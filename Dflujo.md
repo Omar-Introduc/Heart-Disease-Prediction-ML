@@ -1,4 +1,3 @@
-```mermaid
 %% Diagrama de Flujo del Proyecto de IA para Predicción de Riesgo Cardíaco
 graph TD
     subgraph "Fase 1: Entrada y Preparación"
@@ -45,9 +44,9 @@ graph TD
     style H fill:#9f9,stroke:#333,stroke-width:2px;
     style K fill:#f66,stroke:#333,stroke-width:2px;
     style F fill:#f90,stroke:#333,stroke-width:2px;
-```
 
 
+____________________________________________________________________________________________________________________________________________________
 
 %% Arquitectura de Sistema de ML con enfoque AutoML
 graph TD
@@ -74,9 +73,9 @@ graph TD
         H --> I["Modelo Final Optimizado (.pkl)"];
     end
 
-    subgraph "Fase 3: Interpretación y Despliegue"
-        I --> J["Interpretación del Modelo con SHAP"];
-        J --> K["Carga del Modelo en la Aplicación"];
+subgraph "Fase 3: Interpretación y Despliegue"
+        I["Modelo Final Optimizado (.pkl)"] --> J["Interpretación del Modelo con SHAP"];
+        J --> K["Integrar Modelo (.pkl) en Dashboard"];
         K --> L["Interfaz de Usuario con Streamlit"];
         L --> M[("Predicción Final para el Usuario")];
     end
