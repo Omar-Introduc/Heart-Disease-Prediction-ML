@@ -1,19 +1,19 @@
-# Ignorar todos los archivos y carpetas dentro de /data/ por defecto.
-/data/*
+# =============================================================================
+# Archivos de Entorno y Cache de Python
+# =============================================================================
+__pycache__/
+*.pyc
+# =============================================================================
+# Archivos de Datos Grandes y Específicos
+# =============================================================================
+# Ignorar el archivo de datos crudos original por su gran tamaño.
+/data/01_raw/LLCP2022.XPT
 
-# PERO, no ignores la carpeta de datos procesados.
-# La "!" anula la regla anterior para esta carpeta específica.
-!/data/02_processed/
+# Ignorar el archivo de datos procesado de 36MB.
+/data/02_processed/brfss_2022_cleaned.csv
 
-# Y tampoco ignores la carpeta de características.
-!/data/03_features/
-
-# Dentro de las carpetas que SÍ observamos, ignora cualquier
-# archivo "placeholder" como .gitkeep si lo usas.
-/data/02_processed/.gitkeep
-/data/03_features/.gitkeep
-
-# Finalmente, asegúrate de ignorar todos los archivos ZIP y XPT,
-# sin importar dónde estén. Esto es una doble seguridad.
-*.zip
-*.XPT
+# =============================================================================
+# NOTA SOBRE LA ESTRUCTURA DE CARPETAS:
+# Para mantener las carpetas vacías en Git (
+# crea un archivo vacío dentro de ellas llamado '.gitkeep'.
+# =============================================================================
