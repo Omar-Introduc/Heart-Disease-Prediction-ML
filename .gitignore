@@ -1,0 +1,19 @@
+# Ignorar todos los archivos y carpetas dentro de /data/ por defecto.
+/data/*
+
+# PERO, no ignores la carpeta de datos procesados.
+# La "!" anula la regla anterior para esta carpeta específica.
+!/data/02_processed/
+
+# Y tampoco ignores la carpeta de características.
+!/data/03_features/
+
+# Dentro de las carpetas que SÍ observamos, ignora cualquier
+# archivo "placeholder" como .gitkeep si lo usas.
+/data/02_processed/.gitkeep
+/data/03_features/.gitkeep
+
+# Finalmente, asegúrate de ignorar todos los archivos ZIP y XPT,
+# sin importar dónde estén. Esto es una doble seguridad.
+*.zip
+*.XPT
