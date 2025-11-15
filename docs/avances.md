@@ -127,3 +127,22 @@ Para asegurar que la implementación de las derivadas es correcta, se realizaron
         *   Esto también coincide con nuestra implementación `y_pred * (1 - y_pred)`.
 
 Estas validaciones confirman que los cálculos de gradiente y hessiano son matemáticamente correctos y están listos para ser utilizados en el algoritmo de boosting.
+
+### **3.4 Creación del Bucle de Boosting Secuencial (Issue-02.6)**
+
+Con los componentes fundamentales del árbol de decisión y el cálculo de derivadas ya implementados y validados, el siguiente paso ha sido ensamblarlos dentro de un bucle de entrenamiento secuencial, que es el núcleo del algoritmo de Gradient Boosting.
+
+*   **Propósito de la Implementación**:
+    *   **Entrenamiento Iterativo**: Implementar el proceso mediante el cual el modelo aprende de manera aditiva. En cada iteración, se entrena un nuevo árbol de decisión para corregir los errores (residuos) del modelo combinado de los árboles anteriores.
+    *   **Componentes Clave Desarrollados**:
+        *   **Clase `XGBoost`**: Se ha creado una nueva clase en `src/train.py` que orquesta todo el proceso de entrenamiento y predicción.
+        *   **Bucle Principal de Entrenamiento**: Dentro del método `fit`, se ha implementado un bucle que itera un número predefinido de veces (`n_estimators`). En cada iteración, se realizan los siguientes pasos:
+            1.  **Cálculo de Residuos**: Se calculan el gradiente y el hessiano de la función de pérdida con respecto a las predicciones actuales. Estos valores actúan como una medida del error que el nuevo árbol debe aprender a corregir.
+            2.  **Entrenamiento de un Nuevo Árbol**: Se instancia y entrena un nuevo `DecisionTree`, pasándole los datos de entrada y los residuos calculados (gradiente y hessiano).
+            3.  **Actualización de Predicciones**: Las predicciones del nuevo árbol se suman a las predicciones acumuladas, acercando el modelo a la solución óptima.
+        *   **Mecanismo de Predicción**: El método `predict` combina las predicciones de todos los árboles entrenados y aplica la transformación final (e.g., sigmoide para clasificación) para generar el resultado final.
+    *   **Criterios de Parada**:
+        *   **Número Fijo de Árboles (`n_estimators`)**: El bucle se detiene después de construir un número fijo de árboles, definido como un hiperparámetro.
+        *   **Early Stopping**: Se ha implementado un mecanismo de parada temprana. Si se proporciona un conjunto de validación, el entrenamiento se detendrá si la pérdida en dicho conjunto no mejora durante un número determinado de rondas (`early_stopping_rounds`), evitando así el sobreajuste.
+
+Esta implementación completa el esqueleto funcional del algoritmo XGBoost, permitiendo el entrenamiento de un modelo de ensamblaje a partir de los componentes desarrollados en las etapas anteriores.
