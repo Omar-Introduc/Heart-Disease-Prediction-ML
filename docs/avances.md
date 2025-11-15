@@ -67,3 +67,19 @@ Aquí es donde tu plan de proyecto, de manera muy acertada, ubica la ingeniería
     * **¿Por qué aquí y no antes?**: Porque las decisiones sobre *cómo* preprocesar los datos se basan en los hallazgos del análisis de la Fase 2 y en el diseño de la arquitectura de la Fase 3. No se puede construir un pipeline robusto sin haber analizado primero a fondo los datos crudos.
 
 **En resumen**: Tu plan sigue una metodología profesional. No estás omitiendo el preprocesamiento; lo has colocado estratégicamente en la fase de implementación (`p4_pipe`), que es exactamente donde debe estar para construir una solución de Machine Learning modular, reproducible y robusta.
+
+
+### **3.1 Implementación del Árbol de Decisión Base (Issue-02.4)**
+
+Como parte de la Fase 2 y en línea con el objetivo de comprender a fondo los componentes de XGBoost, se ha completado la implementación de un Árbol de Decisión desde cero utilizando NumPy.
+
+*   **Propósito de la Implementación**:
+    *   **Entendimiento Fundamental**: El objetivo principal no es reemplazar la librería optimizada de XGBoost, sino construir una comprensión profunda de los mecanismos internos que impulsan los modelos basados en árboles.
+    *   **Componentes Clave Desarrollados**:
+        *   **Estructura de Nodos**: Se creó una clase `Node` que sirve como el bloque de construcción fundamental del árbol.
+        *   **Lógica de División (Splitting)**: Se implementaron funciones para encontrar la mejor división en los datos, utilizando criterios de impureza para maximizar la ganancia de información.
+        *   **Cálculo de Impureza**: El árbol soporta tanto la **Entropía** como el **Índice de Gini**, permitiendo flexibilidad en la evaluación de las divisiones.
+        *   **Predicción y Recorrido**: Se desarrollaron métodos para atravesar el árbol y realizar predicciones sobre nuevos datos.
+    *   **Ubicación del Código**: El código fuente de esta implementación se encuentra en el nuevo directorio `src/tree/`, asegurando una estructura de proyecto modular y organizada.
+
+Esta implementación sirve como una base teórica y práctica crucial antes de avanzar hacia el ensamblaje de árboles más complejo que define a XGBoost.
