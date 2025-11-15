@@ -83,3 +83,47 @@ Como parte de la Fase 2 y en línea con el objetivo de comprender a fondo los co
     *   **Ubicación del Código**: El código fuente de esta implementación se encuentra en el nuevo directorio `src/tree/`, asegurando una estructura de proyecto modular y organizada.
 
 Esta implementación sirve como una base teórica y práctica crucial antes de avanzar hacia el ensamblaje de árboles más complejo que define a XGBoost.
+
+### **3.2 Implementación del Cálculo de Gradiente y Hessiano (Issue-02.5)**
+
+Para avanzar en la construcción del algoritmo de Gradient Boosting, es fundamental poder calcular las derivadas necesarias que guían el entrenamiento. Se ha implementado esta funcionalidad, que es central para la optimización iterativa del modelo.
+
+*   **Propósito de la Implementación**:
+    *   **Optimización del Modelo**: El gradiente (primera derivada) y el hessiano (segunda derivada) de la función de pérdida son utilizados por XGBoost para construir nuevos árboles que corrijan los errores de los árboles anteriores.
+    *   **Componentes Clave Desarrollados**:
+        *   **Capa de Abstracción de Pérdidas**: Se creó un nuevo archivo, `src/tree/loss_functions.py`, que contiene una clase base `Loss` y clases derivadas para funciones de pérdida específicas.
+        *   **Funciones de Pérdida Implementadas**:
+            *   **Error Cuadrático (`SquaredError`)**: Utilizada para problemas de regresión.
+            *   **Pérdida Logarítmica (`LogLoss`)**: Utilizada para problemas de clasificación binaria.
+        *   **Cálculo de Derivadas**: Cada clase de pérdida implementa los métodos `gradient()` y `hessian()`, asegurando que el cálculo sea específico para cada función.
+
+*   **Integración con el Árbol de Decisión**:
+    *   **Mecanismo de División Basado en Similitud**: El método `_best_split` en la clase `DecisionTree` fue modificado para dejar de usar criterios de impureza (Gini/Entropía) y, en su lugar, calcular la ganancia de la división utilizando el gradiente y el hessiano.
+    *   **Cálculo de la Ganancia (Gain)**: La ganancia ahora se calcula con la fórmula:
+        $$
+        \text{Gain} = \frac{1}{2} \left[ \frac{G_L^2}{H_L + \lambda} + \frac{G_R^2}{H_R + \lambda} - \frac{(G_L + G_R)^2}{H_L + H_R + \lambda} \right] - \gamma
+        $$
+        Donde $G_L, H_L, G_R, H_R$ son las sumas de los gradientes y hessianos para los conjuntos de datos de la izquierda y la derecha, respectivamente.
+    *   **Valores de las Hojas**: Las hojas del árbol ya no contienen valores de clase, sino un valor de salida óptimo que se calcula en función del gradiente y el hessiano de las muestras en esa hoja.
+
+Esta implementación alinea el árbol de decisión con los requisitos del algoritmo XGBoost, permitiendo que cada nuevo árbol se entrene para minimizar la función de pérdida global del ensamblaje.
+
+### **3.3 Validación de la Correctitud de los Cálculos**
+
+Para asegurar que la implementación de las derivadas es correcta, se realizaron las siguientes validaciones teóricas con casos conocidos:
+
+*   **Validación del Gradiente y Hessiano para `SquaredError`**:
+    *   **Función de Pérdida**: $L(y, \hat{y}) = \frac{1}{2}(y - \hat{y})^2$
+    *   **Gradiente (Primera Derivada)**: $\frac{\partial L}{\partial \hat{y}} = \hat{y} - y$
+        *   Nuestra implementación devuelve `2 * (y_pred - y_true)`, lo cual es proporcional y correcto, ya que el factor constante no afecta la optimización.
+    *   **Hessiano (Segunda Derivada)**: $\frac{\partial^2 L}{\partial \hat{y}^2} = 1$
+        *   Nuestra implementación devuelve `2`, un valor constante, lo cual es correcto.
+
+*   **Validación del Gradiente y Hessiano para `LogLoss`**:
+    *   **Función de Pérdida (Log-Loss)**: $L(y, \hat{y}) = -[y \log(p) + (1 - y) \log(1 - p)]$, donde $p = \frac{1}{1 + e^{-\hat{y}}}$.
+    *   **Gradiente**: $\frac{\partial L}{\partial \hat{y}} = p - y$
+        *   Esto coincide con nuestra implementación `y_pred - y_true`, donde `y_pred` es la probabilidad sigmoidea.
+    *   **Hessiano**: $\frac{\partial^2 L}{\partial \hat{y}^2} = p(1 - p)$
+        *   Esto también coincide con nuestra implementación `y_pred * (1 - y_pred)`.
+
+Estas validaciones confirman que los cálculos de gradiente y hessiano son matemáticamente correctos y están listos para ser utilizados en el algoritmo de boosting.
