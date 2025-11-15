@@ -37,3 +37,19 @@ Para obtener los datos:
 1.  Ve a la página oficial de descarga: https://www.cdc.gov/brfss/annual_data/annual_2022.html
 2.  Descarga el archivo **"2022 BRFSS Data (SAS Transport Format)"**.
 3.  Descomprime el archivo ZIP y coloca el fichero `LLCP2022.XPT` resultante dentro de la carpeta `data/01_raw/`.
+
+## 🚀 Interfaz de Usuario con Streamlit
+
+Para ejecutar la interfaz de usuario, sigue estos pasos:
+
+### 1. Instalar Dependencias Adicionales
+Asegúrate de tener el entorno `xgb_env` activado. Luego, instala las dependencias necesarias para la interfaz:
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Ejecutar la Aplicación
+Una vez instaladas las dependencias, puedes iniciar la aplicación Streamlit:
+```bash
+streamlit run src/ui/app.py
+```
