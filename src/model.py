@@ -1,10 +1,12 @@
 import numpy as np
 from src.tree.decision_tree import DecisionTree
 from src.tree.loss_functions import LogLoss
+from src.interfaces import HeartDiseaseModel
 
-class XGBoostScratch:
+class XGBoostScratch(HeartDiseaseModel):
     """
     XGBoost implementation from scratch.
+    Implements the HeartDiseaseModel protocol.
     """
     def __init__(self, n_estimators=10, learning_rate=0.1, max_depth=3, lambda_=1.0, gamma=0.0):
         self.n_estimators = n_estimators
@@ -16,7 +18,7 @@ class XGBoostScratch:
         self.loss_func = LogLoss()
         self.base_score = 0.5
 
-    def fit(self, X, y):
+    def fit(self, X: np.ndarray, y: np.ndarray) -> None:
         # Initial prediction (log-odds)
         # Assuming base_score = 0.5 -> log(p/(1-p)) = 0
         self.base_score = 0.5
@@ -45,13 +47,13 @@ class XGBoostScratch:
             current_loss = self.loss_func.loss(y, y_pred)
             # print(f"Iter {i}: Loss = {current_loss:.4f}")
 
-    def predict_proba(self, X):
+    def predict_proba(self, X: np.ndarray) -> np.ndarray:
         y_pred = np.full(X.shape[0], 0.0) # Start with initial log-odds 0
         for tree in self.trees:
             y_pred += self.learning_rate * tree.predict(X)
 
         return self.loss_func.sigmoid(y_pred)
 
-    def predict(self, X, threshold=0.5):
+    def predict(self, X: np.ndarray, threshold: float = 0.5) -> np.ndarray:
         proba = self.predict_proba(X)
         return (proba >= threshold).astype(int)
