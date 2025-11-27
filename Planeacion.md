@@ -10,8 +10,13 @@ Este documento estructura el plan de implementación del proyecto (originalmente
     *   **Asignado a:** Todos
     *   **Fecha estimada:** Semana 3
 
-*   **Issue 2: Configuración del Entorno**
-    *   **Descripción:** Configurar Git y el entorno de desarrollo (Conda/Poetry).
+*   **Issue 1.5: Definición de Métricas de Éxito**
+    *   **Descripción:** Definir métricas clave (AUC, Accuracy, Falsos Negativos vs Positivos) para evaluar el éxito del modelo.
+    *   **Asignado a:** Todos
+    *   **Fecha estimada:** Semana 3
+
+*   **Issue 2: Configuración del Entorno y Calidad de Código**
+    *   **Descripción:** Configurar Git, entorno (Conda/Poetry), instalación de `pyreadstat` para .XPT, y herramientas de linting/formatting (ruff/black).
     *   **Asignado a:** Líder Técnico
     *   **Fecha estimada:** Semana 3
 
@@ -45,9 +50,14 @@ Este documento estructura el plan de implementación del proyecto (originalmente
 ## Sprint 2: Preparación y Pruebas (Semanas 5-6)
 **Objetivo:** Preparar los datos y realizar una implementación "desde cero" de los componentes clave de XGBoost para comprender su funcionamiento.
 
-*   **Issue 8: Ingesta de Datos**
-    *   **Descripción:** Seleccionar y cargar el Dataset (UCI, Kaggle).
+*   **Issue 8: Ingesta de Datos y Conversión**
+    *   **Descripción:** Seleccionar y cargar el Dataset (UCI, Kaggle). Conversión de formato SAS (.XPT) a Parquet/CSV.
     *   **Asignado a:** Ing. Datos
+    *   **Fecha estimada:** Semana 5
+
+*   **Issue 8.5: División del Dataset (Train/Test) y Aislamiento**
+    *   **Descripción:** Definir estrategia de validación y dividir datos antes del EDA profundo para evitar Data Leakage.
+    *   **Asignado a:** Ing. ML / Ing. Datos
     *   **Fecha estimada:** Semana 5
 
 *   **Issue 9: Análisis Exploratorio Automático**
@@ -71,13 +81,18 @@ Este documento estructura el plan de implementación del proyecto (originalmente
     *   **Fecha estimada:** Semana 6
 
 *   **Issue 13: Boosting Secuencial**
-    *   **Descripción:** Crear el bucle de Boosting secuencial para entrenar el modelo.
+    *   **Descripción:** Crear el bucle de Boosting secuencial para entrenar el modelo. (Nota: Tener Plan B simplificado si se complica para no bloquear Sprint 4).
     *   **Asignado a:** Ing. ML
     *   **Fecha estimada:** Semana 6
 
 *   **Issue 14: Prototipo Desde Cero**
     *   **Descripción:** Validar que el prototipo de XGBoost 'Desde Cero' sea funcional.
     *   **Asignado a:** Todos (Hito)
+    *   **Fecha estimada:** Semana 6
+
+*   **Issue 14.5: Tests Unitarios Matemáticos**
+    *   **Descripción:** Crear tests unitarios para componentes matemáticos (Gradiente/Hessiano) comparando con librerías estándar.
+    *   **Asignado a:** Ing. ML
     *   **Fecha estimada:** Semana 6
 
 ---
@@ -120,13 +135,18 @@ Este documento estructura el plan de implementación del proyecto (originalmente
     *   **Asignado a:** Todos
     *   **Fecha estimada:** Semana 8
 
+*   **Issue 21.5: Manejo de Dependencias y Reproducibilidad**
+    *   **Descripción:** Crear `Dockerfile` o `requirements.txt` congelado para asegurar reproducibilidad entre entornos.
+    *   **Asignado a:** Líder Técnico
+    *   **Fecha estimada:** Semana 8
+
 ---
 
 ## Sprint 4: Implementación del Prototipo (Semanas 9-10)
 **Objetivo:** Construir el pipeline de datos, establecer un baseline con PyCaret y crear la primera versión de la UI.
 
 *   **Issue 22: Pipeline de Datos**
-    *   **Descripción:** Codificar el pipeline de procesamiento de datos (scripts .py).
+    *   **Descripción:** Codificar pipeline de procesamiento, incluyendo limpieza de nombres de columnas (ej. `_STATE`).
     *   **Asignado a:** Ing. Datos
     *   **Fecha estimada:** Semana 9
 
@@ -137,6 +157,11 @@ Este documento estructura el plan de implementación del proyecto (originalmente
 
 *   **Issue 24: Comparación de Modelos**
     *   **Descripción:** Ejecutar `compare_models` en PyCaret para establecer baselines.
+    *   **Asignado a:** Ing. ML
+    *   **Fecha estimada:** Semana 9
+
+*   **Issue 24.5: Análisis de Fuga de Datos (Leakage Check)**
+    *   **Descripción:** Verificar que PyCaret y el pipeline no utilicen variables prohibidas o futuras (Leakage).
     *   **Asignado a:** Ing. ML
     *   **Fecha estimada:** Semana 9
 
@@ -226,13 +251,18 @@ Este documento estructura el plan de implementación del proyecto (originalmente
     *   **Fecha estimada:** Semana 13
 
 *   **Issue 40: Ética y Sesgos**
-    *   **Descripción:** Realizar un análisis ético y de sesgos del modelo desarrollado.
+    *   **Descripción:** Análisis ético y de sesgos utilizando herramientas como `fairlearn` y revisión manual.
     *   **Asignado a:** Analista IA
     *   **Fecha estimada:** Semana 13
 
 *   **Issue 41: Frontend Final**
     *   **Descripción:** Finalizar el desarrollo del Frontend de la UI (Streamlit).
     *   **Asignado a:** Des. de UI
+    *   **Fecha estimada:** Semana 13
+
+*   **Issue 41.5: Guía de Usuario de la UI**
+    *   **Descripción:** Crear una mini guía o documentación para el usuario final de la interfaz.
+    *   **Asignado a:** Documentador
     *   **Fecha estimada:** Semana 13
 
 *   **Issue 42: Redacción de Resultados**
@@ -255,8 +285,8 @@ Este documento estructura el plan de implementación del proyecto (originalmente
 ## Sprint 7: Entrega Final (Semana 15)
 **Objetivo:** Pulir el producto final, preparar la presentación y entregar el proyecto.
 
-*   **Issue 45: Limpieza de Código**
-    *   **Descripción:** Limpiar el código fuente, añadir docstrings y documentación final.
+*   **Issue 45: Limpieza Final y Refactorización**
+    *   **Descripción:** Refactorización final para asegurar código limpio y docstrings exhaustivos (continuación del trabajo continuo de calidad).
     *   **Asignado a:** Líder Técnico/Todos
     *   **Fecha estimada:** Semana 15
 
