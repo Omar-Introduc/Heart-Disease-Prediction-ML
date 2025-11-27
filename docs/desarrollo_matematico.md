@@ -1,6 +1,6 @@
 # Desarrollo Matemático de XGBoost: Taylor y Hessianos
 
-**Objetivo:** Desglosar la derivación matemática que permite a XGBoost optimizar funciones de pérdida arbitrarias utilizando información de segundo orden.
+**Objetivo:** Desglosar la derivación matemática que permite a XGBoost optimizar funciones de pérdida arbitrarias utilizando información de segundo orden y conectar estas fórmulas con la implementación en código.
 
 ## 1. El Problema de Optimización
 
@@ -50,7 +50,7 @@ Definimos las sumas acumuladas por hoja:
 Entonces:
 $$Obj^{(t)} = \sum_{j=1}^{T} [G_j w_j + \frac{1}{2} (H_j + \lambda) w_j^2] + \gamma T$$
 
-## 5. El Peso Óptimo ($w_j^*$)
+## 5. El Peso Óptimo ($w_j^*$) y la Conexión con el Código
 
 Esta es ahora una suma de funciones cuadráticas independientes para cada hoja $w_j$. Para encontrar el peso óptimo de una hoja, derivamos respecto a $w_j$ e igualamos a cero:
 
@@ -59,4 +59,43 @@ $$\frac{\partial Obj}{\partial w_j} = G_j + (H_j + \lambda)w_j = 0$$
 Despejando $w_j$:
 $$w_j^* = - \frac{G_j}{H_j + \lambda}$$
 
-> **Conclusión Matemática:** El valor óptimo que debe predecir una hoja no se adivina, se calcula exactamente usando la suma de gradientes y hessianos de los datos que caen en ella, regularizado por $\lambda$. Esta fórmula es la base de la implementación en código del Sprint 2.
+### Conexión con el Código
+En `src/tree/decision_tree.py`, el método `_calculate_leaf_weight` implementa esta fórmula exacta:
+
+```python
+def _calculate_leaf_weight(self, g, h):
+    """
+    Calculates the optimal weight for a leaf: w* = - Sum(g) / (Sum(h) + lambda)
+    """
+    G = np.sum(g)
+    H = np.sum(h)
+    return -G / (H + self.lambda_)
+```
+
+El parámetro `self.lambda_` en el denominador corresponde a la regularización $\lambda$, que evita la división por cero (si $H=0$) y reduce la magnitud del peso para prevenir sobreajuste.
+
+## 6. La Ganancia de Estructura (Score)
+
+Si sustituimos el peso óptimo $w_j^*$ de vuelta en la función objetivo, obtenemos el valor mínimo de la pérdida para una estructura de árbol dada:
+
+$$Obj^* = - \frac{1}{2} \sum_{j=1}^{T} \frac{G_j^2}{H_j + \lambda} + \gamma T$$
+
+Para decidir si dividir un nodo en dos (Izquierda y Derecha), comparamos el score antes de dividir vs. después de dividir. La **Ganancia** se define como la reducción en la función de pérdida:
+
+$$Gain = \frac{1}{2} \left[ \frac{G_L^2}{H_L + \lambda} + \frac{G_R^2}{H_R + \lambda} - \frac{(G_L + G_R)^2}{H_L + H_R + \lambda} \right] - \gamma$$
+
+### Conexión con el Código
+Esta fórmula es el núcleo del método `_calculate_gain` en nuestra implementación:
+
+```python
+def _calculate_gain(self, g_L, h_L, g_R, h_R):
+    # ...
+    term_L = (G_L**2) / (H_L + self.lambda_)
+    term_R = (G_R**2) / (H_R + self.lambda_)
+    term_Total = ((G_L + G_R)**2) / (H_L + H_R + self.lambda_)
+
+    gain = 0.5 * (term_L + term_R - term_Total) - self.gamma
+    return gain
+```
+
+Aquí, `self.gamma` actúa como el umbral mínimo de mejora requerido para realizar una división (pruning).
