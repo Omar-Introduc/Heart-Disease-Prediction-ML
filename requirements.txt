@@ -29,6 +29,7 @@ pre-commit
 
 # UI
 streamlit
+streamlit-shap
 
 # AutoML
 pycaret>=3.0.0
