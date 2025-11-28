@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
-from pycaret.classification import setup, compare_models, save_model, pull, tune_model, predict_model, get_config
+from pycaret.classification import setup, compare_models, save_model, pull, tune_model, predict_model, get_config, finalize_model
 from sklearn.metrics import fbeta_score, recall_score, precision_score
 import os
+import json
 
 def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
     """
@@ -133,13 +134,43 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
         print(f"Recall: {recall_score(y_true, default_pred):.4f}")
         print("==================================\n")
 
-    # Save best model
+    # Issue 34: Finalize Model (Train on Full Dataset)
+    print("Finalizing model (training on full dataset)...")
+    final_model = finalize_model(tuned_model)
+
+    # Issue 35: Serialization with Metadata
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    model_path = os.path.join(output_dir, "best_pipeline")
-    save_model(tuned_model, model_path)
-    print(f"Model saved to {model_path}.pkl")
+    # Save configuration
+    config_data = {
+        "threshold": float(best_thresh) if y_scores is not None else 0.5,
+        "metric": "Recall"
+    }
+    config_path = os.path.join(output_dir, "model_config.json")
+    with open(config_path, 'w') as f:
+        json.dump(config_data, f, indent=4)
+    print(f"Model configuration saved to {config_path}")
+
+    # Save finalized model
+    model_name = "final_pipeline_v1"
+    save_model(final_model, os.path.join(output_dir, model_name))
+    print(f"Finalized model saved to {os.path.join(output_dir, model_name)}.pkl")
+
+    # Issue 36: Final Report
+    print("\n" + "="*50)
+    print("FINAL TRAINING REPORT")
+    print("="*50)
+    print(f"Final Model: {final_model}")
+    print(f"Optimal Threshold (F2): {config_data['threshold']:.4f}")
+    if y_scores is not None:
+        print(f"Best F2-Score: {best_f2:.4f}")
+        print(f"Recall at Best Threshold: {best_recall:.4f}")
+    print("-" * 30)
+    print(f"Artifacts Saved in '{output_dir}/':")
+    print(f"1. Model Pipeline: {model_name}.pkl")
+    print(f"2. Config Metadata: model_config.json")
+    print("="*50 + "\n")
 
 if __name__ == "__main__":
     data_path = "data/02_intermediate/processed_data.parquet"
