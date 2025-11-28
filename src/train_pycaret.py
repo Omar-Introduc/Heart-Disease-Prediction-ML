@@ -1,10 +1,12 @@
 import pandas as pd
-from pycaret.classification import setup, compare_models, save_model, pull
+import numpy as np
+from pycaret.classification import setup, compare_models, save_model, pull, tune_model, predict_model, get_config
+from sklearn.metrics import fbeta_score, recall_score, precision_score
 import os
 
 def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
     """
-    Trains baseline models using PyCaret.
+    Trains baseline models using PyCaret with Tuning and Threshold Optimization.
     """
     if not os.path.exists(data_path):
         print(f"Data file {data_path} not found.")
@@ -24,36 +26,119 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
             return
 
     print(f"Data shape: {df.shape}")
+
+    # Sample data if too large to avoid MemoryError in Sandbox
+    MAX_ROWS = 20000
+    if len(df) > MAX_ROWS:
+        print(f"Dataset too large ({len(df)} rows). Sampling {MAX_ROWS} rows for testing purposes...")
+        # Maintain class distribution roughly
+        df = df.sample(n=MAX_ROWS, random_state=42)
+        print(f"New Data shape: {df.shape}")
+
+    # Reset index to avoid duplicates issue in PyCaret
+    df = df.reset_index(drop=True)
+
     print(f"Target distribution:\n{df[target_col].value_counts()}")
 
     # PyCaret Setup
-    # fix_imbalance=True uses SMOTE by default on train set
-    # session_id for reproducibility
     print("Setting up PyCaret experiment...")
+    # fix_imbalance=True uses SMOTE by default on train set
     exp = setup(
         data=df,
         target=target_col,
         session_id=42,
         fix_imbalance=True,
         verbose=False,
-        html=False # Disable HTML for script execution
+        html=False
     )
 
     # Compare Models
-    # Sort by Recall as requested
     print("Comparing models (sorted by Recall)...")
     best_model = compare_models(sort='Recall', n_select=1)
 
+    print(f"Best model selected: {best_model}")
+
+    # Tuning
+    # Issue 30 & 31: Tuning for Recall
+    print("Optimizing hyperparameters for Recall...")
+    try:
+        tuned_model = tune_model(best_model, optimize='Recall', n_iter=50, verbose=False)
+        print("Tuning complete.")
+    except Exception as e:
+        print(f"Tuning failed or skipped: {e}")
+        tuned_model = best_model
+
     results = pull()
-    print("Top models:")
+    print("Tuning Results:")
     print(results.head())
+
+    # Issue 33: Comparative Analysis and Optimal Threshold
+    print("Calculating Optimal Threshold for F2-Score...")
+
+    # Predict on holdout set
+    predictions = predict_model(tuned_model, raw_score=True, verbose=False)
+
+    # Identify target and score columns
+    # PyCaret 3.x usually uses 'prediction_label' and 'prediction_score_1' (for class 1)
+    # or just 'prediction_score' (if binary, probability of predicted class)
+    # We need probability of class 1.
+
+    y_true = predictions[target_col]
+
+    # Logic to find probability column
+    score_col = None
+    if 'prediction_score_1' in predictions.columns:
+        score_col = 'prediction_score_1'
+        y_scores = predictions['prediction_score_1']
+    elif 'Score_1' in predictions.columns:
+        score_col = 'Score_1'
+        y_scores = predictions['Score_1']
+    elif 'prediction_score' in predictions.columns:
+        # Assuming binary classification where 1 is the positive class
+        # If prediction_label is 0, prob(1) = 1 - prediction_score
+        # If prediction_label is 1, prob(1) = prediction_score
+        pred_label = predictions['prediction_label']
+        raw_score = predictions['prediction_score']
+        y_scores = np.where(pred_label == 1, raw_score, 1 - raw_score)
+        score_col = 'inferred_score'
+    else:
+        print("Could not identify probability score column. Skipping threshold optimization.")
+        y_scores = None
+
+    if y_scores is not None:
+        thresholds = np.arange(0, 1, 0.01)
+        f2_scores = []
+        recalls = []
+
+        for t in thresholds:
+            y_pred = (y_scores >= t).astype(int)
+            f2 = fbeta_score(y_true, y_pred, beta=2)
+            f2_scores.append(f2)
+            recalls.append(recall_score(y_true, y_pred))
+
+        best_idx = np.argmax(f2_scores)
+        best_thresh = thresholds[best_idx]
+        best_f2 = f2_scores[best_idx]
+        best_recall = recalls[best_idx]
+
+        print(f"\n=== Optimal Threshold Analysis ===")
+        print(f"Best Threshold (F2-Score): {best_thresh:.2f}")
+        print(f"F2-Score at {best_thresh:.2f}: {best_f2:.4f}")
+        print(f"Recall at {best_thresh:.2f}: {best_recall:.4f}")
+
+        # Also print metrics at default 0.5 for comparison
+        default_pred = (y_scores >= 0.5).astype(int)
+        print(f"Metrics at 0.50 threshold:")
+        print(f"F2-Score: {fbeta_score(y_true, default_pred, beta=2):.4f}")
+        print(f"Recall: {recall_score(y_true, default_pred):.4f}")
+        print("==================================\n")
 
     # Save best model
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     model_path = os.path.join(output_dir, "best_pipeline")
-    save_model(best_model, model_path)
+    save_model(tuned_model, model_path)
     print(f"Model saved to {model_path}.pkl")
 
 if __name__ == "__main__":
