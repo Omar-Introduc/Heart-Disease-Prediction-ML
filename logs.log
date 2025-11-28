@@ -94,3 +94,1748 @@
 2025-11-27 22:04:43,209:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDEC20>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002856BC46200>)
 2025-11-27 22:04:43,209:INFO:Checking exceptions
 2025-11-27 22:04:43,209:INFO:Preloading libraries
+2025-11-28 16:10:59,746:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:10:59,747:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:10:59,747:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:10:59,747:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:11:06,336:INFO:PyCaret ClassificationExperiment
+2025-11-28 16:11:06,336:INFO:Logging name: clf-default-name
+2025-11-28 16:11:06,336:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-11-28 16:11:06,336:INFO:version 3.3.2
+2025-11-28 16:11:06,336:INFO:Initializing setup()
+2025-11-28 16:11:06,336:INFO:self.USI: 0449
+2025-11-28 16:11:06,337:INFO:self._variable_keys: {'target_param', 'data', 'X_test', 'fold_groups_param', 'exp_name_log', 'y_train', 'exp_id', 'idx', '_ml_usecase', 'fold_shuffle_param', 'X_train', '_available_plots', 'is_multiclass', 'pipeline', 'X', 'USI', 'memory', 'html_param', 'seed', 'fix_imbalance', 'y', 'n_jobs_param', 'gpu_param', 'y_test', 'log_plots_param', 'fold_generator', 'gpu_n_jobs_param', 'logging_param'}
+2025-11-28 16:11:06,337:INFO:Checking environment
+2025-11-28 16:11:06,337:INFO:python_version: 3.12.12
+2025-11-28 16:11:06,337:INFO:python_build: ('main', 'Nov  7 2025 00:07:10')
+2025-11-28 16:11:06,337:INFO:machine: x86_64
+2025-11-28 16:11:06,341:INFO:platform: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-28 16:11:06,341:INFO:Memory: svmem(total=8345706496, available=5299548160, percent=36.5, used=3046158336, free=3362717696, active=231464960, inactive=4478382080, buffers=45596672, cached=2197397504, shared=540672, slab=191496192)
+2025-11-28 16:11:06,342:INFO:Physical Core: 4
+2025-11-28 16:11:06,342:INFO:Logical Core: 4
+2025-11-28 16:11:06,342:INFO:Checking libraries
+2025-11-28 16:11:06,342:INFO:System:
+2025-11-28 16:11:06,342:INFO:    python: 3.12.12 (main, Nov  7 2025, 00:07:10) [GCC 13.3.0]
+2025-11-28 16:11:06,342:INFO:executable: /home/jules/.pyenv/versions/3.12.12/bin/python
+2025-11-28 16:11:06,342:INFO:   machine: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-28 16:11:06,342:INFO:PyCaret required dependencies:
+2025-11-28 16:11:06,388:INFO:                 pip: 25.3
+2025-11-28 16:11:06,388:INFO:          setuptools: 80.9.0
+2025-11-28 16:11:06,388:INFO:             pycaret: 3.3.2
+2025-11-28 16:11:06,388:INFO:             IPython: 9.7.0
+2025-11-28 16:11:06,388:INFO:          ipywidgets: 8.1.8
+2025-11-28 16:11:06,389:INFO:                tqdm: 4.67.1
+2025-11-28 16:11:06,389:INFO:               numpy: 1.26.4
+2025-11-28 16:11:06,389:INFO:              pandas: 2.1.4
+2025-11-28 16:11:06,389:INFO:              jinja2: 3.1.6
+2025-11-28 16:11:06,389:INFO:               scipy: 1.11.4
+2025-11-28 16:11:06,389:INFO:              joblib: 1.3.2
+2025-11-28 16:11:06,389:INFO:             sklearn: 1.4.2
+2025-11-28 16:11:06,389:INFO:                pyod: 2.0.5
+2025-11-28 16:11:06,389:INFO:            imblearn: 0.14.0
+2025-11-28 16:11:06,389:INFO:   category_encoders: 2.7.0
+2025-11-28 16:11:06,389:INFO:            lightgbm: 4.6.0
+2025-11-28 16:11:06,389:INFO:               numba: 0.62.1
+2025-11-28 16:11:06,389:INFO:            requests: 2.32.5
+2025-11-28 16:11:06,389:INFO:          matplotlib: 3.7.5
+2025-11-28 16:11:06,389:INFO:          scikitplot: 0.3.7
+2025-11-28 16:11:06,389:INFO:         yellowbrick: 1.5
+2025-11-28 16:11:06,389:INFO:              plotly: 6.5.0
+2025-11-28 16:11:06,389:INFO:    plotly-resampler: Not installed
+2025-11-28 16:11:06,389:INFO:             kaleido: 1.2.0
+2025-11-28 16:11:06,389:INFO:           schemdraw: 0.15
+2025-11-28 16:11:06,389:INFO:         statsmodels: 0.14.5
+2025-11-28 16:11:06,389:INFO:              sktime: 0.26.0
+2025-11-28 16:11:06,389:INFO:               tbats: 1.1.3
+2025-11-28 16:11:06,389:INFO:            pmdarima: 2.0.4
+2025-11-28 16:11:06,389:INFO:              psutil: 7.1.3
+2025-11-28 16:11:06,389:INFO:          markupsafe: 3.0.3
+2025-11-28 16:11:06,389:INFO:             pickle5: Not installed
+2025-11-28 16:11:06,389:INFO:         cloudpickle: 3.1.2
+2025-11-28 16:11:06,390:INFO:         deprecation: 2.1.0
+2025-11-28 16:11:06,390:INFO:              xxhash: 3.6.0
+2025-11-28 16:11:06,390:INFO:           wurlitzer: 3.1.1
+2025-11-28 16:11:06,390:INFO:PyCaret optional dependencies:
+2025-11-28 16:11:06,429:INFO:                shap: Not installed
+2025-11-28 16:11:06,430:INFO:           interpret: Not installed
+2025-11-28 16:11:06,430:INFO:                umap: Not installed
+2025-11-28 16:11:06,430:INFO:     ydata_profiling: Not installed
+2025-11-28 16:11:06,430:INFO:  explainerdashboard: Not installed
+2025-11-28 16:11:06,430:INFO:             autoviz: Not installed
+2025-11-28 16:11:06,430:INFO:           fairlearn: Not installed
+2025-11-28 16:11:06,430:INFO:          deepchecks: Not installed
+2025-11-28 16:11:06,430:INFO:             xgboost: Not installed
+2025-11-28 16:11:06,430:INFO:            catboost: Not installed
+2025-11-28 16:11:06,430:INFO:              kmodes: Not installed
+2025-11-28 16:11:06,430:INFO:             mlxtend: Not installed
+2025-11-28 16:11:06,430:INFO:       statsforecast: Not installed
+2025-11-28 16:11:06,430:INFO:        tune_sklearn: Not installed
+2025-11-28 16:11:06,430:INFO:                 ray: Not installed
+2025-11-28 16:11:06,430:INFO:            hyperopt: Not installed
+2025-11-28 16:11:06,430:INFO:              optuna: Not installed
+2025-11-28 16:11:06,430:INFO:               skopt: Not installed
+2025-11-28 16:11:06,430:INFO:              mlflow: Not installed
+2025-11-28 16:11:06,430:INFO:              gradio: Not installed
+2025-11-28 16:11:06,430:INFO:             fastapi: Not installed
+2025-11-28 16:11:06,430:INFO:             uvicorn: Not installed
+2025-11-28 16:11:06,430:INFO:              m2cgen: Not installed
+2025-11-28 16:11:06,430:INFO:           evidently: Not installed
+2025-11-28 16:11:06,430:INFO:               fugue: Not installed
+2025-11-28 16:11:06,430:INFO:           streamlit: Not installed
+2025-11-28 16:11:06,430:INFO:             prophet: Not installed
+2025-11-28 16:11:06,430:INFO:None
+2025-11-28 16:11:06,431:INFO:Set up data.
+2025-11-28 16:11:58,801:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:11:58,801:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:11:58,801:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:11:58,801:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:12:01,016:INFO:PyCaret ClassificationExperiment
+2025-11-28 16:12:01,016:INFO:Logging name: clf-default-name
+2025-11-28 16:12:01,016:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-11-28 16:12:01,016:INFO:version 3.3.2
+2025-11-28 16:12:01,016:INFO:Initializing setup()
+2025-11-28 16:12:01,016:INFO:self.USI: 43a0
+2025-11-28 16:12:01,016:INFO:self._variable_keys: {'html_param', 'target_param', 'X_train', 'fold_shuffle_param', 'y_train', 'y', 'idx', 'memory', 'is_multiclass', '_ml_usecase', 'fold_groups_param', 'pipeline', 'fix_imbalance', 'log_plots_param', 'n_jobs_param', 'gpu_param', 'exp_name_log', 'data', 'X_test', 'fold_generator', 'y_test', 'logging_param', 'X', 'USI', 'exp_id', 'gpu_n_jobs_param', '_available_plots', 'seed'}
+2025-11-28 16:12:01,017:INFO:Checking environment
+2025-11-28 16:12:01,017:INFO:python_version: 3.12.12
+2025-11-28 16:12:01,017:INFO:python_build: ('main', 'Nov  7 2025 00:07:10')
+2025-11-28 16:12:01,017:INFO:machine: x86_64
+2025-11-28 16:12:01,020:INFO:platform: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-28 16:12:01,020:INFO:Memory: svmem(total=8345706496, available=6336094208, percent=24.1, used=2009612288, free=4398821376, active=280793088, inactive=3347316736, buffers=45678592, cached=2197782528, shared=540672, slab=191647744)
+2025-11-28 16:12:01,020:INFO:Physical Core: 4
+2025-11-28 16:12:01,021:INFO:Logical Core: 4
+2025-11-28 16:12:01,021:INFO:Checking libraries
+2025-11-28 16:12:01,021:INFO:System:
+2025-11-28 16:12:01,021:INFO:    python: 3.12.12 (main, Nov  7 2025, 00:07:10) [GCC 13.3.0]
+2025-11-28 16:12:01,021:INFO:executable: /home/jules/.pyenv/versions/3.12.12/bin/python
+2025-11-28 16:12:01,021:INFO:   machine: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-28 16:12:01,021:INFO:PyCaret required dependencies:
+2025-11-28 16:12:01,052:INFO:                 pip: 25.3
+2025-11-28 16:12:01,052:INFO:          setuptools: 80.9.0
+2025-11-28 16:12:01,052:INFO:             pycaret: 3.3.2
+2025-11-28 16:12:01,052:INFO:             IPython: 9.7.0
+2025-11-28 16:12:01,052:INFO:          ipywidgets: 8.1.8
+2025-11-28 16:12:01,052:INFO:                tqdm: 4.67.1
+2025-11-28 16:12:01,052:INFO:               numpy: 1.26.4
+2025-11-28 16:12:01,052:INFO:              pandas: 2.1.4
+2025-11-28 16:12:01,052:INFO:              jinja2: 3.1.6
+2025-11-28 16:12:01,053:INFO:               scipy: 1.11.4
+2025-11-28 16:12:01,053:INFO:              joblib: 1.3.2
+2025-11-28 16:12:01,053:INFO:             sklearn: 1.4.2
+2025-11-28 16:12:01,053:INFO:                pyod: 2.0.5
+2025-11-28 16:12:01,053:INFO:            imblearn: 0.14.0
+2025-11-28 16:12:01,053:INFO:   category_encoders: 2.7.0
+2025-11-28 16:12:01,053:INFO:            lightgbm: 4.6.0
+2025-11-28 16:12:01,053:INFO:               numba: 0.62.1
+2025-11-28 16:12:01,053:INFO:            requests: 2.32.5
+2025-11-28 16:12:01,053:INFO:          matplotlib: 3.7.5
+2025-11-28 16:12:01,053:INFO:          scikitplot: 0.3.7
+2025-11-28 16:12:01,053:INFO:         yellowbrick: 1.5
+2025-11-28 16:12:01,053:INFO:              plotly: 6.5.0
+2025-11-28 16:12:01,053:INFO:    plotly-resampler: Not installed
+2025-11-28 16:12:01,053:INFO:             kaleido: 1.2.0
+2025-11-28 16:12:01,053:INFO:           schemdraw: 0.15
+2025-11-28 16:12:01,053:INFO:         statsmodels: 0.14.5
+2025-11-28 16:12:01,053:INFO:              sktime: 0.26.0
+2025-11-28 16:12:01,053:INFO:               tbats: 1.1.3
+2025-11-28 16:12:01,053:INFO:            pmdarima: 2.0.4
+2025-11-28 16:12:01,053:INFO:              psutil: 7.1.3
+2025-11-28 16:12:01,053:INFO:          markupsafe: 3.0.3
+2025-11-28 16:12:01,053:INFO:             pickle5: Not installed
+2025-11-28 16:12:01,053:INFO:         cloudpickle: 3.1.2
+2025-11-28 16:12:01,053:INFO:         deprecation: 2.1.0
+2025-11-28 16:12:01,053:INFO:              xxhash: 3.6.0
+2025-11-28 16:12:01,053:INFO:           wurlitzer: 3.1.1
+2025-11-28 16:12:01,053:INFO:PyCaret optional dependencies:
+2025-11-28 16:12:01,089:INFO:                shap: Not installed
+2025-11-28 16:12:01,089:INFO:           interpret: Not installed
+2025-11-28 16:12:01,089:INFO:                umap: Not installed
+2025-11-28 16:12:01,089:INFO:     ydata_profiling: Not installed
+2025-11-28 16:12:01,089:INFO:  explainerdashboard: Not installed
+2025-11-28 16:12:01,089:INFO:             autoviz: Not installed
+2025-11-28 16:12:01,089:INFO:           fairlearn: Not installed
+2025-11-28 16:12:01,089:INFO:          deepchecks: Not installed
+2025-11-28 16:12:01,089:INFO:             xgboost: Not installed
+2025-11-28 16:12:01,089:INFO:            catboost: Not installed
+2025-11-28 16:12:01,089:INFO:              kmodes: Not installed
+2025-11-28 16:12:01,089:INFO:             mlxtend: Not installed
+2025-11-28 16:12:01,089:INFO:       statsforecast: Not installed
+2025-11-28 16:12:01,089:INFO:        tune_sklearn: Not installed
+2025-11-28 16:12:01,089:INFO:                 ray: Not installed
+2025-11-28 16:12:01,089:INFO:            hyperopt: Not installed
+2025-11-28 16:12:01,090:INFO:              optuna: Not installed
+2025-11-28 16:12:01,090:INFO:               skopt: Not installed
+2025-11-28 16:12:01,090:INFO:              mlflow: Not installed
+2025-11-28 16:12:01,090:INFO:              gradio: Not installed
+2025-11-28 16:12:01,090:INFO:             fastapi: Not installed
+2025-11-28 16:12:01,090:INFO:             uvicorn: Not installed
+2025-11-28 16:12:01,090:INFO:              m2cgen: Not installed
+2025-11-28 16:12:01,090:INFO:           evidently: Not installed
+2025-11-28 16:12:01,090:INFO:               fugue: Not installed
+2025-11-28 16:12:01,090:INFO:           streamlit: Not installed
+2025-11-28 16:12:01,090:INFO:             prophet: Not installed
+2025-11-28 16:12:01,090:INFO:None
+2025-11-28 16:12:01,090:INFO:Set up data.
+2025-11-28 16:12:01,701:INFO:Set up folding strategy.
+2025-11-28 16:12:01,701:INFO:Set up train/test split.
+2025-11-28 16:12:02,298:INFO:Set up index.
+2025-11-28 16:12:33,859:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:12:33,859:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:12:33,860:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:12:33,860:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:12:35,989:INFO:PyCaret ClassificationExperiment
+2025-11-28 16:12:35,989:INFO:Logging name: clf-default-name
+2025-11-28 16:12:35,989:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-11-28 16:12:35,989:INFO:version 3.3.2
+2025-11-28 16:12:35,990:INFO:Initializing setup()
+2025-11-28 16:12:35,990:INFO:self.USI: 824c
+2025-11-28 16:12:35,990:INFO:self._variable_keys: {'fold_shuffle_param', 'log_plots_param', 'exp_name_log', 'logging_param', 'gpu_param', 'X', 'memory', 'y_train', 'data', 'idx', 'pipeline', 'n_jobs_param', 'fix_imbalance', 'target_param', 'is_multiclass', 'y_test', 'html_param', '_available_plots', 'gpu_n_jobs_param', 'X_test', 'y', 'X_train', 'fold_generator', 'fold_groups_param', 'exp_id', 'USI', '_ml_usecase', 'seed'}
+2025-11-28 16:12:35,990:INFO:Checking environment
+2025-11-28 16:12:35,990:INFO:python_version: 3.12.12
+2025-11-28 16:12:35,990:INFO:python_build: ('main', 'Nov  7 2025 00:07:10')
+2025-11-28 16:12:35,990:INFO:machine: x86_64
+2025-11-28 16:12:35,993:INFO:platform: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-28 16:12:35,993:INFO:Memory: svmem(total=8345706496, available=6221844480, percent=25.4, used=2123862016, free=4284301312, active=324292608, inactive=3307839488, buffers=45764608, cached=2197970944, shared=540672, slab=191864832)
+2025-11-28 16:12:35,994:INFO:Physical Core: 4
+2025-11-28 16:12:35,994:INFO:Logical Core: 4
+2025-11-28 16:12:35,994:INFO:Checking libraries
+2025-11-28 16:12:35,994:INFO:System:
+2025-11-28 16:12:35,994:INFO:    python: 3.12.12 (main, Nov  7 2025, 00:07:10) [GCC 13.3.0]
+2025-11-28 16:12:35,994:INFO:executable: /home/jules/.pyenv/versions/3.12.12/bin/python
+2025-11-28 16:12:35,994:INFO:   machine: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-28 16:12:35,994:INFO:PyCaret required dependencies:
+2025-11-28 16:12:36,023:INFO:                 pip: 25.3
+2025-11-28 16:12:36,023:INFO:          setuptools: 80.9.0
+2025-11-28 16:12:36,023:INFO:             pycaret: 3.3.2
+2025-11-28 16:12:36,023:INFO:             IPython: 9.7.0
+2025-11-28 16:12:36,023:INFO:          ipywidgets: 8.1.8
+2025-11-28 16:12:36,023:INFO:                tqdm: 4.67.1
+2025-11-28 16:12:36,023:INFO:               numpy: 1.26.4
+2025-11-28 16:12:36,023:INFO:              pandas: 2.1.4
+2025-11-28 16:12:36,023:INFO:              jinja2: 3.1.6
+2025-11-28 16:12:36,023:INFO:               scipy: 1.11.4
+2025-11-28 16:12:36,023:INFO:              joblib: 1.3.2
+2025-11-28 16:12:36,023:INFO:             sklearn: 1.4.2
+2025-11-28 16:12:36,023:INFO:                pyod: 2.0.5
+2025-11-28 16:12:36,024:INFO:            imblearn: 0.14.0
+2025-11-28 16:12:36,024:INFO:   category_encoders: 2.7.0
+2025-11-28 16:12:36,024:INFO:            lightgbm: 4.6.0
+2025-11-28 16:12:36,024:INFO:               numba: 0.62.1
+2025-11-28 16:12:36,024:INFO:            requests: 2.32.5
+2025-11-28 16:12:36,024:INFO:          matplotlib: 3.7.5
+2025-11-28 16:12:36,024:INFO:          scikitplot: 0.3.7
+2025-11-28 16:12:36,024:INFO:         yellowbrick: 1.5
+2025-11-28 16:12:36,024:INFO:              plotly: 6.5.0
+2025-11-28 16:12:36,024:INFO:    plotly-resampler: Not installed
+2025-11-28 16:12:36,024:INFO:             kaleido: 1.2.0
+2025-11-28 16:12:36,024:INFO:           schemdraw: 0.15
+2025-11-28 16:12:36,024:INFO:         statsmodels: 0.14.5
+2025-11-28 16:12:36,024:INFO:              sktime: 0.26.0
+2025-11-28 16:12:36,024:INFO:               tbats: 1.1.3
+2025-11-28 16:12:36,024:INFO:            pmdarima: 2.0.4
+2025-11-28 16:12:36,024:INFO:              psutil: 7.1.3
+2025-11-28 16:12:36,024:INFO:          markupsafe: 3.0.3
+2025-11-28 16:12:36,024:INFO:             pickle5: Not installed
+2025-11-28 16:12:36,024:INFO:         cloudpickle: 3.1.2
+2025-11-28 16:12:36,024:INFO:         deprecation: 2.1.0
+2025-11-28 16:12:36,024:INFO:              xxhash: 3.6.0
+2025-11-28 16:12:36,024:INFO:           wurlitzer: 3.1.1
+2025-11-28 16:12:36,024:INFO:PyCaret optional dependencies:
+2025-11-28 16:12:36,059:INFO:                shap: Not installed
+2025-11-28 16:12:36,059:INFO:           interpret: Not installed
+2025-11-28 16:12:36,059:INFO:                umap: Not installed
+2025-11-28 16:12:36,059:INFO:     ydata_profiling: Not installed
+2025-11-28 16:12:36,059:INFO:  explainerdashboard: Not installed
+2025-11-28 16:12:36,059:INFO:             autoviz: Not installed
+2025-11-28 16:12:36,059:INFO:           fairlearn: Not installed
+2025-11-28 16:12:36,059:INFO:          deepchecks: Not installed
+2025-11-28 16:12:36,059:INFO:             xgboost: Not installed
+2025-11-28 16:12:36,059:INFO:            catboost: Not installed
+2025-11-28 16:12:36,059:INFO:              kmodes: Not installed
+2025-11-28 16:12:36,059:INFO:             mlxtend: Not installed
+2025-11-28 16:12:36,060:INFO:       statsforecast: Not installed
+2025-11-28 16:12:36,060:INFO:        tune_sklearn: Not installed
+2025-11-28 16:12:36,060:INFO:                 ray: Not installed
+2025-11-28 16:12:36,060:INFO:            hyperopt: Not installed
+2025-11-28 16:12:36,060:INFO:              optuna: Not installed
+2025-11-28 16:12:36,060:INFO:               skopt: Not installed
+2025-11-28 16:12:36,060:INFO:              mlflow: Not installed
+2025-11-28 16:12:36,060:INFO:              gradio: Not installed
+2025-11-28 16:12:36,060:INFO:             fastapi: Not installed
+2025-11-28 16:12:36,060:INFO:             uvicorn: Not installed
+2025-11-28 16:12:36,060:INFO:              m2cgen: Not installed
+2025-11-28 16:12:36,060:INFO:           evidently: Not installed
+2025-11-28 16:12:36,060:INFO:               fugue: Not installed
+2025-11-28 16:12:36,060:INFO:           streamlit: Not installed
+2025-11-28 16:12:36,060:INFO:             prophet: Not installed
+2025-11-28 16:12:36,060:INFO:None
+2025-11-28 16:12:36,060:INFO:Set up data.
+2025-11-28 16:12:36,318:INFO:Set up folding strategy.
+2025-11-28 16:12:36,319:INFO:Set up train/test split.
+2025-11-28 16:12:36,529:INFO:Set up index.
+2025-11-28 16:12:36,532:INFO:Assigning column types.
+2025-11-28 16:12:36,738:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-11-28 16:12:36,804:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-28 16:12:36,808:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-28 16:12:36,855:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:36,856:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:36,923:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-28 16:12:36,924:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-28 16:12:36,966:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:36,966:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:36,966:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-11-28 16:12:37,035:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-28 16:12:37,076:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,077:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,146:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-28 16:12:37,187:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,187:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,188:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-11-28 16:12:37,298:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,298:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,409:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,410:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:37,412:INFO:Preparing preprocessing pipeline...
+2025-11-28 16:12:37,441:INFO:Set up simple imputation.
+2025-11-28 16:12:37,524:INFO:Set up encoding of ordinal features.
+2025-11-28 16:12:37,582:INFO:Set up encoding of categorical features.
+2025-11-28 16:12:37,583:INFO:Set up imbalanced handling.
+2025-11-28 16:12:38,329:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:12:39,760:INFO:Finished creating preprocessing pipeline.
+2025-11-28 16:12:39,789:INFO:Pipeline: Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['STATE', 'FMONTH', 'DISPCODE',
+                                             'PSU', 'CTELENM1', 'PVTRESD1',
+                                             'COLGHOUS', 'STATERE1', 'CELPHON1',
+                                             'LADULT1', 'COLGSEX1', 'NUMADULT',
+                                             'LANDSEX1', 'NUMMEN', 'NUMWOMEN',
+                                             'RESPSLCT', 'SAFETIME', 'CTELNUM1',
+                                             'CELLFON5', 'CADULT1', 'CELLSEX1',
+                                             'PVTRESD3', 'CCL...
+                                    transformer=TargetEncoder(cols=['IDATE',
+                                                                    'IDAY'],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              hierarchy=None,
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=42,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False)
+2025-11-28 16:12:39,790:INFO:Creating final display dataframe.
+2025-11-28 16:12:42,051:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:12:44,870:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target          CVDINFR4
+2                   Target type            Binary
+3           Original data shape      (20000, 327)
+4        Transformed data shape      (32424, 333)
+5   Transformed train set shape      (26424, 333)
+6    Transformed test set shape       (6000, 333)
+7              Numeric features               322
+8          Categorical features                 4
+9      Rows with missing values            100.0%
+10                   Preprocess              True
+11              Imputation type            simple
+12           Numeric imputation              mean
+13       Categorical imputation              mode
+14     Maximum one-hot encoding                25
+15              Encoding method              None
+16                Fix imbalance              True
+17         Fix imbalance method             SMOTE
+18               Fold Generator   StratifiedKFold
+19                  Fold Number                10
+20                     CPU Jobs                -1
+21                      Use GPU             False
+22               Log Experiment             False
+23              Experiment Name  clf-default-name
+24                          USI              824c
+2025-11-28 16:12:44,979:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:44,979:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:45,088:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:45,089:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-28 16:12:45,091:INFO:setup() successfully completed in 9.1s...............
+2025-11-28 16:12:45,091:INFO:Initializing compare_models()
+2025-11-28 16:12:45,091:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, include=None, exclude=None, fold=None, round=4, cross_validation=True, sort=Recall, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Recall', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>})
+2025-11-28 16:12:45,091:INFO:Checking exceptions
+2025-11-28 16:12:45,229:INFO:Preparing display monitor
+2025-11-28 16:12:45,233:INFO:Initializing Logistic Regression
+2025-11-28 16:12:45,234:INFO:Total runtime is 1.9391377766927082e-06 minutes
+2025-11-28 16:12:45,234:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:12:45,234:INFO:Initializing create_model()
+2025-11-28 16:12:45,234:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:12:45,234:INFO:Checking exceptions
+2025-11-28 16:12:45,234:INFO:Importing libraries
+2025-11-28 16:12:45,234:INFO:Copying training dataset
+2025-11-28 16:12:45,446:INFO:Defining folds
+2025-11-28 16:12:45,446:INFO:Declaring metric variables
+2025-11-28 16:12:45,446:INFO:Importing untrained model
+2025-11-28 16:12:45,447:INFO:Logistic Regression Imported successfully
+2025-11-28 16:12:45,447:INFO:Starting cross validation
+2025-11-28 16:12:45,451:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:12:49,041:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:12:49,143:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:12:49,262:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:12:49,394:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:06,594:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:07,137:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:07,760:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:07,777:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:07,824:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:07,840:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:07,926:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:07,942:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:08,248:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:08,336:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:08,437:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:23,634:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:23,651:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:24,066:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:25,208:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:25,224:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:25,270:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:25,286:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:25,585:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:25,803:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:25,820:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:37,339:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:39,703:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-28 16:13:39,719:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:39,874:INFO:Calculating mean and std
+2025-11-28 16:13:39,875:INFO:Creating metrics dataframe
+2025-11-28 16:13:39,879:INFO:Uploading results into container
+2025-11-28 16:13:39,880:INFO:Uploading model into container now
+2025-11-28 16:13:39,880:INFO:_master_model_container: 1
+2025-11-28 16:13:39,880:INFO:_display_container: 2
+2025-11-28 16:13:39,881:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-11-28 16:13:39,881:INFO:create_model() successfully completed......................................
+2025-11-28 16:13:40,022:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:13:40,022:INFO:Creating metrics dataframe
+2025-11-28 16:13:40,026:INFO:Initializing K Neighbors Classifier
+2025-11-28 16:13:40,026:INFO:Total runtime is 0.9132046302159628 minutes
+2025-11-28 16:13:40,026:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:13:40,026:INFO:Initializing create_model()
+2025-11-28 16:13:40,026:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:13:40,026:INFO:Checking exceptions
+2025-11-28 16:13:40,026:INFO:Importing libraries
+2025-11-28 16:13:40,026:INFO:Copying training dataset
+2025-11-28 16:13:40,262:INFO:Defining folds
+2025-11-28 16:13:40,262:INFO:Declaring metric variables
+2025-11-28 16:13:40,263:INFO:Importing untrained model
+2025-11-28 16:13:40,263:INFO:K Neighbors Classifier Imported successfully
+2025-11-28 16:13:40,263:INFO:Starting cross validation
+2025-11-28 16:13:40,268:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:13:40,536:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:40,600:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:40,646:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:40,749:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:41,472:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:41,558:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:41,592:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:41,800:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:43,683:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:43,763:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:43,975:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:44,285:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:44,634:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:44,671:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:44,937:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:45,222:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:46,769:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:46,813:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:47,673:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:47,749:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:49,610:INFO:Calculating mean and std
+2025-11-28 16:13:49,611:INFO:Creating metrics dataframe
+2025-11-28 16:13:49,613:INFO:Uploading results into container
+2025-11-28 16:13:49,614:INFO:Uploading model into container now
+2025-11-28 16:13:49,614:INFO:_master_model_container: 2
+2025-11-28 16:13:49,614:INFO:_display_container: 2
+2025-11-28 16:13:49,615:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2025-11-28 16:13:49,615:INFO:create_model() successfully completed......................................
+2025-11-28 16:13:49,716:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:13:49,717:INFO:Creating metrics dataframe
+2025-11-28 16:13:49,720:INFO:Initializing Naive Bayes
+2025-11-28 16:13:49,720:INFO:Total runtime is 1.074781592686971 minutes
+2025-11-28 16:13:49,720:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:13:49,721:INFO:Initializing create_model()
+2025-11-28 16:13:49,721:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:13:49,721:INFO:Checking exceptions
+2025-11-28 16:13:49,721:INFO:Importing libraries
+2025-11-28 16:13:49,721:INFO:Copying training dataset
+2025-11-28 16:13:49,935:INFO:Defining folds
+2025-11-28 16:13:49,935:INFO:Declaring metric variables
+2025-11-28 16:13:49,935:INFO:Importing untrained model
+2025-11-28 16:13:49,935:INFO:Naive Bayes Imported successfully
+2025-11-28 16:13:49,936:INFO:Starting cross validation
+2025-11-28 16:13:49,940:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:13:50,212:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:50,370:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:50,406:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:50,414:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,231:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,384:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,385:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,439:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,729:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,762:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,842:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:51,892:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:52,763:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:52,765:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:52,867:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:52,915:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:53,131:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:53,182:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:54,107:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:54,179:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:54,333:INFO:Calculating mean and std
+2025-11-28 16:13:54,334:INFO:Creating metrics dataframe
+2025-11-28 16:13:54,337:INFO:Uploading results into container
+2025-11-28 16:13:54,337:INFO:Uploading model into container now
+2025-11-28 16:13:54,338:INFO:_master_model_container: 3
+2025-11-28 16:13:54,338:INFO:_display_container: 2
+2025-11-28 16:13:54,338:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2025-11-28 16:13:54,338:INFO:create_model() successfully completed......................................
+2025-11-28 16:13:54,439:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:13:54,439:INFO:Creating metrics dataframe
+2025-11-28 16:13:54,442:INFO:Initializing Decision Tree Classifier
+2025-11-28 16:13:54,442:INFO:Total runtime is 1.153481403986613 minutes
+2025-11-28 16:13:54,442:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:13:54,443:INFO:Initializing create_model()
+2025-11-28 16:13:54,443:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:13:54,443:INFO:Checking exceptions
+2025-11-28 16:13:54,443:INFO:Importing libraries
+2025-11-28 16:13:54,443:INFO:Copying training dataset
+2025-11-28 16:13:54,656:INFO:Defining folds
+2025-11-28 16:13:54,656:INFO:Declaring metric variables
+2025-11-28 16:13:54,656:INFO:Importing untrained model
+2025-11-28 16:13:54,657:INFO:Decision Tree Classifier Imported successfully
+2025-11-28 16:13:54,657:INFO:Starting cross validation
+2025-11-28 16:13:54,661:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:13:54,959:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:55,014:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:55,063:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:55,155:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:58,513:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:58,577:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:58,698:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:58,754:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:58,911:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:59,062:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:59,089:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:13:59,242:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:01,924:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:02,001:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:02,223:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:02,250:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:02,308:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:02,355:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:05,190:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:05,719:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:05,871:INFO:Calculating mean and std
+2025-11-28 16:14:05,872:INFO:Creating metrics dataframe
+2025-11-28 16:14:05,874:INFO:Uploading results into container
+2025-11-28 16:14:05,875:INFO:Uploading model into container now
+2025-11-28 16:14:05,875:INFO:_master_model_container: 4
+2025-11-28 16:14:05,875:INFO:_display_container: 2
+2025-11-28 16:14:05,876:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=42, splitter='best')
+2025-11-28 16:14:05,876:INFO:create_model() successfully completed......................................
+2025-11-28 16:14:05,973:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:14:05,973:INFO:Creating metrics dataframe
+2025-11-28 16:14:05,976:INFO:Initializing SVM - Linear Kernel
+2025-11-28 16:14:05,977:INFO:Total runtime is 1.3457196672757468 minutes
+2025-11-28 16:14:05,977:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:14:05,977:INFO:Initializing create_model()
+2025-11-28 16:14:05,977:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:14:05,977:INFO:Checking exceptions
+2025-11-28 16:14:05,977:INFO:Importing libraries
+2025-11-28 16:14:05,977:INFO:Copying training dataset
+2025-11-28 16:14:06,196:INFO:Defining folds
+2025-11-28 16:14:06,196:INFO:Declaring metric variables
+2025-11-28 16:14:06,196:INFO:Importing untrained model
+2025-11-28 16:14:06,197:INFO:SVM - Linear Kernel Imported successfully
+2025-11-28 16:14:06,197:INFO:Starting cross validation
+2025-11-28 16:14:06,201:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:14:06,569:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:06,597:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:06,645:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:06,684:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:13,336:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:13,433:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:13,479:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:13,577:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:13,726:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:13,827:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:18,842:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:18,897:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:18,984:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:19,041:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:19,222:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:19,324:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:20,487:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:20,630:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:20,948:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:23,941:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:24,393:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:29,217:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:31,556:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:31,695:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:33,489:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:33,629:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:36,643:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:36,779:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-28 16:14:36,794:INFO:Calculating mean and std
+2025-11-28 16:14:36,795:INFO:Creating metrics dataframe
+2025-11-28 16:14:36,797:INFO:Uploading results into container
+2025-11-28 16:14:36,798:INFO:Uploading model into container now
+2025-11-28 16:14:36,798:INFO:_master_model_container: 5
+2025-11-28 16:14:36,799:INFO:_display_container: 2
+2025-11-28 16:14:36,799:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2025-11-28 16:14:36,799:INFO:create_model() successfully completed......................................
+2025-11-28 16:14:36,901:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:14:36,901:INFO:Creating metrics dataframe
+2025-11-28 16:14:36,904:INFO:Initializing Ridge Classifier
+2025-11-28 16:14:36,905:INFO:Total runtime is 1.8611862341562908 minutes
+2025-11-28 16:14:36,905:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:14:36,905:INFO:Initializing create_model()
+2025-11-28 16:14:36,905:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:14:36,905:INFO:Checking exceptions
+2025-11-28 16:14:36,905:INFO:Importing libraries
+2025-11-28 16:14:36,905:INFO:Copying training dataset
+2025-11-28 16:14:37,120:INFO:Defining folds
+2025-11-28 16:14:37,120:INFO:Declaring metric variables
+2025-11-28 16:14:37,120:INFO:Importing untrained model
+2025-11-28 16:14:37,120:INFO:Ridge Classifier Imported successfully
+2025-11-28 16:14:37,121:INFO:Starting cross validation
+2025-11-28 16:14:37,125:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:14:37,411:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:37,490:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:37,517:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:37,612:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:38,534:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:38,576:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:38,608:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:38,747:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:38,908:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:38,956:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:39,059:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:39,145:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:40,002:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:40,022:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:40,164:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:40,263:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:40,407:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:40,455:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:41,470:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:41,553:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:41,706:INFO:Calculating mean and std
+2025-11-28 16:14:41,707:INFO:Creating metrics dataframe
+2025-11-28 16:14:41,709:INFO:Uploading results into container
+2025-11-28 16:14:41,709:INFO:Uploading model into container now
+2025-11-28 16:14:41,710:INFO:_master_model_container: 6
+2025-11-28 16:14:41,710:INFO:_display_container: 2
+2025-11-28 16:14:41,710:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001)
+2025-11-28 16:14:41,710:INFO:create_model() successfully completed......................................
+2025-11-28 16:14:41,812:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:14:41,812:INFO:Creating metrics dataframe
+2025-11-28 16:14:41,816:INFO:Initializing Random Forest Classifier
+2025-11-28 16:14:41,816:INFO:Total runtime is 1.9430511077245078 minutes
+2025-11-28 16:14:41,817:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:14:41,817:INFO:Initializing create_model()
+2025-11-28 16:14:41,817:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:14:41,817:INFO:Checking exceptions
+2025-11-28 16:14:41,817:INFO:Importing libraries
+2025-11-28 16:14:41,817:INFO:Copying training dataset
+2025-11-28 16:14:42,029:INFO:Defining folds
+2025-11-28 16:14:42,029:INFO:Declaring metric variables
+2025-11-28 16:14:42,029:INFO:Importing untrained model
+2025-11-28 16:14:42,030:INFO:Random Forest Classifier Imported successfully
+2025-11-28 16:14:42,030:INFO:Starting cross validation
+2025-11-28 16:14:42,034:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:14:42,372:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:42,410:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:42,503:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:14:42,505:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:02,401:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:02,439:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:02,613:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:02,623:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:02,944:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:02,991:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:03,080:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:03,267:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:20,565:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:20,675:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:20,690:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:20,711:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:21,050:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:21,176:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:30,053:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:30,540:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:30,786:INFO:Calculating mean and std
+2025-11-28 16:15:30,786:INFO:Creating metrics dataframe
+2025-11-28 16:15:30,789:INFO:Uploading results into container
+2025-11-28 16:15:30,790:INFO:Uploading model into container now
+2025-11-28 16:15:30,790:INFO:_master_model_container: 7
+2025-11-28 16:15:30,790:INFO:_display_container: 2
+2025-11-28 16:15:30,791:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-11-28 16:15:30,791:INFO:create_model() successfully completed......................................
+2025-11-28 16:15:30,900:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:15:30,900:INFO:Creating metrics dataframe
+2025-11-28 16:15:30,904:INFO:Initializing Quadratic Discriminant Analysis
+2025-11-28 16:15:30,904:INFO:Total runtime is 2.7611717700958254 minutes
+2025-11-28 16:15:30,904:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:15:30,904:INFO:Initializing create_model()
+2025-11-28 16:15:30,904:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:15:30,904:INFO:Checking exceptions
+2025-11-28 16:15:30,904:INFO:Importing libraries
+2025-11-28 16:15:30,904:INFO:Copying training dataset
+2025-11-28 16:15:31,120:INFO:Defining folds
+2025-11-28 16:15:31,120:INFO:Declaring metric variables
+2025-11-28 16:15:31,120:INFO:Importing untrained model
+2025-11-28 16:15:31,121:INFO:Quadratic Discriminant Analysis Imported successfully
+2025-11-28 16:15:31,121:INFO:Starting cross validation
+2025-11-28 16:15:31,125:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:15:31,403:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:31,452:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:31,614:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:31,617:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:32,941:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:32,943:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:33,147:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:33,153:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:33,593:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:33,598:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:33,805:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:33,812:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:34,008:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:34,102:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:34,308:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:34,325:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:35,540:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:35,618:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:35,822:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:35,851:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:36,195:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:36,286:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:36,479:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:36,512:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:36,649:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:36,799:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:38,161:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:38,284:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-11-28 16:15:38,805:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:38,927:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:39,117:INFO:Calculating mean and std
+2025-11-28 16:15:39,118:INFO:Creating metrics dataframe
+2025-11-28 16:15:39,120:INFO:Uploading results into container
+2025-11-28 16:15:39,121:INFO:Uploading model into container now
+2025-11-28 16:15:39,121:INFO:_master_model_container: 8
+2025-11-28 16:15:39,121:INFO:_display_container: 2
+2025-11-28 16:15:39,122:INFO:QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
+                              store_covariance=False, tol=0.0001)
+2025-11-28 16:15:39,122:INFO:create_model() successfully completed......................................
+2025-11-28 16:15:39,222:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:15:39,222:INFO:Creating metrics dataframe
+2025-11-28 16:15:39,225:INFO:Initializing Ada Boost Classifier
+2025-11-28 16:15:39,225:INFO:Total runtime is 2.899866882960002 minutes
+2025-11-28 16:15:39,226:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:15:39,226:INFO:Initializing create_model()
+2025-11-28 16:15:39,226:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:15:39,226:INFO:Checking exceptions
+2025-11-28 16:15:39,226:INFO:Importing libraries
+2025-11-28 16:15:39,226:INFO:Copying training dataset
+2025-11-28 16:15:39,442:INFO:Defining folds
+2025-11-28 16:15:39,442:INFO:Declaring metric variables
+2025-11-28 16:15:39,442:INFO:Importing untrained model
+2025-11-28 16:15:39,443:INFO:Ada Boost Classifier Imported successfully
+2025-11-28 16:15:39,443:INFO:Starting cross validation
+2025-11-28 16:15:39,447:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:15:39,721:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:39,811:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:39,924:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:39,937:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:40,627:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:15:40,695:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:15:40,783:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:15:40,845:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:15:58,772:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:58,889:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:58,908:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:59,098:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:59,256:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:59,318:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:59,417:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:15:59,574:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:00,159:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:16:00,166:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:16:00,314:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:16:00,462:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:16:18,579:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:18,598:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:18,748:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:18,868:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:19,077:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:19,093:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:19,950:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:16:19,972:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/ensemble/_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-11-28 16:16:38,022:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:38,034:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:38,256:INFO:Calculating mean and std
+2025-11-28 16:16:38,257:INFO:Creating metrics dataframe
+2025-11-28 16:16:38,259:INFO:Uploading results into container
+2025-11-28 16:16:38,260:INFO:Uploading model into container now
+2025-11-28 16:16:38,260:INFO:_master_model_container: 9
+2025-11-28 16:16:38,261:INFO:_display_container: 2
+2025-11-28 16:16:38,261:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=42)
+2025-11-28 16:16:38,261:INFO:create_model() successfully completed......................................
+2025-11-28 16:16:38,369:INFO:SubProcess create_model() end ==================================
+2025-11-28 16:16:38,369:INFO:Creating metrics dataframe
+2025-11-28 16:16:38,372:INFO:Initializing Gradient Boosting Classifier
+2025-11-28 16:16:38,373:INFO:Total runtime is 3.8856521646181745 minutes
+2025-11-28 16:16:38,373:INFO:SubProcess create_model() called ==================================
+2025-11-28 16:16:38,373:INFO:Initializing create_model()
+2025-11-28 16:16:38,373:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f42a64623c0>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f42a513e3c0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-28 16:16:38,373:INFO:Checking exceptions
+2025-11-28 16:16:38,373:INFO:Importing libraries
+2025-11-28 16:16:38,373:INFO:Copying training dataset
+2025-11-28 16:16:38,592:INFO:Defining folds
+2025-11-28 16:16:38,592:INFO:Declaring metric variables
+2025-11-28 16:16:38,592:INFO:Importing untrained model
+2025-11-28 16:16:38,593:INFO:Gradient Boosting Classifier Imported successfully
+2025-11-28 16:16:38,593:INFO:Starting cross validation
+2025-11-28 16:16:38,597:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-28 16:16:38,859:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:38,932:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:39,070:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:16:39,094:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:13,642:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:13,676:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:14,018:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:14,050:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:14,056:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:14,147:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:14,525:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:18:14,534:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/sklearn/impute/_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'TOLDCFS' 'HAVECFS' 'WORKCFS']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-28 16:22:06,611:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,612:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,613:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,613:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,614:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,615:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,616:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,617:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,617:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,618:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,619:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,620:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,621:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,622:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,622:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,623:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,623:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,624:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,626:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,627:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,627:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,628:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,629:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,629:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,630:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,631:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,631:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,632:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,636:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,637:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,638:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,638:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,640:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,641:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,642:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,643:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,644:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,645:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,646:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,646:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,647:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,648:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,651:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,652:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,653:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,653:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,654:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,655:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,656:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,657:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,658:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,659:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,660:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,660:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,661:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,662:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,662:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,663:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,663:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,672:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,672:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,673:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,674:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,675:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,677:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,678:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,678:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,679:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,680:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,680:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,682:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,684:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,685:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,686:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,688:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,689:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,690:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,691:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,692:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,692:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,693:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,694:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,694:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,695:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,696:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,697:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,698:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,698:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,699:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,700:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,700:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,701:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,702:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,703:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,704:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,705:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,705:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,706:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,707:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,708:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,709:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,709:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-11-28 16:22:06,712:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:22:06,712:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:22:06,712:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:22:06,712:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:22:07,021:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/yellowbrick/style/colors.py:35: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  mpl_ge_150 = LooseVersion(mpl.__version__) >= "1.5.0"
+
+2025-11-28 16:22:07,022:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/setuptools/_distutils/version.py:336: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+
+2025-11-28 16:22:07,025:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/yellowbrick/style/rcmod.py:31: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  mpl_ge_150 = LooseVersion(mpl.__version__) >= "1.5.0"
+
+2025-11-28 16:22:07,025:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/setuptools/_distutils/version.py:336: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+
+2025-11-28 16:22:07,448:WARNING:/home/jules/.pyenv/versions/3.12.12/lib/python3.12/site-packages/scikitplot/plotters.py:33: DeprecationWarning: This module was deprecated in version 0.3.0 and its functions are spread throughout different modules. Please check the documentation and update your function calls as soon as possible. This module will be removed in 0.4.0
+  warnings.warn("This module was deprecated in version 0.3.0 and its functions "
+
+2025-11-28 16:24:57,871:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:24:57,872:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:24:57,872:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-28 16:24:57,872:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
