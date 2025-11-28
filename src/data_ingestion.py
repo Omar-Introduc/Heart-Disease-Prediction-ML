@@ -9,7 +9,7 @@ def load_and_process_data(filepath, output_dir):
     """
     print(f"Loading data from {filepath}...")
     try:
-        df, meta = pyreadstat.read_xport(filepath)
+        df, meta = pyreadstat.read_xport(filepath,encoding='latin1')
     except Exception as e:
         print(f"Error reading XPT file: {e}")
         return None
@@ -67,7 +67,8 @@ def load_and_process_data(filepath, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    output_path = os.path.join(output_dir, "processed_data.parquet")
+    #output_path = os.path.join(output_dir, "processed_data.parquet")
+    output_path = os.path.join(output_dir, "processed_data_profundo.parquet")
     print(f"Saving to {output_path}...")
     df.to_parquet(output_path) # Index (SEQNO) is preserved in Parquet
     print("Done.")
@@ -97,7 +98,8 @@ def split_data(df, target_col, test_size=0.2, random_state=42):
     return X_train, y_train, X_test, y_test
 
 if __name__ == "__main__":
-    raw_path = "data/01_raw/LLCP2022_10rows.xpt"
+    #raw_path = "data/01_raw/LLCP2022_10rows.xpt"
+    raw_path = "data/01_raw/LLCP2022.xpt"
     # Fallback to empty if not found, just to test script syntax
     if os.path.exists(raw_path):
         load_and_process_data(raw_path, "data/02_intermediate")

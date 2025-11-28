@@ -1,0 +1,96 @@
+2025-11-27 22:00:59,904:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:00:59,904:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:00:59,904:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:00:59,904:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:03:10,211:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:03:10,221:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:03:10,221:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:03:10,221:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 22:03:39,195:INFO:Initializing predict_model()
+2025-11-27 22:03:39,195:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDDDE0>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC12D0>)
+2025-11-27 22:03:39,195:INFO:Checking exceptions
+2025-11-27 22:03:39,195:INFO:Preloading libraries
+2025-11-27 22:03:39,195:INFO:Initializing predict_model()
+2025-11-27 22:03:39,195:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDDDE0>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC12D0>)
+2025-11-27 22:03:39,195:INFO:Checking exceptions
+2025-11-27 22:03:39,195:INFO:Preloading libraries
+2025-11-27 22:03:45,004:INFO:Initializing predict_model()
+2025-11-27 22:03:45,004:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDC190>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC1090>)
+2025-11-27 22:03:45,004:INFO:Checking exceptions
+2025-11-27 22:03:45,004:INFO:Preloading libraries
+2025-11-27 22:03:45,004:INFO:Initializing predict_model()
+2025-11-27 22:03:45,004:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002856CCA2680>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC1090>)
+2025-11-27 22:03:45,004:INFO:Checking exceptions
+2025-11-27 22:03:45,004:INFO:Preloading libraries
+2025-11-27 22:03:48,560:INFO:Initializing predict_model()
+2025-11-27 22:03:48,565:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDC760>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC0A60>)
+2025-11-27 22:03:48,565:INFO:Checking exceptions
+2025-11-27 22:03:48,565:INFO:Preloading libraries
+2025-11-27 22:03:48,565:INFO:Initializing predict_model()
+2025-11-27 22:03:48,565:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000285047BF730>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000285218EE320>)
+2025-11-27 22:03:48,565:INFO:Checking exceptions
+2025-11-27 22:03:48,565:INFO:Preloading libraries
+2025-11-27 22:04:14,381:INFO:Initializing predict_model()
+2025-11-27 22:04:14,381:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDC280>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC1C60>)
+2025-11-27 22:04:14,381:INFO:Checking exceptions
+2025-11-27 22:04:14,381:INFO:Preloading libraries
+2025-11-27 22:04:14,381:INFO:Initializing predict_model()
+2025-11-27 22:04:14,381:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDC280>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC1C60>)
+2025-11-27 22:04:14,381:INFO:Checking exceptions
+2025-11-27 22:04:14,388:INFO:Preloading libraries
+2025-11-27 22:04:20,303:INFO:Initializing predict_model()
+2025-11-27 22:04:20,303:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002851E86AB90>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521B98310>)
+2025-11-27 22:04:20,304:INFO:Checking exceptions
+2025-11-27 22:04:20,304:INFO:Preloading libraries
+2025-11-27 22:04:20,304:INFO:Initializing predict_model()
+2025-11-27 22:04:20,304:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002851E86AB90>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000285218EE320>)
+2025-11-27 22:04:20,304:INFO:Checking exceptions
+2025-11-27 22:04:20,304:INFO:Preloading libraries
+2025-11-27 22:04:23,294:INFO:Initializing predict_model()
+2025-11-27 22:04:23,294:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDE650>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521B77E20>)
+2025-11-27 22:04:23,294:INFO:Checking exceptions
+2025-11-27 22:04:23,294:INFO:Preloading libraries
+2025-11-27 22:04:23,294:INFO:Initializing predict_model()
+2025-11-27 22:04:23,294:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDE650>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521B77E20>)
+2025-11-27 22:04:23,294:INFO:Checking exceptions
+2025-11-27 22:04:23,294:INFO:Preloading libraries
+2025-11-27 22:04:25,854:INFO:Initializing predict_model()
+2025-11-27 22:04:25,855:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDF910>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC1CF0>)
+2025-11-27 22:04:25,855:INFO:Checking exceptions
+2025-11-27 22:04:25,855:INFO:Preloading libraries
+2025-11-27 22:04:25,855:INFO:Initializing predict_model()
+2025-11-27 22:04:25,855:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDF910>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC1CF0>)
+2025-11-27 22:04:25,855:INFO:Checking exceptions
+2025-11-27 22:04:25,855:INFO:Preloading libraries
+2025-11-27 22:04:27,856:INFO:Initializing predict_model()
+2025-11-27 22:04:27,856:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDCB80>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC0A60>)
+2025-11-27 22:04:27,856:INFO:Checking exceptions
+2025-11-27 22:04:27,856:INFO:Preloading libraries
+2025-11-27 22:04:27,857:INFO:Initializing predict_model()
+2025-11-27 22:04:27,857:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDCB80>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521B77F40>)
+2025-11-27 22:04:27,857:INFO:Checking exceptions
+2025-11-27 22:04:27,857:INFO:Preloading libraries
+2025-11-27 22:04:41,260:INFO:Initializing predict_model()
+2025-11-27 22:04:41,260:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDD090>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC0A60>)
+2025-11-27 22:04:41,260:INFO:Checking exceptions
+2025-11-27 22:04:41,260:INFO:Preloading libraries
+2025-11-27 22:04:41,260:INFO:Initializing predict_model()
+2025-11-27 22:04:41,260:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002851F970C10>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521DC0A60>)
+2025-11-27 22:04:41,260:INFO:Checking exceptions
+2025-11-27 22:04:41,260:INFO:Preloading libraries
+2025-11-27 22:04:43,209:INFO:Initializing predict_model()
+2025-11-27 22:04:43,209:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDEC20>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028521B98040>)
+2025-11-27 22:04:43,209:INFO:Checking exceptions
+2025-11-27 22:04:43,209:INFO:Preloading libraries
+2025-11-27 22:04:43,209:INFO:Initializing predict_model()
+2025-11-27 22:04:43,209:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028521DDEC20>, estimator=Pipeline(steps=[('classifier', DummyClassifier())]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002856BC46200>)
+2025-11-27 22:04:43,209:INFO:Checking exceptions
+2025-11-27 22:04:43,209:INFO:Preloading libraries

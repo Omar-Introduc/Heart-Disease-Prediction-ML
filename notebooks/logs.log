@@ -1,0 +1,1693 @@
+2025-11-27 21:35:32,191:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 21:35:32,191:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 21:35:32,191:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 21:35:32,191:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-27 21:35:33,204:INFO:PyCaret ClassificationExperiment
+2025-11-27 21:35:33,204:INFO:Logging name: clf-default-name
+2025-11-27 21:35:33,204:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-11-27 21:35:33,204:INFO:version 3.3.2
+2025-11-27 21:35:33,204:INFO:Initializing setup()
+2025-11-27 21:35:33,204:INFO:self.USI: b0f4
+2025-11-27 21:35:33,204:INFO:self._variable_keys: {'seed', 'logging_param', 'html_param', 'X', 'USI', 'is_multiclass', 'X_train', 'data', 'fold_generator', 'exp_id', 'idx', 'log_plots_param', 'fold_groups_param', 'X_test', 'pipeline', 'gpu_param', 'fix_imbalance', 'target_param', 'y_train', 'exp_name_log', 'y_test', 'y', 'fold_shuffle_param', 'n_jobs_param', 'memory', 'gpu_n_jobs_param', '_available_plots', '_ml_usecase'}
+2025-11-27 21:35:33,204:INFO:Checking environment
+2025-11-27 21:35:33,204:INFO:python_version: 3.10.19
+2025-11-27 21:35:33,204:INFO:python_build: ('main', 'Oct 22 2025 22:23:22')
+2025-11-27 21:35:33,204:INFO:machine: AMD64
+2025-11-27 21:35:33,204:INFO:platform: Windows-10-10.0.26100-SP0
+2025-11-27 21:35:33,204:INFO:Memory: svmem(total=16282144768, available=5985746944, percent=63.2, used=10296397824, free=5985746944)
+2025-11-27 21:35:33,204:INFO:Physical Core: 6
+2025-11-27 21:35:33,204:INFO:Logical Core: 12
+2025-11-27 21:35:33,204:INFO:Checking libraries
+2025-11-27 21:35:33,204:INFO:System:
+2025-11-27 21:35:33,204:INFO:    python: 3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:23:22) [MSC v.1944 64 bit (AMD64)]
+2025-11-27 21:35:33,204:INFO:executable: c:\Users\OMAR\miniconda3\envs\xgb_env\python.exe
+2025-11-27 21:35:33,204:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-11-27 21:35:33,204:INFO:PyCaret required dependencies:
+2025-11-27 21:35:33,204:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:33,268:INFO:                 pip: 25.3
+2025-11-27 21:35:33,268:INFO:          setuptools: 80.9.0
+2025-11-27 21:35:33,268:INFO:             pycaret: 3.3.2
+2025-11-27 21:35:33,268:INFO:             IPython: 8.37.0
+2025-11-27 21:35:33,268:INFO:          ipywidgets: 8.1.8
+2025-11-27 21:35:33,268:INFO:                tqdm: 4.67.1
+2025-11-27 21:35:33,268:INFO:               numpy: 1.26.4
+2025-11-27 21:35:33,268:INFO:              pandas: 2.1.4
+2025-11-27 21:35:33,268:INFO:              jinja2: 3.1.6
+2025-11-27 21:35:33,268:INFO:               scipy: 1.11.4
+2025-11-27 21:35:33,268:INFO:              joblib: 1.3.2
+2025-11-27 21:35:33,268:INFO:             sklearn: 1.4.2
+2025-11-27 21:35:33,268:INFO:                pyod: 2.0.5
+2025-11-27 21:35:33,268:INFO:            imblearn: 0.14.0
+2025-11-27 21:35:33,268:INFO:   category_encoders: 2.7.0
+2025-11-27 21:35:33,272:INFO:            lightgbm: 4.6.0
+2025-11-27 21:35:33,272:INFO:               numba: 0.62.1
+2025-11-27 21:35:33,272:INFO:            requests: 2.32.5
+2025-11-27 21:35:33,272:INFO:          matplotlib: 3.7.5
+2025-11-27 21:35:33,272:INFO:          scikitplot: 0.3.7
+2025-11-27 21:35:33,272:INFO:         yellowbrick: 1.5
+2025-11-27 21:35:33,272:INFO:              plotly: 6.5.0
+2025-11-27 21:35:33,272:INFO:    plotly-resampler: Not installed
+2025-11-27 21:35:33,272:INFO:             kaleido: 1.2.0
+2025-11-27 21:35:33,272:INFO:           schemdraw: 0.15
+2025-11-27 21:35:33,272:INFO:         statsmodels: 0.14.5
+2025-11-27 21:35:33,272:INFO:              sktime: 0.26.0
+2025-11-27 21:35:33,272:INFO:               tbats: 1.1.3
+2025-11-27 21:35:33,272:INFO:            pmdarima: 2.0.4
+2025-11-27 21:35:33,272:INFO:              psutil: 7.1.3
+2025-11-27 21:35:33,272:INFO:          markupsafe: 3.0.3
+2025-11-27 21:35:33,272:INFO:             pickle5: Not installed
+2025-11-27 21:35:33,272:INFO:         cloudpickle: 3.1.2
+2025-11-27 21:35:33,272:INFO:         deprecation: 2.1.0
+2025-11-27 21:35:33,272:INFO:              xxhash: 3.6.0
+2025-11-27 21:35:33,272:INFO:           wurlitzer: Not installed
+2025-11-27 21:35:33,272:INFO:PyCaret optional dependencies:
+2025-11-27 21:35:33,279:INFO:                shap: 0.48.0
+2025-11-27 21:35:33,279:INFO:           interpret: Not installed
+2025-11-27 21:35:33,279:INFO:                umap: Not installed
+2025-11-27 21:35:33,279:INFO:     ydata_profiling: Not installed
+2025-11-27 21:35:33,279:INFO:  explainerdashboard: Not installed
+2025-11-27 21:35:33,279:INFO:             autoviz: Not installed
+2025-11-27 21:35:33,279:INFO:           fairlearn: 0.12.0.dev0
+2025-11-27 21:35:33,279:INFO:          deepchecks: Not installed
+2025-11-27 21:35:33,279:INFO:             xgboost: 3.1.2
+2025-11-27 21:35:33,279:INFO:            catboost: Not installed
+2025-11-27 21:35:33,279:INFO:              kmodes: Not installed
+2025-11-27 21:35:33,279:INFO:             mlxtend: Not installed
+2025-11-27 21:35:33,279:INFO:       statsforecast: Not installed
+2025-11-27 21:35:33,279:INFO:        tune_sklearn: Not installed
+2025-11-27 21:35:33,279:INFO:                 ray: Not installed
+2025-11-27 21:35:33,279:INFO:            hyperopt: Not installed
+2025-11-27 21:35:33,279:INFO:              optuna: Not installed
+2025-11-27 21:35:33,279:INFO:               skopt: Not installed
+2025-11-27 21:35:33,279:INFO:              mlflow: Not installed
+2025-11-27 21:35:33,279:INFO:              gradio: Not installed
+2025-11-27 21:35:33,279:INFO:             fastapi: Not installed
+2025-11-27 21:35:33,279:INFO:             uvicorn: Not installed
+2025-11-27 21:35:33,279:INFO:              m2cgen: Not installed
+2025-11-27 21:35:33,279:INFO:           evidently: Not installed
+2025-11-27 21:35:33,279:INFO:               fugue: Not installed
+2025-11-27 21:35:33,281:INFO:           streamlit: 1.51.0
+2025-11-27 21:35:33,281:INFO:             prophet: Not installed
+2025-11-27 21:35:33,281:INFO:None
+2025-11-27 21:35:33,281:INFO:Set up data.
+2025-11-27 21:35:33,317:INFO:Set up folding strategy.
+2025-11-27 21:35:33,317:INFO:Set up train/test split.
+2025-11-27 21:35:33,344:INFO:Set up index.
+2025-11-27 21:35:33,344:INFO:Assigning column types.
+2025-11-27 21:35:33,365:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-11-27 21:35:33,390:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-27 21:35:33,395:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-27 21:35:33,414:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:33,418:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:33,445:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-27 21:35:33,445:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-27 21:35:33,459:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:33,459:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:33,459:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-11-27 21:35:33,488:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-27 21:35:33,504:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:33,506:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:33,531:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-27 21:35:33,545:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:33,547:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:33,547:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-11-27 21:35:33,580:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:33,588:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:33,628:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:33,628:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:33,628:INFO:Preparing preprocessing pipeline...
+2025-11-27 21:35:33,637:INFO:Set up simple imputation.
+2025-11-27 21:35:33,645:INFO:Set up encoding of ordinal features.
+2025-11-27 21:35:33,651:INFO:Set up encoding of categorical features.
+2025-11-27 21:35:33,747:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:33,806:INFO:Finished creating preprocessing pipeline.
+2025-11-27 21:35:33,817:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['STATE', 'FMONTH', 'DISPCODE',
+                                             'PSU', 'CTELENM1', 'PVTRESD1',
+                                             'COLGHOUS', 'STATERE1', 'CELPHON1',
+                                             'LADULT1', 'COLGSEX1', 'NUMADULT',
+                                             'LANDSEX1', 'NUMMEN', 'NUMWOMEN',
+                                             'RESPSLCT', 'SAFETIME', 'CTELNUM1',
+                                             'CELLFON5', 'CADULT1...
+                                                                         'data_type': dtype('O'),
+                                                                         'mapping': 02     0
+03     1
+NaN   -1
+dtype: int64}],
+                                                               return_df=True,
+                                                               verbose=0))),
+                ('onehot_encoding',
+                 TransformerWrapper(exclude=None,
+                                    include=['IDATE', 'IDAY', 'IYEAR'],
+                                    transformer=OneHotEncoder(cols=['IDATE',
+                                                                    'IDAY',
+                                                                    'IYEAR'],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              return_df=True,
+                                                              use_cat_names=True,
+                                                              verbose=0)))],
+         verbose=False)
+2025-11-27 21:35:33,817:INFO:Creating final display dataframe.
+2025-11-27 21:35:34,009:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:34,131:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:34,254:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:34,381:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:34,432:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target          CVDINFR4
+2                   Target type            Binary
+3           Original data shape         (50, 327)
+4        Transformed data shape         (50, 226)
+5   Transformed train set shape         (35, 226)
+6    Transformed test set shape         (15, 226)
+7              Numeric features               322
+8          Categorical features                 4
+9      Rows with missing values            100.0%
+10                   Preprocess              True
+11              Imputation type            simple
+12           Numeric imputation              mean
+13       Categorical imputation              mode
+14     Maximum one-hot encoding                25
+15              Encoding method              None
+16               Fold Generator   StratifiedKFold
+17                  Fold Number                10
+18                     CPU Jobs                -1
+19                      Use GPU             False
+20               Log Experiment             False
+21              Experiment Name  clf-default-name
+22                          USI              b0f4
+2025-11-27 21:35:34,475:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:34,475:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:34,516:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-27 21:35:34,517:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-27 21:35:34,518:INFO:setup() successfully completed in 1.31s...............
+2025-11-27 21:35:34,518:INFO:Initializing compare_models()
+2025-11-27 21:35:34,518:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000024612C71C30>, include=['lr', 'dt'], fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x0000024612C71C30>, 'include': ['lr', 'dt'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Accuracy', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2025-11-27 21:35:34,518:INFO:Checking exceptions
+2025-11-27 21:35:34,534:INFO:Preparing display monitor
+2025-11-27 21:35:34,534:INFO:Initializing Logistic Regression
+2025-11-27 21:35:34,534:INFO:Total runtime is 0.0 minutes
+2025-11-27 21:35:34,534:INFO:SubProcess create_model() called ==================================
+2025-11-27 21:35:34,534:INFO:Initializing create_model()
+2025-11-27 21:35:34,534:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000024612C71C30>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000024612C71090>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-27 21:35:34,534:INFO:Checking exceptions
+2025-11-27 21:35:34,534:INFO:Importing libraries
+2025-11-27 21:35:34,534:INFO:Copying training dataset
+2025-11-27 21:35:34,558:INFO:Defining folds
+2025-11-27 21:35:34,558:INFO:Declaring metric variables
+2025-11-27 21:35:34,558:INFO:Importing untrained model
+2025-11-27 21:35:34,558:INFO:Logistic Regression Imported successfully
+2025-11-27 21:35:34,558:INFO:Starting cross validation
+2025-11-27 21:35:34,560:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-27 21:35:34,569:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\model_selection\_split.py:737: UserWarning: The least populated class in y has only 6 members, which is less than n_splits=10.
+  warnings.warn(
+
+2025-11-27 21:35:38,294:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,309:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,309:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,316:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,316:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,318:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,318:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,321:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,321:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,321:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:38,542:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'LASTSIG4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,544:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,547:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,547:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,552:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,554:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'COVIDPRM' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,558:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSGEND1'
+ 'RCSXBRTH' 'RCSRLTN2' 'CASTHDX2' 'CASTHNO2' 'BIRTHSEX' 'SOMALE'
+ 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4'
+ 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3' 'RRCOGNT2' 'RRTREAT'
+ 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CRACE2' 'CPRACE2' 'CAGEG' 'CLLCPWT']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,560:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'VCLNTES2' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,567:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,569:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'NUMPHON4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,654:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,660:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSGEND1'
+ 'RCSXBRTH' 'RCSRLTN2' 'CASTHDX2' 'CASTHNO2' 'BIRTHSEX' 'SOMALE'
+ 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4'
+ 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3' 'RRCOGNT2' 'RRTREAT'
+ 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CRACE2' 'CPRACE2' 'CAGEG' 'CLLCPWT']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,672:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,672:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,686:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'NUMPHON4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,686:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'LASTSIG4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,686:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\linear_model\_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-27 21:35:38,694:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'COVIDPRM' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,699:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\linear_model\_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-27 21:35:38,703:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'VCLNTES2' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,706:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,708:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,710:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:38,713:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,713:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\linear_model\_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-11-27 21:35:38,723:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:38,725:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,733:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:38,736:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,739:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,741:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,741:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:38,743:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:708: RuntimeWarning: invalid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-27 21:35:38,743:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:38,743:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:38,744:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,751:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,777:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:38,782:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:38,804:INFO:Calculating mean and std
+2025-11-27 21:35:38,806:INFO:Creating metrics dataframe
+2025-11-27 21:35:38,808:INFO:Uploading results into container
+2025-11-27 21:35:38,808:INFO:Uploading model into container now
+2025-11-27 21:35:38,809:INFO:_master_model_container: 1
+2025-11-27 21:35:38,809:INFO:_display_container: 2
+2025-11-27 21:35:38,809:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-11-27 21:35:38,809:INFO:create_model() successfully completed......................................
+2025-11-27 21:35:38,919:INFO:SubProcess create_model() end ==================================
+2025-11-27 21:35:38,919:INFO:Creating metrics dataframe
+2025-11-27 21:35:38,919:INFO:Initializing Decision Tree Classifier
+2025-11-27 21:35:38,919:INFO:Total runtime is 0.07307968934377035 minutes
+2025-11-27 21:35:38,919:INFO:SubProcess create_model() called ==================================
+2025-11-27 21:35:38,919:INFO:Initializing create_model()
+2025-11-27 21:35:38,919:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000024612C71C30>, estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000024612C71090>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-27 21:35:38,919:INFO:Checking exceptions
+2025-11-27 21:35:38,919:INFO:Importing libraries
+2025-11-27 21:35:38,919:INFO:Copying training dataset
+2025-11-27 21:35:38,941:INFO:Defining folds
+2025-11-27 21:35:38,941:INFO:Declaring metric variables
+2025-11-27 21:35:38,941:INFO:Importing untrained model
+2025-11-27 21:35:38,941:INFO:Decision Tree Classifier Imported successfully
+2025-11-27 21:35:38,941:INFO:Starting cross validation
+2025-11-27 21:35:38,944:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-27 21:35:38,944:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\model_selection\_split.py:737: UserWarning: The least populated class in y has only 6 members, which is less than n_splits=10.
+  warnings.warn(
+
+2025-11-27 21:35:38,994:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,004:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'VCLNTES2' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,004:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,020:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,025:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'NUMPHON4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,036:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,042:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'LASTSIG4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,052:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSGEND1'
+ 'RCSXBRTH' 'RCSRLTN2' 'CASTHDX2' 'CASTHNO2' 'BIRTHSEX' 'SOMALE'
+ 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4'
+ 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3' 'RRCOGNT2' 'RRTREAT'
+ 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CRACE2' 'CPRACE2' 'CAGEG' 'CLLCPWT']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,085:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'VCLNTES2' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,087:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,090:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,104:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,105:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'NUMPHON4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,114:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,126:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'LASTSIG4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,168:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSGEND1'
+ 'RCSXBRTH' 'RCSRLTN2' 'CASTHDX2' 'CASTHNO2' 'BIRTHSEX' 'SOMALE'
+ 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4'
+ 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3' 'RRCOGNT2' 'RRTREAT'
+ 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CRACE2' 'CPRACE2' 'CAGEG' 'CLLCPWT']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:39,190:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:39,192:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:39,192:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,195:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,195:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,196:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,198:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:39,198:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:708: RuntimeWarning: invalid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-27 21:35:39,198:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:39,204:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:39,204:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,210:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,210:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,210:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:39,210:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:708: RuntimeWarning: invalid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-27 21:35:39,210:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:39,214:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py:204: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 196, in _score
+    return super()._score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_scorer.py", line 350, in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\metrics.py", line 144, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\utils\_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 640, in roc_auc_score
+    return _average_binary_score(
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-27 21:35:39,217:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,218:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,220:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-27 21:35:39,220:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:39,220:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:708: RuntimeWarning: invalid value encountered in scalar divide
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-27 21:35:39,220:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+
+2025-11-27 21:35:40,931:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:40,937:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-27 21:35:41,075:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'COVIDPRM' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:41,075:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:41,123:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'COVIDPRM' 'PDIABTS1'
+ 'PREDIAB2' 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1'
+ 'DIABEDU1' 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4'
+ 'HPVADSHT' 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT'
+ 'COVIDFS1' 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST'
+ 'COPDSMOK' 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1'
+ 'CSRVSUM' 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN'
+ 'CSRVPAIN' 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST'
+ 'PCSTALK1' 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS'
+ 'CAREGIV1' 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD'
+ 'CRGVPER1' 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS'
+ 'ACEPRISN' 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH'
+ 'ACETTHEM' 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK'
+ 'MARJEAT' 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2'
+ 'STOPSMK2' 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK'
+ 'ASBIBING' 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2'
+ 'RCSXBRTH' 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX'
+ 'PFPPRVN4' 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER'
+ 'RRCLASS3' 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:41,125:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:41,175:INFO:Calculating mean and std
+2025-11-27 21:35:41,175:INFO:Creating metrics dataframe
+2025-11-27 21:35:41,177:INFO:Uploading results into container
+2025-11-27 21:35:41,177:INFO:Uploading model into container now
+2025-11-27 21:35:41,177:INFO:_master_model_container: 2
+2025-11-27 21:35:41,177:INFO:_display_container: 2
+2025-11-27 21:35:41,177:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=123, splitter='best')
+2025-11-27 21:35:41,177:INFO:create_model() successfully completed......................................
+2025-11-27 21:35:41,278:INFO:SubProcess create_model() end ==================================
+2025-11-27 21:35:41,278:INFO:Creating metrics dataframe
+2025-11-27 21:35:41,285:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:323: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
+  master_display_.apply(
+
+2025-11-27 21:35:41,285:INFO:Initializing create_model()
+2025-11-27 21:35:41,285:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000024612C71C30>, estimator=DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=123, splitter='best'), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-27 21:35:41,285:INFO:Checking exceptions
+2025-11-27 21:35:41,285:INFO:Importing libraries
+2025-11-27 21:35:41,285:INFO:Copying training dataset
+2025-11-27 21:35:41,308:INFO:Defining folds
+2025-11-27 21:35:41,309:INFO:Declaring metric variables
+2025-11-27 21:35:41,309:INFO:Importing untrained model
+2025-11-27 21:35:41,309:INFO:Declaring custom model
+2025-11-27 21:35:41,309:INFO:Decision Tree Classifier Imported successfully
+2025-11-27 21:35:41,310:INFO:Cross validation set to False
+2025-11-27 21:35:41,310:INFO:Fitting Model
+2025-11-27 21:35:41,322:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\impute\_base.py:577: UserWarning: Skipping features without any observed values: ['COLGHOUS' 'COLGSEX1' 'SAFETIME' 'CTELNUM1' 'CELLFON5' 'CADULT1'
+ 'CELLSEX1' 'PVTRESD3' 'CCLGHOUS' 'CSTATE1' 'LANDLINE' 'HHADULT'
+ 'LASTDEN4' 'RMVTETH4' 'BLDSTFIT' 'SDNATES1' 'PDIABTS1' 'PREDIAB2'
+ 'DIABTYPE' 'INSULIN1' 'CHKHEMO3' 'EYEEXAM1' 'DIABEYE1' 'DIABEDU1'
+ 'FEETSORE' 'TOLDCFS' 'HAVECFS' 'WORKCFS' 'IMFVPLA3' 'HPVADVC4' 'HPVADSHT'
+ 'SHINGLE2' 'COVIDVA1' 'COVACGET' 'COVIDNU1' 'COVIDINT' 'COVIDFS1'
+ 'COVIDSE1' 'COPDCOGH' 'COPDFLEM' 'COPDBRTH' 'COPDBTST' 'COPDSMOK'
+ 'CNCRDIFF' 'CNCRAGE' 'CNCRTYP2' 'CSRVTRT3' 'CSRVDOC1' 'CSRVSUM'
+ 'CSRVRTRN' 'CSRVINST' 'CSRVINSR' 'CSRVDEIN' 'CSRVCLIN' 'CSRVPAIN'
+ 'CSRVCTL2' 'PSATEST1' 'PSATIME1' 'PCPSARS2' 'PSASUGST' 'PCSTALK1'
+ 'CIMEMLOS' 'CDHOUSE' 'CDASSIST' 'CDHELP' 'CDSOCIAL' 'CDDISCUS' 'CAREGIV1'
+ 'CRGVREL4' 'CRGVLNG1' 'CRGVHRS1' 'CRGVPRB3' 'CRGVALZD' 'CRGVPER1'
+ 'CRGVHOU1' 'CRGVEXPT' 'ACEDEPRS' 'ACEDRINK' 'ACEDRUGS' 'ACEPRISN'
+ 'ACEDIVRC' 'ACEPUNCH' 'ACEHURT1' 'ACESWEAR' 'ACETOUCH' 'ACETTHEM'
+ 'ACEHVSEX' 'ACEADSAF' 'ACEADNED' 'MARIJAN1' 'MARJSMOK' 'MARJEAT'
+ 'MARJVAPE' 'MARJDAB' 'MARJOTHR' 'USEMRJN4' 'LASTSMK2' 'STOPSMK2'
+ 'MENTCIGS' 'MENTECIG' 'HEATTBCO' 'ASBIALCH' 'ASBIDRNK' 'ASBIBING'
+ 'ASBIADVC' 'ASBIRDUC' 'FIREARM5' 'GUNLOAD' 'LOADULK2' 'RCSXBRTH'
+ 'CASTHNO2' 'BIRTHSEX' 'SOMALE' 'SOFEMALE' 'TRNSGNDR' 'HADSEX' 'PFPPRVN4'
+ 'TYPCNTR9' 'BRTHCNT4' 'WHEREGET' 'NOBCUSE8' 'BCPREFER' 'RRCLASS3'
+ 'RRCOGNT2' 'RRTREAT' 'RRATWRK2' 'RRHCARE4' 'RRPHYSM2' 'CAGEG']. At least one non-missing value is needed for imputation with strategy='mean'.
+  warnings.warn(
+
+2025-11-27 21:35:41,364:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=123, splitter='best')
+2025-11-27 21:35:41,364:INFO:create_model() successfully completed......................................
+2025-11-27 21:35:41,472:INFO:_master_model_container: 2
+2025-11-27 21:35:41,472:INFO:_display_container: 2
+2025-11-27 21:35:41,472:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=123, splitter='best')
+2025-11-27 21:35:41,472:INFO:compare_models() successfully completed......................................
+2025-11-27 21:41:07,306:INFO:Initializing predict_model()
+2025-11-27 21:41:07,306:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000024612C71C30>, estimator=<__main__.MockModel object at 0x00000246A05C0CD0>, probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002467E654B80>)
+2025-11-27 21:41:07,306:INFO:Checking exceptions
+2025-11-27 21:41:07,306:INFO:Preloading libraries
+2025-11-27 21:41:07,306:INFO:Set up data.
+2025-11-27 21:41:07,308:INFO:Set up index.
+2025-11-27 21:41:07,308:INFO:Initializing predict_model()
+2025-11-27 21:41:07,310:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000024612C71C30>, estimator=<__main__.MockModel object at 0x00000246A05C0CD0>, probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002467E654B80>)
+2025-11-27 21:41:07,310:INFO:Checking exceptions
+2025-11-27 21:41:07,310:INFO:Preloading libraries
+2025-11-27 21:41:07,310:INFO:Set up data.
+2025-11-27 21:41:07,312:INFO:Set up index.

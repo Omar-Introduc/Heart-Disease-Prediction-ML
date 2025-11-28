@@ -1,9 +1,15 @@
+import sys  # <--- 1. Primero importas sys
+import os   # <--- 2. Luego importas os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
 import os
 from src.adapters import PyCaretAdapter
+
 
 # Page Config
 st.set_page_config(

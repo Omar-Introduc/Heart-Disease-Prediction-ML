@@ -8,6 +8,7 @@ __pycache__/
 # =============================================================================
 # Ignorar el archivo de datos crudos original por su gran tamaño.
 /data/01_raw/LLCP2022.XPT
+/data/01_raw/LLCP2022_10rows.xpt
 
 # Ignorar el archivo de datos procesado de 36MB.
 /data/02_processed/brfss_2022_cleaned.csv
@@ -17,3 +18,5 @@ __pycache__/
 # Para mantener las carpetas vacías en Git (
 # crea un archivo vacío dentro de ellas llamado '.gitkeep'.
 # =============================================================================data/02_intermediate/
+
+/data/02_intermediate/processed_data_profundo.parquet
