@@ -20,4 +20,5 @@ __pycache__/
 # =============================================================================data/02_intermediate/
 
 /data/02_intermediate/processed_data_profundo.parquet
+/data/02_intermediate/processed_data_pequeno.parquet
 /notebooks/SWEETVIZ_REPORT.html
