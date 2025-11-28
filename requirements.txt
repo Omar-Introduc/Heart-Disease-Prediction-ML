@@ -1,36 +1,34 @@
 # Core ML
-numpy==1.26.4
-pandas==2.2.0
-scikit-learn==1.4.0
-xgboost==2.0.3
+numpy<2.0.0
+pandas<2.0.0
+scikit-learn<1.3.0
+xgboost
 
 # Data Processing
-pyreadstat==1.2.7
-pyarrow==15.0.0
+pyreadstat
+pyarrow
 
 # Visualization
-matplotlib==3.8.2
-seaborn==0.13.2
-sweetviz==2.3.1
-shap==0.44.1
+matplotlib
+seaborn
+sweetviz
+shap
 
 # Notebooks
-jupyter==1.0.0
-ipykernel==6.29.0
-papermill==2.5.0
+jupyter
+ipykernel
+papermill
 
 # Fairness
-fairlearn==0.10.0
+fairlearn
 
 # Dev Tools
-ruff==0.1.15
-black==24.1.1
-pre-commit==3.6.0
+ruff
+black
+pre-commit
 
 # UI
-streamlit==1.31.1
+streamlit
 
-# AutoML (Future Sprint)
-pycaret==3.2.0
-
-# Python version note: Tested on Python 3.10
+# AutoML
+pycaret>=3.0.0
