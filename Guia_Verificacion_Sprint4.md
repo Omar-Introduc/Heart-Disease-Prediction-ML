@@ -75,3 +75,20 @@ Para una verificación técnica detallada y documentada, puedes ejecutar el note
 1.  Abre el notebook en VS Code o Jupyter.
 2.  Ejecuta todas las celdas secuencialmente.
 3.  **Criterio de Éxito:** Todas las celdas deben ejecutarse sin errores, confirmando la carga de datos, el funcionamiento del modelo "desde cero" (XGBoostScratch), el pipeline de PyCaret y el adaptador de la UI.
+
+
+# Semantic Leakage Removal
+    # Removing variables that indicate diagnosis or treatment consequence
+    leakage_vars = [
+        'CVDASPRN', # Aspirin usage
+        'ASPUNSAF', # Aspirin unsafe
+        'DIABEDU',  # Diabetes education
+        
+        # --- AGREGAR ESTOS NUEVOS ---
+        'MICHD',    # Leakage TOTAL (Incluye el target)
+        'CVDCRHD4', # Leakage parcial (Diagnóstico previo muy fuerte)
+        'IDATE',    # Metadatos irrelevantes (Fecha)
+        'IDAY',     # Metadatos irrelevantes (Día)
+        'IYEAR',    # Metadatos irrelevantes (Año, por si acaso)
+        # ----------------------------
+    ]
