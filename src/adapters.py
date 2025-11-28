@@ -1,78 +1,94 @@
-from typing import Any
 import pandas as pd
 import numpy as np
-from src.interfaces import HeartDiseaseModel
+import json
 
-# Lazy import or safe import for PyCaret
-try:
-    from pycaret.classification import predict_model
-except (ImportError, RuntimeError):
-    # RuntimeError is raised by PyCaret on python 3.12
-    predict_model = None
+class DataAdapter:
+    def __init__(self, feature_names):
+        self.feature_names = feature_names
 
-class PyCaretAdapter(HeartDiseaseModel):
-    """
-    Adapter to make PyCaret models compatible with HeartDiseaseModel protocol.
-    """
-    def __init__(self, model: Any):
+    def map_ui_input_to_model(self, ui_input: dict) -> pd.DataFrame:
         """
-        :param model: The trained PyCaret pipeline/model.
+        Maps user inputs (human readable) to the model's expected feature vector.
+        Unspecified features are filled with defaults (usually 0 or median).
         """
-        self.model = model
+        # Initialize with zeros or NaNs
+        # Ridge Classifier handles 0s fine.
+        data = {col: 0 for col in self.feature_names}
 
-    def fit(self, X: np.ndarray, y: np.ndarray) -> None:
-        """
-        PyCaret models are usually pre-trained pipelines.
-        Re-fitting might not be standard usage for the artifact.
-        """
-        raise NotImplementedError("PyCaretAdapter is intended for inference with pre-trained models.")
+        # --- Mappings ---
 
-    def predict_proba(self, X: np.ndarray) -> np.ndarray:
-        """
-        Returns probabilities for the positive class (1).
-        """
-        # Convert X to DataFrame if it's numpy
-        if isinstance(X, np.ndarray):
-            # Try to get feature names from the underlying steps
-            feature_names = None
-            if hasattr(self.model, 'feature_names_in_'):
-                feature_names = self.model.feature_names_in_
+        # Age: 18-99 -> AGEG5YR (1-13)
+        # 1: 18-24, 2: 25-29, ..., 13: 80+
+        age = ui_input.get('Age', 30)
+        if age <= 24: age_code = 1
+        elif age <= 29: age_code = 2
+        elif age <= 34: age_code = 3
+        elif age <= 39: age_code = 4
+        elif age <= 44: age_code = 5
+        elif age <= 49: age_code = 6
+        elif age <= 54: age_code = 7
+        elif age <= 59: age_code = 8
+        elif age <= 64: age_code = 9
+        elif age <= 69: age_code = 10
+        elif age <= 74: age_code = 11
+        elif age <= 79: age_code = 12
+        else: age_code = 13
 
-            if feature_names is not None:
-                data = pd.DataFrame(X, columns=feature_names)
-            else:
-                data = pd.DataFrame(X)
+        data['AGEG5YR'] = age_code
+        data['_AGEG5YR'] = age_code # Handle both if present (ingestion strips _, but just in case)
+
+        # Sex: Male/Female -> SEX (1/2) or SEXVAR (1/2)
+        sex = ui_input.get('Sex', 'Male')
+        sex_code = 1 if sex == 'Male' else 2
+        data['SEX'] = sex_code
+        data['SEXVAR'] = sex_code
+        data['_SEX'] = sex_code
+
+        # BMI: 10.0-60.0 -> BMI5 (int, *100)
+        bmi = ui_input.get('BMI', 25.0)
+        data['BMI5'] = int(bmi * 100)
+        data['_BMI5'] = int(bmi * 100)
+
+        # Smoker: Yes/No -> SMOKE100 (1=Yes, 2=No)
+        # Also SMOKER3 (1=Every day, 2=Some days, 3=Former, 4=Never)
+        smoker = ui_input.get('Smoker', 'No')
+        if smoker == 'Yes':
+            data['SMOKE100'] = 1
+            data['_SMOKER3'] = 1 # Rough approx
+            data['SMOKER3'] = 1
         else:
-            data = X
+            data['SMOKE100'] = 2
+            data['_SMOKER3'] = 4
+            data['SMOKER3'] = 4
 
-        if predict_model:
-            try:
-                # predict_model in PyCaret usually returns a DF with scores
-                predictions = predict_model(self.model, data=data, raw_score=True)
-
-                # Check for various score column naming conventions
-                if 'prediction_score_1' in predictions.columns:
-                    return predictions['prediction_score_1'].values
-                elif 'Score_1' in predictions.columns:
-                     return predictions['Score_1'].values
-                elif 'prediction_score' in predictions.columns:
-                    # If binary and label is present, we might need to infer
-                    label = predictions['prediction_label']
-                    score = predictions['prediction_score']
-                    # If label is 1, prob is score. If label is 0, prob is 1-score.
-                    # This assumes 'prediction_score' is the probability of the *predicted* class
-                    return np.where(label == 1, score, 1 - score)
-                else:
-                    return self.model.predict_proba(data)[:, 1]
-            except Exception:
-                 return self.model.predict_proba(data)[:, 1]
+        # Diabetes: Yes/No -> DIABETE4 (1=Yes, 3=No)
+        diabetes = ui_input.get('Diabetes', 'No')
+        if diabetes == 'Yes':
+            data['DIABETE4'] = 1
         else:
-            # Fallback to direct sklearn call if PyCaret not available
-            return self.model.predict_proba(data)[:, 1]
+            data['DIABETE4'] = 3 # 3 is No
 
-    def predict(self, X: np.ndarray, threshold: float = 0.5) -> np.ndarray:
-        """
-        Predict class labels with custom threshold.
-        """
-        proba = self.predict_proba(X)
-        return (proba >= threshold).astype(int)
+        # Physical Activity: Yes/No -> EXERANY2 (1=Yes, 2=No)
+        phys = ui_input.get('PhysicalActivity', 'No')
+        if phys == 'Yes':
+            data['EXERANY2'] = 1
+            data['_TOTINDA'] = 1 # Calculated var
+        else:
+            data['EXERANY2'] = 2
+            data['_TOTINDA'] = 2
+
+        # Convert to DataFrame
+        # Filter keys to only those in feature_names to avoid errors if model is strict
+        filtered_data = {k: v for k, v in data.items() if k in self.feature_names}
+
+        # If any feature from feature_names is missing (should be covered by init), it's 0
+        return pd.DataFrame([filtered_data])
+
+def get_adapter(feature_names_path='models/feature_names.json'):
+    try:
+        with open(feature_names_path, 'r') as f:
+            feature_names = json.load(f)
+        return DataAdapter(feature_names)
+    except Exception as e:
+        print(f"Error loading adapter: {e}")
+        return None
