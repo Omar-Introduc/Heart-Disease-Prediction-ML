@@ -16,6 +16,9 @@ class DecisionTree:
         """
         Fits the tree using features X, gradients g, and hessians h.
         """
+        # Ensure X is a numpy array for consistent slicing
+        if not isinstance(X, np.ndarray):
+            X = np.array(X)
         self.tree = self._build_tree(X, g, h, depth=0)
 
     def _build_tree(self, X, g, h, depth):
@@ -116,6 +119,8 @@ class DecisionTree:
         return best_split
 
     def predict(self, X):
+        if not isinstance(X, np.ndarray):
+             X = np.array(X)
         predictions = np.array([self._predict_single(x, self.tree) for x in X])
         return predictions
 
