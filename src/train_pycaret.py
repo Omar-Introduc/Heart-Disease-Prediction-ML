@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from pycaret.classification import setup, compare_models, save_model, pull, tune_model, predict_model, get_config, finalize_model
+from pycaret.classification import setup, compare_models, save_model, pull, tune_model, predict_model, get_config, finalize_model, load_model
 from sklearn.metrics import fbeta_score, recall_score, precision_score
 import os
 import json
@@ -15,6 +15,9 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
 
     print(f"Loading data from {data_path}...")
     df = pd.read_parquet(data_path)
+
+    # Clean indices immediately to avoid SMOTE crash
+    df = df.reset_index(drop=True)
 
     # Check if target exists
     if target_col not in df.columns:
@@ -35,9 +38,8 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
         # Maintain class distribution roughly
         df = df.sample(n=MAX_ROWS, random_state=42)
         print(f"New Data shape: {df.shape}")
-
-    # Reset index to avoid duplicates issue in PyCaret
-    df = df.reset_index(drop=True)
+        # Reset index again after sampling
+        df = df.reset_index(drop=True)
 
     print(f"Target distribution:\n{df[target_col].value_counts()}")
 
@@ -54,13 +56,18 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
     )
 
     # Compare Models
+    # Issue 30: Force ensemble models
     print("Comparing models (sorted by Recall)...")
-    best_model = compare_models(sort='Recall', n_select=1)
+    best_model = compare_models(
+        include=['xgboost', 'lightgbm', 'gbc', 'rf'],
+        sort='Recall',
+        n_select=1
+    )
 
     print(f"Best model selected: {best_model}")
 
     # Tuning
-    # Issue 30 & 31: Tuning for Recall
+    # Issue 31: Tuning for Recall
     print("Optimizing hyperparameters for Recall...")
     try:
         tuned_model = tune_model(best_model, optimize='Recall', n_iter=50, verbose=False)
@@ -80,10 +87,6 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
     predictions = predict_model(tuned_model, raw_score=True, verbose=False)
 
     # Identify target and score columns
-    # PyCaret 3.x usually uses 'prediction_label' and 'prediction_score_1' (for class 1)
-    # or just 'prediction_score' (if binary, probability of predicted class)
-    # We need probability of class 1.
-
     y_true = predictions[target_col]
 
     # Logic to find probability column
@@ -96,8 +99,6 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
         y_scores = predictions['Score_1']
     elif 'prediction_score' in predictions.columns:
         # Assuming binary classification where 1 is the positive class
-        # If prediction_label is 0, prob(1) = 1 - prediction_score
-        # If prediction_label is 1, prob(1) = prediction_score
         pred_label = predictions['prediction_label']
         raw_score = predictions['prediction_score']
         y_scores = np.where(pred_label == 1, raw_score, 1 - raw_score)
@@ -138,14 +139,14 @@ def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
     print("Finalizing model (training on full dataset)...")
     final_model = finalize_model(tuned_model)
 
-    # Issue 35: Serialization with Metadata
+    # Issue 35: Persistence
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     # Save configuration
     config_data = {
         "threshold": float(best_thresh) if y_scores is not None else 0.5,
-        "metric": "Recall"
+        "model_name": "Boosting"
     }
     config_path = os.path.join(output_dir, "model_config.json")
     with open(config_path, 'w') as f:

@@ -78,65 +78,73 @@ class PyCaretAdapter(HeartDiseaseModel):
         return (proba >= threshold).astype(int)
 
 
-def map_age_to_category(age: int) -> int:
-    """Maps age in years to BRFSS age category (AGEG5YR)."""
-    if 18 <= age <= 24: return 1
-    elif 25 <= age <= 29: return 2
-    elif 30 <= age <= 34: return 3
-    elif 35 <= age <= 39: return 4
-    elif 40 <= age <= 44: return 5
-    elif 45 <= age <= 49: return 6
-    elif 50 <= age <= 54: return 7
-    elif 55 <= age <= 59: return 8
-    elif 60 <= age <= 64: return 9
-    elif 65 <= age <= 69: return 10
-    elif 70 <= age <= 74: return 11
-    elif 75 <= age <= 79: return 12
-    elif age >= 80: return 13
-    else: return 14 # Missing or out of range
-
-def transform_user_input(user_input: Dict[str, Any], feature_names: List[str]) -> pd.DataFrame:
+class UserInputAdapter:
     """
-    Transforms user input dictionary into a DataFrame compatible with the model.
-    Fills missing model features with 0.
+    Adapts human-readable dictionary inputs into the technical DataFrame structure
+    expected by the model, applying necessary encodings and transformations.
     """
-    # Initialize dictionary with 0 for all features
-    data = {feature: 0 for feature in feature_names}
+    def __init__(self):
+        # We might not know the exact feature list at initialization,
+        # but we can produce the known columns.
+        # The model usually expects specific columns.
+        pass
 
-    # Extract user inputs
-    age = user_input.get('Age', 30)
-    bmi = user_input.get('BMI', 25.0)
-    smoker = user_input.get('Smoker', 'No')
-    sex = user_input.get('Sex', 'Female')
-    diabetes = user_input.get('Diabetes', 'No')
-    phys_activity = user_input.get('PhysicalActivity', 'No')
+    def _map_age_to_category(self, age: int) -> int:
+        """Maps age in years to BRFSS age category (AGEG5YR)."""
+        if 18 <= age <= 24: return 1
+        elif 25 <= age <= 29: return 2
+        elif 30 <= age <= 34: return 3
+        elif 35 <= age <= 39: return 4
+        elif 40 <= age <= 44: return 5
+        elif 45 <= age <= 49: return 6
+        elif 50 <= age <= 54: return 7
+        elif 55 <= age <= 59: return 8
+        elif 60 <= age <= 64: return 9
+        elif 65 <= age <= 69: return 10
+        elif 70 <= age <= 74: return 11
+        elif 75 <= age <= 79: return 12
+        elif age >= 80: return 13
+        else: return 14 # Missing or out of range
 
-    # Map inputs to model features
+    def transform(self, user_input: Dict[str, Any]) -> pd.DataFrame:
+        """
+        Transforms user input dictionary into a DataFrame compatible with the model.
+        Returns a DataFrame with the mapped features.
+        """
+        # Dictionary to hold the mapped values
+        data = {}
 
-    # _AGEG5YR
-    if '_AGEG5YR' in data:
-        data['_AGEG5YR'] = map_age_to_category(age)
+        # Extract user inputs
+        age = user_input.get('Age', 30)
+        bmi = user_input.get('BMI', 25.0)
+        smoker = user_input.get('Smoker', 'No')
+        sex = user_input.get('Sex', 'Female')
+        diabetes = user_input.get('Diabetes', 'No')
+        phys_activity = user_input.get('PhysicalActivity', 'No')
 
-    # _BMI5 (BMI * 100)
-    if '_BMI5' in data:
+        # Map inputs to model features (BRFSS Standards)
+
+        # _AGEG5YR: Reported Age in 5 Year Bands
+        data['_AGEG5YR'] = self._map_age_to_category(age)
+
+        # _BMI5: Body Mass Index * 100
         data['_BMI5'] = int(bmi * 100)
 
-    # SMOKE100 (1=Yes, 2=No)
-    if 'SMOKE100' in data:
+        # SMOKE100: Smoked at least 100 cigarettes (1=Yes, 2=No)
         data['SMOKE100'] = 1 if smoker == 'Yes' else 2
 
-    # SEXVAR (1=Male, 2=Female)
-    if 'SEXVAR' in data:
+        # SEXVAR: Sex of respondent (1=Male, 2=Female)
         data['SEXVAR'] = 1 if sex == 'Male' else 2
 
-    # DIABETE4 (1=Yes, 3=No) - Simplified mapping
-    # BRFSS: 1=Yes, 2=Yes(preg), 3=No, 4=Pre-diabetes
-    if 'DIABETE4' in data:
+        # DIABETE4: (1=Yes, 3=No) - Simplified
+        # In full dataset: 1=Yes, 2=Yes(preg), 3=No, 4=Pre-diabetes
         data['DIABETE4'] = 1 if diabetes == 'Yes' else 3
 
-    # EXERANY2 (1=Yes, 2=No)
-    if 'EXERANY2' in data:
+        # EXERANY2: Exercise in past 30 days (1=Yes, 2=No)
         data['EXERANY2'] = 1 if phys_activity == 'Yes' else 2
 
-    # Create DataFrame with single row
-    return pd.DataFrame([data])
+        # Additional features could be added here if the model expects them.
+        # Ideally, we should pad with 0s or defaults for any other columns
+        # the model might expect if they are not collected from UI.
+
+        return pd.DataFrame([data])
