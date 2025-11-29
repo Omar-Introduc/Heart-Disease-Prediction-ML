@@ -1,104 +1,46 @@
-# Auditoría de Variables - Proyecto de Predicción de Enfermedades Cardíacas
+# Auditoría de Variables - Proyecto de Predicción de Enfermedades Cardíacas (NHANES)
 
-Esta auditoría se basa en el análisis de los archivos `USCODE22_LLCP_102523.HTML` (Codebook del BRFSS 2022) y la lista de columnas disponibles (`columns.txt`). El objetivo es categorizar las variables para su uso en el modelo de predicción de riesgo cardíaco (`CVDINFR4` - Ataque al corazón).
+Esta auditoría describe el nuevo conjunto de datos basado en **NHANES 2011-2020** (National Health and Nutrition Examination Survey). A diferencia del dataset anterior (BRFSS), este conjunto prioriza **biomarcadores clínicos objetivos** (laboratorio y exámenes) sobre encuestas subjetivas.
 
-## Resumen de Hallazgos Críticos
+## Diccionario de Datos: Biomarcadores y Variables Clínicas
 
-1.  **Ausencia de Variables Clave:** Las variables relacionadas con la **Presión Arterial** (ej. `BPHIGH4`) y el **Colesterol** (ej. `TOLDHI2`, `CHOLCHK`) **NO están presentes** en el conjunto de datos de 2022. Esto se debe a que en el BRFSS estos módulos son "Core Rotativo" (años impares 2021, 2023) y no formaron parte del núcleo en 2022.
-    *   *Impacto:* El modelo dependerá fuertemente de comorbilidades (Diabetes, etc.) y factores de estilo de vida, perdiendo dos de los predictores clínicos más fuertes.
-2.  **Fuga de Información Detectada:** La variable `MICHD` (Miocardical Infarction or CHD) es una variable calculada que incluye directamente el objetivo (`CVDINFR4`). Debe ser eliminada obligatoriamente.
+A continuación, se detallan las variables seleccionadas para el modelo "Clínico Predictivo".
 
----
+| Variable (Feature) | Tipo | Descripción Clínica / Justificación | Unidad/Rango Típico |
+| :--- | :--- | :--- | :--- |
+| **HeartDisease** (Target) | Binaria | **Variable Objetivo.** Historial de infarto o ataque al corazón (MCQ160E). Define si el paciente ha sufrido un evento cardíaco. | 0: No, 1: Sí |
+| **SystolicBP** | Numérica (Continua) | **Presión Arterial Sistólica.** La fuerza que ejerce la sangre contra las arterias cuando el corazón late. Es el factor de riesgo #1 para hipertensión y daño arterial. | mmHg (90 - 180+) |
+| **TotalCholesterol** | Numérica (Continua) | **Colesterol Total.** Suma del colesterol en sangre. Niveles altos contribuyen a la aterosclerosis (placa en arterias). Medido en laboratorio, no preguntado. | mg/dL (100 - 300+) |
+| **HbA1c** | Numérica (Continua) | **Hemoglobina Glicosilada.** Promedio de azúcar en sangre de los últimos 3 meses. Es mucho más fiable que la glucosa en ayunas para diagnosticar diabetes crónica y riesgo cardiovascular. | % (4.0 - 15.0) |
+| **Glucose** | Numérica (Continua) | **Glucosa en Suero.** Nivel de azúcar en el momento del examen. Indicador agudo de metabolismo, complementa a HbA1c. | mg/dL (70 - 400+) |
+| **Creatinine** | Numérica (Continua) | **Creatinina Sérica.** Producto de desecho muscular filtrado por los riñones. Niveles altos indican disfunción renal, una comorbilidad crítica para el corazón (Síndrome Cardio-Renal). | mg/dL (0.5 - 5.0+) |
+| **UricAcid** | Numérica (Continua) | **Ácido Úrico.** Niveles altos (hiperuricemia) están asociados con hipertensión, inflamación y mayor riesgo cardiovascular, no solo gota. | mg/dL (2.0 - 10.0+) |
+| **Triglycerides** | Numérica (Continua) | **Triglicéridos.** Tipo de grasa en sangre. Elevados junto con LDL alto aumentan drásticamente el riesgo de infarto y pancreatitis. | mg/dL (50 - 500+) |
+| **LDL** | Numérica (Continua) | **Lipoproteína de Baja Densidad ("Colesterol Malo").** Transporta colesterol a las arterias. Es el objetivo primario de tratamiento para prevenir infartos. | mg/dL (50 - 200+) |
+| **BMI** | Numérica (Continua) | **Índice de Masa Corporal.** Medida de obesidad basada en peso y talla reales (medidos por enfermera, no reportados por paciente). | kg/m² (15 - 60) |
+| **Age** | Numérica (Continua) | **Edad.** Factor de riesgo no modificable más importante. Ahora se usa el valor exacto, no rangos decenales. | Años (20 - 80) |
+| **Sex** | Binaria | **Sexo Biológico.** Hombres y mujeres tienen perfiles de riesgo distintos (ej. protección estrogénica en mujeres pre-menopáusicas). | 0: Mujer, 1: Hombre |
+| **Smoking** | Binaria | **Tabaquismo.** Historial de fumar (Cotilinina o reporte clínico). Daña el endotelio vascular y acelera la aterosclerosis. | 0: No, 1: Sí |
+| **Alcohol** | Frecuencia | **Consumo de Alcohol.** Consumo excesivo eleva triglicéridos y presión arterial. | Categorías/Frecuencia |
+| **PhysicalActivity** | Binaria/Nivel | **Actividad Física.** Nivel de sedentarismo. El ejercicio regular mejora todos los biomarcadores anteriores. | 0: Sedentario, 1: Activo |
 
-## Categorización de Variables
+## Cambios en el Preprocesamiento
 
-A continuación se detalla la recomendación para cada grupo de variables.
+Dado el cambio de naturaleza de las variables (de Rangos/Categorías a Valores Reales), el pipeline de preprocesamiento cambia drásticamente:
 
-### 1. Variables a Descartar (Obligatorio)
+1.  **Escalamiento Obligatorio (Scaling):**
+    *   Las variables tienen magnitudes muy distintas (ej. `HbA1c` ~5.0 vs `Triglycerides` ~150.0).
+    *   Se requiere **StandardScaler** (Z-score) o **RobustScaler** (si hay muchos outliers en sangre) para que el modelo no se sesgue hacia las variables de mayor magnitud.
+2.  **Eliminación de One-Hot Encoding masivo:**
+    *   Ya no se discretiza la edad ni el BMI. Se aprovecha la información continua.
+3.  **Imputación Clínica:**
+    *   Los valores nulos en laboratorio (ej. LDL faltante) deben imputarse con cuidado (ej. KNN o IterativeImputer) respetando las correlaciones biológicas, no con la media simple.
 
-Estas variables introducen ruido, fuga de datos o son irrelevantes para la predicción clínica.
+## Variables Eliminadas (Legacy BRFSS)
 
-*   **Metadatos y Administración:**
-    *   `STATE`, `FMONTH`, `IDATE`, `IMONTH`, `IDAY`, `IYEAR`, `DISPCODE`, `SEQNO`, `PSU`.
-    *   `QSTVER`, `QSTLANG` (Versión e idioma del cuestionario).
-*   **Pesos y Estratificación (Weights):**
-    *   `STSTR`, `STRWT`, `RAWRAKE`, `WT2RAKE`, `CLLCPWT`, `DUALUSE`, `DUALCOR`, `LLCPWT2`, `LLCPWT`.
-    *   *Razón:* Son para análisis estadístico poblacional, no para modelos predictivos a nivel individuo (a menos que se usen modelos ponderados, pero suelen añadir ruido en ML estándar).
-*   **Fuga de Información (Leakage):**
-    *   `MICHD`: Definida como `CVDINFR4=1 OR CVDCRHD4=1`. Revela el target.
-*   **Preguntas de Contacto / Hogar:**
-    *   `CTELENM1`, `PVTRESD1`, `COLGHOUS`, `STATERE1`, `CELPHON1`, `LADULT1`, `COLGSEX1`, `NUMADULT`, `LANDSEX1`, `NUMMEN`, `NUMWOMEN`, `RESPSLCT`, `CTELNUM1`, `CELLFON5`, `CADULT1`, `CELLSEX1`, `PVTRESD3`, `CCLGHOUS`, `CSTATE1`, `LANDLINE`, `HHADULT`.
-    *   `NUMHHOL4`, `NUMPHON4`, `CPDEMO1C`.
-    *   *Razón:* Irrelevantes para la salud cardíaca.
-
-### 2. Variables a Descartar (Recomendado / Simplificación)
-
-Variables que son redundantes (versiones crudas vs calculadas) o tienen alta probabilidad de valores faltantes/baja relevancia.
-
-*   **Redundantes (Usar Calculadas/Limpias):**
-    *   `HEIGHT3`, `WEIGHT2`: Descartar a favor de `BMI5` (IMC calculado) y `BMI5CAT` (Categoría). El IMC captura la relación relevante.
-    *   `SMOKE100`, `SMOKDAY2`, `USENOW3`, `ECIGNOW2`: Evaluar uso de `RFSMOK3` (Fumador actual - calculado) para simplificar. `SMOKDAY2` tiene dependencia estructural.
-    *   `ALCDAY4`, `AVEDRNK3`, `DRNK3GE5`, `MAXDRNKS`: `ALCDAY4` es útil. `RFDRHV8` (Heavy Drinker) es una buena variable resumen. `DROCDY4_` (Tragos por día) es buena numérica.
-    *   `RACE1`, `RACEG22`, `MRACE2`...: Usar `_IMPRACE` (Imputed Race) o `_RACE` (si existe, o `RACEGR3`) para evitar múltiples columnas de raza y valores faltantes. `IMPRACE` es la más completa.
-    *   `AGE`, `AGEG5YR`: Usar `AGE80` (si es numérica continua top-coded) o `AGEG5YR` (Categorías de 5 años). `AGEG5YR` es estándar en BRFSS público.
-*   **Módulos Específicos / Baja Relevancia Directa:**
-    *   `HADMAM`, `HOWLONG`, `CERVSCRN`... (Salud Femenina): Específicas de sexo, generan Nulos en hombres.
-    *   `PSATEST1`... (Salud Masculina): Específicas de sexo.
-    *   `FLUSHOT7`, `PNEUVAC4`, `TETANUS1`: Vacunación. Poca causalidad directa con IAM.
-    *   `HIVTST7`...: Riesgo HIV.
-    *   `CAREGIV1`... (Cuidado de otros): Determinante social, pero alto missingness en no-cuidadores.
-    *   `MARIJAN1`... (Marihuana): Módulo opcional en muchos estados (posible alto missingness).
-    *   `ACEDEPRS`... (Experiencias Adversas Infancia): Módulo opcional.
-    *   `FIREARM5`: Armas de fuego. Irrelevante clínico.
-
-### 3. Variables a Mantener (Predictoras Candidatas)
-
-Estas variables deben formar el núcleo del dataset de entrenamiento.
-
-*   **Target:**
-    *   `CVDINFR4` (Ever diagnosed with heart attack).
-*   **Relacionadas al Corazón (Comorbilidades Fuertes):**
-    *   `CVDCRHD4` (Angina/Coronary Heart Disease): **Decisión Requerida.** Es un predictor extremadamente fuerte. Si el objetivo es predecir riesgo *antes* de cualquier evento cardíaco, descartar. Si es predecir infarto (evento agudo) en población general (incluyendo enfermos crónicos), mantener. *Recomendación: Mantener como predictor de alto riesgo.*
-    *   `CVDSTRK3` (Stroke/Derrame): Fuerte comorbilidad.
-*   **Historial de Salud (Chronic Conditions):**
-    *   `DIABETE4` (Diabetes): Crítico.
-    *   `CHCKDNY2` (Enfermedad Renal): Crítico.
-    *   `CHCCOPD3` (EPOC/COPD): Importante (relacionado a fumar).
-    *   `HAVARTH4` (Artritis): Indicador de inflamación/movilidad.
-    *   `ADDEPEV3` (Depresión): Factor de riesgo conocido.
-    *   `ASTHMA3`: Asma.
-    *   `CHCSCNC1`, `CHCOCNC1` (Cáncer): Comorbilidad general.
-*   **Demografía:**
-    *   `SEXVAR` (Sexo) o `SEX`.
-    *   `AGEG5YR` (Edad).
-    *   `IMPRACE` (Raza).
-    *   `EDUCA` (Educación - Proxy de nivel socioeconómico).
-    *   `INCOME3` (Ingresos - Proxy NSE, cuidado con valores faltantes).
-    *   `MARITAL` (Estado civil - Soporte social).
-    *   `VETERAN3` (Veterano).
-*   **Estilo de Vida y Salud General:**
-    *   `BMI5` (Índice de Masa Corporal).
-    *   `EXERANY2` (Ejercicio en el último mes). `TOTINDA` (Actividad física calculada) es mejor si está disponible.
-    *   `GENHLTH` (Salud general autopercibida): Predictor muy fuerte.
-    *   `PHYSHLTH` (Días de mala salud física).
-    *   `MENTHLTH` (Días de mala salud mental).
-    *   `SLEPTIM1` (Tiempo de sueño): Importante.
-*   **Acceso a Salud:**
-    *   `CHECKUP1` (Tiempo desde último chequeo).
-    *   `PERSDOC3` (Tiene doctor personal).
-    *   `MEDCOST1` (No pudo ir al médico por costo).
-
-### 4. Variables de COVID-19 (Evaluar)
-
-*   `COVIDPOS`, `COVIDVA1` (Vacuna): Pueden ser confusores temporales en 2022. Se recomienda **Descartar** para un modelo generalizable a largo plazo, a menos que el estudio sea específicamente sobre impacto COVID.
-
-## Conclusión
-
-El modelo deberá construirse sin lecturas directas de Presión Arterial ni Colesterol. Esto eleva la importancia de:
-1.  **Diabetes (`DIABETE4`)**
-2.  **Obesidad (`BMI5`)**
-3.  **Tabaquismo (`RFSMOK3`)**
-4.  **Historial previo (`CVDSTRK3`, `CVDCRHD4`)**
-5.  **Edad y Sexo**
-
-Se recomienda generar un dataset limpio (`processed_data.parquet`) seleccionando solo las variables de la categoría "Mantener" y filtrando las filas con valores nulos excesivos en estas columnas críticas.
+Se han eliminado las variables subjetivas que introducían ruido o dependían de la memoria del paciente:
+*   `PhysicalHealth`, `MentalHealth` (Días de mala salud percibida).
+*   `DiffWalking` (Dificultad para caminar).
+*   `AgeCategory` (Reemplazado por `Age` real).
+*   `GenHealth` (Salud general "Buena/Mala").
+*   `SleepTime`, `Asthma`, `KidneyDisease`, `SkinCancer` (Reemplazados por sus marcadores biológicos o descartados por baja especificidad).

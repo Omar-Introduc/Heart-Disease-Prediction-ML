@@ -51,6 +51,14 @@ $$Gain = \frac{1}{2} \left[ \frac{G_L^2}{H_L+\lambda} + \frac{G_R^2}{H_R+\lambda
 *   El primer término mide la reducción de la pérdida gracias a la división.
 *   El término $-\gamma$ actúa como el costo de complejidad. Si la mejora en la pérdida no es mayor que $\gamma$, la ganancia es negativa y no se divide.
 
-## 4. Conclusión
+## 4. Ventaja en Biomarcadores: No Linealidad
 
-XGBoost no es solo "Gradient Boosting rápido". Su formulación matemática introduce controles de complejidad ($\gamma, \lambda$) directamente en el proceso de construcción del árbol (no solo como post-pruning). Esto le permite generalizar mejor en problemas con ruido o pocos datos, haciéndolo ideal para datos médicos complejos.
+Una razón clave para elegir XGBoost en este proyecto clínico (NHANES) es su capacidad nativa para modelar **relaciones no lineales** entre biomarcadores sin necesidad de transformación de características compleja.
+
+*   **El caso de la Presión Arterial:** La relación entre presión sistólica y riesgo cardíaco no es lineal (el riesgo se dispara exponencialmente después de cierto umbral, ej. 140 mmHg). Un modelo lineal (Regresión Logística) necesitaría términos polinómicos manuales para capturar esto.
+*   **Árboles de Decisión:** XGBoost, al estar basado en árboles, "aprende" estos umbrales de forma natural mediante divisiones (splits). Por ejemplo, un árbol puede crear una rama para `SystolicBP < 120` (bajo riesgo) y otra para `SystolicBP >= 140` (alto riesgo), capturando la no linealidad "a trozos" (piecewise constant).
+*   **Interacciones:** Además, detecta interacciones automáticas, como que el "Colesterol Alto" es mucho más peligroso si también se tiene "Presión Alta".
+
+## 5. Conclusión
+
+XGBoost no es solo "Gradient Boosting rápido". Su formulación matemática introduce controles de complejidad ($\gamma, \lambda$) directamente en el proceso de construcción del árbol. Esto, sumado a su capacidad para manejar la no linealidad intrínseca de los datos biológicos, lo hace ideal para predecir fenotipos complejos de riesgo cardíaco.
