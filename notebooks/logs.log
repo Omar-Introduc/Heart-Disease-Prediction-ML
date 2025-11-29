@@ -8673,3 +8673,54 @@ Alternately, you can install this by running `pip install pycaret[models]`
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2025-11-29 12:38:30,569:WARNING:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 13:55:29,461:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 13:55:29,461:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 13:55:29,461:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 13:55:29,461:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 13:55:32,238:INFO:Initializing load_model()
+2025-11-29 13:55:32,239:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 13:55:32,321:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 13:55:36,208:INFO:Initializing predict_model()
+2025-11-29 13:55:36,208:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002A8E62365C0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002A8E609A560>)
+2025-11-29 13:55:36,208:INFO:Checking exceptions
+2025-11-29 13:55:36,208:INFO:Preloading libraries
+2025-11-29 13:55:36,208:INFO:Set up data.
+2025-11-29 13:55:36,222:INFO:Set up index.
+2025-11-29 13:55:45,988:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 13:55:45,991:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 13:55:45,992:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
