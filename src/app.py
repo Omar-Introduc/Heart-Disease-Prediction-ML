@@ -1,7 +1,7 @@
 import sys
 import os
 import json
-import pickle
+from typing import Optional, Any, Dict
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -24,7 +24,14 @@ CONFIG_PATH = "models/model_config.json"
 MODEL_PATH = "models/final_pipeline_v1.pkl"
 
 @st.cache_resource
-def load_config():
+def load_config() -> Dict[str, Any]:
+    """
+    Loads the model configuration from a JSON file.
+
+    Returns:
+        Dict[str, Any]: A dictionary containing configuration parameters (e.g., threshold).
+                        Returns a default dictionary if the file is missing.
+    """
     if os.path.exists(CONFIG_PATH):
         with open(CONFIG_PATH, 'r') as f:
             return json.load(f)
@@ -35,7 +42,13 @@ default_threshold = config.get("threshold", 0.5)
 
 # Load Model
 @st.cache_resource
-def load_model_pipeline():
+def load_model_pipeline() -> Optional[PyCaretAdapter]:
+    """
+    Loads the PyCaret model pipeline and wraps it in an adapter.
+
+    Returns:
+        Optional[PyCaretAdapter]: The adapted model ready for prediction, or None if loading fails.
+    """
     if not os.path.exists(MODEL_PATH):
         # Fallback for development if specific model missing, mostly for testing UI logic
         return None
@@ -218,8 +231,6 @@ if submitted:
 
                     except Exception as e:
                         st.error(f"Error calculating SHAP values: {e}")
-                        # import traceback
-                        # st.text(traceback.format_exc())
 
         except Exception as e:
             st.error(f"Error during prediction: {e}")

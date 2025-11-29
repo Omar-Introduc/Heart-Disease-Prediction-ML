@@ -4,10 +4,16 @@ from pycaret.classification import setup, compare_models, save_model, pull, tune
 from sklearn.metrics import fbeta_score, recall_score, precision_score
 import os
 import json
+from typing import Optional, List
 
-def train_baseline(data_path, output_dir, target_col='CVDINFR4'):
+def train_baseline(data_path: str, output_dir: str, target_col: str = 'CVDINFR4') -> None:
     """
     Trains baseline models using PyCaret with Tuning and Threshold Optimization.
+
+    Args:
+        data_path (str): Path to the input Parquet file.
+        output_dir (str): Directory where the trained model and config will be saved.
+        target_col (str): The name of the target variable column. Defaults to 'CVDINFR4'.
     """
     if not os.path.exists(data_path):
         print(f"Data file {data_path} not found.")
