@@ -302,6 +302,25 @@ def train_baseline(
     print("Finalizing model...")
     final_model = finalize_model(tuned_model)
 
+    # --- Save Training Reference Schema for Drift Detection ---
+    print("Generating Training Reference Schema...")
+    reference_schema = {}
+    # df is the data used for training (after renaming)
+    for col in numeric_features:
+        if col in df.columns:
+            desc = df[col].describe()
+            reference_schema[col] = {
+                "mean": float(desc["mean"]),
+                "std": float(desc["std"]),
+                "min": float(desc["min"]),
+                "max": float(desc["max"]),
+            }
+
+    with open(os.path.join(output_dir, "training_reference_schema.json"), "w") as f:
+        json.dump(reference_schema, f, indent=4)
+    print(f"Training reference schema saved to {os.path.join(output_dir, 'training_reference_schema.json')}")
+    # ----------------------------------------------------------
+
     # Confusion Matrix on Test Set
     # We need to predict using the final model on the hold-out test set
     # Note: finalize_model fits on ALL data (train+test).
