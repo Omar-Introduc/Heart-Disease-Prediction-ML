@@ -18,7 +18,7 @@ pydantic
 matplotlib
 seaborn
 sweetviz
-shap
+shap==0.45.0
 
 # Notebooks
 jupyter
