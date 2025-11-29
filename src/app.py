@@ -19,10 +19,6 @@ st.set_page_config(
     layout="centered"
 )
 
-# Title
-st.title("❤️ Heart Disease Risk Prediction")
-st.write("Enter patient data below to estimate the risk of heart disease.")
-
 # Load Config
 CONFIG_PATH = "models/model_config.json"
 MODEL_PATH = "models/final_pipeline_v1.pkl"
@@ -41,18 +37,11 @@ default_threshold = config.get("threshold", 0.5)
 @st.cache_resource
 def load_model_pipeline():
     if not os.path.exists(MODEL_PATH):
-        st.error(f"Model file not found at {MODEL_PATH}")
+        # Fallback for development if specific model missing, mostly for testing UI logic
         return None
 
     try:
-        # PyCaret saves as .pkl, but sometimes with .pkl suffix in filename or not
-        # If load_model from pycaret was used, it adds .pkl.
-        # But we use pickle directly here if we want or pycaret's load_model function.
-        # However, to be safe and standard with the training script:
         from pycaret.classification import load_model
-        # load_model appends .pkl automatically if not present in string, but expects path without extension usually
-        # The training script saved as 'models/final_pipeline_v1' (no extension in string passed to save_model)
-
         path_without_ext = os.path.splitext(MODEL_PATH)[0]
         pipeline = load_model(path_without_ext)
         return PyCaretAdapter(pipeline)
@@ -62,6 +51,30 @@ def load_model_pipeline():
 
 model = load_model_pipeline()
 
+if model:
+    st.toast("Modelo cargado exitosamente", icon="✅")
+
+# Sidebar - Issue 41
+with st.sidebar:
+    st.image("https://img.icons8.com/color/96/heart-with-pulse.png")
+    st.warning("⚠️ **Aviso Importante**\nEsta herramienta es un prototipo de apoyo al diagnóstico. No sustituye la opinión de un profesional médico.")
+    if model:
+        st.info(f"Modelo cargado: {type(model.model).__name__}")
+    st.markdown("---")
+    st.write("Desarrollado para Sprint 6")
+
+# Title
+st.title("❤️ Heart Disease Risk Prediction")
+st.write("Enter patient data below to estimate the risk of heart disease.")
+
+# Issue 41.5: User Guide
+with st.expander("📘 ¿Cómo interpretar los resultados?"):
+    st.markdown("""
+    - **Probabilidad de Riesgo:** Porcentaje calculado por el modelo.
+    - **Umbral (Threshold):** Nivel a partir del cual se activa la alerta roja. Si priorizas encontrar a todos los enfermos (Sensibilidad), baja este valor.
+    - **BMI:** Índice de Masa Corporal. Valor normal entre 18.5 y 24.9.
+    """)
+
 # Input Form
 with st.form("patient_data_form"):
     st.subheader("Patient Information")
@@ -70,8 +83,8 @@ with st.form("patient_data_form"):
 
     with col1:
         age = st.number_input("Age", min_value=18, max_value=120, value=30)
-        bmi = st.number_input("BMI", min_value=10.0, max_value=60.0, value=25.0)
-        sex = st.selectbox("Sex", options=["Female", "Male"]) # Female default
+        bmi = st.number_input("BMI", min_value=10.0, max_value=60.0, value=25.0, help="kg/m²")
+        sex = st.selectbox("Sex", options=["Female", "Male"])
 
     with col2:
         smoker = st.selectbox("Smoker?", options=["No", "Yes"])
@@ -81,7 +94,6 @@ with st.form("patient_data_form"):
     # Threshold slider
     st.markdown("---")
     st.subheader("Decision Parameters")
-    st.write("Adjust the threshold to balance between detecting more cases (High Recall) and reducing false alarms.")
 
     threshold = st.slider(
         "Decision Threshold",
@@ -113,101 +125,103 @@ if submitted:
             input_df = adapter.transform(user_input)
 
             # Ensure all columns required by the model are present
-            # We pad missing columns with 0
             if hasattr(model.model, 'feature_names_in_'):
                 expected_cols = model.model.feature_names_in_
-                # Reindex to match model columns, filling missing with 0
                 input_df = input_df.reindex(columns=expected_cols, fill_value=0)
 
             # Predict
             prob = model.predict_proba(input_df)[0]
             prediction_label = "High Risk 🔴" if prob >= threshold else "Low Risk 🟢"
 
+            st.toast("Predicción completada", icon="🚀")
+
             st.divider()
             st.subheader("Results")
 
-            col_res1, col_res2 = st.columns(2)
-            with col_res1:
-                st.metric("Risk Probability", f"{prob:.2%}")
+            # Visual improvement with containers (Issue 41)
+            result_container = st.container()
+            with result_container:
+                col_res1, col_res2 = st.columns(2)
+                with col_res1:
+                    st.metric("Risk Probability", f"{prob:.2%}")
 
-            with col_res2:
-                if prob >= threshold:
-                    st.error(f"{prediction_label}")
-                else:
-                    st.success(f"{prediction_label}")
+                with col_res2:
+                    if prob >= threshold:
+                        st.error(f"**{prediction_label}**")
+                    else:
+                        st.success(f"**{prediction_label}**")
 
             st.info(f"Prediction made with threshold {threshold}. Optimized threshold was {default_threshold:.4f}.")
 
-            # SHAP Integration
-            if st.checkbox("¿Por qué este resultado? (Explain with SHAP)"):
-                try:
-                    with st.spinner("Calculating explanation..."):
-                        # Access underlying PyCaret pipeline step
-                        # Assuming PyCaret Pipeline wrapper
+            # SHAP Integration (Issue 43)
+            st.subheader("Explicación del Resultado")
+            if st.checkbox("Ver por qué el modelo tomó esta decisión"):
+                with st.spinner('Calculando importancia de variables...'):
+                    try:
+                        # 1. Extract underlying estimator and transformed data
                         pipeline = model.model
 
-                        # Data Transformation for SHAP
-                        # PyCaret pipeline handles preprocessing (imputation, encoding)
-                        # We must transform the input_df using the pipeline *except* the final estimator step
-                        # to get the actual features the tree sees.
+                        # Logic to handle PyCaret Pipeline to get estimator and transformed X
+                        if hasattr(pipeline, 'steps'):
+                            # Standard sklearn/imblearn pipeline
+                            estimator = pipeline.steps[-1][1]
 
-                        if hasattr(pipeline, 'named_steps'):
-                            estimator = pipeline.named_steps['trained_model']
-
-                            # We need to run transform on all steps except the last one
-                            # scikit-learn pipeline doesn't have a simple "transform until" method
-                            # So we iterate.
-
+                            # Transform data through previous steps
                             X_transformed = input_df.copy()
-                            for name, step in pipeline.named_steps.items():
-                                if name == 'trained_model':
-                                    continue
+                            for name, step in pipeline.steps[:-1]:
                                 if hasattr(step, 'transform'):
                                     X_transformed = step.transform(X_transformed)
-                                    # If output is numpy array (e.g. from SimpleImputer or standard scaler sometimes)
-                                    # we need to keep track of columns if possible, but sklearn pipelines often return numpy
+                                    # Handle numpy output from intermediate steps
                                     if isinstance(X_transformed, np.ndarray):
-                                         # Try to recover columns if possible, or proceed with array
-                                         # Ideally we should keep it as dataframe if steps allow, but PyCaret steps usually do
-                                         pass
+                                        # If we lose column names, we might have issues with waterfall plot if it expects names
+                                        # But often steps preserve shape. If columns lost, we might need to rely on estimator.feature_names_in_
+                                        pass
+
+                            # If X_transformed is numpy, try to convert back to DF if estimator has feature names
+                            if isinstance(X_transformed, np.ndarray) and hasattr(estimator, 'feature_names_in_'):
+                                X_transformed = pd.DataFrame(X_transformed, columns=estimator.feature_names_in_)
+
                         else:
-                            # Fallback if no steps (unlikely for PyCaret)
+                            # If not a pipeline (just the model)
                             estimator = pipeline
                             X_transformed = input_df
 
-                        # Create Explainer
-                        # Ideally, this should be cached globally, but for now we create it here.
-                        # Note: TreeExplainer handles feature_perturbation='tree_path_dependent' by default which doesn't strictly require background data
-                        # but requires the model.
+                        # 2. Create Explainer
                         explainer = shap.TreeExplainer(estimator)
 
-                        # Calculate SHAP values for this instance
+                        # 3. Calculate SHAP values for this instance
                         shap_values = explainer.shap_values(X_transformed)
 
-                        # Force Plot
-                        # shap_values might be a list (for classification), taking the positive class [1]
+                        # Handle SHAP output format (list for binary classification or array)
                         if isinstance(shap_values, list):
-                            sv = shap_values[1][0] # 0 for the single row
-                            ev = explainer.expected_value[1]
+                            # Binary classification usually returns [class0, class1]
+                            # We want class 1 (Risk)
+                            sv = shap_values[1][0]
+                            base_value = explainer.expected_value[1]
                         else:
-                            sv = shap_values[0] # 0 for the single row
-                            ev = explainer.expected_value
+                            sv = shap_values[0]
+                            base_value = explainer.expected_value
 
-                        st_shap(shap.force_plot(ev, sv, X_transformed))
+                        # 4. Visualize with Waterfall
+                        # Ensure we pass the first row of data for the plot
+                        if isinstance(X_transformed, pd.DataFrame):
+                            data_row = X_transformed.iloc[0]
+                        else:
+                            data_row = X_transformed[0]
 
-                except Exception as ex:
-                    st.warning(f"Could not generate SHAP explanation: {ex}")
-                    import traceback
-                    st.text(traceback.format_exc())
+                        explanation = shap.Explanation(values=sv,
+                                                     base_values=base_value,
+                                                     data=data_row,
+                                                     feature_names=getattr(X_transformed, "columns", None))
 
-            with st.expander("Technical Details"):
-                st.write(f"Model used: {type(model.model).__name__}")
-                st.write("Processed Input Features:")
-                st.dataframe(input_df)
+                        st_shap(shap.plots.waterfall(explanation))
+
+                    except Exception as e:
+                        st.error(f"Error calculating SHAP values: {e}")
+                        # import traceback
+                        # st.text(traceback.format_exc())
 
         except Exception as e:
             st.error(f"Error during prediction: {e}")
-            import traceback
-            st.text(traceback.format_exc())
     else:
-        st.error("Model could not be loaded.")
+        st.error("Model could not be loaded. Please check if the model file exists.")
