@@ -19,6 +19,10 @@ dependencies:
   - ruff
   - black
   - pre-commit
+  - pyarrow
+  - fastapi
+  - uvicorn
+  - pydantic
   - pip
   - pip:
     - streamlit
