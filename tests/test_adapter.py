@@ -7,9 +7,13 @@ from pydantic import ValidationError
 class TestUserInputAdapter(unittest.TestCase):
     def setUp(self):
         self.adapter = UserInputAdapter()
+        # Updated to match src/interfaces.py requirements (NHANES schema)
         self.valid_input = {
             'Age': 45,
             'Sex': 1,
+            'Race': 3,          # Added (White)
+            'Education': 4,     # Added (Some College)
+            'IncomeRatio': 2.5, # Added
             'Height': 175.0,
             'BMI': 24.5,
             'SystolicBP': 120.0,
@@ -22,6 +26,12 @@ class TestUserInputAdapter(unittest.TestCase):
             'Glucose': 90.0,
             'UricAcid': 5.0,
             'Creatinine': 0.9,
+            'ALT_Enzyme': 25.0, # Added
+            'AST_Enzyme': 22.0, # Added
+            'GGT_Enzyme': 30.0, # Added
+            'Albumin': 4.5,     # Added
+            'Potassium': 4.0,   # Added
+            'Sodium': 140.0,    # Added
             'Smoking': 0,
             'Alcohol': 0,
             'PhysicalActivity': 1,
@@ -35,6 +45,7 @@ class TestUserInputAdapter(unittest.TestCase):
         self.assertEqual(len(df), 1)
         self.assertEqual(df['Age'][0], 45)
         self.assertEqual(df['SystolicBP'][0], 120.0)
+        self.assertEqual(df['Race'][0], 3)
 
     def test_missing_optional_field(self):
         """Test missing optional DiastolicBP is handled."""
