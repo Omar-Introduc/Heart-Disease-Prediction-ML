@@ -1839,3 +1839,8 @@ Please also refer to the documentation for alternative solver options:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2025-11-28 16:24:57,872:WARNING:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 05:11:49,515:WARNING:/app/src/adapters.py:111: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  data_dict = validated_data.dict()
+
+2025-11-29 05:12:08,233:WARNING:/app/src/adapters.py:111: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  data_dict = validated_data.dict()
