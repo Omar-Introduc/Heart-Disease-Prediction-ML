@@ -3,39 +3,41 @@ playwright==1.55.0
 pyee==13.0.0
 typing_extensions==4.15.0
 
-
 # Core ML
-#numpy<2.0.0
-#pandas<2.0.0
-#scikit-learn<1.3.0
-#xgboost
+numpy<2.0.0
+pandas<2.0.0
+scikit-learn<1.3.0
+xgboost
 
 # Data Processing
-#pyreadstat
-#pyarrow
+pyreadstat
+pyarrow
 
 # Visualization
-#matplotlib
-#seaborn
-#sweetviz
-#shap
+matplotlib
+seaborn
+sweetviz
+shap
 
 # Notebooks
-#jupyter
-#ipykernel
-#papermill
+jupyter
+ipykernel
+papermill
 
 # Fairness
-#fairlearn
+fairlearn
 
 # Dev Tools
-#ruff
-#black
-#pre-commit
+ruff
+black
+pre-commit
 
-# UI
-#streamlit
-#streamlit-shap
+# UI / API
+streamlit
+streamlit-shap
+fastapi
+uvicorn
+pydantic
 
 # AutoML
-#pycaret>=3.0.0
+pycaret>=3.0.0
