@@ -1,0 +1,21 @@
+{
+    "model_path": "models/best_pipeline",
+    "metrics": {
+        "men": {
+            "recall": 1.0,
+            "fnr": 0.0,
+            "count": 21601
+        },
+        "women": {
+            "recall": 0.0,
+            "fnr": 1.0,
+            "count": 0
+        }
+    },
+    "fairness_metrics": {
+        "equal_opportunity_ratio": 0.0,
+        "fnr_ratio": 999.0
+    },
+    "status": "\u274c FAIL",
+    "message": "Significant Bias Detected against Women (High FNR)."
+}
