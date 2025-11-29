@@ -8,8 +8,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 import pandas as pd
 import numpy as np
-import shap
-from streamlit_shap import st_shap
+
+try:
+    import shap
+    from streamlit_shap import st_shap
+    SHAP_AVAILABLE = True
+except (ImportError, OSError):
+    SHAP_AVAILABLE = False
+
 from src.adapters import PyCaretAdapter, UserInputAdapter
 
 # Page Config
@@ -186,34 +192,38 @@ if submitted:
                     st.success(f"**{prediction_label}**")
 
             # SHAP
-            if st.checkbox("Show Explanation (SHAP)"):
-                with st.spinner('Calculating explanation...'):
-                    try:
-                        # Simple SHAP implementation for the first row
-                        pipeline = model.model
-                        if hasattr(pipeline, 'steps'):
-                             estimator = pipeline.steps[-1][1]
-                        else:
-                             estimator = pipeline
+            if SHAP_AVAILABLE:
+                if st.checkbox("Show Explanation (SHAP)"):
+                    with st.spinner('Calculating explanation...'):
+                        try:
+                            # Simple SHAP implementation for the first row
+                            pipeline = model.model
+                            if hasattr(pipeline, 'steps'):
+                                estimator = pipeline.steps[-1][1]
+                            else:
+                                estimator = pipeline
 
-                        # Note: SHAP with pipelines can be tricky.
-                        # Ideally use explainer on the estimator and transformed data.
-                        # For simplicity, we skip full transformation logic in this snippet
-                        # and assume TreeExplainer works if compatible.
-                        explainer = shap.TreeExplainer(estimator)
-                        shap_values = explainer.shap_values(input_df)
+                            # Note: SHAP with pipelines can be tricky.
+                            # Ideally use explainer on the estimator and transformed data.
+                            # For simplicity, we skip full transformation logic in this snippet
+                            # and assume TreeExplainer works if compatible.
+                            explainer = shap.TreeExplainer(estimator)
+                            shap_values = explainer.shap_values(input_df)
 
-                        if isinstance(shap_values, list):
-                            sv = shap_values[1][0]
-                            base_value = explainer.expected_value[1]
-                        else:
-                            sv = shap_values[0]
-                            base_value = explainer.expected_value
+                            if isinstance(shap_values, list):
+                                sv = shap_values[1][0]
+                                base_value = explainer.expected_value[1]
+                            else:
+                                sv = shap_values[0]
+                                base_value = explainer.expected_value
 
-                        explanation = shap.Explanation(values=sv, base_values=base_value, data=input_df.iloc[0], feature_names=input_df.columns)
-                        st_shap(shap.plots.waterfall(explanation))
-                    except Exception as e:
-                        st.warning(f"Could not generate explanation: {e}")
+                            explanation = shap.Explanation(values=sv, base_values=base_value, data=input_df.iloc[0], feature_names=input_df.columns)
+                            st_shap(shap.plots.waterfall(explanation))
+                        except Exception as e:
+                            st.warning(f"Could not generate explanation: {e}")
+            else:
+                if st.checkbox("Show Explanation (SHAP)", disabled=True, help="Feature unavailable due to missing dependencies (shap/numba)."):
+                    pass
 
         except Exception as e:
             st.error(f"Error: {e}")
