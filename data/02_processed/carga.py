@@ -112,6 +112,10 @@ for c in cycles_config:
         df_smq = load('SMQ', ['SMQ020'])
         df_hiq = load('HIQ', ['HIQ011'])
         
+        # --- CORRECCIÓN: Agregamos carga de Alcohol (ALQ101) ---
+        # ALQ101: "Had at least 12 alcohol drinks/1 yr?" (1=Yes, 2=No)
+        df_alq = load('ALQ', ['ALQ101'])
+
         df_paq_raw = load('PAQ')
         if 'PAQ650' in df_paq_raw.columns:
             df_paq = df_paq_raw[['SEQN', 'PAQ650']].rename(columns={'PAQ650': 'Actividad_Fisica'})
@@ -130,7 +134,8 @@ for c in cycles_config:
                           .merge(df_bio, on='SEQN', how='inner') \
                           .merge(df_smq, on='SEQN', how='left') \
                           .merge(df_paq, on='SEQN', how='left') \
-                          .merge(df_hiq, on='SEQN', how='left')
+                          .merge(df_hiq, on='SEQN', how='left') \
+                          .merge(df_alq, on='SEQN', how='left')
         
         print(f"   -> Filas recolectadas: {len(df_cycle)}")
         dfs_list.append(df_cycle)
@@ -152,14 +157,15 @@ if dfs_list:
         'LBXSGL': 'Glucosa', 'LBXSCR': 'Creatinina', 'LBXSUA': 'Acido_Urico',
         'LBXSATSI': 'Enzima_ALT', 'LBXSASSI': 'Enzima_AST', 'LBXSGTSI': 'Enzima_GGT',
         'LBXSAL': 'Albumina', 'LBXSKSI': 'Potasio', 'LBXSNASI': 'Sodio',
-        'SMQ020': 'Fumador', 'HIQ011': 'Seguro_Medico'
+        'SMQ020': 'Fumador', 'HIQ011': 'Seguro_Medico',
+        'ALQ101': 'Alcohol'
     }
     df_final = df_final.rename(columns=cols_esp)
 
     # Limpieza Binaria y Nulos
     df_final['TARGET'] = df_final['TARGET'].apply(lambda x: 1 if x == 1 else 0)
     
-    for col in ['Fumador', 'Seguro_Medico', 'Actividad_Fisica']:
+    for col in ['Fumador', 'Seguro_Medico', 'Actividad_Fisica', 'Alcohol']:
         if col in df_final.columns:
             df_final[col] = df_final[col].apply(lambda x: 1 if x == 1 else (0 if x == 2 else np.nan))
 
