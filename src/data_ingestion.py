@@ -1,8 +1,8 @@
-import numpy as np
 import pandas as pd
 import pyreadstat
 import os
-from typing import Optional, Tuple, List
+from typing import Optional, Tuple
+
 
 def load_and_process_data(filepath: str, output_dir: str) -> Optional[pd.DataFrame]:
     """
@@ -17,7 +17,7 @@ def load_and_process_data(filepath: str, output_dir: str) -> Optional[pd.DataFra
     """
     print(f"Loading data from {filepath}...")
     try:
-        df, meta = pyreadstat.read_xport(filepath,encoding='latin1')
+        df, meta = pyreadstat.read_xport(filepath, encoding="latin1")
     except Exception as e:
         print(f"Error reading XPT file: {e}")
         return None
@@ -25,20 +25,20 @@ def load_and_process_data(filepath: str, output_dir: str) -> Optional[pd.DataFra
     print(f"Initial shape: {df.shape}")
 
     # Clean column names (remove leading '_')
-    df.columns = [col.lstrip('_') for col in df.columns]
+    df.columns = [col.lstrip("_") for col in df.columns]
     print("Cleaned column names (removed leading '_').")
 
     # Handle IDs
-    if 'SEQNO' in df.columns:
+    if "SEQNO" in df.columns:
         print("Setting SEQNO as index.")
-        df = df.set_index('SEQNO')
+        df = df.set_index("SEQNO")
 
     # Semantic Leakage Removal
     # Removing variables that indicate diagnosis or treatment consequence
     leakage_vars = [
-        'CVDASPRN', # Aspirin usage
-        'ASPUNSAF', # Aspirin unsafe
-        'DIABEDU',  # Diabetes education
+        "CVDASPRN",  # Aspirin usage
+        "ASPUNSAF",  # Aspirin unsafe
+        "DIABEDU",  # Diabetes education
         # Add others if found
     ]
 
@@ -51,10 +51,10 @@ def load_and_process_data(filepath: str, output_dir: str) -> Optional[pd.DataFra
     # Target Standardization
     # Priority: CVDINFR4 (Heart Attack) > CVDCRHD4 (Coronary Heart Disease)
     target = None
-    if 'CVDINFR4' in df.columns:
-        target = 'CVDINFR4'
-    elif 'CVDCRHD4' in df.columns:
-        target = 'CVDCRHD4'
+    if "CVDINFR4" in df.columns:
+        target = "CVDINFR4"
+    elif "CVDCRHD4" in df.columns:
+        target = "CVDCRHD4"
 
     if target:
         print(f"Target variable selected: {target}")
@@ -77,12 +77,15 @@ def load_and_process_data(filepath: str, output_dir: str) -> Optional[pd.DataFra
 
     output_path = os.path.join(output_dir, "processed_data_profundo.parquet")
     print(f"Saving to {output_path}...")
-    df.to_parquet(output_path) # Index (SEQNO) is preserved in Parquet
+    df.to_parquet(output_path)  # Index (SEQNO) is preserved in Parquet
     print("Done.")
 
     return df
 
-def split_data(df: pd.DataFrame, target_col: str, test_size: float = 0.2, random_state: int = 42) -> Tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.Series]:
+
+def split_data(
+    df: pd.DataFrame, target_col: str, test_size: float = 0.2, random_state: int = 42
+) -> Tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.Series]:
     """
     Splits data into Train and Test.
 
@@ -101,7 +104,7 @@ def split_data(df: pd.DataFrame, target_col: str, test_size: float = 0.2, random
         return None, None, None, None
 
     # Shuffle
-    df = df.sample(frac=1, random_state=random_state) # Index preserved
+    df = df.sample(frac=1, random_state=random_state)  # Index preserved
 
     split_idx = int(len(df) * (1 - test_size))
     train = df.iloc[:split_idx]
@@ -113,6 +116,7 @@ def split_data(df: pd.DataFrame, target_col: str, test_size: float = 0.2, random
     y_test = test[target_col]
 
     return X_train, y_train, X_test, y_test
+
 
 if __name__ == "__main__":
     raw_path = "data/01_raw/LLCP2022.xpt"

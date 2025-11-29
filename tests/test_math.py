@@ -4,6 +4,7 @@ from src.tree.loss_functions import LogLoss
 from src.tree.decision_tree import DecisionTree
 from src.model import XGBoostScratch
 
+
 class TestXGBoostMath(unittest.TestCase):
     """
     Unit tests for mathematical components of XGBoost.
@@ -28,10 +29,10 @@ class TestXGBoostMath(unittest.TestCase):
 
         # Manual calculation
         # g = p - y
-        g_expected = p - self.y # [0.5, 0.5, 0.5, -0.5, -0.5]
+        g_expected = p - self.y  # [0.5, 0.5, 0.5, -0.5, -0.5]
 
         # h = p * (1 - p)
-        h_expected = p * (1 - p) # 0.25 for all
+        # h_expected = p * (1 - p)  # 0.25 for all
         h_expected_arr = np.full(5, 0.25)
 
         g_calc = self.loss.gradient(self.y, y_pred_score)
@@ -53,18 +54,18 @@ class TestXGBoostMath(unittest.TestCase):
         g_R = np.array([-0.5, -0.5])
         h_R = np.array([0.25, 0.25])
 
-        G_L = 1.5
-        H_L = 0.75
-        G_R = -1.0
-        H_R = 0.5
+        # G_L = 1.5
+        # H_L = 0.75
+        # G_R = -1.0
+        # H_R = 0.5
 
         lambda_ = 1.0
         gamma = 0.0
 
         # Gain = 0.5 * [ G_L^2/(H_L+lam) + G_R^2/(H_R+lam) - (G_L+G_R)^2/(H_L+H_R+lam) ] - gamma
-        term_L = (1.5**2) / (0.75 + 1.0) # 2.25 / 1.75 = 1.2857
-        term_R = ((-1.0)**2) / (0.5 + 1.0) # 1.0 / 1.5 = 0.6667
-        term_Total = ((0.5)**2) / (1.25 + 1.0) # 0.25 / 2.25 = 0.1111
+        term_L = (1.5**2) / (0.75 + 1.0)  # 2.25 / 1.75 = 1.2857
+        term_R = ((-1.0) ** 2) / (0.5 + 1.0)  # 1.0 / 1.5 = 0.6667
+        term_Total = ((0.5) ** 2) / (1.25 + 1.0)  # 0.25 / 2.25 = 0.1111
 
         expected_gain = 0.5 * (term_L + term_R - term_Total)
 
@@ -87,5 +88,6 @@ class TestXGBoostMath(unittest.TestCase):
         # First 3 should be low, last 2 should be high
         self.assertTrue(np.mean(preds[:3]) < np.mean(preds[3:]))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

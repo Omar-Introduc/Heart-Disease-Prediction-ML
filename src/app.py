@@ -11,40 +11,42 @@ except NameError:
     # When running in notebook
     current_dir = os.getcwd()
 
-sys.path.append(os.path.abspath(os.path.join(current_dir, '..')))
+sys.path.append(os.path.abspath(os.path.join(current_dir, "..")))
 
-import streamlit as st
-import pandas as pd
+import streamlit as st  # noqa: E402
+import pandas as pd  # noqa: E402
 
 try:
     import shap
     from streamlit_shap import st_shap
+
     SHAP_AVAILABLE = True
 except (ImportError, OSError):
     SHAP_AVAILABLE = False
 
-from src.adapters import PyCaretAdapter, UserInputAdapter
+from src.adapters import PyCaretAdapter, UserInputAdapter  # noqa: E402
 
 # Page Config
 st.set_page_config(
-    page_title="Heart Disease Risk Prediction (NHANES)",
-    page_icon="❤️",
-    layout="wide"
+    page_title="Heart Disease Risk Prediction (NHANES)", page_icon="❤️", layout="wide"
 )
 
 # Load Config
 CONFIG_PATH = "models/model_config.json"
 MODEL_PATH = "models/best_pipeline.pkl"
 
+
 @st.cache_resource
 def load_config() -> Dict[str, Any]:
     if os.path.exists(CONFIG_PATH):
-        with open(CONFIG_PATH, 'r') as f:
+        with open(CONFIG_PATH, "r") as f:
             return json.load(f)
     return {"threshold": 0.5}
 
+
 config = load_config()
 default_threshold = config.get("threshold", 0.5)
+
 
 # Load Model
 @st.cache_resource
@@ -54,16 +56,18 @@ def load_model_pipeline() -> Optional[PyCaretAdapter]:
         # Try without extension if pkl is not found directly
         path_no_ext = os.path.splitext(MODEL_PATH)[0]
         if not os.path.exists(path_no_ext + ".pkl"):
-             return None
+            return None
 
     try:
         from pycaret.classification import load_model
+
         path_without_ext = os.path.splitext(MODEL_PATH)[0]
         pipeline = load_model(path_without_ext)
         return PyCaretAdapter(pipeline)
     except Exception as e:
         st.error(f"Error loading model: {e}")
         return None
+
 
 model = load_model_pipeline()
 
@@ -73,7 +77,9 @@ if model:
 # Sidebar
 with st.sidebar:
     st.image("https://img.icons8.com/color/96/heart-with-pulse.png")
-    st.warning("⚠️ **Aviso Importante**\nEsta herramienta es un prototipo basado en datos clínicos (NHANES). No sustituye la opinión médica.")
+    st.warning(
+        "⚠️ **Aviso Importante**\nEsta herramienta es un prototipo basado en datos clínicos (NHANES). No sustituye la opinión médica."
+    )
     if model:
         st.info(f"Modelo cargado: {type(model.model).__name__}")
     st.markdown("---")
@@ -85,19 +91,18 @@ st.markdown("Enter clinical patient data below to estimate risk.")
 
 # Input Form
 with st.form("patient_data_form"):
-
     # 1. Datos Personales
     st.subheader("👤 Datos Personales")
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         age = st.number_input("Age", min_value=18, max_value=100, value=45)
-        
+
         race_map = {
             "Mexican American": 1,
             "Other Hispanic": 2,
             "Non-Hispanic White": 3,
             "Non-Hispanic Black": 4,
-            "Other Race": 5
+            "Other Race": 5,
         }
         race_label = st.selectbox("Race / Ethnicity", list(race_map.keys()), index=2)
         race = race_map[race_label]
@@ -105,29 +110,41 @@ with st.form("patient_data_form"):
     with col2:
         sex_radio = st.radio("Sex", options=["Female", "Male"], horizontal=True)
         sex = 1 if sex_radio == "Male" else 0
-        
+
         edu_map = {
             "< 9th Grade": 1,
             "9-11th Grade": 2,
             "High School Grad/GED": 3,
             "Some College/AA": 4,
-            "College Graduate": 5
+            "College Graduate": 5,
         }
         edu_label = st.selectbox("Education Level", list(edu_map.keys()), index=2)
         education = edu_map[edu_label]
 
     with col3:
-        height = st.number_input("Height (cm)", min_value=130.0, max_value=220.0, value=170.0)
-        income = st.slider("Income Ratio (PIR)", 0.0, 5.0, 2.5, help="Ratio of family income to poverty threshold")
+        height = st.number_input(
+            "Height (cm)", min_value=130.0, max_value=220.0, value=170.0
+        )
+        income = st.slider(
+            "Income Ratio (PIR)",
+            0.0,
+            5.0,
+            2.5,
+            help="Ratio of family income to poverty threshold",
+        )
 
     with col4:
-        waist = st.number_input("Waist Circumference (cm)", min_value=50.0, max_value=180.0, value=90.0)
+        waist = st.number_input(
+            "Waist Circumference (cm)", min_value=50.0, max_value=180.0, value=90.0
+        )
 
     # 2. Signos Vitales
     st.subheader("🫀 Signos Vitales")
     col_v1, col_v2, col_v3 = st.columns(3)
     with col_v1:
-        bmi = st.number_input("BMI", min_value=12.0, max_value=60.0, value=25.0, format="%.1f")
+        bmi = st.number_input(
+            "BMI", min_value=12.0, max_value=60.0, value=25.0, format="%.1f"
+        )
     with col_v2:
         sys_bp = st.slider("Systolic BP (mmHg)", 80.0, 220.0, 120.0)
     with col_v3:
@@ -186,7 +203,7 @@ with st.form("patient_data_form"):
         min_value=0.0,
         max_value=1.0,
         value=float(default_threshold),
-        step=0.01
+        step=0.01,
     )
 
     submitted = st.form_submit_button("Predict Clinical Risk")
@@ -196,33 +213,33 @@ if submitted:
         try:
             # Prepare dictionary
             user_input = {
-                'Age': age,
-                'Sex': sex,
-                'Race': race,
-                'Education': education,
-                'IncomeRatio': income,
-                'Height': height,
-                'BMI': bmi,
-                'SystolicBP': sys_bp,
-                'DiastolicBP': dia_bp,
-                'WaistCircumference': waist,
-                'TotalCholesterol': chol,
-                'LDL': ldl,
-                'Triglycerides': trig,
-                'HbA1c': hba1c,
-                'Glucose': glucose,
-                'UricAcid': uric,
-                'Creatinine': creat,
-                'ALT_Enzyme': alt,
-                'AST_Enzyme': ast,
-                'GGT_Enzyme': ggt,
-                'Albumin': albumin,
-                'Potassium': potassium,
-                'Sodium': sodium,
-                'Smoking': smoking_int,
-                'Alcohol': alcohol_int,
-                'PhysicalActivity': activity_int,
-                'HealthInsurance': insurance_int
+                "Age": age,
+                "Sex": sex,
+                "Race": race,
+                "Education": education,
+                "IncomeRatio": income,
+                "Height": height,
+                "BMI": bmi,
+                "SystolicBP": sys_bp,
+                "DiastolicBP": dia_bp,
+                "WaistCircumference": waist,
+                "TotalCholesterol": chol,
+                "LDL": ldl,
+                "Triglycerides": trig,
+                "HbA1c": hba1c,
+                "Glucose": glucose,
+                "UricAcid": uric,
+                "Creatinine": creat,
+                "ALT_Enzyme": alt,
+                "AST_Enzyme": ast,
+                "GGT_Enzyme": ggt,
+                "Albumin": albumin,
+                "Potassium": potassium,
+                "Sodium": sodium,
+                "Smoking": smoking_int,
+                "Alcohol": alcohol_int,
+                "PhysicalActivity": activity_int,
+                "HealthInsurance": insurance_int,
             }
 
             # Adapter
@@ -230,7 +247,7 @@ if submitted:
             input_df = adapter.transform(user_input)
 
             # Ensure columns match model expectation (handling unexpected columns if any)
-            if hasattr(model.model, 'feature_names_in_'):
+            if hasattr(model.model, "feature_names_in_"):
                 expected_cols = model.model.feature_names_in_
                 # Reindex allows filling missing columns with 0 if needed, though Adapter should have covered it
                 input_df = input_df.reindex(columns=expected_cols, fill_value=0)
@@ -252,7 +269,7 @@ if submitted:
             # SHAP
             if SHAP_AVAILABLE:
                 if st.checkbox("Show Explanation (SHAP)"):
-                    with st.spinner('Calculating explanation...'):
+                    with st.spinner("Calculating explanation..."):
                         try:
                             # 1. Access the raw model pipeline
                             pipeline = model.model
@@ -261,10 +278,12 @@ if submitted:
                             estimator = pipeline
                             preprocessor = None
 
-                            if hasattr(pipeline, 'steps'):
+                            if hasattr(pipeline, "steps"):
                                 # Usually the last step is the model
                                 estimator = pipeline.steps[-1][1]
-                                preprocessor = pipeline[:-1] # All steps except the last
+                                preprocessor = pipeline[
+                                    :-1
+                                ]  # All steps except the last
 
                             # 3. Transform data if there is a preprocessor
                             X_transformed = input_df
@@ -274,9 +293,11 @@ if submitted:
                                 X_transformed = preprocessor.transform(input_df)
 
                                 # Try to recover feature names from preprocessor
-                                if hasattr(preprocessor, 'get_feature_names_out'):
+                                if hasattr(preprocessor, "get_feature_names_out"):
                                     try:
-                                        feature_names = preprocessor.get_feature_names_out()
+                                        feature_names = (
+                                            preprocessor.get_feature_names_out()
+                                        )
                                     except Exception:
                                         # Fallback: if X_transformed is DataFrame
                                         if isinstance(X_transformed, pd.DataFrame):
@@ -298,7 +319,9 @@ if submitted:
                                 # Using a summary of training data is best, but we don't have it loaded easily here.
                                 # We'll try to use the input itself as background (bad practice but avoids crash)
                                 # or better: warn user.
-                                st.warning("TreeExplainer failed (model might not be tree-based). Trying generic approach...")
+                                st.warning(
+                                    "TreeExplainer failed (model might not be tree-based). Trying generic approach..."
+                                )
                                 explainer = shap.Explainer(estimator, X_transformed)
 
                             # 5. Calculate SHAP values
@@ -306,7 +329,10 @@ if submitted:
                             shap_values = explainer(X_transformed)
 
                             # 6. Fix Feature Names in Explanation object
-                            if feature_names is not None and len(feature_names) == shap_values.shape[1]:
+                            if (
+                                feature_names is not None
+                                and len(feature_names) == shap_values.shape[1]
+                            ):
                                 shap_values.feature_names = feature_names
 
                             # 7. Visualize (Waterfall for single instance)
@@ -316,9 +342,14 @@ if submitted:
                         except Exception as e:
                             st.warning(f"Could not generate explanation: {e}")
                             import traceback
+
                             st.expander("Details").text(traceback.format_exc())
             else:
-                if st.checkbox("Show Explanation (SHAP)", disabled=True, help="Feature unavailable due to missing dependencies (shap/numba)."):
+                if st.checkbox(
+                    "Show Explanation (SHAP)",
+                    disabled=True,
+                    help="Feature unavailable due to missing dependencies (shap/numba).",
+                ):
                     pass
 
         except Exception as e:

@@ -1,9 +1,11 @@
 import numpy as np
 
+
 class LogLoss:
     """
     LogLoss (Binary Cross Entropy) for Binary Classification.
     """
+
     def __init__(self):
         pass
 
