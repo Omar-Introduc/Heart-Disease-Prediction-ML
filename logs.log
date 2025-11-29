@@ -2537,3 +2537,87 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2025-11-29 12:58:14,893:INFO:Preloading libraries
 2025-11-29 12:58:14,894:INFO:Set up data.
 2025-11-29 12:58:14,902:INFO:Set up index.
+2025-11-29 14:17:31,981:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:17:31,984:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:17:31,984:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:17:31,984:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:17:33,386:INFO:Initializing load_model()
+2025-11-29 14:17:33,387:INFO:load_model(model_name=models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 14:17:33,438:WARNING:C:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 14:17:41,887:INFO:Initializing predict_model()
+2025-11-29 14:17:41,888:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000015AFEEBB3A0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000015AFF3D9BD0>)
+2025-11-29 14:17:41,888:INFO:Checking exceptions
+2025-11-29 14:17:41,888:INFO:Preloading libraries
+2025-11-29 14:17:41,888:INFO:Set up data.
+2025-11-29 14:17:41,892:INFO:Set up index.
+2025-11-29 14:32:59,729:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:32:59,730:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:32:59,730:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:32:59,730:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 14:33:01,993:INFO:Initializing load_model()
+2025-11-29 14:33:01,993:INFO:load_model(model_name=models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 14:33:02,092:WARNING:C:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 14:33:16,758:INFO:Initializing predict_model()
+2025-11-29 14:33:16,758:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000022E945A0AF0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000022EDF2FB760>)
+2025-11-29 14:33:16,758:INFO:Checking exceptions
+2025-11-29 14:33:16,758:INFO:Preloading libraries
+2025-11-29 14:33:16,758:INFO:Set up data.
+2025-11-29 14:33:16,768:INFO:Set up index.

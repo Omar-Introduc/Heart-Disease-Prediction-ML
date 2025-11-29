@@ -18,7 +18,9 @@ pydantic
 matplotlib
 seaborn
 sweetviz
-shap==0.45.0
+shap==0.48.0
+numba==0.59.0
+llvmlite==0.42.0
 
 # Notebooks
 jupyter
@@ -35,7 +37,7 @@ pre-commit
 
 # UI & API
 streamlit
-streamlit-shap
+streamlit-shap==1.0.2
 fastapi
 uvicorn
 
