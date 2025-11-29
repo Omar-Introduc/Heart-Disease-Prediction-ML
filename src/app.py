@@ -8,6 +8,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 import pandas as pd
 import numpy as np
+import shap
+from streamlit_shap import st_shap
 from src.adapters import PyCaretAdapter, UserInputAdapter
 
 # Page Config
@@ -135,6 +137,68 @@ if submitted:
                     st.success(f"{prediction_label}")
 
             st.info(f"Prediction made with threshold {threshold}. Optimized threshold was {default_threshold:.4f}.")
+
+            # SHAP Integration
+            if st.checkbox("¿Por qué este resultado? (Explain with SHAP)"):
+                try:
+                    with st.spinner("Calculating explanation..."):
+                        # Access underlying PyCaret pipeline step
+                        # Assuming PyCaret Pipeline wrapper
+                        pipeline = model.model
+
+                        # Data Transformation for SHAP
+                        # PyCaret pipeline handles preprocessing (imputation, encoding)
+                        # We must transform the input_df using the pipeline *except* the final estimator step
+                        # to get the actual features the tree sees.
+
+                        if hasattr(pipeline, 'named_steps'):
+                            estimator = pipeline.named_steps['trained_model']
+
+                            # We need to run transform on all steps except the last one
+                            # scikit-learn pipeline doesn't have a simple "transform until" method
+                            # So we iterate.
+
+                            X_transformed = input_df.copy()
+                            for name, step in pipeline.named_steps.items():
+                                if name == 'trained_model':
+                                    continue
+                                if hasattr(step, 'transform'):
+                                    X_transformed = step.transform(X_transformed)
+                                    # If output is numpy array (e.g. from SimpleImputer or standard scaler sometimes)
+                                    # we need to keep track of columns if possible, but sklearn pipelines often return numpy
+                                    if isinstance(X_transformed, np.ndarray):
+                                         # Try to recover columns if possible, or proceed with array
+                                         # Ideally we should keep it as dataframe if steps allow, but PyCaret steps usually do
+                                         pass
+                        else:
+                            # Fallback if no steps (unlikely for PyCaret)
+                            estimator = pipeline
+                            X_transformed = input_df
+
+                        # Create Explainer
+                        # Ideally, this should be cached globally, but for now we create it here.
+                        # Note: TreeExplainer handles feature_perturbation='tree_path_dependent' by default which doesn't strictly require background data
+                        # but requires the model.
+                        explainer = shap.TreeExplainer(estimator)
+
+                        # Calculate SHAP values for this instance
+                        shap_values = explainer.shap_values(X_transformed)
+
+                        # Force Plot
+                        # shap_values might be a list (for classification), taking the positive class [1]
+                        if isinstance(shap_values, list):
+                            sv = shap_values[1][0] # 0 for the single row
+                            ev = explainer.expected_value[1]
+                        else:
+                            sv = shap_values[0] # 0 for the single row
+                            ev = explainer.expected_value
+
+                        st_shap(shap.force_plot(ev, sv, X_transformed))
+
+                except Exception as ex:
+                    st.warning(f"Could not generate SHAP explanation: {ex}")
+                    import traceback
+                    st.text(traceback.format_exc())
 
             with st.expander("Technical Details"):
                 st.write(f"Model used: {type(model.model).__name__}")
