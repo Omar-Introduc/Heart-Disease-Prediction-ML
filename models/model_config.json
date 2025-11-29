@@ -1,5 +1,0 @@
-{
-    "threshold": 0.01,
-    "model_name": "LGBMClassifier",
-    "metric_optimized": "F2-Score"
-}
