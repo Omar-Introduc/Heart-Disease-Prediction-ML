@@ -7,14 +7,15 @@ class XGBoostScratch:
     """
     XGBoost implementation from scratch using Gradient Boosting on Decision Trees.
     """
-    def __init__(self, n_estimators=100, learning_rate=0.1, max_depth=3, lambda_=1.0, gamma=0.0):
+    def __init__(self, n_estimators=100, learning_rate=0.1, max_depth=3, lambda_=1.0, gamma=0.0, scale_pos_weight=1.0):
         self.n_estimators = n_estimators
         self.learning_rate = learning_rate
         self.max_depth = max_depth
         self.lambda_ = lambda_
         self.gamma = gamma
+        self.scale_pos_weight = scale_pos_weight
         self.trees = []
-        self.loss_func = LogLoss()
+        self.loss_func = LogLoss(scale_pos_weight=self.scale_pos_weight)
         self.base_pred = 0.0
 
     def fit(self, X, y):
@@ -32,6 +33,7 @@ class XGBoostScratch:
             y = np.array(y)
 
         # Initial prediction (log(odds) = 0.0 implies p=0.5)
+        # If classes are imbalanced, starting with log(pos/neg) is better, but 0.0 is standard for educational scratch
         self.base_pred = 0.0
         y_pred = np.full(y.shape, self.base_pred)
 
