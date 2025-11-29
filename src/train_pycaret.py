@@ -11,8 +11,10 @@ from pycaret.classification import (
     add_metric,
     create_model
 )
-from sklearn.metrics import fbeta_score, precision_score, f1_score, confusion_matrix
+from sklearn.metrics import fbeta_score, precision_score, f1_score, confusion_matrix, recall_score
+from pycaret.classification import interpret_model
 import os
+import shutil
 import json
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -240,19 +242,62 @@ def train_baseline(
 
     if y_scores is None:
          # Try finding the score column for the positive class (1)
-         # Usually 'prediction_score_1'
-         pass
+         for col in predictions.columns:
+             if 'score_1' in col or 'score_True' in col:
+                 y_scores = predictions[col]
+                 break
 
     best_thresh = 0.5
     if y_scores is not None:
+        # Precision-Constrained Recall Maximization
         thresholds = np.arange(0.1, 0.9, 0.01)
-        f2_scores = []
+        candidates = []
+
         for t in thresholds:
             y_pred = (y_scores >= t).astype(int)
-            f2_scores.append(fbeta_score(y_true, y_pred, beta=2))
-        best_idx = np.argmax(f2_scores)
-        best_thresh = thresholds[best_idx]
-        print(f"Best Threshold (F2): {best_thresh:.2f}")
+            prec = precision_score(y_true, y_pred, zero_division=0)
+            rec = recall_score(y_true, y_pred, zero_division=0)
+            f1 = f1_score(y_true, y_pred, zero_division=0)
+            candidates.append((t, prec, rec, f1))
+
+        # Strategy: Max Recall such that Precision >= 0.4
+        safe_candidates = [c for c in candidates if c[1] >= 0.4]
+
+        best_prec, best_rec, best_f1 = 0, 0, 0
+
+        if safe_candidates:
+            # Sort by Recall (descending)
+            safe_candidates.sort(key=lambda x: x[2], reverse=True)
+            best_thresh, best_prec, best_rec, best_f1 = safe_candidates[0]
+            print(f"Selected Threshold {best_thresh:.2f} based on Precision >= 0.4 and Max Recall.")
+        else:
+            # Fallback: Maximize F1
+            candidates.sort(key=lambda x: x[3], reverse=True)
+            best_thresh, best_prec, best_rec, best_f1 = candidates[0]
+            print(f"No threshold met Precision >= 0.4. Selected Threshold {best_thresh:.2f} based on Max F1.")
+
+        print(f"Metrics at Optimal Threshold: Precision: {best_prec:.4f}, Recall: {best_rec:.4f}, F1: {best_f1:.4f}")
+
+    # SHAP Explainability
+    print("Generating SHAP Summary Plot...")
+    try:
+        # interpret_model works with the estimator (tuned_model) and uses the test set from setup()
+        # It saves the plot as 'Summary Plot.png' in the current directory if save=True
+        interpret_model(tuned_model, plot='summary', save=True)
+
+        # Move the file to models/ directory
+        shap_src = 'Summary Plot.png'
+        shap_dst = os.path.join(output_dir, 'shap_summary_plot.png')
+        if os.path.exists(shap_src):
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
+            shutil.move(shap_src, shap_dst)
+            print(f"SHAP summary plot saved to {shap_dst}")
+        else:
+            print("SHAP plot generated but file 'Summary Plot.png' not found.")
+
+    except Exception as e:
+        print(f"SHAP generation failed: {e}")
 
     print("Finalizing model...")
     final_model = finalize_model(tuned_model)
