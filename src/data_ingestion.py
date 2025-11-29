@@ -2,10 +2,18 @@ import numpy as np
 import pandas as pd
 import pyreadstat
 import os
+from typing import Optional, Tuple, List
 
-def load_and_process_data(filepath, output_dir):
+def load_and_process_data(filepath: str, output_dir: str) -> Optional[pd.DataFrame]:
     """
     Loads SAS XPT file, cleans data, and saves as Parquet.
+
+    Args:
+        filepath (str): Path to the input SAS XPT file.
+        output_dir (str): Directory where the processed Parquet file will be saved.
+
+    Returns:
+        Optional[pd.DataFrame]: The processed dataframe, or None if loading fails.
     """
     print(f"Loading data from {filepath}...")
     try:
@@ -67,7 +75,6 @@ def load_and_process_data(filepath, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    #output_path = os.path.join(output_dir, "processed_data.parquet")
     output_path = os.path.join(output_dir, "processed_data_profundo.parquet")
     print(f"Saving to {output_path}...")
     df.to_parquet(output_path) # Index (SEQNO) is preserved in Parquet
@@ -75,9 +82,19 @@ def load_and_process_data(filepath, output_dir):
 
     return df
 
-def split_data(df, target_col, test_size=0.2, random_state=42):
+def split_data(df: pd.DataFrame, target_col: str, test_size: float = 0.2, random_state: int = 42) -> Tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.Series]:
     """
     Splits data into Train and Test.
+
+    Args:
+        df (pd.DataFrame): The full dataframe.
+        target_col (str): The name of the target column.
+        test_size (float): The proportion of the dataset to include in the test split.
+        random_state (int): The seed used by the random number generator.
+
+    Returns:
+        Tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.Series]: X_train, y_train, X_test, y_test.
+        Returns (None, None, None, None) if target column is missing.
     """
     if target_col not in df.columns:
         print(f"Target column {target_col} not found.")
@@ -98,7 +115,6 @@ def split_data(df, target_col, test_size=0.2, random_state=42):
     return X_train, y_train, X_test, y_test
 
 if __name__ == "__main__":
-    #raw_path = "data/01_raw/LLCP2022_10rows.xpt"
     raw_path = "data/01_raw/LLCP2022.xpt"
     # Fallback to empty if not found, just to test script syntax
     if os.path.exists(raw_path):

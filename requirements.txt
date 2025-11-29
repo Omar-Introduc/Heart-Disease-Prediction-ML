@@ -1,35 +1,4 @@
-# Core ML
-numpy<2.0.0
-pandas<2.0.0
-scikit-learn<1.3.0
-xgboost
-
-# Data Processing
-pyreadstat
-pyarrow
-
-# Visualization
-matplotlib
-seaborn
-sweetviz
-shap
-
-# Notebooks
-jupyter
-ipykernel
-papermill
-
-# Fairness
-fairlearn
-
-# Dev Tools
-ruff
-black
-pre-commit
-
-# UI
-streamlit
-streamlit-shap
-
-# AutoML
-pycaret>=3.0.0
+greenlet==3.2.4
+playwright==1.55.0
+pyee==13.0.0
+typing_extensions==4.15.0
