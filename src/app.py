@@ -15,7 +15,6 @@ sys.path.append(os.path.abspath(os.path.join(current_dir, '..')))
 
 import streamlit as st
 import pandas as pd
-import numpy as np
 
 try:
     import shap
@@ -255,31 +254,69 @@ if submitted:
                 if st.checkbox("Show Explanation (SHAP)"):
                     with st.spinner('Calculating explanation...'):
                         try:
-                            # Simple SHAP implementation for the first row
+                            # 1. Access the raw model pipeline
                             pipeline = model.model
+
+                            # 2. Decompose Pipeline to get Estimator and Preprocessor
+                            estimator = pipeline
+                            preprocessor = None
+
                             if hasattr(pipeline, 'steps'):
+                                # Usually the last step is the model
                                 estimator = pipeline.steps[-1][1]
-                            else:
-                                estimator = pipeline
+                                preprocessor = pipeline[:-1] # All steps except the last
 
-                            # Note: SHAP with pipelines can be tricky.
-                            # Ideally use explainer on the estimator and transformed data.
-                            # For simplicity, we skip full transformation logic in this snippet
-                            # and assume TreeExplainer works if compatible.
-                            explainer = shap.TreeExplainer(estimator)
-                            shap_values = explainer.shap_values(input_df)
+                            # 3. Transform data if there is a preprocessor
+                            X_transformed = input_df
+                            feature_names = input_df.columns
 
-                            if isinstance(shap_values, list):
-                                sv = shap_values[1][0]
-                                base_value = explainer.expected_value[1]
-                            else:
-                                sv = shap_values[0]
-                                base_value = explainer.expected_value
+                            if preprocessor:
+                                X_transformed = preprocessor.transform(input_df)
 
-                            explanation = shap.Explanation(values=sv, base_values=base_value, data=input_df.iloc[0], feature_names=input_df.columns)
-                            st_shap(shap.plots.waterfall(explanation))
+                                # Try to recover feature names from preprocessor
+                                if hasattr(preprocessor, 'get_feature_names_out'):
+                                    try:
+                                        feature_names = preprocessor.get_feature_names_out()
+                                    except Exception:
+                                        # Fallback: if X_transformed is DataFrame
+                                        if isinstance(X_transformed, pd.DataFrame):
+                                            feature_names = X_transformed.columns
+                                        else:
+                                            # We lose feature names, but we can try to guess or leave it
+                                            # If one-hot encoding happened, names are changed.
+                                            pass
+
+                            # 4. Create Explainer
+                            # Use TreeExplainer for tree models (XGBoost, LGBM, etc)
+                            # Fallback to KernelExplainer if not tree (or if generic)
+
+                            try:
+                                explainer = shap.TreeExplainer(estimator)
+                            except Exception:
+                                # Fallback for non-tree models
+                                # KernelExplainer needs background data.
+                                # Using a summary of training data is best, but we don't have it loaded easily here.
+                                # We'll try to use the input itself as background (bad practice but avoids crash)
+                                # or better: warn user.
+                                st.warning("TreeExplainer failed (model might not be tree-based). Trying generic approach...")
+                                explainer = shap.Explainer(estimator, X_transformed)
+
+                            # 5. Calculate SHAP values
+                            # explainer(X) returns an Explanation object in modern SHAP
+                            shap_values = explainer(X_transformed)
+
+                            # 6. Fix Feature Names in Explanation object
+                            if feature_names is not None and len(feature_names) == shap_values.shape[1]:
+                                shap_values.feature_names = feature_names
+
+                            # 7. Visualize (Waterfall for single instance)
+                            # shap_values[0] is the explanation for the first (and only) row
+                            st_shap(shap.plots.waterfall(shap_values[0]), height=600)
+
                         except Exception as e:
                             st.warning(f"Could not generate explanation: {e}")
+                            import traceback
+                            st.expander("Details").text(traceback.format_exc())
             else:
                 if st.checkbox("Show Explanation (SHAP)", disabled=True, help="Feature unavailable due to missing dependencies (shap/numba)."):
                     pass
