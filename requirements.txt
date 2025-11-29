@@ -6,12 +6,13 @@ typing_extensions==4.15.0
 # Core ML
 numpy<2.0.0
 pandas<2.0.0
-scikit-learn<1.3.0
-xgboost
+scikit-learn==1.3.2
+xgboost==3.1.2
+joblib==1.2.0
 
 # Data Processing
 pyreadstat
-pyarrow
+pyarrow==22.0.0
 pydantic
 
 # Visualization

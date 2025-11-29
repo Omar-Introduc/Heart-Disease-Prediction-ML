@@ -232,6 +232,9 @@ if submitted:
             # Ensure columns match model expectation (handling unexpected columns if any)
             if hasattr(model.model, 'feature_names_in_'):
                 expected_cols = model.model.feature_names_in_
+                # Filter out target column if present in expected_cols (PyCaret artifact)
+                expected_cols = [c for c in expected_cols if c != 'HeartDisease']
+                
                 # Reindex allows filling missing columns with 0 if needed, though Adapter should have covered it
                 input_df = input_df.reindex(columns=expected_cols, fill_value=0)
 
