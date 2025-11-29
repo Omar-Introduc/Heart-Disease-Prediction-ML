@@ -1,7 +1,8 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 import pandas as pd
 import numpy as np
-from src.interfaces import HeartDiseaseModel
+from src.interfaces import HeartDiseaseModel, InputData
+from pydantic import ValidationError
 
 # Lazy import or safe import for PyCaret
 try:
@@ -81,70 +82,42 @@ class PyCaretAdapter(HeartDiseaseModel):
 class UserInputAdapter:
     """
     Adapts human-readable dictionary inputs into the technical DataFrame structure
-    expected by the model, applying necessary encodings and transformations.
+    expected by the model, applying necessary validations and type conversions.
     """
     def __init__(self):
-        # We might not know the exact feature list at initialization,
-        # but we can produce the known columns.
-        # The model usually expects specific columns.
         pass
-
-    def _map_age_to_category(self, age: int) -> int:
-        """Maps age in years to BRFSS age category (AGEG5YR)."""
-        if 18 <= age <= 24: return 1
-        elif 25 <= age <= 29: return 2
-        elif 30 <= age <= 34: return 3
-        elif 35 <= age <= 39: return 4
-        elif 40 <= age <= 44: return 5
-        elif 45 <= age <= 49: return 6
-        elif 50 <= age <= 54: return 7
-        elif 55 <= age <= 59: return 8
-        elif 60 <= age <= 64: return 9
-        elif 65 <= age <= 69: return 10
-        elif 70 <= age <= 74: return 11
-        elif 75 <= age <= 79: return 12
-        elif age >= 80: return 13
-        else: return 14 # Missing or out of range
 
     def transform(self, user_input: Dict[str, Any]) -> pd.DataFrame:
         """
         Transforms user input dictionary into a DataFrame compatible with the model.
-        Returns a DataFrame with the mapped features.
+        Validates input using Pydantic InputData model.
+
+        Args:
+            user_input (Dict[str, Any]): Dictionary containing user inputs.
+
+        Returns:
+            pd.DataFrame: A DataFrame with the columns expected by the model.
+
+        Raises:
+            ValidationError: If input data is invalid.
         """
-        # Dictionary to hold the mapped values
-        data = {}
+        # Validate input using Pydantic
+        try:
+            validated_data = InputData(**user_input)
+        except ValidationError as e:
+            raise ValueError(f"Invalid input data: {e}")
 
-        # Extract user inputs
-        age = user_input.get('Age', 30)
-        bmi = user_input.get('BMI', 25.0)
-        smoker = user_input.get('Smoker', 'No')
-        sex = user_input.get('Sex', 'Female')
-        diabetes = user_input.get('Diabetes', 'No')
-        phys_activity = user_input.get('PhysicalActivity', 'No')
+        # Convert to dictionary
+        data_dict = validated_data.dict()
 
-        # Map inputs to model features (BRFSS Standards)
+        # Handle Optional fields if they end up as None (though Pydantic default is None)
+        # We fill missing DiastolicBP with a standard value if it's missing (though UI should handle it)
+        # But for model safety, let's fill it.
+        if data_dict.get('DiastolicBP') is None:
+            data_dict['DiastolicBP'] = 80.0 # Default normal diastolic
 
-        # _AGEG5YR: Reported Age in 5 Year Bands
-        data['_AGEG5YR'] = self._map_age_to_category(age)
+        # Convert to DataFrame
+        # We expect the model to use these exact keys as column names
+        df = pd.DataFrame([data_dict])
 
-        # _BMI5: Body Mass Index * 100
-        data['_BMI5'] = int(bmi * 100)
-
-        # SMOKE100: Smoked at least 100 cigarettes (1=Yes, 2=No)
-        data['SMOKE100'] = 1 if smoker == 'Yes' else 2
-
-        # SEXVAR: Sex of respondent (1=Male, 2=Female)
-        data['SEXVAR'] = 1 if sex == 'Male' else 2
-
-        # DIABETE4: (1=Yes, 3=No) - Simplified
-        # In full dataset: 1=Yes, 2=Yes(preg), 3=No, 4=Pre-diabetes
-        data['DIABETE4'] = 1 if diabetes == 'Yes' else 3
-
-        # EXERANY2: Exercise in past 30 days (1=Yes, 2=No)
-        data['EXERANY2'] = 1 if phys_activity == 'Yes' else 2
-
-        # Additional features could be added here if the model expects them.
-        # Ideally, we should pad with 0s or defaults for any other columns
-        # the model might expect if they are not collected from UI.
-
-        return pd.DataFrame([data])
+        return df
