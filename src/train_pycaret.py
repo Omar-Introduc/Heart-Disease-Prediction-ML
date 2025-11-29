@@ -1,11 +1,21 @@
 import pandas as pd
 import numpy as np
-from pycaret.classification import setup, compare_models, save_model, pull, tune_model, predict_model, finalize_model
-from sklearn.metrics import fbeta_score, recall_score
+from pycaret.classification import (
+    setup,
+    compare_models,
+    save_model,
+    tune_model,
+    predict_model,
+    finalize_model,
+)
+from sklearn.metrics import fbeta_score
 import os
 import json
 
-def train_baseline(data_path: str, output_dir: str, target_col: str = 'HeartDisease') -> None:
+
+def train_baseline(
+    data_path: str, output_dir: str, target_col: str = "HeartDisease"
+) -> None:
     """
     Trains baseline models using PyCaret on NHANES Clinical Data.
 
@@ -22,10 +32,30 @@ def train_baseline(data_path: str, output_dir: str, target_col: str = 'HeartDise
     df = pd.read_parquet(data_path)
     df = df.reset_index(drop=True)
 
-    # Check target
+    # Check target and Rename columns to English (NHANES Standard)
+    rename_map = {
+        "TARGET": "HeartDisease",
+        "Edad": "Age",
+        "Sexo": "Sex",
+        "Raza": "Race",
+        "Educacion": "Education",
+        "Presion_Sistolica": "SystolicBP",
+        "Cintura": "WaistCircumference",
+        "Altura": "Height",
+        "Colesterol_Total": "TotalCholesterol",
+        "Trigliceridos": "Triglycerides",
+        "Glucosa": "Glucose",
+        "Creatinina": "Creatinine",
+        "Acido_Urico": "UricAcid",
+        "Fumador": "Smoking",
+        "Actividad_Fisica": "PhysicalActivity",
+        "Seguro_Medico": "HealthInsurance",
+    }
+    df = df.rename(columns=rename_map)
+
     if target_col not in df.columns:
         # Fallback to likely targets if default name is wrong
-        possible_targets = ['CVDINFR4', 'Target', 'Outcome', 'HeartDisease']
+        possible_targets = ["CVDINFR4", "Target", "Outcome", "HeartDisease", "TARGET"]
         found = False
         for t in possible_targets:
             if t in df.columns:
@@ -47,12 +77,28 @@ def train_baseline(data_path: str, output_dir: str, target_col: str = 'HeartDise
     # Define Feature Types
     # Numeric Features: All continuous clinical variables
     numeric_features = [
-        'Age', 'BMI', 'SystolicBP', 'DiastolicBP', 'TotalCholesterol',
-        'LDL', 'Triglycerides', 'HbA1c', 'Glucose', 'UricAcid',
-        'Creatinine', 'WaistCircumference', 'Height'
+        "Age",
+        "BMI",
+        "SystolicBP",
+        "DiastolicBP",
+        "TotalCholesterol",
+        "LDL",
+        "Triglycerides",
+        "HbA1c",
+        "Glucose",
+        "UricAcid",
+        "Creatinine",
+        "WaistCircumference",
+        "Height",
     ]
     # Categorical Features: Binary/Nominal
-    categorical_features = ['Sex', 'Smoking', 'Alcohol', 'PhysicalActivity', 'HealthInsurance']
+    categorical_features = [
+        "Sex",
+        "Smoking",
+        "Alcohol",
+        "PhysicalActivity",
+        "HealthInsurance",
+    ]
 
     # Filter columns that exist in df
     numeric_features = [c for c in numeric_features if c in df.columns]
@@ -60,26 +106,28 @@ def train_baseline(data_path: str, output_dir: str, target_col: str = 'HeartDise
 
     print("Setting up PyCaret...")
     # normalize=True is CRITICAL for mixed scales (Age vs Cholesterol)
-    exp = setup(
+    setup(
         data=df,
         target=target_col,
         numeric_features=numeric_features,
         categorical_features=categorical_features,
         normalize=True,
-        normalize_method='minmax', # or zscore
+        normalize_method="minmax",  # or zscore
         session_id=42,
         fix_imbalance=True,
-        verbose=False
+        verbose=False,
     )
 
     print("Comparing models...")
-    best_model = compare_models(sort='Recall', n_select=1)
+    best_model = compare_models(sort="Recall", n_select=1)
     print(f"Best model: {best_model}")
 
     print("Tuning...")
     try:
-        tuned_model = tune_model(best_model, optimize='Recall', n_iter=20, verbose=False)
-    except:
+        tuned_model = tune_model(
+            best_model, optimize="Recall", n_iter=20, verbose=False
+        )
+    except Exception:
         tuned_model = best_model
 
     # Threshold Optimization
@@ -90,15 +138,15 @@ def train_baseline(data_path: str, output_dir: str, target_col: str = 'HeartDise
     # Locate score column
     y_scores = None
     for col in predictions.columns:
-        if 'score' in col.lower() and ('1' in col or 'True' in str(col)):
-             y_scores = predictions[col]
-             break
+        if "score" in col.lower() and ("1" in col or "True" in str(col)):
+            y_scores = predictions[col]
+            break
     if y_scores is None:
         # If binary 0/1, maybe infer?
-        if 'prediction_score' in predictions.columns:
+        if "prediction_score" in predictions.columns:
             # Assuming label is prediction_label
-            label = predictions['prediction_label']
-            score = predictions['prediction_score']
+            label = predictions["prediction_label"]
+            score = predictions["prediction_score"]
             y_scores = np.where(label == 1, score, 1 - score)
 
     best_thresh = 0.5
@@ -120,13 +168,15 @@ def train_baseline(data_path: str, output_dir: str, target_col: str = 'HeartDise
 
     save_model(final_model, os.path.join(output_dir, "final_pipeline_v1"))
 
-    with open(os.path.join(output_dir, "model_config.json"), 'w') as f:
+    with open(os.path.join(output_dir, "model_config.json"), "w") as f:
         json.dump({"threshold": float(best_thresh)}, f)
 
     print("Done.")
 
+
 if __name__ == "__main__":
     # Updated path
-    data_path = "data/02_intermediate/NHANES_ULTIMATE_CLEAN.parquet"
+    # Using the file found in data/02_intermediate
+    data_path = "data/02_intermediate/process_data.parquet"
     output_dir = "models"
     train_baseline(data_path, output_dir)
