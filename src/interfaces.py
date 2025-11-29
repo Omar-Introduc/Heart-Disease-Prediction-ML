@@ -37,6 +37,9 @@ class InputData(BaseModel):
     # Personal Data
     Age: int = Field(..., ge=18, le=100, description="Age in years")
     Sex: int = Field(..., ge=0, le=1, description="0=Female, 1=Male")
+    Race: int = Field(..., ge=1, le=5, description="1=Mex, 2=Other Hisp, 3=White, 4=Black, 5=Other")
+    Education: int = Field(..., ge=1, le=5, description="1=Low, 5=High")
+    IncomeRatio: float = Field(..., ge=0.0, le=5.0, description="Poverty Income Ratio")
     Height: float = Field(..., ge=130, le=220, description="Height in cm")
 
     # Vital Signs
@@ -53,6 +56,14 @@ class InputData(BaseModel):
     Glucose: float = Field(..., ge=50, le=300, description="Fasting Glucose (mg/dL)")
     UricAcid: float = Field(..., ge=2.0, le=12.0, description="Uric Acid (mg/dL)")
     Creatinine: float = Field(..., ge=0.4, le=5.0, description="Serum Creatinine (mg/dL)")
+    
+    # Enzymes & Electrolytes
+    ALT_Enzyme: float = Field(..., ge=5, le=200, description="Alanine Aminotransferase (U/L)")
+    AST_Enzyme: float = Field(..., ge=5, le=200, description="Aspartate Aminotransferase (U/L)")
+    GGT_Enzyme: float = Field(..., ge=5, le=200, description="Gamma-Glutamyl Transferase (U/L)")
+    Albumin: float = Field(..., ge=2.0, le=6.0, description="Albumin (g/dL)")
+    Potassium: float = Field(..., ge=2.0, le=6.0, description="Potassium (mmol/L)")
+    Sodium: float = Field(..., ge=120, le=160, description="Sodium (mmol/L)")
 
     # Lifestyle / History
     Smoking: int = Field(..., ge=0, le=1, description="Smoked >100 cigarettes? (0/1)")

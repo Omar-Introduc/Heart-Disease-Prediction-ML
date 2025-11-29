@@ -7642,3 +7642,1034 @@ ValueError: Only one class present in y_true. ROC AUC score is not defined in th
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2025-11-29 10:32:00,396:WARNING:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:45:58,415:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:45:58,415:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:45:58,415:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:45:58,415:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:46:45,867:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:46:45,867:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:46:45,867:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:46:45,867:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:47:53,850:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:47:53,850:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:47:53,850:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:47:53,850:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:52:13,250:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:52:13,250:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:52:13,250:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 10:52:13,250:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:22:47,280:INFO:PyCaret ClassificationExperiment
+2025-11-29 11:22:47,280:INFO:Logging name: clf-default-name
+2025-11-29 11:22:47,280:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-11-29 11:22:47,280:INFO:version 3.3.2
+2025-11-29 11:22:47,280:INFO:Initializing setup()
+2025-11-29 11:22:47,280:INFO:self.USI: 7743
+2025-11-29 11:22:47,280:INFO:self._variable_keys: {'y_train', 'idx', 'logging_param', 'data', 'y', 'fix_imbalance', 'pipeline', 'log_plots_param', 'html_param', 'X_train', 'fold_groups_param', '_ml_usecase', 'n_jobs_param', 'memory', 'gpu_param', 'X', 'X_test', 'exp_id', 'fold_shuffle_param', 'y_test', 'exp_name_log', 'USI', 'is_multiclass', 'gpu_n_jobs_param', 'fold_generator', 'target_param', '_available_plots', 'seed'}
+2025-11-29 11:22:47,280:INFO:Checking environment
+2025-11-29 11:22:47,280:INFO:python_version: 3.10.19
+2025-11-29 11:22:47,280:INFO:python_build: ('main', 'Oct 22 2025 22:23:22')
+2025-11-29 11:22:47,280:INFO:machine: AMD64
+2025-11-29 11:22:47,280:INFO:platform: Windows-10-10.0.26100-SP0
+2025-11-29 11:22:47,280:INFO:Memory: svmem(total=16282144768, available=3520397312, percent=78.4, used=12761747456, free=3520397312)
+2025-11-29 11:22:47,281:INFO:Physical Core: 6
+2025-11-29 11:22:47,281:INFO:Logical Core: 12
+2025-11-29 11:22:47,281:INFO:Checking libraries
+2025-11-29 11:22:47,281:INFO:System:
+2025-11-29 11:22:47,281:INFO:    python: 3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:23:22) [MSC v.1944 64 bit (AMD64)]
+2025-11-29 11:22:47,281:INFO:executable: c:\Users\OMAR\miniconda3\envs\xgb_env\python.exe
+2025-11-29 11:22:47,281:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-11-29 11:22:47,281:INFO:PyCaret required dependencies:
+2025-11-29 11:22:47,285:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:22:47,363:INFO:                 pip: 25.3
+2025-11-29 11:22:47,363:INFO:          setuptools: 80.9.0
+2025-11-29 11:22:47,363:INFO:             pycaret: 3.3.2
+2025-11-29 11:22:47,363:INFO:             IPython: 8.37.0
+2025-11-29 11:22:47,363:INFO:          ipywidgets: 8.1.8
+2025-11-29 11:22:47,363:INFO:                tqdm: 4.67.1
+2025-11-29 11:22:47,363:INFO:               numpy: 1.26.4
+2025-11-29 11:22:47,363:INFO:              pandas: 2.1.4
+2025-11-29 11:22:47,363:INFO:              jinja2: 3.1.6
+2025-11-29 11:22:47,363:INFO:               scipy: 1.11.4
+2025-11-29 11:22:47,363:INFO:              joblib: 1.3.2
+2025-11-29 11:22:47,363:INFO:             sklearn: 1.4.2
+2025-11-29 11:22:47,363:INFO:                pyod: 2.0.5
+2025-11-29 11:22:47,364:INFO:            imblearn: 0.14.0
+2025-11-29 11:22:47,364:INFO:   category_encoders: 2.7.0
+2025-11-29 11:22:47,364:INFO:            lightgbm: 4.6.0
+2025-11-29 11:22:47,364:INFO:               numba: 0.62.1
+2025-11-29 11:22:47,364:INFO:            requests: 2.32.5
+2025-11-29 11:22:47,364:INFO:          matplotlib: 3.7.5
+2025-11-29 11:22:47,364:INFO:          scikitplot: 0.3.7
+2025-11-29 11:22:47,364:INFO:         yellowbrick: 1.5
+2025-11-29 11:22:47,364:INFO:              plotly: 6.5.0
+2025-11-29 11:22:47,364:INFO:    plotly-resampler: Not installed
+2025-11-29 11:22:47,364:INFO:             kaleido: 1.2.0
+2025-11-29 11:22:47,364:INFO:           schemdraw: 0.15
+2025-11-29 11:22:47,364:INFO:         statsmodels: 0.14.5
+2025-11-29 11:22:47,364:INFO:              sktime: 0.26.0
+2025-11-29 11:22:47,364:INFO:               tbats: 1.1.3
+2025-11-29 11:22:47,364:INFO:            pmdarima: 2.0.4
+2025-11-29 11:22:47,364:INFO:              psutil: 7.1.3
+2025-11-29 11:22:47,364:INFO:          markupsafe: 3.0.3
+2025-11-29 11:22:47,364:INFO:             pickle5: Not installed
+2025-11-29 11:22:47,364:INFO:         cloudpickle: 3.1.2
+2025-11-29 11:22:47,364:INFO:         deprecation: 2.1.0
+2025-11-29 11:22:47,364:INFO:              xxhash: 3.6.0
+2025-11-29 11:22:47,364:INFO:           wurlitzer: Not installed
+2025-11-29 11:22:47,364:INFO:PyCaret optional dependencies:
+2025-11-29 11:22:47,413:INFO:                shap: 0.48.0
+2025-11-29 11:22:47,414:INFO:           interpret: Not installed
+2025-11-29 11:22:47,414:INFO:                umap: Not installed
+2025-11-29 11:22:47,414:INFO:     ydata_profiling: Not installed
+2025-11-29 11:22:47,414:INFO:  explainerdashboard: Not installed
+2025-11-29 11:22:47,414:INFO:             autoviz: Not installed
+2025-11-29 11:22:47,414:INFO:           fairlearn: 0.12.0.dev0
+2025-11-29 11:22:47,414:INFO:          deepchecks: Not installed
+2025-11-29 11:22:47,414:INFO:             xgboost: 3.1.2
+2025-11-29 11:22:47,414:INFO:            catboost: Not installed
+2025-11-29 11:22:47,414:INFO:              kmodes: Not installed
+2025-11-29 11:22:47,414:INFO:             mlxtend: Not installed
+2025-11-29 11:22:47,414:INFO:       statsforecast: Not installed
+2025-11-29 11:22:47,414:INFO:        tune_sklearn: Not installed
+2025-11-29 11:22:47,414:INFO:                 ray: Not installed
+2025-11-29 11:22:47,414:INFO:            hyperopt: Not installed
+2025-11-29 11:22:47,414:INFO:              optuna: Not installed
+2025-11-29 11:22:47,414:INFO:               skopt: Not installed
+2025-11-29 11:22:47,414:INFO:              mlflow: Not installed
+2025-11-29 11:22:47,414:INFO:              gradio: Not installed
+2025-11-29 11:22:47,414:INFO:             fastapi: Not installed
+2025-11-29 11:22:47,414:INFO:             uvicorn: Not installed
+2025-11-29 11:22:47,414:INFO:              m2cgen: Not installed
+2025-11-29 11:22:47,414:INFO:           evidently: Not installed
+2025-11-29 11:22:47,414:INFO:               fugue: Not installed
+2025-11-29 11:22:47,414:INFO:           streamlit: 1.51.0
+2025-11-29 11:22:47,414:INFO:             prophet: Not installed
+2025-11-29 11:22:47,414:INFO:None
+2025-11-29 11:22:47,414:INFO:Set up data.
+2025-11-29 11:22:47,420:INFO:Set up folding strategy.
+2025-11-29 11:22:47,420:INFO:Set up train/test split.
+2025-11-29 11:22:47,424:INFO:Set up index.
+2025-11-29 11:22:47,425:INFO:Assigning column types.
+2025-11-29 11:22:47,428:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-11-29 11:22:47,455:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-29 11:22:47,458:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-29 11:22:47,480:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:47,482:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:47,507:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-29 11:22:47,508:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-29 11:22:47,525:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:47,527:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:47,527:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-11-29 11:22:47,553:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-29 11:22:47,568:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:47,569:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:47,596:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-29 11:22:47,612:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:47,613:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:47,613:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-11-29 11:22:47,667:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:47,670:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:47,713:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:47,714:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:47,720:INFO:Preparing preprocessing pipeline...
+2025-11-29 11:22:47,721:INFO:Set up simple imputation.
+2025-11-29 11:22:47,725:INFO:Set up encoding of ordinal features.
+2025-11-29 11:22:47,730:INFO:Set up encoding of categorical features.
+2025-11-29 11:22:47,730:INFO:Set up removing outliers.
+2025-11-29 11:22:47,730:INFO:Set up imbalanced handling.
+2025-11-29 11:22:47,730:INFO:Set up feature normalization.
+2025-11-29 11:22:47,945:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+[WinError 2] El sistema no puede encontrar el archivo especificado
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2025-11-29 11:22:47,967:INFO:Finished creating preprocessing pipeline.
+2025-11-29 11:22:48,015:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Po...
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=123,
+                                                                              sampling_strategy='auto')))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False)
+2025-11-29 11:22:48,015:INFO:Creating final display dataframe.
+2025-11-29 11:22:48,575:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target      HeartDisease
+2                   Target type            Binary
+3           Original data shape        (2185, 27)
+4        Transformed data shape        (3484, 36)
+5   Transformed train set shape        (2828, 36)
+6    Transformed test set shape         (656, 36)
+7              Numeric features                19
+8          Categorical features                 7
+9      Rows with missing values             87.6%
+10                   Preprocess              True
+11              Imputation type            simple
+12           Numeric imputation              mean
+13       Categorical imputation              mode
+14     Maximum one-hot encoding                25
+15              Encoding method              None
+16              Remove outliers              True
+17           Outliers threshold              0.05
+18                Fix imbalance              True
+19         Fix imbalance method             SMOTE
+20                    Normalize              True
+21             Normalize method            robust
+22               Fold Generator   StratifiedKFold
+23                  Fold Number                10
+24                     CPU Jobs                -1
+25                      Use GPU             False
+26               Log Experiment             False
+27              Experiment Name  clf-default-name
+28                          USI              7743
+2025-11-29 11:22:48,626:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:48,627:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:48,671:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-29 11:22:48,673:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-29 11:22:48,675:INFO:setup() successfully completed in 1.41s...............
+2025-11-29 11:30:52,503:INFO:Initializing compare_models()
+2025-11-29 11:30:52,503:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, include=['xgboost', 'lightgbm'], fold=None, round=4, cross_validation=True, sort=Recall, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, 'include': ['xgboost', 'lightgbm'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Recall', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2025-11-29 11:30:52,503:INFO:Checking exceptions
+2025-11-29 11:30:52,509:INFO:Preparing display monitor
+2025-11-29 11:30:52,530:INFO:Initializing Extreme Gradient Boosting
+2025-11-29 11:30:52,530:INFO:Total runtime is 0.0 minutes
+2025-11-29 11:30:52,532:INFO:SubProcess create_model() called ==================================
+2025-11-29 11:30:52,532:INFO:Initializing create_model()
+2025-11-29 11:30:52,532:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000025EE4FEEBF0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-29 11:30:52,532:INFO:Checking exceptions
+2025-11-29 11:30:52,532:INFO:Importing libraries
+2025-11-29 11:30:52,532:INFO:Copying training dataset
+2025-11-29 11:30:52,537:INFO:Defining folds
+2025-11-29 11:30:52,537:INFO:Declaring metric variables
+2025-11-29 11:30:52,540:INFO:Importing untrained model
+2025-11-29 11:30:52,544:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-29 11:30:52,550:INFO:Starting cross validation
+2025-11-29 11:30:52,558:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-29 11:30:56,153:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,161:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,165:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,167:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,169:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,169:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,176:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,176:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,180:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,187:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:56,803:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:30:56,806:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:30:56,817:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:30:56,844:INFO:Calculating mean and std
+2025-11-29 11:30:56,846:INFO:Creating metrics dataframe
+2025-11-29 11:30:56,848:INFO:Uploading results into container
+2025-11-29 11:30:56,850:INFO:Uploading model into container now
+2025-11-29 11:30:56,850:INFO:_master_model_container: 1
+2025-11-29 11:30:56,850:INFO:_display_container: 2
+2025-11-29 11:30:56,853:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-29 11:30:56,853:INFO:create_model() successfully completed......................................
+2025-11-29 11:30:57,026:INFO:SubProcess create_model() end ==================================
+2025-11-29 11:30:57,026:INFO:Creating metrics dataframe
+2025-11-29 11:30:57,032:INFO:Initializing Light Gradient Boosting Machine
+2025-11-29 11:30:57,032:INFO:Total runtime is 0.0750348687171936 minutes
+2025-11-29 11:30:57,037:INFO:SubProcess create_model() called ==================================
+2025-11-29 11:30:57,037:INFO:Initializing create_model()
+2025-11-29 11:30:57,037:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000025EE4FEEBF0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-29 11:30:57,037:INFO:Checking exceptions
+2025-11-29 11:30:57,037:INFO:Importing libraries
+2025-11-29 11:30:57,037:INFO:Copying training dataset
+2025-11-29 11:30:57,044:INFO:Defining folds
+2025-11-29 11:30:57,044:INFO:Declaring metric variables
+2025-11-29 11:30:57,049:INFO:Importing untrained model
+2025-11-29 11:30:57,049:INFO:Light Gradient Boosting Machine Imported successfully
+2025-11-29 11:30:57,056:INFO:Starting cross validation
+2025-11-29 11:30:57,064:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-29 11:30:58,553:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:30:58,616:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:30:58,780:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:30:58,840:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:30:59,726:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:30:59,740:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:31:00,090:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:31:00,099:INFO:Calculating mean and std
+2025-11-29 11:31:00,100:INFO:Creating metrics dataframe
+2025-11-29 11:31:00,103:INFO:Uploading results into container
+2025-11-29 11:31:00,103:INFO:Uploading model into container now
+2025-11-29 11:31:00,104:INFO:_master_model_container: 2
+2025-11-29 11:31:00,104:INFO:_display_container: 2
+2025-11-29 11:31:00,105:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-11-29 11:31:00,105:INFO:create_model() successfully completed......................................
+2025-11-29 11:31:00,246:INFO:SubProcess create_model() end ==================================
+2025-11-29 11:31:00,246:INFO:Creating metrics dataframe
+2025-11-29 11:31:00,259:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:323: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
+  master_display_.apply(
+
+2025-11-29 11:31:00,266:INFO:Initializing create_model()
+2025-11-29 11:31:00,266:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-29 11:31:00,266:INFO:Checking exceptions
+2025-11-29 11:31:00,267:INFO:Importing libraries
+2025-11-29 11:31:00,267:INFO:Copying training dataset
+2025-11-29 11:31:00,267:INFO:Defining folds
+2025-11-29 11:31:00,267:INFO:Declaring metric variables
+2025-11-29 11:31:00,267:INFO:Importing untrained model
+2025-11-29 11:31:00,267:INFO:Declaring custom model
+2025-11-29 11:31:00,267:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-29 11:31:00,280:INFO:Cross validation set to False
+2025-11-29 11:31:00,280:INFO:Fitting Model
+2025-11-29 11:31:00,492:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-29 11:31:00,492:INFO:create_model() successfully completed......................................
+2025-11-29 11:31:00,630:INFO:_master_model_container: 2
+2025-11-29 11:31:00,630:INFO:_display_container: 2
+2025-11-29 11:31:00,631:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-29 11:31:00,631:INFO:compare_models() successfully completed......................................
+2025-11-29 11:31:22,717:INFO:Initializing tune_model()
+2025-11-29 11:31:22,717:INFO:tune_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=None, round=4, n_iter=5, custom_grid=None, optimize=Recall, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=False, tuner_verbose=True, return_train_score=False, kwargs={}, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>)
+2025-11-29 11:31:22,717:INFO:Checking exceptions
+2025-11-29 11:31:22,723:INFO:Copying training dataset
+2025-11-29 11:31:22,728:INFO:Checking base model
+2025-11-29 11:31:22,728:INFO:Base model : Extreme Gradient Boosting
+2025-11-29 11:31:22,729:INFO:Declaring metric variables
+2025-11-29 11:31:22,729:INFO:Defining Hyperparameters
+2025-11-29 11:31:22,861:INFO:Tuning with n_jobs=-1
+2025-11-29 11:31:22,861:INFO:Initializing RandomizedSearchCV
+2025-11-29 11:31:26,292:INFO:best_params: {'actual_estimator__subsample': 0.5, 'actual_estimator__scale_pos_weight': 2.1, 'actual_estimator__reg_lambda': 5, 'actual_estimator__reg_alpha': 0.05, 'actual_estimator__n_estimators': 300, 'actual_estimator__min_child_weight': 1, 'actual_estimator__max_depth': 10, 'actual_estimator__learning_rate': 0.0005, 'actual_estimator__colsample_bytree': 1}
+2025-11-29 11:31:26,292:INFO:Hyperparameter search completed
+2025-11-29 11:31:26,292:INFO:SubProcess create_model() called ==================================
+2025-11-29 11:31:26,293:INFO:Initializing create_model()
+2025-11-29 11:31:26,293:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000025EE4E877F0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={'subsample': 0.5, 'scale_pos_weight': 2.1, 'reg_lambda': 5, 'reg_alpha': 0.05, 'n_estimators': 300, 'min_child_weight': 1, 'max_depth': 10, 'learning_rate': 0.0005, 'colsample_bytree': 1})
+2025-11-29 11:31:26,293:INFO:Checking exceptions
+2025-11-29 11:31:26,293:INFO:Importing libraries
+2025-11-29 11:31:26,293:INFO:Copying training dataset
+2025-11-29 11:31:26,296:INFO:Defining folds
+2025-11-29 11:31:26,296:INFO:Declaring metric variables
+2025-11-29 11:31:26,296:INFO:Importing untrained model
+2025-11-29 11:31:26,296:INFO:Declaring custom model
+2025-11-29 11:31:26,296:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-29 11:31:26,296:INFO:Starting cross validation
+2025-11-29 11:31:26,303:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-29 11:31:28,026:INFO:Calculating mean and std
+2025-11-29 11:31:28,026:INFO:Creating metrics dataframe
+2025-11-29 11:31:28,026:INFO:Finalizing model
+2025-11-29 11:31:28,477:INFO:Uploading results into container
+2025-11-29 11:31:28,477:INFO:Uploading model into container now
+2025-11-29 11:31:28,477:INFO:_master_model_container: 3
+2025-11-29 11:31:28,477:INFO:_display_container: 3
+2025-11-29 11:31:28,479:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None, colsample_bytree=1,
+              device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0005, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=10,
+              max_leaves=None, min_child_weight=1, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=300,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-29 11:31:28,479:INFO:create_model() successfully completed......................................
+2025-11-29 11:31:28,602:INFO:SubProcess create_model() end ==================================
+2025-11-29 11:31:28,602:INFO:choose_better activated
+2025-11-29 11:31:28,603:INFO:SubProcess create_model() called ==================================
+2025-11-29 11:31:28,603:INFO:Initializing create_model()
+2025-11-29 11:31:28,603:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-29 11:31:28,603:INFO:Checking exceptions
+2025-11-29 11:31:28,603:INFO:Importing libraries
+2025-11-29 11:31:28,603:INFO:Copying training dataset
+2025-11-29 11:31:28,606:INFO:Defining folds
+2025-11-29 11:31:28,606:INFO:Declaring metric variables
+2025-11-29 11:31:28,606:INFO:Importing untrained model
+2025-11-29 11:31:28,606:INFO:Declaring custom model
+2025-11-29 11:31:28,609:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-29 11:31:28,609:INFO:Starting cross validation
+2025-11-29 11:31:28,613:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-29 11:31:29,053:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:31:29,060:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:31:29,067:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:31:29,076:INFO:Calculating mean and std
+2025-11-29 11:31:29,076:INFO:Creating metrics dataframe
+2025-11-29 11:31:29,078:INFO:Finalizing model
+2025-11-29 11:31:29,277:INFO:Uploading results into container
+2025-11-29 11:31:29,277:INFO:Uploading model into container now
+2025-11-29 11:31:29,277:INFO:_master_model_container: 4
+2025-11-29 11:31:29,277:INFO:_display_container: 4
+2025-11-29 11:31:29,280:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-29 11:31:29,280:INFO:create_model() successfully completed......................................
+2025-11-29 11:31:29,404:INFO:SubProcess create_model() end ==================================
+2025-11-29 11:31:29,404:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...) result for Recall is 0.065
+2025-11-29 11:31:29,404:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None, colsample_bytree=1,
+              device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0005, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=10,
+              max_leaves=None, min_child_weight=1, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=300,
+              n_jobs=-1, num_parallel_tree=None, ...) result for Recall is 1.0
+2025-11-29 11:31:29,404:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None, colsample_bytree=1,
+              device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0005, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=10,
+              max_leaves=None, min_child_weight=1, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=300,
+              n_jobs=-1, num_parallel_tree=None, ...) is best model
+2025-11-29 11:31:29,404:INFO:choose_better completed
+2025-11-29 11:31:29,406:INFO:_master_model_container: 4
+2025-11-29 11:31:29,406:INFO:_display_container: 3
+2025-11-29 11:31:29,406:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None, colsample_bytree=1,
+              device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0005, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=10,
+              max_leaves=None, min_child_weight=1, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=300,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-29 11:31:29,406:INFO:tune_model() successfully completed......................................
+2025-11-29 11:32:35,163:INFO:Initializing finalize_model()
+2025-11-29 11:32:35,163:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None, colsample_bytree=1,
+              device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0005, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=10,
+              max_leaves=None, min_child_weight=1, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=300,
+              n_jobs=-1, num_parallel_tree=None, ...), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2025-11-29 11:32:35,164:INFO:Finalizing XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None, colsample_bytree=1,
+              device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0005, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=10,
+              max_leaves=None, min_child_weight=1, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=300,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-29 11:32:35,167:INFO:Initializing create_model()
+2025-11-29 11:32:35,167:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000025EE79BDC00>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None, colsample_bytree=1,
+              device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0005, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=10,
+              max_leaves=None, min_child_weight=1, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=300,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+2025-11-29 11:32:35,167:INFO:Checking exceptions
+2025-11-29 11:32:35,169:INFO:Importing libraries
+2025-11-29 11:32:35,169:INFO:Copying training dataset
+2025-11-29 11:32:35,169:INFO:Defining folds
+2025-11-29 11:32:35,169:INFO:Declaring metric variables
+2025-11-29 11:32:35,169:INFO:Importing untrained model
+2025-11-29 11:32:35,169:INFO:Declaring custom model
+2025-11-29 11:32:35,171:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-29 11:32:35,176:INFO:Cross validation set to False
+2025-11-29 11:32:35,176:INFO:Fitting Model
+2025-11-29 11:32:35,797:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleIm...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False)
+2025-11-29 11:32:35,797:INFO:create_model() successfully completed......................................
+2025-11-29 11:32:35,910:INFO:_master_model_container: 4
+2025-11-29 11:32:35,910:INFO:_display_container: 3
+2025-11-29 11:32:35,959:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleIm...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False)
+2025-11-29 11:32:35,959:INFO:finalize_model() successfully completed......................................
+2025-11-29 11:32:36,167:INFO:Initializing save_model()
+2025-11-29 11:32:36,167:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleIm...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False), model_name=../models\best_pipeline, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Po...
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              random_state=123,
+                                                                              sampling_strategy='auto')))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-11-29 11:32:36,167:INFO:Adding model into prep_pipe
+2025-11-29 11:32:36,167:WARNING:Only Model saved as it was a pipeline.
+2025-11-29 11:32:36,207:INFO:../models\best_pipeline.pkl saved in current working directory
+2025-11-29 11:32:36,273:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleIm...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False)
+2025-11-29 11:32:36,273:INFO:save_model() successfully completed......................................
+2025-11-29 11:32:56,840:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:32:56,840:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:32:56,840:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:32:56,840:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:33:01,238:INFO:Initializing load_model()
+2025-11-29 11:33:01,238:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 11:33:01,297:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 11:33:11,410:INFO:Initializing predict_model()
+2025-11-29 11:33:11,410:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000021219F935B0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000021219DFA170>)
+2025-11-29 11:33:11,410:INFO:Checking exceptions
+2025-11-29 11:33:11,410:INFO:Preloading libraries
+2025-11-29 11:33:11,410:INFO:Set up data.
+2025-11-29 11:33:11,421:INFO:Set up index.
+2025-11-29 11:33:27,570:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:33:27,574:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:33:27,574:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:48:23,953:INFO:Initializing load_model()
+2025-11-29 11:48:23,954:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 11:48:33,828:INFO:Initializing predict_model()
+2025-11-29 11:48:33,828:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002124DF96EC0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000021232187880>)
+2025-11-29 11:48:33,828:INFO:Checking exceptions
+2025-11-29 11:48:33,828:INFO:Preloading libraries
+2025-11-29 11:48:33,828:INFO:Set up data.
+2025-11-29 11:48:33,837:INFO:Set up index.
+2025-11-29 11:48:39,864:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:48:39,867:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:48:39,869:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-11-29 11:53:13,069:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:53:13,069:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:53:13,069:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:53:13,069:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 11:53:22,473:INFO:Initializing load_model()
+2025-11-29 11:53:22,473:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 11:53:22,530:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 12:00:24,813:INFO:Initializing load_model()
+2025-11-29 12:00:24,813:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 12:00:50,055:INFO:Initializing predict_model()
+2025-11-29 12:00:50,055:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017F198DB070>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017F1AC72B00>)
+2025-11-29 12:00:50,055:INFO:Checking exceptions
+2025-11-29 12:00:50,055:INFO:Preloading libraries
+2025-11-29 12:00:50,055:INFO:Set up data.
+2025-11-29 12:00:50,058:INFO:Set up index.
+2025-11-29 12:04:17,178:INFO:Initializing predict_model()
+2025-11-29 12:04:17,179:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017F198DB1F0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017F1D1B6560>)
+2025-11-29 12:04:17,179:INFO:Checking exceptions
+2025-11-29 12:04:17,179:INFO:Preloading libraries
+2025-11-29 12:04:17,179:INFO:Set up data.
+2025-11-29 12:04:17,183:INFO:Set up index.
+2025-11-29 12:04:44,535:INFO:Initializing predict_model()
+2025-11-29 12:04:44,535:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017F1991A7A0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017F1B370A60>)
+2025-11-29 12:04:44,535:INFO:Checking exceptions
+2025-11-29 12:04:44,535:INFO:Preloading libraries
+2025-11-29 12:04:44,535:INFO:Set up data.
+2025-11-29 12:04:44,538:INFO:Set up index.
+2025-11-29 12:31:07,015:INFO:Initializing load_model()
+2025-11-29 12:31:07,020:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 12:31:12,746:INFO:Initializing predict_model()
+2025-11-29 12:31:12,746:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017F199197B0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017F1B370E50>)
+2025-11-29 12:31:12,746:INFO:Checking exceptions
+2025-11-29 12:31:12,746:INFO:Preloading libraries
+2025-11-29 12:31:12,748:INFO:Set up data.
+2025-11-29 12:31:12,757:INFO:Set up index.
+2025-11-29 12:31:43,603:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 12:31:43,603:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 12:31:43,603:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 12:31:43,603:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 12:31:47,347:INFO:Initializing load_model()
+2025-11-29 12:31:47,347:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-11-29 12:31:47,433:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-29 12:31:54,176:INFO:Initializing predict_model()
+2025-11-29 12:31:54,177:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000015B4E3BB370>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transformer=SimpleImputer())),
+                ('c...
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0005, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=10,
+                               max_leaves=None, min_child_weight=1, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=300, n_jobs=-1,
+                               num_parallel_tree=None, ...))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000015B4F759900>)
+2025-11-29 12:31:54,177:INFO:Checking exceptions
+2025-11-29 12:31:54,177:INFO:Preloading libraries
+2025-11-29 12:31:54,177:INFO:Set up data.
+2025-11-29 12:31:54,181:INFO:Set up index.
+2025-11-29 12:38:30,568:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 12:38:30,569:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 12:38:30,569:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-29 12:38:30,569:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.

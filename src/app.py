@@ -3,7 +3,15 @@ import os
 import json
 from typing import Optional, Any, Dict
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Add root directory to path
+try:
+    # When running as script
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    # When running in notebook
+    current_dir = os.getcwd()
+
+sys.path.append(os.path.abspath(os.path.join(current_dir, '..')))
 
 import streamlit as st
 import pandas as pd
@@ -21,7 +29,7 @@ st.set_page_config(
 
 # Load Config
 CONFIG_PATH = "models/model_config.json"
-MODEL_PATH = "models/final_pipeline_v1.pkl"
+MODEL_PATH = "models/best_pipeline.pkl"
 
 @st.cache_resource
 def load_config() -> Dict[str, Any]:
@@ -36,8 +44,12 @@ default_threshold = config.get("threshold", 0.5)
 # Load Model
 @st.cache_resource
 def load_model_pipeline() -> Optional[PyCaretAdapter]:
+    # Check if file exists (with or without extension)
     if not os.path.exists(MODEL_PATH):
-        return None
+        # Try without extension if pkl is not found directly
+        path_no_ext = os.path.splitext(MODEL_PATH)[0]
+        if not os.path.exists(path_no_ext + ".pkl"):
+             return None
 
     try:
         from pycaret.classification import load_model
@@ -74,11 +86,35 @@ with st.form("patient_data_form"):
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         age = st.number_input("Age", min_value=18, max_value=100, value=45)
+        
+        race_map = {
+            "Mexican American": 1,
+            "Other Hispanic": 2,
+            "Non-Hispanic White": 3,
+            "Non-Hispanic Black": 4,
+            "Other Race": 5
+        }
+        race_label = st.selectbox("Race / Ethnicity", list(race_map.keys()), index=2)
+        race = race_map[race_label]
+
     with col2:
         sex_radio = st.radio("Sex", options=["Female", "Male"], horizontal=True)
         sex = 1 if sex_radio == "Male" else 0
+        
+        edu_map = {
+            "< 9th Grade": 1,
+            "9-11th Grade": 2,
+            "High School Grad/GED": 3,
+            "Some College/AA": 4,
+            "College Graduate": 5
+        }
+        edu_label = st.selectbox("Education Level", list(edu_map.keys()), index=2)
+        education = edu_map[edu_label]
+
     with col3:
         height = st.number_input("Height (cm)", min_value=130.0, max_value=220.0, value=170.0)
+        income = st.slider("Income Ratio (PIR)", 0.0, 5.0, 2.5, help="Ratio of family income to poverty threshold")
+
     with col4:
         waist = st.number_input("Waist Circumference (cm)", min_value=50.0, max_value=180.0, value=90.0)
 
@@ -90,6 +126,7 @@ with st.form("patient_data_form"):
     with col_v2:
         sys_bp = st.slider("Systolic BP (mmHg)", 80.0, 220.0, 120.0)
     with col_v3:
+        # Diastolic is optional in InputData but good to have if model uses it (current model might not)
         dia_bp = st.slider("Diastolic BP (mmHg) [Opcional]", 40.0, 120.0, 80.0)
 
     # 3. Perfil Bioquímico
@@ -107,7 +144,20 @@ with st.form("patient_data_form"):
     with col_b4:
         creat = st.number_input("Creatinine (mg/dL)", 0.4, 5.0, 0.9, step=0.1)
 
-    # 4. Estilo de Vida y Antecedentes
+    # 4. Enzimas y Electrolitos (New Features)
+    with st.expander("🔬 Enzimas y Electrolitos (Avanzado)", expanded=False):
+        col_e1, col_e2, col_e3 = st.columns(3)
+        with col_e1:
+            alt = st.number_input("ALT (U/L)", 5.0, 200.0, 25.0)
+            albumin = st.number_input("Albumin (g/dL)", 2.0, 6.0, 4.5)
+        with col_e2:
+            ast = st.number_input("AST (U/L)", 5.0, 200.0, 25.0)
+            potassium = st.number_input("Potassium (mmol/L)", 2.0, 6.0, 4.0)
+        with col_e3:
+            ggt = st.number_input("GGT (U/L)", 5.0, 200.0, 25.0)
+            sodium = st.number_input("Sodium (mmol/L)", 120.0, 160.0, 140.0)
+
+    # 5. Estilo de Vida y Antecedentes
     st.subheader("🏃 Estilo de Vida")
     col_l1, col_l2, col_l3, col_l4 = st.columns(4)
     with col_l1:
@@ -143,6 +193,9 @@ if submitted:
             user_input = {
                 'Age': age,
                 'Sex': sex,
+                'Race': race,
+                'Education': education,
+                'IncomeRatio': income,
                 'Height': height,
                 'BMI': bmi,
                 'SystolicBP': sys_bp,
@@ -155,6 +208,12 @@ if submitted:
                 'Glucose': glucose,
                 'UricAcid': uric,
                 'Creatinine': creat,
+                'ALT_Enzyme': alt,
+                'AST_Enzyme': ast,
+                'GGT_Enzyme': ggt,
+                'Albumin': albumin,
+                'Potassium': potassium,
+                'Sodium': sodium,
                 'Smoking': smoking_int,
                 'Alcohol': alcohol_int,
                 'PhysicalActivity': activity_int,
