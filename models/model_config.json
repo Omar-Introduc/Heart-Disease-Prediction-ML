@@ -1,0 +1,20 @@
+{
+    "features": [
+        "SystolicBP", "TotalCholesterol", "LDL", "Triglycerides", "HbA1c", "Glucose",
+        "UricAcid", "Creatinine", "BMI", "WaistCircumference", "Height",
+        "Sex", "Smoking", "Alcohol", "PhysicalActivity", "HealthInsurance"
+    ],
+    "numeric_features": [
+        "SystolicBP", "TotalCholesterol", "LDL", "Triglycerides", "HbA1c", "Glucose",
+        "UricAcid", "Creatinine", "BMI", "WaistCircumference", "Height"
+    ],
+    "categorical_features": [
+        "Sex", "Smoking", "Alcohol", "PhysicalActivity", "HealthInsurance"
+    ],
+    "target": "HeartDisease",
+    "hyperparameters": {
+        "learning_rate": 0.1,
+        "n_estimators": 100,
+        "max_depth": 5
+    }
+}
