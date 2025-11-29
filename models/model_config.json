@@ -1,4 +1,43 @@
 {
+    "features": [
+        "SystolicBP",
+        "TotalCholesterol",
+        "LDL",
+        "Triglycerides",
+        "HbA1c",
+        "Glucose",
+        "UricAcid",
+        "Creatinine",
+        "BMI",
+        "WaistCircumference",
+        "Height",
+        "Sex",
+        "Smoking",
+        "Alcohol",
+        "PhysicalActivity",
+        "HealthInsurance"
+    ],
+    "numeric_features": [
+        "SystolicBP",
+        "TotalCholesterol",
+        "LDL",
+        "Triglycerides",
+        "HbA1c",
+        "Glucose",
+        "UricAcid",
+        "Creatinine",
+        "BMI",
+        "WaistCircumference",
+        "Height"
+    ],
+    "categorical_features": [
+        "Sex",
+        "Smoking",
+        "Alcohol",
+        "PhysicalActivity",
+        "HealthInsurance"
+    ],
+    "target": "HeartDisease",
     "threshold": 0.01,
     "model_name": "LGBMClassifier",
     "metric_optimized": "F2-Score"
