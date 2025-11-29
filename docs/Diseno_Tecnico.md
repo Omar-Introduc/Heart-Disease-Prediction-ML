@@ -1,37 +1,43 @@
 # Diseño Técnico y Arquitectura del Sistema
 
 ## 1. Visión General
-El sistema está diseñado con una arquitectura bifurcada que separa el componente académico (implementación desde cero para aprendizaje) del componente productivo (solución optimizada para despliegue).
+El sistema ha evolucionado hacia una arquitectura clínica robusta. Mantenemos la separación entre el componente académico (aprendizaje de algoritmos) y el componente productivo, pero el flujo de datos ahora maneja **biomarcadores continuos** provenientes de NHANES, lo que exige un preprocesamiento estadístico más riguroso.
 
 ## 2. Diagrama de Arquitectura
-A continuación se presenta el flujo de datos y componentes del sistema:
+A continuación se presenta el flujo de datos actualizado:
 
 ```mermaid
 graph TD
     subgraph Data Source
-        Raw[Datos Raw (.XPT)]
+        Raw[Datos Clínicos NHANES (.XPT/.CSV)]
     end
 
     subgraph Academic Flow [Flujo Académico - Aprendizaje]
-        CleanBasic[Limpieza Básica]
+        CleanBasic[Limpieza & Selección de Biomarcadores]
+        ScalingA[Escalamiento (StandardScaler)]
         ScratchModel[Modelo XGBoostScratch]
         Metrics[Métricas de Validación]
         Report[Informe Técnico]
 
         Raw --> CleanBasic
-        CleanBasic --> ScratchModel
+        CleanBasic --> ScalingA
+        ScalingA --> ScratchModel
         ScratchModel --> Metrics
         Metrics --> Report
     end
 
     subgraph Productive Flow [Flujo Productivo - App]
-        FeatureEng[Ingeniería de Características]
+        Imputation[Imputación Clínica (KNN/Iterative)]
+        ScalingP[Escalamiento Robusto]
+        FeatureEng[Ingeniería (Ratios: Colesterol/HDL)]
         PyCaret[Modelo Optimizado (PyCaret)]
-        Streamlit[Interfaz de Usuario (Streamlit)]
-        User[Usuario Final]
+        Streamlit[Interfaz Médica (Streamlit)]
+        User[Profesional de Salud]
 
-        Raw --> FeatureEng
-        FeatureEng --> PyCaret
+        Raw --> Imputation
+        Imputation --> FeatureEng
+        FeatureEng --> ScalingP
+        ScalingP --> PyCaret
         PyCaret --> Streamlit
         Streamlit --> User
     end
@@ -43,19 +49,25 @@ graph TD
 ## 3. Descripción de Componentes
 
 ### 3.1 Flujo Académico
-Este flujo justifica el Sprint 2 y parte del Sprint 3.
-*   **Limpieza Básica:** Transformación mínima necesaria para que el algoritmo funcione (manejo de nulos, codificación numérica).
-*   **XGBoostScratch:** Implementación "Vanilla" del algoritmo Gradient Boosting Tree.
-    *   *Objetivo:* Demostrar comprensión profunda de la matemática (Gradientes, Hessianos, Ganancia).
-    *   *Limitación:* No apto para grandes volúmenes de datos en tiempo real (Algoritmo Exact Greedy).
+Centrado en entender cómo XGBoost maneja variables continuas y relaciones no lineales.
+*   **Limpieza Básica:** Filtrado de outliers fisiológicamente imposibles (ej. Presión < 0).
+*   **Escalamiento:** Paso crítico añadido. Convertir biomarcadores (Glucosa, Colesterol) a una escala común (Z-score) para estabilidad numérica de gradientes.
+*   **XGBoostScratch:** Implementación "Vanilla".
+    *   *Foco:* Observar cómo el árbol decide los "cortes" (splits) en variables continuas como HbA1c o Presión Sistólica.
 
 ### 3.2 Flujo Productivo
-Este flujo será el foco del Sprint 4 en adelante.
-*   **Ingeniería de Características:** Pipeline robusto (imputación avanzada, selección de variables, manejo de outliers).
-*   **PyCaret:** Uso de librerías industriales para selección de modelos, tuning de hiperparámetros y ensamblaje.
-*   **Streamlit:** Interfaz de usuario que abstrae la complejidad del modelo.
+Orientado a la precisión clínica y despliegue.
+*   **Imputación:** Manejo de exámenes de laboratorio faltantes usando correlaciones entre biomarcadores.
+*   **Ingeniería de Características:** Creación de ratios médicos (ej. Índice aterogénico).
+*   **PyCaret:** Entrenamiento de modelos State-of-the-Art.
+*   **Streamlit:** Interfaz diseñada para ingresar valores exactos de laboratorio.
 
 ## 4. Contratos de Software
-Para asegurar que la interfaz de usuario (Streamlit) sea agnóstica al modelo subyacente (aunque usaremos principalmente el productivo), se define una interfaz común `HeartDiseaseModel`.
+Se mantiene la interfaz `HeartDiseaseModel` ([ver interfaces](../src/interfaces.py)).
 
-Ver [Interfaces](../src/interfaces.py) y documentación de implementación.
+### Cambio Importante en Inputs
+La interfaz de predicción (`predict`) ahora espera vectores numéricos flotantes normalizados, no categorías codificadas.
+*   *Antes:* `[1, 0, 1]` (Edad 18-24, Hombre, Salud Buena)
+*   *Ahora:* `[0.45, 1.2, -0.5]` (Edad estandarizada, Presión estandarizada, Colesterol estandarizado)
+
+El componente `Streamlit` debe encargarse de capturar el dato "crudo" (ej. 120 mmHg) y pasarlo por el `Scaler` antes de enviarlo al modelo.
