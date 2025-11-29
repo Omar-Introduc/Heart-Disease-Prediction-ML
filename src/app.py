@@ -16,12 +16,14 @@ sys.path.append(os.path.abspath(os.path.join(current_dir, '..')))
 import streamlit as st
 import pandas as pd
 
+SHAP_UNAVAILABLE_REASON = ""
 try:
     import shap
     from streamlit_shap import st_shap
     SHAP_AVAILABLE = True
-except (ImportError, OSError):
+except (ImportError, OSError) as e:
     SHAP_AVAILABLE = False
+    SHAP_UNAVAILABLE_REASON = str(e)
 
 from src.adapters import PyCaretAdapter, UserInputAdapter
 
@@ -318,7 +320,7 @@ if submitted:
                             import traceback
                             st.expander("Details").text(traceback.format_exc())
             else:
-                if st.checkbox("Show Explanation (SHAP)", disabled=True, help="Feature unavailable due to missing dependencies (shap/numba)."):
+                if st.checkbox("Show Explanation (SHAP)", disabled=True, help=f"Feature unavailable. Error: {SHAP_UNAVAILABLE_REASON}"):
                     pass
 
         except Exception as e:
