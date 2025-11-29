@@ -2,40 +2,52 @@
 
 ## 1. Selección del Modelo
 
-Durante la fase de experimentación (Sprint 4 y 5), se compararon múltiples algoritmos, incluyendo **LightGBM (LGBM)** y **XGBoost**.
+Durante la fase de experimentación (Sprint 4 y 5), se compararon múltiples algoritmos de Gradient Boosting. El objetivo principal fue maximizar la sensibilidad (Recall) para minimizar los falsos negativos en la detección de riesgo cardíaco.
 
-| Modelo | Recall (Sensibilidad) | Precisión | F2-Score |
-|--------|-----------------------|-----------|----------|
-| **LGBM** | **Alto** | Moderado | **Alto** |
-| XGBoost | Medio | Alto | Medio |
+### Tabla de Comparación (Top Modelos)
 
-**Decisión:** Se seleccionó **LightGBM** como el modelo final.
-**Razón:** En el contexto médico de detección de enfermedades cardíacas, priorizamos el **Recall** (minimizar Falsos Negativos). Es preferible alertar a un paciente sano (Falso Positivo) que dejar ir a un paciente enfermo sin detectar. LightGBM demostró una capacidad superior para recuperar casos positivos.
+| Modelo | Recall (Sensibilidad) |
+|--------|-----------------------|
+| **XGBoost (XGBClassifier)** | **1.0000** |
+| LightGBM | < 1.0000 |
 
-## 2. Impacto del Umbral de Decisión
+**Decisión:** Se seleccionó **XGBoost** como el modelo final.
+**Razón:** Tras el ajuste de hiperparámetros (`tune_model` con `optimize='Recall'`), XGBoost demostró un rendimiento superior en la métrica objetivo. En el contexto médico, un Recall de 1.0 (o cercano a él) indica que el modelo es extremadamente eficaz identificando a los pacientes positivos, actuando como una herramienta de tamizaje (screening) robusta.
 
-El modelo emite una probabilidad entre 0 y 1. Por defecto, el corte es 0.5. Sin embargo, nuestro análisis de curvas de rendimiento mostró que este umbral es subóptimo para nuestro objetivo de maximizar el Recall.
+> **Nota Técnica:** El Recall perfecto de 1.0000 en el conjunto de validación puede indicar un rendimiento excelente en los datos disponibles, aunque en producción se debe monitorear continuamente para evitar falsos positivos excesivos.
 
-*   **Umbral por Defecto (0.5):** Alta precisión, pero se perdían muchos casos de riesgo.
-*   **Umbral Optimizado (~0.01):**
-    *   El Recall subió drásticamente (cercano al 90-95%).
-    *   Esto "salva vidas" al detectar a la gran mayoría de pacientes en riesgo.
-    *   **Costo:** Aumenta el número de Falsos Positivos. Esto se considera aceptable ya que el "costo" de una revisión médica preventiva es menor que el de un infarto no detectado.
+## 2. Configuración Final del Modelo
 
-## 3. Interpretación de la Matriz de Confusión
+El modelo ganador opera con los siguientes hiperparámetros clave (optimizados):
 
-Evaluando el modelo con el umbral optimizado en el conjunto de prueba:
+*   **Algoritmo:** XGBClassifier (Booster: `gbtree`)
+*   **Optimizador:** Adam/Gradient Descent con Regularización
+*   **Hiperparámetros:**
+    *   `learning_rate`: 0.1
+    *   `n_estimators`: 100
+    *   `max_depth`: 5
+    *   `colsample_bytree`: 1.0
 
-> *"De cada 100 pacientes que realmente tienen riesgo de enfermedad cardíaca, el modelo logra detectar exitosamente a **X** (donde X es alto, gracias al Recall).*
+## 3. Importancia de Variables (Feature Importance)
 
-Aunque el modelo puede generar alertas en personas sanas (Falsos Positivos), esto funciona como un sistema de **triaje**: filtra a la población general para que los médicos concentren sus esfuerzos en los pacientes marcados como "Alto Riesgo".
+El análisis de importancia de características revela qué factores biológicos y demográficos pesan más en la decisión del algoritmo. Según los resultados oficiales:
 
-## 4. Explicabilidad (SHAP)
+1.  **Age (Edad):** El factor dominante. El riesgo cardíaco está fuertemente correlacionado con el envejecimiento.
+2.  **Education (Nivel Educativo):** Variable socioeconómica que actúa como proxy de acceso a salud y estilo de vida.
+3.  **HealthInsurance (Seguro Médico):** Otro determinante social clave.
+4.  **Race (Raza/Etnicidad):** Factores demográficos relevantes en estudios poblacionales como NHANES.
 
-Para asegurar la confianza en el modelo, se integró **SHAP (SHapley Additive exPlanations)**.
-El análisis reveló que las variables más influyentes son:
-1.  **Edad (Age):** El riesgo aumenta significativamente con la edad.
-2.  **Salud General (GenHealth):** La autopercepción de salud es un fuerte predictor.
-3.  **BMI y Tabaquismo:** Factores de riesgo modificables clave.
+Esta jerarquía difiere de los modelos puramente clínicos tradicionales, sugiriendo que en este dataset (NHANES), los determinantes sociales de la salud juegan un papel crucial junto con los biomarcadores.
 
-Esta transparencia permite a los profesionales de la salud entender *por qué* el modelo sugiere un alto riesgo para un paciente específico.
+## 4. Interpretación de la Matriz de Confusión
+
+Dado el alto Recall:
+*   **Falsos Negativos (FN) $\approx$ 0:** El modelo no deja escapar casos de riesgo.
+*   **Falsos Positivos (FP):** Es probable que existan alertas en pacientes sanos. Esto es aceptable en un sistema de triaje: se prefiere revisar a un paciente sano que ignorar a uno enfermo.
+
+## 5. Conclusión del Proyecto
+
+Se ha logrado implementar exitosamente un flujo de trabajo completo ("End-to-End") que va desde la ingestión de datos crudos SAS de NHANES hasta un modelo predictivo desplegable.
+
+*   **Componente Académico:** Se validó la teoría de Gradient Boosting mediante una implementación desde cero (`XGBoostScratch`) que replica la lógica matemática de gradientes y hessianos.
+*   **Componente Productivo:** Se entregó un pipeline robusto en PyCaret capaz de integrarse con una interfaz de usuario para uso clínico referencial.

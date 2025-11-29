@@ -1,64 +1,78 @@
 # Estudio Teórico de XGBoost: Fundamentos y Regularización
 
-**Objetivo:** Comprender la "caja negra" de XGBoost, centrándonos en por qué es diferente y superior al Gradient Boosting estándar.
+**Objetivo:** Comprender la "caja negra" de XGBoost, detallando su formulación matemática y su implementación práctica en este proyecto.
 
-## 1. Introducción: De Árboles a Boosting
+## 1. Introducción: Gradient Boosting
 
-XGBoost (eXtreme Gradient Boosting) es una implementación optimizada del algoritmo de Gradient Boosting. Su éxito radica no solo en la velocidad computacional, sino en su formulación matemática robusta que incluye **regularización** explícita para controlar el sobreajuste.
+XGBoost (eXtreme Gradient Boosting) es una técnica de aprendizaje supervisado que construye un modelo predictivo fuerte combinando múltiples modelos débiles (típicamente árboles de decisión).
 
-A diferencia de Random Forest (que usa Bagging y construye árboles independientes), el Boosting construye árboles de forma **secuencial**: cada nuevo árbol intenta corregir los errores (residuales) de los anteriores.
+A diferencia de Random Forest, que construye árboles independientes en paralelo (Bagging), XGBoost construye árboles **secuencialmente**. Cada nuevo árbol $f_t(x)$ se entrena para corregir los errores residuales de los árboles anteriores.
 
-## 2. La Función Objetivo Regularizada
+## 2. Función Objetivo Regularizada
 
-El corazón de XGBoost es su función objetivo. En el paso $t$, buscamos minimizar:
+La innovación clave de XGBoost es su función objetivo, que equilibra el error de predicción con la complejidad del modelo para evitar el sobreajuste (overfitting).
 
-$$Obj^{(t)} = \sum_{i=1}^{n} l(y_i, \hat{y}_i^{(t-1)} + f_t(x_i)) + \Omega(f_t)$$
+$$Obj^{(t)} = \sum_{i=1}^{n} L(y_i, \hat{y}_i^{(t-1)} + f_t(x_i)) + \Omega(f_t)$$
 
 Donde:
-*   $\sum l(...)$: Es la función de pérdida (ej: error cuadrático, log-loss) que mide qué tan bien se ajusta el modelo a los datos.
-*   $\Omega(f_t)$: Es el término de **regularización**, que penaliza la complejidad del nuevo árbol $f_t$.
+1.  **$L(...)$:** Función de pérdida (Loss Function). En nuestro proyecto, para clasificación binaria, utilizamos **LogLoss** (Entropía Cruzada Binaria).
+2.  **$\Omega(f_t)$:** Término de regularización que penaliza la complejidad del nuevo árbol.
 
-### 2.1. El Término de Regularización ($\Omega$)
+### 2.1 Regularización ($\Omega$)
 
-Esta es la gran diferencia con el Gradient Boosting tradicional (GBM). XGBoost define la complejidad del árbol como:
+Definimos la complejidad de un árbol como:
 
 $$\Omega(f) = \gamma T + \frac{1}{2} \lambda ||w||^2$$
 
+*   **$T$:** Número de hojas en el árbol.
+*   **$w$:** Pesos (scores) en las hojas.
+*   **$\gamma$ (Gamma):** Costo mínimo para añadir una nueva hoja. Actúa como un mecanismo de "poda" (pruning) durante la construcción.
+*   **$\lambda$ (Lambda):** Penalización L2 sobre los pesos. Suaviza las predicciones, evitando que una sola hoja tenga un peso excesivo.
+
+> **En nuestro código:** Estos parámetros se encuentran en `src/model.py` como `self.gamma` y `self.lambda_`.
+
+## 3. Optimización con Gradientes de Segundo Orden
+
+Para minimizar la función objetivo de manera eficiente, XGBoost utiliza una aproximación de **Taylor de segundo orden**. Esto permite optimizar cualquier función de pérdida siempre que sea dos veces diferenciable.
+
+La función objetivo aproximada en el paso $t$ es:
+
+$$Obj^{(t)} \approx \sum_{i=1}^{n} [g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i)] + \Omega(f_t)$$
+
 Donde:
-*   $T$: Es el número de hojas en el árbol.
-*   $w$: Son los pesos (scores) asignados a cada hoja.
-*   **$\gamma$ (Gamma - "Min Split Loss"):** Penalización por hoja adicional. Funciona como un umbral: si la ganancia de dividir un nodo no supera a $\gamma$, la división no se realiza (pruning automático).
-*   **$\lambda$ (Lambda - L2 reg):** Penalización L2 sobre los pesos de las hojas. Evita que los pesos de las hojas sean muy grandes, lo que suaviza las predicciones y reduce el overfitting.
+*   **$g_i$ (Gradiente):** Primera derivada de la pérdida. $\partial_{\hat{y}} L$
+*   **$h_i$ (Hessiano):** Segunda derivada de la pérdida. $\partial^2_{\hat{y}} L$
 
-> **Intuición:** GBM estándar es equivalente a XGBoost con $\Omega = 0$. Al añadir $\gamma$ y $\lambda$, XGBoost prefiere árboles más simples (menos hojas) y predicciones menos extremas (pesos más pequeños).
+### Implementación de LogLoss
+En `src/tree/loss_functions.py`, definimos explícitamente estas derivadas para la clasificación binaria:
 
-## 3. Optimización: De Gradientes a la Estructura del Árbol
+*   Gradiente: $g_i = p_i - y_i$
+*   Hessiano: $h_i = p_i (1 - p_i)$
 
-Dado que no podemos optimizar la función objetivo directamente en el espacio de funciones (árboles), XGBoost utiliza una **aproximación de Taylor de segundo orden** (ver documento *Desarrollo Matemático*) para evaluar rápidamente la calidad de una estructura de árbol.
+Donde $p_i$ es la probabilidad predicha (Sigmoide del score).
 
-La "calidad" o "score" de una estructura de árbol $q$ se calcula sumando los scores de sus hojas:
+## 4. Estructura del Árbol y Pesos Óptimos
 
-$$Obj^* = - \frac{1}{2} \sum_{j=1}^{T} \frac{G_j^2}{H_j + \lambda} + \gamma T$$
+Al agrupar las instancias por hojas, podemos calcular el peso óptimo $w_j^*$ para cada hoja $j$:
 
-Donde $G_j$ es la suma de gradientes y $H_j$ la suma de hessianos de los datos en la hoja $j$.
+$$w_j^* = - \frac{\sum_{i \in I_j} g_i}{\sum_{i \in I_j} h_i + \lambda}$$
 
-### 3.1. Criterio de División (Gain)
+Esta fórmula es implementada directamente en el método `_calculate_leaf_weight` de `src/tree/decision_tree.py`. Note cómo $\lambda$ en el denominador actúa como un término de suavizado: si el Hessiano es cero o muy pequeño, $\lambda$ previene la inestabilidad numérica.
 
-Para construir el árbol, el algoritmo busca iterativamente la mejor división. La ganancia de dividir un nodo en izquierda (L) y derecha (R) es:
+## 5. Ganancia (Gain) y Selección de Cortes
+
+Para decidir cómo dividir un nodo, XGBoost calcula la **Ganancia de Estructura**:
 
 $$Gain = \frac{1}{2} \left[ \frac{G_L^2}{H_L+\lambda} + \frac{G_R^2}{H_R+\lambda} - \frac{(G_L+G_R)^2}{H_L+H_R+\lambda} \right] - \gamma$$
 
-*   El primer término mide la reducción de la pérdida gracias a la división.
-*   El término $-\gamma$ actúa como el costo de complejidad. Si la mejora en la pérdida no es mayor que $\gamma$, la ganancia es negativa y no se divide.
+*   $G_L, G_R$: Suma de gradientes en hijo izquierdo/derecho.
+*   $H_L, H_R$: Suma de hessianos en hijo izquierdo/derecho.
 
-## 4. Ventaja en Biomarcadores: No Linealidad
+Si $Gain > 0$, la división reduce la función de pérdida más que el costo de complejidad $\gamma$, y por tanto se acepta. Este algoritmo "Exact Greedy" recorre todos los posibles umbrales de división para encontrar el mejor.
 
-Una razón clave para elegir XGBoost en este proyecto clínico (NHANES) es su capacidad nativa para modelar **relaciones no lineales** entre biomarcadores sin necesidad de transformación de características compleja.
+## 6. Conclusión
 
-*   **El caso de la Presión Arterial:** La relación entre presión sistólica y riesgo cardíaco no es lineal (el riesgo se dispara exponencialmente después de cierto umbral, ej. 140 mmHg). Un modelo lineal (Regresión Logística) necesitaría términos polinómicos manuales para capturar esto.
-*   **Árboles de Decisión:** XGBoost, al estar basado en árboles, "aprende" estos umbrales de forma natural mediante divisiones (splits). Por ejemplo, un árbol puede crear una rama para `SystolicBP < 120` (bajo riesgo) y otra para `SystolicBP >= 140` (alto riesgo), capturando la no linealidad "a trozos" (piecewise constant).
-*   **Interacciones:** Además, detecta interacciones automáticas, como que el "Colesterol Alto" es mucho más peligroso si también se tiene "Presión Alta".
-
-## 5. Conclusión
-
-XGBoost no es solo "Gradient Boosting rápido". Su formulación matemática introduce controles de complejidad ($\gamma, \lambda$) directamente en el proceso de construcción del árbol. Esto, sumado a su capacidad para manejar la no linealidad intrínseca de los datos biológicos, lo hace ideal para predecir fenotipos complejos de riesgo cardíaco.
+La superioridad de XGBoost en competiciones y aplicaciones médicas como esta radica en:
+1.  Uso de información de segundo orden (Hessiano) para una convergencia más rápida.
+2.  Regularización intrínseca ($\gamma, \lambda$) que mejora la generalización.
+3.  Manejo nativo de datos dispersos y no lineales.
