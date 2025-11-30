@@ -8724,3 +8724,1484 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2025-11-29 13:55:45,992:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
 
+2025-11-30 01:49:46,864:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:49:46,865:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:49:46,865:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:49:46,865:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:49:47,369:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-11-30 01:51:01,117:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:51:01,118:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:51:01,118:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:51:01,118:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-11-30 01:51:01,991:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-11-30 01:51:02,569:INFO:PyCaret ClassificationExperiment
+2025-11-30 01:51:02,570:INFO:Logging name: clf-default-name
+2025-11-30 01:51:02,570:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-11-30 01:51:02,570:INFO:version 3.0.3
+2025-11-30 01:51:02,570:INFO:Initializing setup()
+2025-11-30 01:51:02,570:INFO:self.USI: d751
+2025-11-30 01:51:02,570:INFO:self._variable_keys: {'target_param', 'X_train', 'y', 'seed', 'X_test', 'pipeline', '_ml_usecase', 'gpu_param', 'y_train', 'exp_id', 'logging_param', 'USI', 'exp_name_log', '_available_plots', 'n_jobs_param', 'data', 'y_test', 'fold_shuffle_param', 'X', 'is_multiclass', 'html_param', 'memory', 'fold_generator', 'fold_groups_param', 'idx', 'fix_imbalance', 'gpu_n_jobs_param', 'log_plots_param'}
+2025-11-30 01:51:02,570:INFO:Checking environment
+2025-11-30 01:51:02,570:INFO:python_version: 3.10.19
+2025-11-30 01:51:02,570:INFO:python_build: ('main', 'Nov  7 2025 00:05:37')
+2025-11-30 01:51:02,570:INFO:machine: x86_64
+2025-11-30 01:51:02,570:INFO:platform: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-30 01:51:02,571:INFO:Memory: svmem(total=8345706496, available=7554994176, percent=9.5, used=790712320, free=3790553088, active=281694208, inactive=3908857856, buffers=71065600, cached=4005851136, shared=557056, slab=293490688)
+2025-11-30 01:51:02,573:INFO:Physical Core: 4
+2025-11-30 01:51:02,573:INFO:Logical Core: 4
+2025-11-30 01:51:02,573:INFO:Checking libraries
+2025-11-30 01:51:02,573:INFO:System:
+2025-11-30 01:51:02,573:INFO:    python: 3.10.19 (main, Nov  7 2025, 00:05:37) [GCC 13.3.0]
+2025-11-30 01:51:02,573:INFO:executable: /home/jules/.pyenv/versions/3.10.19/bin/python
+2025-11-30 01:51:02,574:INFO:   machine: Linux-6.8.0-x86_64-with-glibc2.39
+2025-11-30 01:51:02,574:INFO:PyCaret required dependencies:
+2025-11-30 01:51:02,581:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-30 01:51:02,691:INFO:                 pip: 25.3
+2025-11-30 01:51:02,691:INFO:          setuptools: 79.0.1
+2025-11-30 01:51:02,692:INFO:             pycaret: 3.0.3
+2025-11-30 01:51:02,692:INFO:             IPython: 8.37.0
+2025-11-30 01:51:02,692:INFO:          ipywidgets: 8.1.8
+2025-11-30 01:51:02,692:INFO:                tqdm: 4.67.1
+2025-11-30 01:51:02,692:INFO:               numpy: 1.23.5
+2025-11-30 01:51:02,692:INFO:              pandas: 1.5.3
+2025-11-30 01:51:02,692:INFO:              jinja2: 3.1.6
+2025-11-30 01:51:02,692:INFO:               scipy: 1.10.1
+2025-11-30 01:51:02,692:INFO:              joblib: 1.2.0
+2025-11-30 01:51:02,692:INFO:             sklearn: 1.3.2
+2025-11-30 01:51:02,692:INFO:                pyod: 2.0.5
+2025-11-30 01:51:02,692:INFO:            imblearn: 0.12.4
+2025-11-30 01:51:02,692:INFO:   category_encoders: 2.7.0
+2025-11-30 01:51:02,692:INFO:            lightgbm: 4.6.0
+2025-11-30 01:51:02,692:INFO:               numba: 0.59.0
+2025-11-30 01:51:02,692:INFO:            requests: 2.32.5
+2025-11-30 01:51:02,692:INFO:          matplotlib: 3.10.7
+2025-11-30 01:51:02,692:INFO:          scikitplot: 0.3.7
+2025-11-30 01:51:02,692:INFO:         yellowbrick: 1.5
+2025-11-30 01:51:02,692:INFO:              plotly: 6.5.0
+2025-11-30 01:51:02,692:INFO:    plotly-resampler: Not installed
+2025-11-30 01:51:02,692:INFO:             kaleido: 1.2.0
+2025-11-30 01:51:02,692:INFO:           schemdraw: 0.15
+2025-11-30 01:51:02,692:INFO:         statsmodels: 0.14.5
+2025-11-30 01:51:02,692:INFO:              sktime: 0.40.1
+2025-11-30 01:51:02,692:INFO:               tbats: 1.1.3
+2025-11-30 01:51:02,693:INFO:            pmdarima: 2.1.1
+2025-11-30 01:51:02,693:INFO:              psutil: 7.1.3
+2025-11-30 01:51:02,693:INFO:          markupsafe: 3.0.3
+2025-11-30 01:51:02,693:INFO:             pickle5: Not installed
+2025-11-30 01:51:02,693:INFO:         cloudpickle: 3.1.2
+2025-11-30 01:51:02,693:INFO:         deprecation: 2.1.0
+2025-11-30 01:51:02,693:INFO:              xxhash: 3.6.0
+2025-11-30 01:51:02,693:INFO:           wurlitzer: 3.1.1
+2025-11-30 01:51:02,693:INFO:PyCaret optional dependencies:
+2025-11-30 01:51:03,576:INFO:                shap: 0.48.0
+2025-11-30 01:51:03,576:INFO:           interpret: Not installed
+2025-11-30 01:51:03,576:INFO:                umap: Not installed
+2025-11-30 01:51:03,576:INFO:    pandas_profiling: Not installed
+2025-11-30 01:51:03,576:INFO:  explainerdashboard: Not installed
+2025-11-30 01:51:03,576:INFO:             autoviz: Not installed
+2025-11-30 01:51:03,576:INFO:           fairlearn: 0.9.0
+2025-11-30 01:51:03,576:INFO:          deepchecks: Not installed
+2025-11-30 01:51:03,577:INFO:             xgboost: 3.1.2
+2025-11-30 01:51:03,577:INFO:            catboost: Not installed
+2025-11-30 01:51:03,577:INFO:              kmodes: Not installed
+2025-11-30 01:51:03,577:INFO:             mlxtend: Not installed
+2025-11-30 01:51:03,577:INFO:       statsforecast: Not installed
+2025-11-30 01:51:03,577:INFO:        tune_sklearn: Not installed
+2025-11-30 01:51:03,577:INFO:                 ray: Not installed
+2025-11-30 01:51:03,577:INFO:            hyperopt: Not installed
+2025-11-30 01:51:03,577:INFO:              optuna: Not installed
+2025-11-30 01:51:03,577:INFO:               skopt: Not installed
+2025-11-30 01:51:03,577:INFO:              mlflow: Not installed
+2025-11-30 01:51:03,577:INFO:              gradio: Not installed
+2025-11-30 01:51:03,577:INFO:             fastapi: 0.122.0
+2025-11-30 01:51:03,577:INFO:             uvicorn: 0.38.0
+2025-11-30 01:51:03,577:INFO:              m2cgen: Not installed
+2025-11-30 01:51:03,577:INFO:           evidently: Not installed
+2025-11-30 01:51:03,577:INFO:               fugue: Not installed
+2025-11-30 01:51:03,577:INFO:           streamlit: 1.50.0
+2025-11-30 01:51:03,577:INFO:             prophet: Not installed
+2025-11-30 01:51:03,577:INFO:None
+2025-11-30 01:51:03,577:INFO:Set up data.
+2025-11-30 01:51:03,597:INFO:Set up train/test split.
+2025-11-30 01:51:03,604:INFO:Set up index.
+2025-11-30 01:51:03,604:INFO:Set up folding strategy.
+2025-11-30 01:51:03,604:INFO:Assigning column types.
+2025-11-30 01:51:03,608:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-11-30 01:51:03,683:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-30 01:51:03,688:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-30 01:51:03,738:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:03,743:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:03,814:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-11-30 01:51:03,815:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-30 01:51:03,854:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:03,858:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:03,859:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-11-30 01:51:03,931:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-30 01:51:03,970:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:03,974:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:04,045:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-11-30 01:51:04,084:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:04,088:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:04,088:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-11-30 01:51:04,199:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:04,202:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:04,313:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:04,317:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:04,320:INFO:Preparing preprocessing pipeline...
+2025-11-30 01:51:04,321:INFO:Set up simple imputation.
+2025-11-30 01:51:04,327:INFO:Set up encoding of ordinal features.
+2025-11-30 01:51:04,336:INFO:Set up encoding of categorical features.
+2025-11-30 01:51:04,336:INFO:Set up removing outliers.
+2025-11-30 01:51:04,336:INFO:Set up imbalanced handling.
+2025-11-30 01:51:04,336:INFO:Set up feature normalization.
+2025-11-30 01:51:04,950:INFO:Finished creating preprocessing pipeline.
+2025-11-30 01:51:05,085:INFO:Pipeline: Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transform...
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto')))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False)
+2025-11-30 01:51:05,085:INFO:Creating final display dataframe.
+2025-11-30 01:51:06,384:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target      HeartDisease
+2                   Target type            Binary
+3           Original data shape         (437, 27)
+4        Transformed data shape         (696, 35)
+5   Transformed train set shape         (564, 35)
+6    Transformed test set shape         (132, 35)
+7              Ordinal features                 5
+8              Numeric features                19
+9          Categorical features                 7
+10     Rows with missing values             88.6%
+11                   Preprocess              True
+12              Imputation type            simple
+13           Numeric imputation              mean
+14       Categorical imputation              mode
+15     Maximum one-hot encoding                25
+16              Encoding method              None
+17              Remove outliers              True
+18           Outliers threshold              0.05
+19                Fix imbalance              True
+20         Fix imbalance method             SMOTE
+21                    Normalize              True
+22             Normalize method            robust
+23               Fold Generator   StratifiedKFold
+24                  Fold Number                10
+25                     CPU Jobs                -1
+26                      Use GPU             False
+27               Log Experiment             False
+28              Experiment Name  clf-default-name
+29                          USI              d751
+2025-11-30 01:51:06,504:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:06,508:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:06,614:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-11-30 01:51:06,618:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-11-30 01:51:06,620:INFO:setup() successfully completed in 4.05s...............
+2025-11-30 01:51:06,654:INFO:Initializing compare_models()
+2025-11-30 01:51:06,654:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, include=['xgboost', 'lightgbm'], fold=None, round=4, cross_validation=True, sort=Recall, n_select=3, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=False, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, 'include': ['xgboost', 'lightgbm'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Recall', 'n_select': 3, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': False, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2025-11-30 01:51:06,654:INFO:Checking exceptions
+2025-11-30 01:51:06,661:INFO:Preparing display monitor
+2025-11-30 01:51:06,666:INFO:Initializing Extreme Gradient Boosting
+2025-11-30 01:51:06,666:INFO:Total runtime is 2.658367156982422e-06 minutes
+2025-11-30 01:51:06,666:INFO:SubProcess create_model() called ==================================
+2025-11-30 01:51:06,667:INFO:Initializing create_model()
+2025-11-30 01:51:06,667:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7fc53b1fb2e0>, model_only=True, return_train_score=False, kwargs={})
+2025-11-30 01:51:06,667:INFO:Checking exceptions
+2025-11-30 01:51:06,667:INFO:Importing libraries
+2025-11-30 01:51:06,667:INFO:Copying training dataset
+2025-11-30 01:51:06,673:INFO:Defining folds
+2025-11-30 01:51:06,673:INFO:Declaring metric variables
+2025-11-30 01:51:06,673:INFO:Importing untrained model
+2025-11-30 01:51:06,674:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-30 01:51:06,675:INFO:Starting cross validation
+2025-11-30 01:51:06,705:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-30 01:51:06,750:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 7 members, which is less than n_splits=10.
+  warnings.warn(
+
+2025-11-30 01:51:11,019:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-30 01:51:11,039:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-30 01:51:11,059:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-30 01:51:11,397:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-11-30 01:51:12,752:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:51:13,792:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:51:13,795:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:51:13,798:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:51:13,801:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1760: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, "true nor predicted", "F-score is", len(true_sum))
+
+2025-11-30 01:51:13,803:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:697: RuntimeWarning: invalid value encountered in double_scalars
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-30 01:51:13,837:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:51:13,843:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:51:13,901:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:51:13,907:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:51:14,115:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:51:14,299:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:425: FitFailedWarning:
+3 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+3 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 729, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 255, in fit
+    X, y, _ = self._fit(X, y, **fit_params_steps)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 238, in _fit
+    X, y = self._memory_transform(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/joblib/memory.py", line 594, in __call__
+    return self._cached_call(args, kwargs)[0]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 398, in _cached_call
+    out, metadata = self.call(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 309, in call
+    output = self.func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 77, in _transform_one
+    output = transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 259, in transform
+    output = self.transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 546, in transform
+    X, y = self.estimator.fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/over_sampling/_smote/base.py", line 389, in _fit_resample
+    nns = self.nn_k_.kneighbors(X_class, return_distance=False)[:, 1:]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/neighbors/_base.py", line 808, in kneighbors
+    raise ValueError(
+ValueError: Expected n_neighbors <= n_samples,  but n_samples = 5, n_neighbors = 6
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2025-11-30 01:51:14,301:INFO:Calculating mean and std
+2025-11-30 01:51:14,302:INFO:Creating metrics dataframe
+2025-11-30 01:51:14,313:INFO:Uploading results into container
+2025-11-30 01:51:14,315:INFO:Uploading model into container now
+2025-11-30 01:51:14,315:INFO:_master_model_container: 1
+2025-11-30 01:51:14,315:INFO:_display_container: 2
+2025-11-30 01:51:14,317:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-30 01:51:14,317:INFO:create_model() successfully completed......................................
+2025-11-30 01:51:14,504:INFO:SubProcess create_model() end ==================================
+2025-11-30 01:51:14,505:INFO:Creating metrics dataframe
+2025-11-30 01:51:14,512:INFO:Initializing Light Gradient Boosting Machine
+2025-11-30 01:51:14,513:INFO:Total runtime is 0.13078117767969769 minutes
+2025-11-30 01:51:14,513:INFO:SubProcess create_model() called ==================================
+2025-11-30 01:51:14,513:INFO:Initializing create_model()
+2025-11-30 01:51:14,513:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7fc53b1fb2e0>, model_only=True, return_train_score=False, kwargs={})
+2025-11-30 01:51:14,514:INFO:Checking exceptions
+2025-11-30 01:51:14,514:INFO:Importing libraries
+2025-11-30 01:51:14,514:INFO:Copying training dataset
+2025-11-30 01:51:14,519:INFO:Defining folds
+2025-11-30 01:51:14,519:INFO:Declaring metric variables
+2025-11-30 01:51:14,520:INFO:Importing untrained model
+2025-11-30 01:51:14,520:INFO:Light Gradient Boosting Machine Imported successfully
+2025-11-30 01:51:14,521:INFO:Starting cross validation
+2025-11-30 01:51:14,545:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-30 01:51:14,550:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 7 members, which is less than n_splits=10.
+  warnings.warn(
+
+2025-11-30 01:52:08,921:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py:310: UserWarning: Persisting input arguments took 0.70s to run.
+If this happens often in your code, it can cause performance problems
+(results will be correct in all cases).
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2025-11-30 01:53:00,189:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py:310: UserWarning: Persisting input arguments took 0.71s to run.
+If this happens often in your code, it can cause performance problems
+(results will be correct in all cases).
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2025-11-30 01:53:00,351:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:53:00,354:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:53:00,374:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:53:00,377:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1760: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, "true nor predicted", "F-score is", len(true_sum))
+
+2025-11-30 01:53:00,387:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:697: RuntimeWarning: invalid value encountered in double_scalars
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-30 01:53:12,301:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py:310: UserWarning: Persisting input arguments took 0.74s to run.
+If this happens often in your code, it can cause performance problems
+(results will be correct in all cases).
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2025-11-30 01:54:22,153:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py:310: UserWarning: Persisting input arguments took 0.80s to run.
+If this happens often in your code, it can cause performance problems
+(results will be correct in all cases).
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2025-11-30 01:54:28,976:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:54:28,982:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:54:28,985:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:54:28,988:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1760: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, "true nor predicted", "F-score is", len(true_sum))
+
+2025-11-30 01:54:28,990:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:697: RuntimeWarning: invalid value encountered in double_scalars
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-30 01:55:18,956:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:55:18,959:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:18,962:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:18,965:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1760: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, "true nor predicted", "F-score is", len(true_sum))
+
+2025-11-30 01:55:18,967:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:697: RuntimeWarning: invalid value encountered in double_scalars
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-30 01:55:18,997:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:19,005:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:425: FitFailedWarning:
+3 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+3 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 729, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 255, in fit
+    X, y, _ = self._fit(X, y, **fit_params_steps)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 238, in _fit
+    X, y = self._memory_transform(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/joblib/memory.py", line 594, in __call__
+    return self._cached_call(args, kwargs)[0]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 398, in _cached_call
+    out, metadata = self.call(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 309, in call
+    output = self.func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 77, in _transform_one
+    output = transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 259, in transform
+    output = self.transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 546, in transform
+    X, y = self.estimator.fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/over_sampling/_smote/base.py", line 389, in _fit_resample
+    nns = self.nn_k_.kneighbors(X_class, return_distance=False)[:, 1:]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/neighbors/_base.py", line 808, in kneighbors
+    raise ValueError(
+ValueError: Expected n_neighbors <= n_samples,  but n_samples = 5, n_neighbors = 6
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2025-11-30 01:55:19,007:INFO:Calculating mean and std
+2025-11-30 01:55:19,007:INFO:Creating metrics dataframe
+2025-11-30 01:55:19,020:INFO:Uploading results into container
+2025-11-30 01:55:19,021:INFO:Uploading model into container now
+2025-11-30 01:55:19,021:INFO:_master_model_container: 2
+2025-11-30 01:55:19,021:INFO:_display_container: 2
+2025-11-30 01:55:19,022:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=42, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-11-30 01:55:19,022:INFO:create_model() successfully completed......................................
+2025-11-30 01:55:19,168:INFO:SubProcess create_model() end ==================================
+2025-11-30 01:55:19,168:INFO:Creating metrics dataframe
+2025-11-30 01:55:19,179:INFO:Initializing create_model()
+2025-11-30 01:55:19,179:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-11-30 01:55:19,179:INFO:Checking exceptions
+2025-11-30 01:55:19,182:INFO:Importing libraries
+2025-11-30 01:55:19,182:INFO:Copying training dataset
+2025-11-30 01:55:19,186:INFO:Defining folds
+2025-11-30 01:55:19,187:INFO:Declaring metric variables
+2025-11-30 01:55:19,187:INFO:Importing untrained model
+2025-11-30 01:55:19,187:INFO:Declaring custom model
+2025-11-30 01:55:19,189:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-30 01:55:19,202:INFO:Cross validation set to False
+2025-11-30 01:55:19,202:INFO:Fitting Model
+2025-11-30 01:55:19,587:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-30 01:55:19,587:INFO:create_model() successfully completed......................................
+2025-11-30 01:55:19,723:INFO:Initializing create_model()
+2025-11-30 01:55:19,723:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=42, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-11-30 01:55:19,723:INFO:Checking exceptions
+2025-11-30 01:55:19,726:INFO:Importing libraries
+2025-11-30 01:55:19,726:INFO:Copying training dataset
+2025-11-30 01:55:19,730:INFO:Defining folds
+2025-11-30 01:55:19,730:INFO:Declaring metric variables
+2025-11-30 01:55:19,730:INFO:Importing untrained model
+2025-11-30 01:55:19,730:INFO:Declaring custom model
+2025-11-30 01:55:19,732:INFO:Light Gradient Boosting Machine Imported successfully
+2025-11-30 01:55:19,745:INFO:Cross validation set to False
+2025-11-30 01:55:19,745:INFO:Fitting Model
+2025-11-30 01:55:19,953:INFO:[LightGBM] [Info] Number of positive: 282, number of negative: 282
+2025-11-30 01:55:19,954:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000364 seconds.
+2025-11-30 01:55:19,954:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-11-30 01:55:19,956:INFO:[LightGBM] [Info] Total Bins 3055
+2025-11-30 01:55:19,960:INFO:[LightGBM] [Info] Number of data points in the train set: 564, number of used features: 33
+2025-11-30 01:55:19,961:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-11-30 01:55:19,961:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,962:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,962:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,963:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,964:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,965:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,966:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,966:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,967:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,968:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,969:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,969:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,970:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,971:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,972:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,973:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,974:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,974:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,975:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,976:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,977:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,978:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,979:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,979:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,980:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,981:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,982:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,983:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,984:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,984:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,985:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,986:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,987:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,988:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,989:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,990:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,991:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,991:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,992:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,993:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,994:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,995:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,996:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,997:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,998:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:19,999:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,000:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,001:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,001:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,002:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,003:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,004:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,005:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,006:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,007:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,008:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,009:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,010:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,011:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,012:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,013:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,013:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,014:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,015:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,016:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,017:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,018:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,019:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,020:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,021:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,023:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,024:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,025:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,026:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,027:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,028:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,030:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,031:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,032:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,033:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,034:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,035:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,036:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,037:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,038:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,039:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,040:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,041:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,042:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,043:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,044:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,045:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,046:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,047:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,047:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,048:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,049:INFO:[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+2025-11-30 01:55:20,096:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=42, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-11-30 01:55:20,096:INFO:create_model() successfully completed......................................
+2025-11-30 01:55:20,231:INFO:_master_model_container: 2
+2025-11-30 01:55:20,231:INFO:_display_container: 2
+2025-11-30 01:55:20,233:INFO:[XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=42, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)]
+2025-11-30 01:55:20,233:INFO:compare_models() successfully completed......................................
+2025-11-30 01:55:20,275:INFO:Initializing tune_model()
+2025-11-30 01:55:20,276:INFO:tune_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=None, round=4, n_iter=2, custom_grid=None, optimize=Recall, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=False, tuner_verbose=True, return_train_score=False, kwargs={}, self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>)
+2025-11-30 01:55:20,276:INFO:Checking exceptions
+2025-11-30 01:55:20,281:INFO:Copying training dataset
+2025-11-30 01:55:20,285:INFO:Checking base model
+2025-11-30 01:55:20,285:INFO:Base model : Extreme Gradient Boosting
+2025-11-30 01:55:20,286:INFO:Declaring metric variables
+2025-11-30 01:55:20,286:INFO:Defining Hyperparameters
+2025-11-30 01:55:20,438:INFO:Tuning with n_jobs=-1
+2025-11-30 01:55:20,438:INFO:Initializing RandomizedSearchCV
+2025-11-30 01:55:20,448:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 7 members, which is less than n_splits=10.
+  warnings.warn(
+
+2025-11-30 01:55:21,169:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:21,180:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:21,204:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:21,730:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:21,739:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:22,065:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:22,084:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:425: FitFailedWarning:
+6 fits failed out of a total of 20.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+6 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 729, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 255, in fit
+    X, y, _ = self._fit(X, y, **fit_params_steps)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 238, in _fit
+    X, y = self._memory_transform(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/joblib/memory.py", line 594, in __call__
+    return self._cached_call(args, kwargs)[0]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 398, in _cached_call
+    out, metadata = self.call(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 309, in call
+    output = self.func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 77, in _transform_one
+    output = transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 259, in transform
+    output = self.transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 546, in transform
+    X, y = self.estimator.fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/over_sampling/_smote/base.py", line 389, in _fit_resample
+    nns = self.nn_k_.kneighbors(X_class, return_distance=False)[:, 1:]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/neighbors/_base.py", line 808, in kneighbors
+    raise ValueError(
+ValueError: Expected n_neighbors <= n_samples,  but n_samples = 5, n_neighbors = 6
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2025-11-30 01:55:22,086:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_search.py:979: UserWarning: One or more of the test scores are non-finite: [nan nan]
+  warnings.warn(
+
+2025-11-30 01:55:22,097:INFO:best_params: {'actual_estimator__subsample': 1, 'actual_estimator__scale_pos_weight': 8.5, 'actual_estimator__reg_lambda': 0.0005, 'actual_estimator__reg_alpha': 0.001, 'actual_estimator__n_estimators': 10, 'actual_estimator__min_child_weight': 3, 'actual_estimator__max_depth': 8, 'actual_estimator__learning_rate': 0.0001, 'actual_estimator__colsample_bytree': 0.7}
+2025-11-30 01:55:22,097:INFO:Hyperparameter search completed
+2025-11-30 01:55:22,097:INFO:SubProcess create_model() called ==================================
+2025-11-30 01:55:22,099:INFO:Initializing create_model()
+2025-11-30 01:55:22,099:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7fc4f2406290>, model_only=True, return_train_score=False, kwargs={'subsample': 1, 'scale_pos_weight': 8.5, 'reg_lambda': 0.0005, 'reg_alpha': 0.001, 'n_estimators': 10, 'min_child_weight': 3, 'max_depth': 8, 'learning_rate': 0.0001, 'colsample_bytree': 0.7})
+2025-11-30 01:55:22,099:INFO:Checking exceptions
+2025-11-30 01:55:22,099:INFO:Importing libraries
+2025-11-30 01:55:22,099:INFO:Copying training dataset
+2025-11-30 01:55:22,105:INFO:Defining folds
+2025-11-30 01:55:22,105:INFO:Declaring metric variables
+2025-11-30 01:55:22,105:INFO:Importing untrained model
+2025-11-30 01:55:22,106:INFO:Declaring custom model
+2025-11-30 01:55:22,108:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-30 01:55:22,108:INFO:Starting cross validation
+2025-11-30 01:55:22,128:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-30 01:55:22,133:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 7 members, which is less than n_splits=10.
+  warnings.warn(
+
+2025-11-30 01:55:22,954:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:55:22,957:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:23,050:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:55:23,053:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:23,055:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:55:23,058:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:23,135:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:425: FitFailedWarning:
+3 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+3 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 729, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 255, in fit
+    X, y, _ = self._fit(X, y, **fit_params_steps)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 238, in _fit
+    X, y = self._memory_transform(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/joblib/memory.py", line 594, in __call__
+    return self._cached_call(args, kwargs)[0]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 398, in _cached_call
+    out, metadata = self.call(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 309, in call
+    output = self.func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 77, in _transform_one
+    output = transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 259, in transform
+    output = self.transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 546, in transform
+    X, y = self.estimator.fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/over_sampling/_smote/base.py", line 389, in _fit_resample
+    nns = self.nn_k_.kneighbors(X_class, return_distance=False)[:, 1:]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/neighbors/_base.py", line 808, in kneighbors
+    raise ValueError(
+ValueError: Expected n_neighbors <= n_samples,  but n_samples = 5, n_neighbors = 6
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2025-11-30 01:55:23,138:INFO:Calculating mean and std
+2025-11-30 01:55:23,139:INFO:Creating metrics dataframe
+2025-11-30 01:55:23,142:INFO:Finalizing model
+2025-11-30 01:55:23,388:INFO:Uploading results into container
+2025-11-30 01:55:23,389:INFO:Uploading model into container now
+2025-11-30 01:55:23,390:INFO:_master_model_container: 3
+2025-11-30 01:55:23,390:INFO:_display_container: 3
+2025-11-30 01:55:23,391:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-30 01:55:23,391:INFO:create_model() successfully completed......................................
+2025-11-30 01:55:23,529:INFO:SubProcess create_model() end ==================================
+2025-11-30 01:55:23,529:INFO:choose_better activated
+2025-11-30 01:55:23,529:INFO:SubProcess create_model() called ==================================
+2025-11-30 01:55:23,531:INFO:Initializing create_model()
+2025-11-30 01:55:23,531:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-11-30 01:55:23,531:INFO:Checking exceptions
+2025-11-30 01:55:23,534:INFO:Importing libraries
+2025-11-30 01:55:23,534:INFO:Copying training dataset
+2025-11-30 01:55:23,539:INFO:Defining folds
+2025-11-30 01:55:23,539:INFO:Declaring metric variables
+2025-11-30 01:55:23,539:INFO:Importing untrained model
+2025-11-30 01:55:23,539:INFO:Declaring custom model
+2025-11-30 01:55:23,541:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-30 01:55:23,541:INFO:Starting cross validation
+2025-11-30 01:55:23,555:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-11-30 01:55:23,559:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 7 members, which is less than n_splits=10.
+  warnings.warn(
+
+2025-11-30 01:55:24,065:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:24,420:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:55:24,423:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:24,426:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:24,429:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1760: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, "true nor predicted", "F-score is", len(true_sum))
+
+2025-11-30 01:55:24,430:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:697: RuntimeWarning: invalid value encountered in double_scalars
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-30 01:55:24,548:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:55:24,551:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:24,563:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py:138: FitFailedWarning: Metric 'make_scorer(roc_auc_score, needs_proba=True, error_score=0.0, average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 130, in _score
+    return super()._score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_scorer.py", line 401, in _score
+    return self._sign * self._score_func(y, y_pred, **scoring_kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/metrics.py", line 35, in __call__
+    return self.score_func(y_true, y_pred, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 627, in roc_auc_score
+    return _average_binary_score(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 382, in _binary_roc_auc_score
+    raise ValueError(
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+  warnings.warn(
+
+2025-11-30 01:55:24,567:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 due to no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:24,569:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:24,572:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1760: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, "true nor predicted", "F-score is", len(true_sum))
+
+2025-11-30 01:55:24,574:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:697: RuntimeWarning: invalid value encountered in double_scalars
+  k = np.sum(w_mat * confusion) / np.sum(w_mat * expected)
+
+2025-11-30 01:55:24,772:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2025-11-30 01:55:24,781:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:425: FitFailedWarning:
+3 fits failed out of a total of 10.
+The score on these train-test partitions for these parameters will be set to 0.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+3 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 729, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 255, in fit
+    X, y, _ = self._fit(X, y, **fit_params_steps)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 238, in _fit
+    X, y = self._memory_transform(
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/joblib/memory.py", line 594, in __call__
+    return self._cached_call(args, kwargs)[0]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 398, in _cached_call
+    out, metadata = self.call(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/memory.py", line 309, in call
+    output = self.func(*args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/pipeline.py", line 77, in _transform_one
+    output = transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 259, in transform
+    output = self.transformer.transform(*args)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/internal/preprocess/transformers.py", line 546, in transform
+    X, y = self.estimator.fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/base.py", line 112, in fit_resample
+    output = self._fit_resample(X, y)
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/imblearn/over_sampling/_smote/base.py", line 389, in _fit_resample
+    nns = self.nn_k_.kneighbors(X_class, return_distance=False)[:, 1:]
+  File "/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/sklearn/neighbors/_base.py", line 808, in kneighbors
+    raise ValueError(
+ValueError: Expected n_neighbors <= n_samples,  but n_samples = 5, n_neighbors = 6
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+
+2025-11-30 01:55:24,783:INFO:Calculating mean and std
+2025-11-30 01:55:24,783:INFO:Creating metrics dataframe
+2025-11-30 01:55:24,787:INFO:Finalizing model
+2025-11-30 01:55:25,043:INFO:Uploading results into container
+2025-11-30 01:55:25,043:INFO:Uploading model into container now
+2025-11-30 01:55:25,044:INFO:_master_model_container: 4
+2025-11-30 01:55:25,044:INFO:_display_container: 4
+2025-11-30 01:55:25,045:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-30 01:55:25,045:INFO:create_model() successfully completed......................................
+2025-11-30 01:55:25,179:INFO:SubProcess create_model() end ==================================
+2025-11-30 01:55:25,181:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...) result for Recall is 0.0
+2025-11-30 01:55:25,182:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...) result for Recall is 0.4
+2025-11-30 01:55:25,183:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...) is best model
+2025-11-30 01:55:25,183:INFO:choose_better completed
+2025-11-30 01:55:25,184:INFO:_master_model_container: 4
+2025-11-30 01:55:25,184:INFO:_display_container: 3
+2025-11-30 01:55:25,185:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-30 01:55:25,185:INFO:tune_model() successfully completed......................................
+2025-11-30 01:55:25,365:INFO:Initializing predict_model()
+2025-11-30 01:55:25,365:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x7fc541dcea70>)
+2025-11-30 01:55:25,365:INFO:Checking exceptions
+2025-11-30 01:55:25,365:INFO:Preloading libraries
+2025-11-30 01:55:25,963:INFO:Initializing get_config()
+2025-11-30 01:55:25,963:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, variable=target_param)
+2025-11-30 01:55:25,963:INFO:Variable:  returned as HeartDisease
+2025-11-30 01:55:25,963:INFO:get_config() successfully completed......................................
+2025-11-30 01:55:27,052:INFO:Initializing interpret_model()
+2025-11-30 01:55:27,052:INFO:interpret_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>)
+2025-11-30 01:55:27,052:INFO:Checking exceptions
+2025-11-30 01:55:27,052:INFO:Soft dependency imported: shap: 0.48.0
+2025-11-30 01:55:27,812:INFO:plot type: summary
+2025-11-30 01:55:27,812:INFO:Creating TreeExplainer
+2025-11-30 01:55:27,851:INFO:Initializing finalize_model()
+2025-11-30 01:55:27,851:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2025-11-30 01:55:27,852:INFO:Finalizing XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-11-30 01:55:27,858:INFO:Initializing create_model()
+2025-11-30 01:55:27,858:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7fc53b4f3580>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=0.0001, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=8,
+              max_leaves=None, min_child_weight=3, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=10,
+              n_jobs=-1, num_parallel_tree=None, ...), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, kwargs={})
+2025-11-30 01:55:27,859:INFO:Checking exceptions
+2025-11-30 01:55:27,861:INFO:Importing libraries
+2025-11-30 01:55:27,861:INFO:Copying training dataset
+2025-11-30 01:55:27,861:INFO:Defining folds
+2025-11-30 01:55:27,861:INFO:Declaring metric variables
+2025-11-30 01:55:27,862:INFO:Importing untrained model
+2025-11-30 01:55:27,862:INFO:Declaring custom model
+2025-11-30 01:55:27,864:INFO:Extreme Gradient Boosting Imported successfully
+2025-11-30 01:55:27,896:INFO:Cross validation set to False
+2025-11-30 01:55:27,897:INFO:Fitting Model
+2025-11-30 01:55:28,597:INFO:Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transform...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0001, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=8,
+                               max_leaves=None, min_child_weight=3, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=10, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False)
+2025-11-30 01:55:28,597:INFO:create_model() successfully completed......................................
+2025-11-30 01:55:28,765:INFO:_master_model_container: 4
+2025-11-30 01:55:28,765:INFO:_display_container: 4
+2025-11-30 01:55:28,903:INFO:Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transform...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0001, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=8,
+                               max_leaves=None, min_child_weight=3, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=10, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False)
+2025-11-30 01:55:28,903:INFO:finalize_model() successfully completed......................................
+2025-11-30 01:55:29,323:INFO:Initializing save_model()
+2025-11-30 01:55:29,323:INFO:save_model(model=Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transform...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0001, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=8,
+                               max_leaves=None, min_child_weight=3, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=10, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False), model_name=../models/best_pipeline, prep_pipe_=Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transform...
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto')))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-11-30 01:55:29,323:INFO:Adding model into prep_pipe
+2025-11-30 01:55:29,323:WARNING:Only Model saved as it was a pipeline.
+2025-11-30 01:55:29,433:INFO:../models/best_pipeline.pkl saved in current working directory
+2025-11-30 01:55:29,571:INFO:Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'SystolicBP',
+                                             'TotalCholesterol', 'LDL',
+                                             'Triglycerides', 'HbA1c',
+                                             'Glucose', 'UricAcid',
+                                             'Creatinine', 'BMI',
+                                             'WaistCircumference', 'Height',
+                                             'IncomeRatio', 'ALT_Enzyme',
+                                             'AST_Enzyme', 'GGT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium'],
+                                    transform...
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None,
+                               learning_rate=0.0001, max_bin=None,
+                               max_cat_threshold=None, max_cat_to_onehot=None,
+                               max_delta_step=None, max_depth=8,
+                               max_leaves=None, min_child_weight=3, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=10, n_jobs=-1,
+                               num_parallel_tree=None, ...))],
+         verbose=False)
+2025-11-30 01:55:29,571:INFO:save_model() successfully completed......................................
