@@ -4249,3 +4249,523 @@ pickle: {'deps_info': {'pip': '25.3', 'setuptools': '80.9.0', 'pycaret': '3.3.2'
 'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
 2025-11-30 01:57:39,193:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/scikitplot/plotters.py:33: DeprecationWarning: This module was deprecated in version 0.3.0 and its functions are spread throughout different modules. Please check the documentation and update your function calls as soon as possible. This module will be removed in 0.4.0
   warnings.warn("This module was deprecated in version 0.3.0 and its functions "
+2025-12-01 15:28:28,009:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:28:28,009:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:28:28,009:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:28:28,009:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:29:01,478:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:29:01,478:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:29:01,479:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:29:01,479:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 15:29:02,360:INFO:PyCaret ClassificationExperiment
+2025-12-01 15:29:02,361:INFO:Logging name: clf-default-name
+2025-12-01 15:29:02,361:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-12-01 15:29:02,361:INFO:version 3.3.2
+2025-12-01 15:29:02,361:INFO:Initializing setup()
+2025-12-01 15:29:02,361:INFO:self.USI: 0745
+2025-12-01 15:29:02,361:INFO:self._variable_keys: {'pipeline', 'fold_shuffle_param', 'USI', 'y_train', 'fold_groups_param', 'fix_imbalance', 'data', 'exp_id', 'html_param', 'memory', 'gpu_param', 'seed', 'target_param', 'X_train', 'exp_name_log', 'log_plots_param', '_available_plots', 'y_test', 'gpu_n_jobs_param', 'is_multiclass', 'fold_generator', 'y', 'X', '_ml_usecase', 'idx', 'X_test', 'logging_param', 'n_jobs_param'}
+2025-12-01 15:29:02,361:INFO:Checking environment
+2025-12-01 15:29:02,361:INFO:python_version: 3.10.19
+2025-12-01 15:29:02,361:INFO:python_build: ('main', 'Nov  7 2025 00:05:37')
+2025-12-01 15:29:02,361:INFO:machine: x86_64
+2025-12-01 15:29:02,363:INFO:platform: Linux-6.8.0-x86_64-with-glibc2.39
+2025-12-01 15:29:02,364:INFO:Memory: svmem(total=8345706496, available=7676461056, percent=8.0, used=669245440, free=3294744576, active=373866496, inactive=4304625664, buffers=59863040, cached=4634308608, shared=540672, slab=292392960)
+2025-12-01 15:29:02,364:INFO:Physical Core: 4
+2025-12-01 15:29:02,365:INFO:Logical Core: 4
+2025-12-01 15:29:02,365:INFO:Checking libraries
+2025-12-01 15:29:02,365:INFO:System:
+2025-12-01 15:29:02,365:INFO:    python: 3.10.19 (main, Nov  7 2025, 00:05:37) [GCC 13.3.0]
+2025-12-01 15:29:02,365:INFO:executable: /home/jules/.pyenv/versions/3.10.19/bin/python
+2025-12-01 15:29:02,365:INFO:   machine: Linux-6.8.0-x86_64-with-glibc2.39
+2025-12-01 15:29:02,365:INFO:PyCaret required dependencies:
+2025-12-01 15:29:02,366:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-12-01 15:29:02,551:INFO:                 pip: 25.3
+2025-12-01 15:29:02,551:INFO:          setuptools: 79.0.1
+2025-12-01 15:29:02,552:INFO:             pycaret: 3.3.2
+2025-12-01 15:29:02,552:INFO:             IPython: 8.37.0
+2025-12-01 15:29:02,552:INFO:          ipywidgets: 8.1.8
+2025-12-01 15:29:02,552:INFO:                tqdm: 4.67.1
+2025-12-01 15:29:02,552:INFO:               numpy: 1.26.4
+2025-12-01 15:29:02,552:INFO:              pandas: 2.1.4
+2025-12-01 15:29:02,552:INFO:              jinja2: 3.1.6
+2025-12-01 15:29:02,552:INFO:               scipy: 1.11.4
+2025-12-01 15:29:02,552:INFO:              joblib: 1.3.2
+2025-12-01 15:29:02,552:INFO:             sklearn: 1.4.2
+2025-12-01 15:29:02,552:INFO:                pyod: 2.0.5
+2025-12-01 15:29:02,552:INFO:            imblearn: 0.14.0
+2025-12-01 15:29:02,552:INFO:   category_encoders: 2.7.0
+2025-12-01 15:29:02,552:INFO:            lightgbm: 4.6.0
+2025-12-01 15:29:02,552:INFO:               numba: 0.62.1
+2025-12-01 15:29:02,552:INFO:            requests: 2.32.5
+2025-12-01 15:29:02,552:INFO:          matplotlib: 3.7.5
+2025-12-01 15:29:02,552:INFO:          scikitplot: 0.3.7
+2025-12-01 15:29:02,552:INFO:         yellowbrick: 1.5
+2025-12-01 15:29:02,552:INFO:              plotly: 6.5.0
+2025-12-01 15:29:02,552:INFO:    plotly-resampler: Not installed
+2025-12-01 15:29:02,552:INFO:             kaleido: 1.2.0
+2025-12-01 15:29:02,552:INFO:           schemdraw: 0.15
+2025-12-01 15:29:02,552:INFO:         statsmodels: 0.14.5
+2025-12-01 15:29:02,552:INFO:              sktime: 0.26.0
+2025-12-01 15:29:02,553:INFO:               tbats: 1.1.3
+2025-12-01 15:29:02,553:INFO:            pmdarima: 2.0.4
+2025-12-01 15:29:02,553:INFO:              psutil: 7.1.3
+2025-12-01 15:29:02,553:INFO:          markupsafe: 3.0.3
+2025-12-01 15:29:02,553:INFO:             pickle5: Not installed
+2025-12-01 15:29:02,553:INFO:         cloudpickle: 3.1.2
+2025-12-01 15:29:02,553:INFO:         deprecation: 2.1.0
+2025-12-01 15:29:02,553:INFO:              xxhash: 3.6.0
+2025-12-01 15:29:02,553:INFO:           wurlitzer: 3.1.1
+2025-12-01 15:29:02,553:INFO:PyCaret optional dependencies:
+2025-12-01 15:29:02,610:INFO:                shap: Not installed
+2025-12-01 15:29:02,610:INFO:           interpret: Not installed
+2025-12-01 15:29:02,610:INFO:                umap: Not installed
+2025-12-01 15:29:02,610:INFO:     ydata_profiling: Not installed
+2025-12-01 15:29:02,610:INFO:  explainerdashboard: Not installed
+2025-12-01 15:29:02,610:INFO:             autoviz: Not installed
+2025-12-01 15:29:02,611:INFO:           fairlearn: Not installed
+2025-12-01 15:29:02,611:INFO:          deepchecks: Not installed
+2025-12-01 15:29:02,611:INFO:             xgboost: 3.1.2
+2025-12-01 15:29:02,611:INFO:            catboost: 1.2.8
+2025-12-01 15:29:02,611:INFO:              kmodes: 0.12.2
+2025-12-01 15:29:02,611:INFO:             mlxtend: 0.23.4
+2025-12-01 15:29:02,611:INFO:       statsforecast: 1.5.0
+2025-12-01 15:29:02,611:INFO:        tune_sklearn: Not installed
+2025-12-01 15:29:02,611:INFO:                 ray: Not installed
+2025-12-01 15:29:02,611:INFO:            hyperopt: Not installed
+2025-12-01 15:29:02,611:INFO:              optuna: Not installed
+2025-12-01 15:29:02,611:INFO:               skopt: Not installed
+2025-12-01 15:29:02,611:INFO:              mlflow: Not installed
+2025-12-01 15:29:02,611:INFO:              gradio: Not installed
+2025-12-01 15:29:02,611:INFO:             fastapi: Not installed
+2025-12-01 15:29:02,611:INFO:             uvicorn: Not installed
+2025-12-01 15:29:02,611:INFO:              m2cgen: Not installed
+2025-12-01 15:29:02,611:INFO:           evidently: Not installed
+2025-12-01 15:29:02,611:INFO:               fugue: 0.9.2
+2025-12-01 15:29:02,611:INFO:           streamlit: Not installed
+2025-12-01 15:29:02,611:INFO:             prophet: Not installed
+2025-12-01 15:29:02,611:INFO:None
+2025-12-01 15:29:02,611:INFO:Set up data.
+2025-12-01 15:29:02,616:INFO:Set up folding strategy.
+2025-12-01 15:29:02,616:INFO:Set up train/test split.
+2025-12-01 15:29:02,620:INFO:Set up index.
+2025-12-01 15:29:02,621:INFO:Assigning column types.
+2025-12-01 15:29:02,624:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-12-01 15:29:02,683:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-01 15:29:02,688:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-01 15:29:02,729:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:02,732:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:02,812:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-01 15:29:02,813:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-01 15:29:02,849:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:02,853:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:02,854:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-12-01 15:29:02,913:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-01 15:29:02,950:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:02,953:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:03,013:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-01 15:29:03,049:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:03,053:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:03,054:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-12-01 15:29:03,149:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:03,152:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:03,249:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:03,252:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:03,255:INFO:Preparing preprocessing pipeline...
+2025-12-01 15:29:03,256:INFO:Set up simple imputation.
+2025-12-01 15:29:03,280:INFO:Finished creating preprocessing pipeline.
+2025-12-01 15:29:03,286:INFO:Pipeline: Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None, include=['a'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent')))],
+         verbose=False)
+2025-12-01 15:29:03,286:INFO:Creating final display dataframe.
+2025-12-01 15:29:03,355:INFO:Setup _display_container:                     Description             Value
+0                    Session id              6644
+1                        Target                 b
+2                   Target type            Binary
+3           Original data shape           (60, 2)
+4        Transformed data shape           (60, 2)
+5   Transformed train set shape           (42, 2)
+6    Transformed test set shape           (18, 2)
+7              Numeric features                 1
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU             False
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              0745
+2025-12-01 15:29:03,451:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:03,455:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:03,550:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:03,554:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:03,556:INFO:setup() successfully completed in 1.2s...............
+2025-12-01 15:29:03,557:INFO:gpu_param set to False
+2025-12-01 15:29:03,651:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:03,655:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 15:29:03,751:INFO:Soft dependency imported: xgboost: 3.1.2
+2025-12-01 15:29:03,754:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-01 16:03:45,214:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,215:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,216:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,217:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,218:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,219:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,221:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,222:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,227:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,228:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,229:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,230:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,231:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,232:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,233:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,234:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,235:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,236:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,238:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,238:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,239:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,240:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,241:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,242:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,243:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,244:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,245:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,246:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,248:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,250:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,251:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,253:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,254:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,255:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,257:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,257:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,258:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,260:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,262:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,264:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,265:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,266:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,267:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,268:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,269:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,270:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,272:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,274:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,274:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,275:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,277:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,279:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,280:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,281:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,282:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,283:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,284:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,285:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,286:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,287:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,290:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,291:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,291:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,293:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,294:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,295:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,296:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,297:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,297:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,300:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,302:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,304:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,307:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,309:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,311:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,312:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,313:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,314:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,315:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,316:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,317:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,318:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,318:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,320:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,321:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,323:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,325:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,326:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,327:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,328:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,329:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,329:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,330:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,331:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,332:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,335:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,336:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,337:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,339:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,339:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,340:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,341:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,342:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,343:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,344:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/pycaret/utils/_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2025-12-01 16:03:45,347:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 16:03:45,347:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 16:03:45,347:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 16:03:45,347:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-01 16:03:45,735:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/yellowbrick/style/colors.py:35: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  mpl_ge_150 = LooseVersion(mpl.__version__) >= "1.5.0"
+
+2025-12-01 16:03:45,739:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/setuptools/_distutils/version.py:336: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+
+2025-12-01 16:03:45,741:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/yellowbrick/style/rcmod.py:31: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  mpl_ge_150 = LooseVersion(mpl.__version__) >= "1.5.0"
+
+2025-12-01 16:03:45,741:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/setuptools/_distutils/version.py:336: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+
+2025-12-01 16:03:46,006:WARNING:/home/jules/.pyenv/versions/3.10.19/lib/python3.10/site-packages/scikitplot/plotters.py:33: DeprecationWarning: This module was deprecated in version 0.3.0 and its functions are spread throughout different modules. Please check the documentation and update your function calls as soon as possible. This module will be removed in 0.4.0
+  warnings.warn("This module was deprecated in version 0.3.0 and its functions "
