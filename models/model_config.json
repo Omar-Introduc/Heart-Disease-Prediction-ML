@@ -1,0 +1,37 @@
+{
+    "target": "HeartDisease",
+    "numeric_features": [
+        "Age",
+        "IncomeRatio",
+        "SystolicBP",
+        "BMI",
+        "WaistCircumference",
+        "Height",
+        "TotalCholesterol",
+        "Triglycerides",
+        "LDL",
+        "HDL",
+        "HbA1c",
+        "Glucose",
+        "Creatinine",
+        "UricAcid",
+        "ALT_Enzyme",
+        "Albumin",
+        "Potassium",
+        "Sodium",
+        "GGT_Enzyme",
+        "AST_Enzyme"
+    ],
+    "categorical_features": [
+        "Sex",
+        "Race",
+        "Education",
+        "Smoking",
+        "PhysicalActivity",
+        "HealthInsurance",
+        "Alcohol"
+    ],
+    "ignore_features": [
+        "SEQN"
+    ]
+}

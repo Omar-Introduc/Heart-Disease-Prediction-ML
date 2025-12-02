@@ -423,13 +423,13 @@ dependencies:
       - schemdraw==0.15
       - scikit-base==0.7.8
       - scikit-learn==1.4.2
-      - scikit-learn-intelex==2025.9.0
+
       - scikit-optimize==0.10.2
       - scikit-plot==0.3.7
       - scipy==1.11.4
       - selenium==4.2.0
       - semantic-version==2.10.0
-      - shap==0.44.1
+      - shap==0.49.1
       - shellingham==1.5.4
       - simplejson==3.20.2
       - sktime==0.26.0
@@ -445,6 +445,7 @@ dependencies:
       - starlette==0.50.0
       - statsforecast==1.5.0
       - streamlit==1.51.0
+      - streamlit-shap
       - sweetviz==2.3.1
       - tbats==1.1.3
       - tbb==2022.3.0
@@ -485,7 +486,7 @@ dependencies:
       - wordcloud==1.9.4
       - wsproto==1.3.2
       - wtforms==3.2.1
-      - xgboost==3.1.2
+      - xgboost==2.1.3
       - xmltodict==1.0.2
       - xxhash==3.6.0
       - ydata-profiling==4.18.0
