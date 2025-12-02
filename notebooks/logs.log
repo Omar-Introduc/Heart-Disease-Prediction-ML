@@ -20124,3 +20124,8 @@ Name: HeartDisease, Length: 30586, dtype: float32
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2025-12-02 15:20:34,238:WARNING:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 15:20:37,908:INFO:Initializing load_model()
+2025-12-02 15:20:37,908:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-02 15:20:37,940:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+

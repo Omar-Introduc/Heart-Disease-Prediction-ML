@@ -1,2 +1,0 @@
-Age,Sex,SystolicBP,TotalCholesterol,LDL,Triglycerides,HbA1c,Glucose,UricAcid,Creatinine,BMI,WaistCircumference,Height,IncomeRatio,ALT_Enzyme,AST_Enzyme,GGT_Enzyme,Albumin,Potassium,Sodium,Race,Education,Smoking,Alcohol,PhysicalActivity,HealthInsurance,prediction_label,prediction_score
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0.641
