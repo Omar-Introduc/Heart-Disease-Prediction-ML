@@ -20129,3 +20129,2265 @@ Name: HeartDisease, Length: 30586, dtype: float32
 2025-12-02 15:20:37,940:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
   warnings.warn(
 
+2025-12-02 17:20:55,714:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:20:55,714:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:20:55,714:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:20:55,714:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:21:39,025:INFO:PyCaret ClassificationExperiment
+2025-12-02 17:21:39,025:INFO:Logging name: clf-default-name
+2025-12-02 17:21:39,025:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-12-02 17:21:39,025:INFO:version 3.3.2
+2025-12-02 17:21:39,025:INFO:Initializing setup()
+2025-12-02 17:21:39,025:INFO:self.USI: b045
+2025-12-02 17:21:39,025:INFO:self._variable_keys: {'X_train', 'exp_id', 'fold_shuffle_param', 'is_multiclass', 'y_train', '_available_plots', '_ml_usecase', 'y', 'html_param', 'fix_imbalance', 'X', 'idx', 'fold_groups_param', 'log_plots_param', 'X_test', 'seed', 'USI', 'memory', 'n_jobs_param', 'data', 'gpu_param', 'exp_name_log', 'gpu_n_jobs_param', 'pipeline', 'y_test', 'fold_generator', 'target_param', 'logging_param'}
+2025-12-02 17:21:39,025:INFO:Checking environment
+2025-12-02 17:21:39,025:INFO:python_version: 3.10.19
+2025-12-02 17:21:39,025:INFO:python_build: ('main', 'Oct 21 2025 16:41:31')
+2025-12-02 17:21:39,025:INFO:machine: AMD64
+2025-12-02 17:21:39,025:INFO:platform: Windows-10-10.0.26100-SP0
+2025-12-02 17:21:39,025:INFO:Memory: svmem(total=16282144768, available=4228182016, percent=74.0, used=12053962752, free=4228182016)
+2025-12-02 17:21:39,026:INFO:Physical Core: 6
+2025-12-02 17:21:39,026:INFO:Logical Core: 12
+2025-12-02 17:21:39,026:INFO:Checking libraries
+2025-12-02 17:21:39,026:INFO:System:
+2025-12-02 17:21:39,026:INFO:    python: 3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]
+2025-12-02 17:21:39,026:INFO:executable: c:\Users\OMAR\miniconda3\envs\xgb_env\python.exe
+2025-12-02 17:21:39,026:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-12-02 17:21:39,026:INFO:PyCaret required dependencies:
+2025-12-02 17:21:39,027:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-12-02 17:21:39,716:INFO:                 pip: 25.3
+2025-12-02 17:21:39,716:INFO:          setuptools: 80.9.0
+2025-12-02 17:21:39,716:INFO:             pycaret: 3.3.2
+2025-12-02 17:21:39,716:INFO:             IPython: 8.37.0
+2025-12-02 17:21:39,716:INFO:          ipywidgets: 8.1.8
+2025-12-02 17:21:39,716:INFO:                tqdm: 4.67.1
+2025-12-02 17:21:39,716:INFO:               numpy: 1.26.4
+2025-12-02 17:21:39,716:INFO:              pandas: 2.1.4
+2025-12-02 17:21:39,716:INFO:              jinja2: 3.1.6
+2025-12-02 17:21:39,716:INFO:               scipy: 1.11.4
+2025-12-02 17:21:39,716:INFO:              joblib: 1.3.2
+2025-12-02 17:21:39,716:INFO:             sklearn: 1.4.2
+2025-12-02 17:21:39,716:INFO:                pyod: 2.0.5
+2025-12-02 17:21:39,716:INFO:            imblearn: 0.14.0
+2025-12-02 17:21:39,716:INFO:   category_encoders: 2.7.0
+2025-12-02 17:21:39,716:INFO:            lightgbm: 4.6.0
+2025-12-02 17:21:39,716:INFO:               numba: 0.62.1
+2025-12-02 17:21:39,716:INFO:            requests: 2.32.5
+2025-12-02 17:21:39,716:INFO:          matplotlib: 3.7.5
+2025-12-02 17:21:39,719:INFO:          scikitplot: 0.3.7
+2025-12-02 17:21:39,719:INFO:         yellowbrick: 1.5
+2025-12-02 17:21:39,719:INFO:              plotly: 5.24.1
+2025-12-02 17:21:39,719:INFO:    plotly-resampler: Not installed
+2025-12-02 17:21:39,719:INFO:             kaleido: 1.2.0
+2025-12-02 17:21:39,719:INFO:           schemdraw: 0.15
+2025-12-02 17:21:39,719:INFO:         statsmodels: 0.14.5
+2025-12-02 17:21:39,719:INFO:              sktime: 0.26.0
+2025-12-02 17:21:39,719:INFO:               tbats: 1.1.3
+2025-12-02 17:21:39,719:INFO:            pmdarima: 2.0.4
+2025-12-02 17:21:39,719:INFO:              psutil: 7.1.3
+2025-12-02 17:21:39,719:INFO:          markupsafe: 3.0.3
+2025-12-02 17:21:39,719:INFO:             pickle5: Not installed
+2025-12-02 17:21:39,719:INFO:         cloudpickle: 3.1.2
+2025-12-02 17:21:39,719:INFO:         deprecation: 2.1.0
+2025-12-02 17:21:39,719:INFO:              xxhash: 3.6.0
+2025-12-02 17:21:39,719:INFO:           wurlitzer: Not installed
+2025-12-02 17:21:39,719:INFO:PyCaret optional dependencies:
+2025-12-02 17:21:43,106:INFO:                shap: 0.49.1
+2025-12-02 17:21:43,106:INFO:           interpret: 0.7.3
+2025-12-02 17:21:43,106:INFO:                umap: 0.5.7
+2025-12-02 17:21:43,106:INFO:     ydata_profiling: 4.18.0
+2025-12-02 17:21:43,106:INFO:  explainerdashboard: 0.5.1
+2025-12-02 17:21:43,106:INFO:             autoviz: Not installed
+2025-12-02 17:21:43,106:INFO:           fairlearn: 0.7.0
+2025-12-02 17:21:43,106:INFO:          deepchecks: Not installed
+2025-12-02 17:21:43,106:INFO:             xgboost: 2.1.3
+2025-12-02 17:21:43,106:INFO:            catboost: 1.2.8
+2025-12-02 17:21:43,106:INFO:              kmodes: 0.12.2
+2025-12-02 17:21:43,106:INFO:             mlxtend: 0.23.4
+2025-12-02 17:21:43,106:INFO:       statsforecast: 1.5.0
+2025-12-02 17:21:43,106:INFO:        tune_sklearn: Not installed
+2025-12-02 17:21:43,106:INFO:                 ray: Not installed
+2025-12-02 17:21:43,106:INFO:            hyperopt: 0.2.7
+2025-12-02 17:21:43,106:INFO:              optuna: 4.6.0
+2025-12-02 17:21:43,106:INFO:               skopt: 0.10.2
+2025-12-02 17:21:43,106:INFO:              mlflow: 3.6.0
+2025-12-02 17:21:43,106:INFO:              gradio: 6.0.1
+2025-12-02 17:21:43,106:INFO:             fastapi: 0.123.0
+2025-12-02 17:21:43,106:INFO:             uvicorn: 0.38.0
+2025-12-02 17:21:43,106:INFO:              m2cgen: 0.10.0
+2025-12-02 17:21:43,106:INFO:           evidently: 0.4.40
+2025-12-02 17:21:43,106:INFO:               fugue: 0.8.7
+2025-12-02 17:21:43,106:INFO:           streamlit: 1.51.0
+2025-12-02 17:21:43,106:INFO:             prophet: Not installed
+2025-12-02 17:21:43,106:INFO:None
+2025-12-02 17:21:43,106:INFO:Set up data.
+2025-12-02 17:21:43,123:INFO:Set up folding strategy.
+2025-12-02 17:21:43,123:INFO:Set up train/test split.
+2025-12-02 17:21:43,151:INFO:Set up index.
+2025-12-02 17:21:43,154:INFO:Assigning column types.
+2025-12-02 17:21:43,180:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-12-02 17:21:43,206:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-02 17:21:43,210:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:21:43,237:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:43,239:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:43,531:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-02 17:21:43,531:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:21:43,547:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:43,550:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:43,551:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-12-02 17:21:43,573:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:21:43,592:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:43,592:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:43,621:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:21:43,636:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:43,636:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:43,636:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-12-02 17:21:43,676:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:43,681:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:43,723:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:43,724:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:43,726:INFO:Preparing preprocessing pipeline...
+2025-12-02 17:21:43,731:INFO:Set up simple imputation.
+2025-12-02 17:21:43,746:INFO:Set up encoding of ordinal features.
+2025-12-02 17:21:43,753:INFO:Set up encoding of categorical features.
+2025-12-02 17:21:43,753:INFO:Set up feature normalization.
+2025-12-02 17:21:43,931:INFO:Finished creating preprocessing pipeline.
+2025-12-02 17:21:43,946:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                    transformer=TargetEncoder(cols=[],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              hierarchy=None,
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False)
+2025-12-02 17:21:43,946:INFO:Creating final display dataframe.
+2025-12-02 17:21:44,171:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target      HeartDisease
+2                   Target type            Binary
+3           Original data shape       (43695, 28)
+4        Transformed data shape       (43695, 32)
+5   Transformed train set shape       (30586, 32)
+6    Transformed test set shape       (13109, 32)
+7              Numeric features                20
+8          Categorical features                 7
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15                    Normalize              True
+16             Normalize method            robust
+17               Fold Generator   StratifiedKFold
+18                  Fold Number                10
+19                     CPU Jobs                 1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  clf-default-name
+23                          USI              b045
+2025-12-02 17:21:44,222:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:44,225:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:44,267:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:21:44,268:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:21:44,271:INFO:setup() successfully completed in 5.26s...............
+2025-12-02 17:21:54,219:INFO:Initializing get_config()
+2025-12-02 17:21:54,219:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, variable=y_train)
+2025-12-02 17:21:54,219:INFO:Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+2025-12-02 17:21:54,219:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+
+2025-12-02 17:21:54,226:INFO:Variable:  returned as 15208    0.0
+25325    0.0
+5132     0.0
+17217    0.0
+6382     0.0
+        ... 
+6265     0.0
+42694    0.0
+13399    0.0
+39959    0.0
+6616     0.0
+Name: HeartDisease, Length: 30586, dtype: float32
+2025-12-02 17:21:54,226:INFO:get_config() successfully completed......................................
+2025-12-02 17:21:54,228:INFO:Initializing create_model()
+2025-12-02 17:21:54,228:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, estimator=xgboost, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={'scale_pos_weight': 38.162612035851474})
+2025-12-02 17:21:54,228:INFO:Checking exceptions
+2025-12-02 17:21:54,241:INFO:Importing libraries
+2025-12-02 17:21:54,241:INFO:Copying training dataset
+2025-12-02 17:21:54,270:INFO:Defining folds
+2025-12-02 17:21:54,270:INFO:Declaring metric variables
+2025-12-02 17:21:54,278:INFO:Importing untrained model
+2025-12-02 17:21:54,285:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-02 17:21:54,293:INFO:Starting cross validation
+2025-12-02 17:21:54,295:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:22:00,486:INFO:Calculating mean and std
+2025-12-02 17:22:00,486:INFO:Creating metrics dataframe
+2025-12-02 17:22:00,499:INFO:Finalizing model
+2025-12-02 17:22:00,586:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:22:01,137:INFO:Uploading results into container
+2025-12-02 17:22:01,138:INFO:Uploading model into container now
+2025-12-02 17:22:01,146:INFO:_master_model_container: 1
+2025-12-02 17:22:01,146:INFO:_display_container: 2
+2025-12-02 17:22:01,146:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-02 17:22:01,148:INFO:create_model() successfully completed......................................
+2025-12-02 17:22:07,692:INFO:Initializing create_model()
+2025-12-02 17:22:07,692:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-02 17:22:07,692:INFO:Checking exceptions
+2025-12-02 17:22:07,693:INFO:Importing libraries
+2025-12-02 17:22:07,693:INFO:Copying training dataset
+2025-12-02 17:22:07,721:INFO:Defining folds
+2025-12-02 17:22:07,721:INFO:Declaring metric variables
+2025-12-02 17:22:07,721:INFO:Importing untrained model
+2025-12-02 17:22:07,721:INFO:Logistic Regression Imported successfully
+2025-12-02 17:22:07,722:INFO:Starting cross validation
+2025-12-02 17:22:07,723:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:22:08,641:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+
+2025-12-02 17:22:09,186:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+
+2025-12-02 17:22:09,547:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+
+2025-12-02 17:22:09,550:INFO:Calculating mean and std
+2025-12-02 17:22:09,550:INFO:Creating metrics dataframe
+2025-12-02 17:22:09,550:INFO:Finalizing model
+2025-12-02 17:22:09,624:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:22:09,711:INFO:Uploading results into container
+2025-12-02 17:22:09,713:INFO:Uploading model into container now
+2025-12-02 17:22:09,713:INFO:_master_model_container: 2
+2025-12-02 17:22:09,713:INFO:_display_container: 3
+2025-12-02 17:22:09,714:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-12-02 17:22:09,714:INFO:create_model() successfully completed......................................
+2025-12-02 17:22:09,873:INFO:Initializing create_model()
+2025-12-02 17:22:09,873:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, estimator=rf, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-02 17:22:09,873:INFO:Checking exceptions
+2025-12-02 17:22:09,873:INFO:Importing libraries
+2025-12-02 17:22:09,875:INFO:Copying training dataset
+2025-12-02 17:22:09,896:INFO:Defining folds
+2025-12-02 17:22:09,896:INFO:Declaring metric variables
+2025-12-02 17:22:09,896:INFO:Importing untrained model
+2025-12-02 17:22:09,896:INFO:Random Forest Classifier Imported successfully
+2025-12-02 17:22:09,896:INFO:Starting cross validation
+2025-12-02 17:22:09,900:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:22:51,201:INFO:Calculating mean and std
+2025-12-02 17:22:51,201:INFO:Creating metrics dataframe
+2025-12-02 17:22:51,202:INFO:Finalizing model
+2025-12-02 17:22:51,276:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:22:55,726:INFO:Uploading results into container
+2025-12-02 17:22:55,726:INFO:Uploading model into container now
+2025-12-02 17:22:55,726:INFO:_master_model_container: 3
+2025-12-02 17:22:55,726:INFO:_display_container: 4
+2025-12-02 17:22:55,726:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-12-02 17:22:55,726:INFO:create_model() successfully completed......................................
+2025-12-02 17:23:04,359:INFO:Initializing get_config()
+2025-12-02 17:23:04,359:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, variable=X_train)
+2025-12-02 17:23:04,359:INFO:Variable: 'X_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_train_transformed' instead.
+2025-12-02 17:23:04,359:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'X_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_train_transformed' instead.
+
+2025-12-02 17:23:04,375:INFO:Variable:  returned as         Age  IncomeRatio  SystolicBP        BMI  WaistCircumference  \
+15208  72.0     4.060000  121.333336  30.000000           94.000000   
+25325  18.0     2.540000   92.000000  15.900000           64.699997   
+5132   38.0     0.870000  103.000000  25.600000           97.300003   
+17217  52.0     0.000000  112.666664  22.600000           96.099998   
+6382   55.0     2.037726  140.666672  50.500000          143.000000   
+...     ...          ...         ...        ...                 ...   
+6265    6.0     0.810000   97.519173  26.900000           77.000000   
+42694  29.0     1.340000   90.000000  22.600000           86.599998   
+13399  50.0     2.881760  121.796486  27.657665           93.338409   
+39959  72.0     1.410000  128.000000  34.500000          121.800003   
+6616   57.0     0.770000  128.666672  16.799999           73.000000   
+
+           Height  TotalCholesterol  Triglycerides         LDL        HDL  \
+15208  149.399994        194.488342     145.337372  106.569115  58.927979   
+25325  153.800003        171.174011      28.993015  106.506821  58.757504   
+5132   179.000000        177.000000     131.000000  118.000000  33.000000   
+17217  178.500000        178.807617     112.662071  106.533295  49.698704   
+6382   166.500000        204.000000     152.522919  106.537094  67.000000   
+...           ...               ...            ...         ...        ...   
+6265   119.900002        115.000000       0.133738   59.959660  55.000000   
+42694  160.899994        171.000000      46.859886  106.514542  55.000000   
+13399  157.421341        188.051712     117.379623  106.551285  58.025379   
+39959  169.600006        230.000000     331.343445  106.646034  57.000000   
+6616   160.399994        161.000000      59.000000   87.000000  62.000000   
+
+       ...      Sodium  GGT_Enzyme  AST_Enzyme  Sex  Race  Education  Smoking  \
+15208  ...  140.134155   19.427843   20.704529  2.0   5.0   2.000000      0.0   
+25325  ...  139.276627   12.077684   20.956255  2.0   1.0   3.399943      0.0   
+5132   ...  143.000000   15.000000   27.000000  1.0   1.0   2.000000      1.0   
+17217  ...  139.376740   38.195724   26.162401  1.0   4.0   3.000000      1.0   
+6382   ...  139.000000  501.000000   14.000000  2.0   4.0   4.000000      1.0   
+...    ...         ...         ...         ...  ...   ...        ...      ...   
+6265   ...  139.272446   11.077256   21.572195  2.0   1.0   1.818816      0.0   
+42694  ...  135.000000    9.000000   16.000000  2.0   1.0   4.000000      0.0   
+13399  ...  139.551743   21.783148   21.532890  2.0   4.0   4.000000      0.0   
+39959  ...  139.000000   25.000000   25.000000  1.0   3.0   4.000000      0.0   
+6616   ...  144.000000   31.000000   20.000000  2.0   3.0   4.000000      1.0   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+15208          0.000000              1.0  0.000000  
+25325          0.000000              1.0  1.000000  
+5132           0.000000              0.0  0.811142  
+17217          0.000000              1.0  1.000000  
+6382           0.000000              1.0  1.003436  
+...                 ...              ...       ...  
+6265           0.414518              1.0  0.260271  
+42694          0.000000              0.0  1.000000  
+13399          0.000000              1.0  0.447658  
+39959          0.000000              1.0  1.000000  
+6616           0.000000              1.0  0.795789  
+
+[30586 rows x 27 columns]
+2025-12-02 17:23:04,375:INFO:get_config() successfully completed......................................
+2025-12-02 17:23:04,375:INFO:Initializing get_config()
+2025-12-02 17:23:04,375:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, variable=y_train)
+2025-12-02 17:23:04,375:INFO:Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+2025-12-02 17:23:04,375:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+
+2025-12-02 17:23:04,383:INFO:Variable:  returned as 15208    0.0
+25325    0.0
+5132     0.0
+17217    0.0
+6382     0.0
+        ... 
+6265     0.0
+42694    0.0
+13399    0.0
+39959    0.0
+6616     0.0
+Name: HeartDisease, Length: 30586, dtype: float32
+2025-12-02 17:23:04,383:INFO:get_config() successfully completed......................................
+2025-12-02 17:23:04,383:INFO:Initializing get_config()
+2025-12-02 17:23:04,383:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, variable=X_test)
+2025-12-02 17:23:04,383:INFO:Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+2025-12-02 17:23:04,383:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+
+2025-12-02 17:23:04,397:INFO:Variable:  returned as         Age  IncomeRatio  SystolicBP        BMI  WaistCircumference  \
+28456   9.0     1.130000   99.333336  15.700000           61.099998   
+8993   66.0     2.540000  166.333328  32.400002          114.800003   
+34312  61.0     2.040000  125.333336  30.000000          107.300003   
+4802    6.0     2.541160  104.023125  22.902746           75.281982   
+25895  61.0     5.000000  110.000000  22.930634           88.350540   
+...     ...          ...         ...        ...                 ...   
+18045   5.0     1.690000   98.095139  13.900000           49.000000   
+5425   56.0     2.816601  167.666672  26.400000           96.500000   
+12819  70.0     1.850000  134.841583  29.400000          116.300003   
+33659   7.0     4.580000   99.172447  19.500000           61.599998   
+19531   4.0     1.030000   99.557884  16.100000           52.599998   
+
+           Height  TotalCholesterol  Triglycerides         LDL        HDL  \
+28456  135.399994        166.760483       0.173547  106.177483  60.548538   
+8993   154.300003        200.000000     162.087509  106.576744  61.000000   
+34312  174.100006        165.000000     193.000000   94.000000  32.000000   
+4802   148.985626        162.438828      20.569315  106.503899  51.826447   
+25895  166.014694        205.000000     242.794479  106.603226  50.000000   
+...           ...               ...            ...         ...        ...   
+18045  111.800003        156.431137       0.197693   96.216103  60.169205   
+5425   164.600006        187.000000      56.000000  120.000000  56.000000   
+12819  189.100006        141.000000       0.274363  103.940323  37.000000   
+33659  131.300003        128.000000       0.145901   71.974304  56.000000   
+19531  105.699997        155.803253       0.195925   95.590103  60.170795   
+
+       ...      Sodium  GGT_Enzyme  AST_Enzyme  Sex  Race  Education  \
+28456  ...  139.097183   11.915139   20.541420  2.0   5.0   3.071737   
+8993   ...  144.000000   27.000000   19.000000  2.0   4.0   4.000000   
+34312  ...  138.000000   20.000000   24.000000  1.0   3.0   2.000000   
+4802   ...  139.436310   19.514387   24.333504  1.0   5.0   3.528540   
+25895  ...  139.000000   27.000000   22.000000  1.0   3.0   5.000000   
+...    ...         ...         ...         ...  ...   ...        ...   
+18045  ...  139.290634   17.000010   25.400091  1.0   3.0   1.778809   
+5425   ...  144.000000   24.000000   17.000000  2.0   4.0   4.000000   
+12819  ...  141.000000   24.000000   32.000000  1.0   3.0   5.000000   
+33659  ...  139.546265   12.943172   24.146975  1.0   4.0   3.521028   
+19531  ...  139.166153   19.742857   25.262833  1.0   5.0   1.732558   
+
+        Smoking  PhysicalActivity  HealthInsurance   Alcohol  
+28456  0.000000          0.413342              1.0  0.248789  
+8993   1.000000          0.000000              1.0  0.677497  
+34312  0.000000          0.000000              1.0  1.000000  
+4802   0.073612          0.633515              1.0  0.529613  
+25895  0.000000          0.000000              1.0  0.000000  
+...         ...               ...              ...       ...  
+18045  0.000000          0.565897              1.0  0.273056  
+5425   1.000000          1.000000              1.0  0.665636  
+12819  1.000000          1.000000              1.0  1.014022  
+33659  0.000000          0.727392              1.0  0.495082  
+19531  0.000000          0.495139              1.0  0.137422  
+
+[13109 rows x 27 columns]
+2025-12-02 17:23:04,398:INFO:get_config() successfully completed......................................
+2025-12-02 17:23:04,398:INFO:Initializing get_config()
+2025-12-02 17:23:04,398:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000019D68AAC430>, variable=y_test)
+2025-12-02 17:23:04,398:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:23:04,398:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:23:04,402:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:23:04,402:INFO:get_config() successfully completed......................................
+2025-12-02 17:26:16,176:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:26:16,176:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:26:16,176:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:26:16,176:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:26:26,564:INFO:PyCaret ClassificationExperiment
+2025-12-02 17:26:26,564:INFO:Logging name: clf-default-name
+2025-12-02 17:26:26,564:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-12-02 17:26:26,564:INFO:version 3.3.2
+2025-12-02 17:26:26,564:INFO:Initializing setup()
+2025-12-02 17:26:26,564:INFO:self.USI: 6f21
+2025-12-02 17:26:26,564:INFO:self._variable_keys: {'_ml_usecase', '_available_plots', 'USI', 'y_test', 'X', 'exp_id', 'target_param', 'idx', 'n_jobs_param', 'memory', 'log_plots_param', 'fix_imbalance', 'is_multiclass', 'data', 'exp_name_log', 'fold_groups_param', 'X_test', 'y', 'fold_shuffle_param', 'y_train', 'html_param', 'gpu_n_jobs_param', 'logging_param', 'fold_generator', 'pipeline', 'gpu_param', 'seed', 'X_train'}
+2025-12-02 17:26:26,564:INFO:Checking environment
+2025-12-02 17:26:26,564:INFO:python_version: 3.10.19
+2025-12-02 17:26:26,564:INFO:python_build: ('main', 'Oct 21 2025 16:41:31')
+2025-12-02 17:26:26,564:INFO:machine: AMD64
+2025-12-02 17:26:26,564:INFO:platform: Windows-10-10.0.26100-SP0
+2025-12-02 17:26:26,564:INFO:Memory: svmem(total=16282144768, available=3913494528, percent=76.0, used=12368650240, free=3913494528)
+2025-12-02 17:26:26,564:INFO:Physical Core: 6
+2025-12-02 17:26:26,565:INFO:Logical Core: 12
+2025-12-02 17:26:26,565:INFO:Checking libraries
+2025-12-02 17:26:26,565:INFO:System:
+2025-12-02 17:26:26,565:INFO:    python: 3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]
+2025-12-02 17:26:26,565:INFO:executable: c:\Users\OMAR\miniconda3\envs\xgb_env\python.exe
+2025-12-02 17:26:26,565:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-12-02 17:26:26,565:INFO:PyCaret required dependencies:
+2025-12-02 17:26:26,565:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-12-02 17:26:27,120:INFO:                 pip: 25.3
+2025-12-02 17:26:27,120:INFO:          setuptools: 80.9.0
+2025-12-02 17:26:27,120:INFO:             pycaret: 3.3.2
+2025-12-02 17:26:27,120:INFO:             IPython: 8.37.0
+2025-12-02 17:26:27,120:INFO:          ipywidgets: 8.1.8
+2025-12-02 17:26:27,120:INFO:                tqdm: 4.67.1
+2025-12-02 17:26:27,120:INFO:               numpy: 1.26.4
+2025-12-02 17:26:27,120:INFO:              pandas: 2.1.4
+2025-12-02 17:26:27,120:INFO:              jinja2: 3.1.6
+2025-12-02 17:26:27,120:INFO:               scipy: 1.11.4
+2025-12-02 17:26:27,120:INFO:              joblib: 1.3.2
+2025-12-02 17:26:27,120:INFO:             sklearn: 1.4.2
+2025-12-02 17:26:27,121:INFO:                pyod: 2.0.5
+2025-12-02 17:26:27,121:INFO:            imblearn: 0.14.0
+2025-12-02 17:26:27,121:INFO:   category_encoders: 2.7.0
+2025-12-02 17:26:27,121:INFO:            lightgbm: 4.6.0
+2025-12-02 17:26:27,121:INFO:               numba: 0.62.1
+2025-12-02 17:26:27,121:INFO:            requests: 2.32.5
+2025-12-02 17:26:27,121:INFO:          matplotlib: 3.7.5
+2025-12-02 17:26:27,121:INFO:          scikitplot: 0.3.7
+2025-12-02 17:26:27,121:INFO:         yellowbrick: 1.5
+2025-12-02 17:26:27,121:INFO:              plotly: 5.24.1
+2025-12-02 17:26:27,121:INFO:    plotly-resampler: Not installed
+2025-12-02 17:26:27,121:INFO:             kaleido: 1.2.0
+2025-12-02 17:26:27,121:INFO:           schemdraw: 0.15
+2025-12-02 17:26:27,121:INFO:         statsmodels: 0.14.5
+2025-12-02 17:26:27,121:INFO:              sktime: 0.26.0
+2025-12-02 17:26:27,121:INFO:               tbats: 1.1.3
+2025-12-02 17:26:27,121:INFO:            pmdarima: 2.0.4
+2025-12-02 17:26:27,121:INFO:              psutil: 7.1.3
+2025-12-02 17:26:27,121:INFO:          markupsafe: 3.0.3
+2025-12-02 17:26:27,121:INFO:             pickle5: Not installed
+2025-12-02 17:26:27,121:INFO:         cloudpickle: 3.1.2
+2025-12-02 17:26:27,121:INFO:         deprecation: 2.1.0
+2025-12-02 17:26:27,121:INFO:              xxhash: 3.6.0
+2025-12-02 17:26:27,121:INFO:           wurlitzer: Not installed
+2025-12-02 17:26:27,121:INFO:PyCaret optional dependencies:
+2025-12-02 17:26:29,784:INFO:                shap: 0.49.1
+2025-12-02 17:26:29,784:INFO:           interpret: 0.7.3
+2025-12-02 17:26:29,784:INFO:                umap: 0.5.7
+2025-12-02 17:26:29,784:INFO:     ydata_profiling: 4.18.0
+2025-12-02 17:26:29,784:INFO:  explainerdashboard: 0.5.1
+2025-12-02 17:26:29,784:INFO:             autoviz: Not installed
+2025-12-02 17:26:29,784:INFO:           fairlearn: 0.7.0
+2025-12-02 17:26:29,784:INFO:          deepchecks: Not installed
+2025-12-02 17:26:29,784:INFO:             xgboost: 2.1.3
+2025-12-02 17:26:29,784:INFO:            catboost: 1.2.8
+2025-12-02 17:26:29,784:INFO:              kmodes: 0.12.2
+2025-12-02 17:26:29,784:INFO:             mlxtend: 0.23.4
+2025-12-02 17:26:29,784:INFO:       statsforecast: 1.5.0
+2025-12-02 17:26:29,784:INFO:        tune_sklearn: Not installed
+2025-12-02 17:26:29,784:INFO:                 ray: Not installed
+2025-12-02 17:26:29,784:INFO:            hyperopt: 0.2.7
+2025-12-02 17:26:29,784:INFO:              optuna: 4.6.0
+2025-12-02 17:26:29,784:INFO:               skopt: 0.10.2
+2025-12-02 17:26:29,784:INFO:              mlflow: 3.6.0
+2025-12-02 17:26:29,784:INFO:              gradio: 6.0.1
+2025-12-02 17:26:29,784:INFO:             fastapi: 0.123.0
+2025-12-02 17:26:29,784:INFO:             uvicorn: 0.38.0
+2025-12-02 17:26:29,784:INFO:              m2cgen: 0.10.0
+2025-12-02 17:26:29,784:INFO:           evidently: 0.4.40
+2025-12-02 17:26:29,784:INFO:               fugue: 0.8.7
+2025-12-02 17:26:29,784:INFO:           streamlit: 1.51.0
+2025-12-02 17:26:29,784:INFO:             prophet: Not installed
+2025-12-02 17:26:29,784:INFO:None
+2025-12-02 17:26:29,784:INFO:Set up data.
+2025-12-02 17:26:29,806:INFO:Set up folding strategy.
+2025-12-02 17:26:29,806:INFO:Set up train/test split.
+2025-12-02 17:26:29,826:INFO:Set up index.
+2025-12-02 17:26:29,832:INFO:Assigning column types.
+2025-12-02 17:26:29,853:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-12-02 17:26:29,876:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-02 17:26:29,876:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:26:29,900:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:29,900:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:29,948:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-02 17:26:29,949:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:26:29,966:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:29,966:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:29,966:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-12-02 17:26:29,992:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:26:30,009:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:30,011:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:30,037:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-02 17:26:30,052:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:30,054:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:30,054:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-12-02 17:26:30,092:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:30,097:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:30,138:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:30,138:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:30,142:INFO:Preparing preprocessing pipeline...
+2025-12-02 17:26:30,146:INFO:Set up simple imputation.
+2025-12-02 17:26:30,160:INFO:Set up encoding of ordinal features.
+2025-12-02 17:26:30,168:INFO:Set up encoding of categorical features.
+2025-12-02 17:26:30,169:INFO:Set up feature normalization.
+2025-12-02 17:26:30,342:INFO:Finished creating preprocessing pipeline.
+2025-12-02 17:26:30,356:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                    transformer=TargetEncoder(cols=[],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              hierarchy=None,
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False)
+2025-12-02 17:26:30,356:INFO:Creating final display dataframe.
+2025-12-02 17:26:30,606:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target      HeartDisease
+2                   Target type            Binary
+3           Original data shape       (43695, 28)
+4        Transformed data shape       (43695, 32)
+5   Transformed train set shape       (30586, 32)
+6    Transformed test set shape       (13109, 32)
+7              Numeric features                20
+8          Categorical features                 7
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15                    Normalize              True
+16             Normalize method            robust
+17               Fold Generator   StratifiedKFold
+18                  Fold Number                10
+19                     CPU Jobs                 1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  clf-default-name
+23                          USI              6f21
+2025-12-02 17:26:30,654:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:30,657:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:30,702:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-02 17:26:30,704:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-02 17:26:30,706:INFO:setup() successfully completed in 4.15s...............
+2025-12-02 17:26:35,251:INFO:Initializing get_config()
+2025-12-02 17:26:35,251:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_train)
+2025-12-02 17:26:35,251:INFO:Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+2025-12-02 17:26:35,251:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+
+2025-12-02 17:26:35,259:INFO:Variable:  returned as 15208    0.0
+25325    0.0
+5132     0.0
+17217    0.0
+6382     0.0
+        ... 
+6265     0.0
+42694    0.0
+13399    0.0
+39959    0.0
+6616     0.0
+Name: HeartDisease, Length: 30586, dtype: float32
+2025-12-02 17:26:35,260:INFO:get_config() successfully completed......................................
+2025-12-02 17:26:35,261:INFO:Initializing create_model()
+2025-12-02 17:26:35,261:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=xgboost, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={'scale_pos_weight': 38.162612035851474})
+2025-12-02 17:26:35,261:INFO:Checking exceptions
+2025-12-02 17:26:35,274:INFO:Importing libraries
+2025-12-02 17:26:35,274:INFO:Copying training dataset
+2025-12-02 17:26:35,303:INFO:Defining folds
+2025-12-02 17:26:35,303:INFO:Declaring metric variables
+2025-12-02 17:26:35,306:INFO:Importing untrained model
+2025-12-02 17:26:35,309:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-02 17:26:35,314:INFO:Starting cross validation
+2025-12-02 17:26:35,316:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:26:41,432:INFO:Calculating mean and std
+2025-12-02 17:26:41,432:INFO:Creating metrics dataframe
+2025-12-02 17:26:41,439:INFO:Finalizing model
+2025-12-02 17:26:41,523:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:26:42,047:INFO:Uploading results into container
+2025-12-02 17:26:42,047:INFO:Uploading model into container now
+2025-12-02 17:26:42,055:INFO:_master_model_container: 1
+2025-12-02 17:26:42,055:INFO:_display_container: 2
+2025-12-02 17:26:42,056:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-02 17:26:42,056:INFO:create_model() successfully completed......................................
+2025-12-02 17:26:54,031:INFO:Initializing create_model()
+2025-12-02 17:26:54,031:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-02 17:26:54,031:INFO:Checking exceptions
+2025-12-02 17:26:54,046:INFO:Importing libraries
+2025-12-02 17:26:54,047:INFO:Copying training dataset
+2025-12-02 17:26:54,074:INFO:Defining folds
+2025-12-02 17:26:54,075:INFO:Declaring metric variables
+2025-12-02 17:26:54,077:INFO:Importing untrained model
+2025-12-02 17:26:54,080:INFO:Logistic Regression Imported successfully
+2025-12-02 17:26:54,084:INFO:Starting cross validation
+2025-12-02 17:26:54,086:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:26:55,047:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+
+2025-12-02 17:26:55,607:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+
+2025-12-02 17:26:56,001:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+
+2025-12-02 17:26:56,006:INFO:Calculating mean and std
+2025-12-02 17:26:56,006:INFO:Creating metrics dataframe
+2025-12-02 17:26:56,014:INFO:Finalizing model
+2025-12-02 17:26:56,096:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:26:56,191:INFO:Uploading results into container
+2025-12-02 17:26:56,192:INFO:Uploading model into container now
+2025-12-02 17:26:56,201:INFO:_master_model_container: 2
+2025-12-02 17:26:56,201:INFO:_display_container: 3
+2025-12-02 17:26:56,201:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-12-02 17:26:56,201:INFO:create_model() successfully completed......................................
+2025-12-02 17:26:56,360:INFO:Initializing create_model()
+2025-12-02 17:26:56,361:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=rf, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-02 17:26:56,361:INFO:Checking exceptions
+2025-12-02 17:26:56,372:INFO:Importing libraries
+2025-12-02 17:26:56,372:INFO:Copying training dataset
+2025-12-02 17:26:56,402:INFO:Defining folds
+2025-12-02 17:26:56,403:INFO:Declaring metric variables
+2025-12-02 17:26:56,404:INFO:Importing untrained model
+2025-12-02 17:26:56,407:INFO:Random Forest Classifier Imported successfully
+2025-12-02 17:26:56,411:INFO:Starting cross validation
+2025-12-02 17:26:56,413:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:27:36,731:INFO:Calculating mean and std
+2025-12-02 17:27:36,731:INFO:Creating metrics dataframe
+2025-12-02 17:27:36,735:INFO:Finalizing model
+2025-12-02 17:27:36,813:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:27:41,242:INFO:Uploading results into container
+2025-12-02 17:27:41,242:INFO:Uploading model into container now
+2025-12-02 17:27:41,250:INFO:_master_model_container: 3
+2025-12-02 17:27:41,251:INFO:_display_container: 4
+2025-12-02 17:27:41,251:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-12-02 17:27:41,251:INFO:create_model() successfully completed......................................
+2025-12-02 17:28:04,872:INFO:Initializing get_config()
+2025-12-02 17:28:04,872:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_train_transformed)
+2025-12-02 17:28:04,909:INFO:Variable: X_train returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+15208  0.954545     0.854789    0.359485  0.518044            0.206281   
+25325 -0.272727     0.253271   -0.812170 -0.966167           -0.799656   
+5132   0.181818    -0.407608   -0.372799  0.054886            0.319578   
+17217  0.500000    -0.751898    0.013314 -0.260904            0.278379   
+6382   0.568182     0.054503    1.131712  2.675938            1.888566   
+...         ...          ...         ...       ...                 ...   
+6265  -0.545455    -0.431352   -0.591719  0.191728           -0.377368   
+42694 -0.022727    -0.221612   -0.892056 -0.260904           -0.047778   
+13399  0.454545     0.388518    0.377985  0.271482            0.183567   
+39959  0.954545    -0.193911    0.625770  0.991728            1.160720   
+6616   0.613636    -0.447182    0.652399 -0.871430           -0.514698   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+15208 -0.487303          0.625876       0.583394  0.005397  0.314564  ...   
+25325 -0.300856          0.033588      -0.261476  0.000256  0.303682  ...   
+5132   0.766972          0.181594       0.479279  0.948690 -1.340476  ...   
+17217  0.745785          0.227516       0.346113  0.002441 -0.274561  ...   
+6382   0.237295          0.867515       0.635574  0.002754  0.829819  ...   
+...         ...               ...            ...       ...       ...  ...   
+6265  -1.737339         -1.393483      -0.471046 -3.840886  0.063832  ...   
+42694  0.000000          0.029167      -0.131730  0.000893  0.063832  ...   
+13399 -0.147405          0.462357       0.380371  0.003925  0.256949  ...   
+39959  0.368655          1.528031       1.934134  0.011744  0.191497  ...   
+6616  -0.021187         -0.224877      -0.043571 -1.609476  0.510658  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education  Smoking  \
+15208       1.0       0.0       0.0       0.0       0.0  -0.659696      0.0   
+25325       0.0       1.0       0.0       0.0       0.0   0.185278      0.0   
+5132        0.0       1.0       0.0       0.0       0.0  -0.659696      1.0   
+17217       0.0       0.0       1.0       0.0       0.0  -0.056119      1.0   
+6382        0.0       0.0       1.0       0.0       0.0   0.547458      1.0   
+...         ...       ...       ...       ...       ...        ...      ...   
+6265        0.0       1.0       0.0       0.0       0.0  -0.769055      0.0   
+42694       0.0       1.0       0.0       0.0       0.0   0.547458      0.0   
+13399       0.0       0.0       1.0       0.0       0.0   0.547458      0.0   
+39959       0.0       0.0       0.0       1.0       0.0   0.547458      0.0   
+6616        0.0       0.0       0.0       1.0       0.0   0.547458      1.0   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+15208          0.000000              0.0 -0.886483  
+25325          0.000000              0.0  0.592213  
+5132           0.000000             -1.0  0.312949  
+17217          0.000000              0.0  0.592213  
+6382           0.000000              0.0  0.597293  
+...                 ...              ...       ...  
+6265           0.662459              0.0 -0.501621  
+42694          0.000000             -1.0  0.592213  
+13399          0.000000              0.0 -0.224534  
+39959          0.000000              0.0  0.592213  
+6616           0.000000              0.0  0.290247  
+
+[30586 rows x 31 columns]
+2025-12-02 17:28:04,909:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:04,909:INFO:Initializing get_config()
+2025-12-02 17:28:04,909:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_train)
+2025-12-02 17:28:04,909:INFO:Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+2025-12-02 17:28:04,909:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+
+2025-12-02 17:28:04,916:INFO:Variable:  returned as 15208    0.0
+25325    0.0
+5132     0.0
+17217    0.0
+6382     0.0
+        ... 
+6265     0.0
+42694    0.0
+13399    0.0
+39959    0.0
+6616     0.0
+Name: HeartDisease, Length: 30586, dtype: float32
+2025-12-02 17:28:04,916:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:04,919:INFO:Initializing get_config()
+2025-12-02 17:28:04,919:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:28:05,002:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:28:05,002:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:05,003:INFO:Initializing get_config()
+2025-12-02 17:28:05,003:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:05,003:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:05,003:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:05,010:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:05,010:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:05,175:INFO:Initializing get_config()
+2025-12-02 17:28:05,176:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_train_transformed)
+2025-12-02 17:28:05,217:INFO:Variable: X_train returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+15208  0.954545     0.854789    0.359485  0.518044            0.206281   
+25325 -0.272727     0.253271   -0.812170 -0.966167           -0.799656   
+5132   0.181818    -0.407608   -0.372799  0.054886            0.319578   
+17217  0.500000    -0.751898    0.013314 -0.260904            0.278379   
+6382   0.568182     0.054503    1.131712  2.675938            1.888566   
+...         ...          ...         ...       ...                 ...   
+6265  -0.545455    -0.431352   -0.591719  0.191728           -0.377368   
+42694 -0.022727    -0.221612   -0.892056 -0.260904           -0.047778   
+13399  0.454545     0.388518    0.377985  0.271482            0.183567   
+39959  0.954545    -0.193911    0.625770  0.991728            1.160720   
+6616   0.613636    -0.447182    0.652399 -0.871430           -0.514698   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+15208 -0.487303          0.625876       0.583394  0.005397  0.314564  ...   
+25325 -0.300856          0.033588      -0.261476  0.000256  0.303682  ...   
+5132   0.766972          0.181594       0.479279  0.948690 -1.340476  ...   
+17217  0.745785          0.227516       0.346113  0.002441 -0.274561  ...   
+6382   0.237295          0.867515       0.635574  0.002754  0.829819  ...   
+...         ...               ...            ...       ...       ...  ...   
+6265  -1.737339         -1.393483      -0.471046 -3.840886  0.063832  ...   
+42694  0.000000          0.029167      -0.131730  0.000893  0.063832  ...   
+13399 -0.147405          0.462357       0.380371  0.003925  0.256949  ...   
+39959  0.368655          1.528031       1.934134  0.011744  0.191497  ...   
+6616  -0.021187         -0.224877      -0.043571 -1.609476  0.510658  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education  Smoking  \
+15208       1.0       0.0       0.0       0.0       0.0  -0.659696      0.0   
+25325       0.0       1.0       0.0       0.0       0.0   0.185278      0.0   
+5132        0.0       1.0       0.0       0.0       0.0  -0.659696      1.0   
+17217       0.0       0.0       1.0       0.0       0.0  -0.056119      1.0   
+6382        0.0       0.0       1.0       0.0       0.0   0.547458      1.0   
+...         ...       ...       ...       ...       ...        ...      ...   
+6265        0.0       1.0       0.0       0.0       0.0  -0.769055      0.0   
+42694       0.0       1.0       0.0       0.0       0.0   0.547458      0.0   
+13399       0.0       0.0       1.0       0.0       0.0   0.547458      0.0   
+39959       0.0       0.0       0.0       1.0       0.0   0.547458      0.0   
+6616        0.0       0.0       0.0       1.0       0.0   0.547458      1.0   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+15208          0.000000              0.0 -0.886483  
+25325          0.000000              0.0  0.592213  
+5132           0.000000             -1.0  0.312949  
+17217          0.000000              0.0  0.592213  
+6382           0.000000              0.0  0.597293  
+...                 ...              ...       ...  
+6265           0.662459              0.0 -0.501621  
+42694          0.000000             -1.0  0.592213  
+13399          0.000000              0.0 -0.224534  
+39959          0.000000              0.0  0.592213  
+6616           0.000000              0.0  0.290247  
+
+[30586 rows x 31 columns]
+2025-12-02 17:28:05,217:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:05,219:INFO:Initializing get_config()
+2025-12-02 17:28:05,219:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_train)
+2025-12-02 17:28:05,219:INFO:Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+2025-12-02 17:28:05,219:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+
+2025-12-02 17:28:05,226:INFO:Variable:  returned as 15208    0.0
+25325    0.0
+5132     0.0
+17217    0.0
+6382     0.0
+        ... 
+6265     0.0
+42694    0.0
+13399    0.0
+39959    0.0
+6616     0.0
+Name: HeartDisease, Length: 30586, dtype: float32
+2025-12-02 17:28:05,227:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:05,229:INFO:Initializing get_config()
+2025-12-02 17:28:05,229:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:28:05,310:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:28:05,310:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:05,310:INFO:Initializing get_config()
+2025-12-02 17:28:05,310:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:05,310:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:05,310:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:05,318:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:05,318:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:23,833:INFO:Initializing plot_model()
+2025-12-02 17:28:23,833:INFO:plot_model(plot=error, fold=None, verbose=True, display=None, display_format=None, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, system=True)
+2025-12-02 17:28:23,833:INFO:Checking exceptions
+2025-12-02 17:28:23,851:INFO:Preloading libraries
+2025-12-02 17:28:23,858:INFO:Copying training dataset
+2025-12-02 17:28:23,858:INFO:Plot type: error
+2025-12-02 17:28:24,070:INFO:Fitting Model
+2025-12-02 17:28:24,071:INFO:Scoring test/hold-out set
+2025-12-02 17:28:24,239:INFO:Visual Rendered Successfully
+2025-12-02 17:28:24,407:INFO:plot_model() successfully completed......................................
+2025-12-02 17:28:34,137:INFO:Initializing get_config()
+2025-12-02 17:28:34,137:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:28:34,216:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:28:34,216:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,242:INFO:Initializing get_config()
+2025-12-02 17:28:34,242:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:34,242:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:34,242:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:34,247:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:34,247:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,248:INFO:Initializing get_config()
+2025-12-02 17:28:34,248:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:34,248:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:34,248:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:34,251:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:34,251:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,255:INFO:Initializing get_config()
+2025-12-02 17:28:34,255:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:28:34,323:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:28:34,323:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,326:INFO:Initializing get_config()
+2025-12-02 17:28:34,326:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:34,326:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:34,326:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:34,331:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:34,331:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,332:INFO:Initializing get_config()
+2025-12-02 17:28:34,332:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:34,332:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:34,332:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:34,337:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:34,337:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,337:INFO:Initializing get_config()
+2025-12-02 17:28:34,337:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:28:34,407:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:28:34,407:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,466:INFO:Initializing get_config()
+2025-12-02 17:28:34,466:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:34,466:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:34,467:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:34,473:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:34,473:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:34,473:INFO:Initializing get_config()
+2025-12-02 17:28:34,473:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:28:34,473:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:28:34,473:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:28:34,476:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:28:34,476:INFO:get_config() successfully completed......................................
+2025-12-02 17:28:41,119:INFO:Initializing interpret_model()
+2025-12-02 17:28:41,119:INFO:interpret_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>)
+2025-12-02 17:28:41,119:INFO:Checking exceptions
+2025-12-02 17:28:41,119:INFO:Soft dependency imported: shap: 0.49.1
+2025-12-02 17:28:41,189:INFO:plot type: summary
+2025-12-02 17:28:41,189:INFO:Creating TreeExplainer
+2025-12-02 17:28:41,205:INFO:Compiling shap values
+2025-12-02 17:28:45,966:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:4145: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+
+2025-12-02 17:28:47,126:INFO:Visual Rendered Successfully
+2025-12-02 17:28:47,126:INFO:interpret_model() successfully completed......................................
+2025-12-02 17:28:51,394:INFO:Initializing interpret_model()
+2025-12-02 17:28:51,394:INFO:interpret_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=0, plot=reason, save=False, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>)
+2025-12-02 17:28:51,394:INFO:Checking exceptions
+2025-12-02 17:28:51,394:INFO:Soft dependency imported: shap: 0.49.1
+2025-12-02 17:28:51,463:INFO:plot type: reason
+2025-12-02 17:28:51,463:INFO:model type detected: type 2
+2025-12-02 17:28:51,463:INFO:Creating TreeExplainer
+2025-12-02 17:28:51,476:INFO:Compiling shap values
+2025-12-02 17:28:56,204:INFO:Visual Rendered Successfully
+2025-12-02 17:28:56,205:INFO:interpret_model() successfully completed......................................
+2025-12-02 17:29:01,571:INFO:Initializing get_config()
+2025-12-02 17:29:01,571:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:29:01,647:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:29:01,647:INFO:get_config() successfully completed......................................
+2025-12-02 17:29:01,675:INFO:Initializing get_config()
+2025-12-02 17:29:01,675:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:29:01,675:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:29:01,675:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:29:01,680:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:29:01,680:INFO:get_config() successfully completed......................................
+2025-12-02 17:29:21,410:INFO:Initializing tune_model()
+2025-12-02 17:29:21,410:INFO:tune_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=None, round=4, n_iter=5, custom_grid=None, optimize=Recall, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=False, tuner_verbose=True, return_train_score=False, kwargs={}, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>)
+2025-12-02 17:29:21,410:INFO:Checking exceptions
+2025-12-02 17:29:21,421:INFO:Copying training dataset
+2025-12-02 17:29:21,436:INFO:Checking base model
+2025-12-02 17:29:21,436:INFO:Base model : Extreme Gradient Boosting
+2025-12-02 17:29:21,436:INFO:Declaring metric variables
+2025-12-02 17:29:21,436:INFO:Defining Hyperparameters
+2025-12-02 17:29:21,604:INFO:Tuning with n_jobs=1
+2025-12-02 17:29:21,604:INFO:Initializing RandomizedSearchCV
+2025-12-02 17:29:57,252:INFO:best_params: {'actual_estimator__subsample': 0.7, 'actual_estimator__scale_pos_weight': 38.0, 'actual_estimator__reg_lambda': 0.7, 'actual_estimator__reg_alpha': 0.001, 'actual_estimator__n_estimators': 60, 'actual_estimator__min_child_weight': 1, 'actual_estimator__max_depth': 6, 'actual_estimator__learning_rate': 0.4, 'actual_estimator__colsample_bytree': 0.7}
+2025-12-02 17:29:57,252:INFO:Hyperparameter search completed
+2025-12-02 17:29:57,252:INFO:SubProcess create_model() called ==================================
+2025-12-02 17:29:57,252:INFO:Initializing create_model()
+2025-12-02 17:29:57,252:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001715BD3B9D0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={'subsample': 0.7, 'scale_pos_weight': 38.0, 'reg_lambda': 0.7, 'reg_alpha': 0.001, 'n_estimators': 60, 'min_child_weight': 1, 'max_depth': 6, 'learning_rate': 0.4, 'colsample_bytree': 0.7})
+2025-12-02 17:29:57,252:INFO:Checking exceptions
+2025-12-02 17:29:57,252:INFO:Importing libraries
+2025-12-02 17:29:57,252:INFO:Copying training dataset
+2025-12-02 17:29:57,276:INFO:Defining folds
+2025-12-02 17:29:57,276:INFO:Declaring metric variables
+2025-12-02 17:29:57,276:INFO:Importing untrained model
+2025-12-02 17:29:57,276:INFO:Declaring custom model
+2025-12-02 17:29:57,276:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-02 17:29:57,276:INFO:Starting cross validation
+2025-12-02 17:29:57,276:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:30:02,054:INFO:Calculating mean and std
+2025-12-02 17:30:02,056:INFO:Creating metrics dataframe
+2025-12-02 17:30:02,056:INFO:Finalizing model
+2025-12-02 17:30:02,124:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:30:02,517:INFO:Uploading results into container
+2025-12-02 17:30:02,519:INFO:Uploading model into container now
+2025-12-02 17:30:02,519:INFO:_master_model_container: 4
+2025-12-02 17:30:02,519:INFO:_display_container: 5
+2025-12-02 17:30:02,520:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-02 17:30:02,520:INFO:create_model() successfully completed......................................
+2025-12-02 17:30:02,702:INFO:SubProcess create_model() end ==================================
+2025-12-02 17:30:02,702:INFO:choose_better activated
+2025-12-02 17:30:02,704:INFO:SubProcess create_model() called ==================================
+2025-12-02 17:30:02,704:INFO:Initializing create_model()
+2025-12-02 17:30:02,704:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-02 17:30:02,704:INFO:Checking exceptions
+2025-12-02 17:30:02,704:INFO:Importing libraries
+2025-12-02 17:30:02,704:INFO:Copying training dataset
+2025-12-02 17:30:02,726:INFO:Defining folds
+2025-12-02 17:30:02,726:INFO:Declaring metric variables
+2025-12-02 17:30:02,726:INFO:Importing untrained model
+2025-12-02 17:30:02,726:INFO:Declaring custom model
+2025-12-02 17:30:02,726:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-02 17:30:02,726:INFO:Starting cross validation
+2025-12-02 17:30:02,726:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-02 17:30:08,647:INFO:Calculating mean and std
+2025-12-02 17:30:08,647:INFO:Creating metrics dataframe
+2025-12-02 17:30:08,651:INFO:Finalizing model
+2025-12-02 17:30:08,714:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:30:09,221:INFO:Uploading results into container
+2025-12-02 17:30:09,221:INFO:Uploading model into container now
+2025-12-02 17:30:09,221:INFO:_master_model_container: 5
+2025-12-02 17:30:09,221:INFO:_display_container: 6
+2025-12-02 17:30:09,222:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-02 17:30:09,222:INFO:create_model() successfully completed......................................
+2025-12-02 17:30:09,401:INFO:SubProcess create_model() end ==================================
+2025-12-02 17:30:09,401:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...) result for Recall is 0.2882
+2025-12-02 17:30:09,401:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...) result for Recall is 0.3316
+2025-12-02 17:30:09,404:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...) is best model
+2025-12-02 17:30:09,404:INFO:choose_better completed
+2025-12-02 17:30:09,404:INFO:_master_model_container: 5
+2025-12-02 17:30:09,404:INFO:_display_container: 5
+2025-12-02 17:30:09,404:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-02 17:30:09,404:INFO:tune_model() successfully completed......................................
+2025-12-02 17:30:14,821:INFO:Initializing predict_model()
+2025-12-02 17:30:14,821:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001715D91B0A0>)
+2025-12-02 17:30:14,821:INFO:Checking exceptions
+2025-12-02 17:30:14,822:INFO:Preloading libraries
+2025-12-02 17:30:15,216:INFO:Initializing get_config()
+2025-12-02 17:30:15,216:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=target_param)
+2025-12-02 17:30:15,216:INFO:Variable:  returned as HeartDisease
+2025-12-02 17:30:15,216:INFO:get_config() successfully completed......................................
+2025-12-02 17:30:22,124:INFO:Initializing interpret_model()
+2025-12-02 17:30:22,124:INFO:interpret_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>)
+2025-12-02 17:30:22,124:INFO:Checking exceptions
+2025-12-02 17:30:22,125:INFO:Soft dependency imported: shap: 0.49.1
+2025-12-02 17:30:22,196:INFO:plot type: summary
+2025-12-02 17:30:22,196:INFO:Creating TreeExplainer
+2025-12-02 17:30:22,206:INFO:Compiling shap values
+2025-12-02 17:30:25,521:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:4145: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+
+2025-12-02 17:30:26,656:INFO:Visual Rendered Successfully
+2025-12-02 17:30:26,656:INFO:interpret_model() successfully completed......................................
+2025-12-02 17:31:47,247:INFO:Initializing finalize_model()
+2025-12-02 17:31:47,250:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2025-12-02 17:31:47,250:INFO:Finalizing XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-02 17:31:47,264:INFO:Initializing create_model()
+2025-12-02 17:31:47,264:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.7, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.4, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=6, max_leaves=None,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=60, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-02 17:31:47,267:INFO:Checking exceptions
+2025-12-02 17:31:47,268:INFO:Importing libraries
+2025-12-02 17:31:47,268:INFO:Copying training dataset
+2025-12-02 17:31:47,272:INFO:Defining folds
+2025-12-02 17:31:47,272:INFO:Declaring metric variables
+2025-12-02 17:31:47,272:INFO:Importing untrained model
+2025-12-02 17:31:47,273:INFO:Declaring custom model
+2025-12-02 17:31:47,274:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-02 17:31:47,275:INFO:Cross validation set to False
+2025-12-02 17:31:47,275:INFO:Fitting Model
+2025-12-02 17:31:47,382:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-02 17:31:47,959:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=Si...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.4,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=6, max_leaves=None, min_child_weight=1,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=60, n_jobs=1,
+                               num_parallel_tree=None,
+                               objective='binary:logistic', ...))],
+         verbose=False)
+2025-12-02 17:31:47,959:INFO:create_model() successfully completed......................................
+2025-12-02 17:31:48,132:INFO:_master_model_container: 5
+2025-12-02 17:31:48,132:INFO:_display_container: 6
+2025-12-02 17:31:48,147:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=Si...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.4,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=6, max_leaves=None, min_child_weight=1,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=60, n_jobs=1,
+                               num_parallel_tree=None,
+                               objective='binary:logistic', ...))],
+         verbose=False)
+2025-12-02 17:31:48,147:INFO:finalize_model() successfully completed......................................
+2025-12-02 17:31:48,342:INFO:Initializing save_model()
+2025-12-02 17:31:48,342:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=Si...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.4,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=6, max_leaves=None, min_child_weight=1,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=60, n_jobs=1,
+                               num_parallel_tree=None,
+                               objective='binary:logistic', ...))],
+         verbose=False), model_name=../models\best_pipeline, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                    transformer=TargetEncoder(cols=[],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              hierarchy=None,
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-12-02 17:31:48,342:INFO:Adding model into prep_pipe
+2025-12-02 17:31:48,342:WARNING:Only Model saved as it was a pipeline.
+2025-12-02 17:31:48,350:INFO:../models\best_pipeline.pkl saved in current working directory
+2025-12-02 17:31:48,364:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=Si...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.4,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=6, max_leaves=None, min_child_weight=1,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=60, n_jobs=1,
+                               num_parallel_tree=None,
+                               objective='binary:logistic', ...))],
+         verbose=False)
+2025-12-02 17:31:48,364:INFO:save_model() successfully completed......................................
+2025-12-02 17:34:22,196:INFO:Initializing get_config()
+2025-12-02 17:34:22,196:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_train_transformed)
+2025-12-02 17:34:22,236:INFO:Variable: X_train returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+15208  0.954545     0.854789    0.359485  0.518044            0.206281   
+25325 -0.272727     0.253271   -0.812170 -0.966167           -0.799656   
+5132   0.181818    -0.407608   -0.372799  0.054886            0.319578   
+17217  0.500000    -0.751898    0.013314 -0.260904            0.278379   
+6382   0.568182     0.054503    1.131712  2.675938            1.888566   
+...         ...          ...         ...       ...                 ...   
+6265  -0.545455    -0.431352   -0.591719  0.191728           -0.377368   
+42694 -0.022727    -0.221612   -0.892056 -0.260904           -0.047778   
+13399  0.454545     0.388518    0.377985  0.271482            0.183567   
+39959  0.954545    -0.193911    0.625770  0.991728            1.160720   
+6616   0.613636    -0.447182    0.652399 -0.871430           -0.514698   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+15208 -0.487303          0.625876       0.583394  0.005397  0.314564  ...   
+25325 -0.300856          0.033588      -0.261476  0.000256  0.303682  ...   
+5132   0.766972          0.181594       0.479279  0.948690 -1.340476  ...   
+17217  0.745785          0.227516       0.346113  0.002441 -0.274561  ...   
+6382   0.237295          0.867515       0.635574  0.002754  0.829819  ...   
+...         ...               ...            ...       ...       ...  ...   
+6265  -1.737339         -1.393483      -0.471046 -3.840886  0.063832  ...   
+42694  0.000000          0.029167      -0.131730  0.000893  0.063832  ...   
+13399 -0.147405          0.462357       0.380371  0.003925  0.256949  ...   
+39959  0.368655          1.528031       1.934134  0.011744  0.191497  ...   
+6616  -0.021187         -0.224877      -0.043571 -1.609476  0.510658  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education  Smoking  \
+15208       1.0       0.0       0.0       0.0       0.0  -0.659696      0.0   
+25325       0.0       1.0       0.0       0.0       0.0   0.185278      0.0   
+5132        0.0       1.0       0.0       0.0       0.0  -0.659696      1.0   
+17217       0.0       0.0       1.0       0.0       0.0  -0.056119      1.0   
+6382        0.0       0.0       1.0       0.0       0.0   0.547458      1.0   
+...         ...       ...       ...       ...       ...        ...      ...   
+6265        0.0       1.0       0.0       0.0       0.0  -0.769055      0.0   
+42694       0.0       1.0       0.0       0.0       0.0   0.547458      0.0   
+13399       0.0       0.0       1.0       0.0       0.0   0.547458      0.0   
+39959       0.0       0.0       0.0       1.0       0.0   0.547458      0.0   
+6616        0.0       0.0       0.0       1.0       0.0   0.547458      1.0   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+15208          0.000000              0.0 -0.886483  
+25325          0.000000              0.0  0.592213  
+5132           0.000000             -1.0  0.312949  
+17217          0.000000              0.0  0.592213  
+6382           0.000000              0.0  0.597293  
+...                 ...              ...       ...  
+6265           0.662459              0.0 -0.501621  
+42694          0.000000             -1.0  0.592213  
+13399          0.000000              0.0 -0.224534  
+39959          0.000000              0.0  0.592213  
+6616           0.000000              0.0  0.290247  
+
+[30586 rows x 31 columns]
+2025-12-02 17:34:22,237:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:22,237:INFO:Initializing get_config()
+2025-12-02 17:34:22,237:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_train)
+2025-12-02 17:34:22,237:INFO:Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+2025-12-02 17:34:22,237:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+
+2025-12-02 17:34:22,245:INFO:Variable:  returned as 15208    0.0
+25325    0.0
+5132     0.0
+17217    0.0
+6382     0.0
+        ... 
+6265     0.0
+42694    0.0
+13399    0.0
+39959    0.0
+6616     0.0
+Name: HeartDisease, Length: 30586, dtype: float32
+2025-12-02 17:34:22,246:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:22,248:INFO:Initializing get_config()
+2025-12-02 17:34:22,248:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:34:22,333:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:34:22,333:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:22,333:INFO:Initializing get_config()
+2025-12-02 17:34:22,333:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:34:22,333:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:34:22,333:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:34:22,336:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:34:22,336:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:22,492:INFO:Initializing get_config()
+2025-12-02 17:34:22,492:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_train_transformed)
+2025-12-02 17:34:22,537:INFO:Variable: X_train returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+15208  0.954545     0.854789    0.359485  0.518044            0.206281   
+25325 -0.272727     0.253271   -0.812170 -0.966167           -0.799656   
+5132   0.181818    -0.407608   -0.372799  0.054886            0.319578   
+17217  0.500000    -0.751898    0.013314 -0.260904            0.278379   
+6382   0.568182     0.054503    1.131712  2.675938            1.888566   
+...         ...          ...         ...       ...                 ...   
+6265  -0.545455    -0.431352   -0.591719  0.191728           -0.377368   
+42694 -0.022727    -0.221612   -0.892056 -0.260904           -0.047778   
+13399  0.454545     0.388518    0.377985  0.271482            0.183567   
+39959  0.954545    -0.193911    0.625770  0.991728            1.160720   
+6616   0.613636    -0.447182    0.652399 -0.871430           -0.514698   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+15208 -0.487303          0.625876       0.583394  0.005397  0.314564  ...   
+25325 -0.300856          0.033588      -0.261476  0.000256  0.303682  ...   
+5132   0.766972          0.181594       0.479279  0.948690 -1.340476  ...   
+17217  0.745785          0.227516       0.346113  0.002441 -0.274561  ...   
+6382   0.237295          0.867515       0.635574  0.002754  0.829819  ...   
+...         ...               ...            ...       ...       ...  ...   
+6265  -1.737339         -1.393483      -0.471046 -3.840886  0.063832  ...   
+42694  0.000000          0.029167      -0.131730  0.000893  0.063832  ...   
+13399 -0.147405          0.462357       0.380371  0.003925  0.256949  ...   
+39959  0.368655          1.528031       1.934134  0.011744  0.191497  ...   
+6616  -0.021187         -0.224877      -0.043571 -1.609476  0.510658  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education  Smoking  \
+15208       1.0       0.0       0.0       0.0       0.0  -0.659696      0.0   
+25325       0.0       1.0       0.0       0.0       0.0   0.185278      0.0   
+5132        0.0       1.0       0.0       0.0       0.0  -0.659696      1.0   
+17217       0.0       0.0       1.0       0.0       0.0  -0.056119      1.0   
+6382        0.0       0.0       1.0       0.0       0.0   0.547458      1.0   
+...         ...       ...       ...       ...       ...        ...      ...   
+6265        0.0       1.0       0.0       0.0       0.0  -0.769055      0.0   
+42694       0.0       1.0       0.0       0.0       0.0   0.547458      0.0   
+13399       0.0       0.0       1.0       0.0       0.0   0.547458      0.0   
+39959       0.0       0.0       0.0       1.0       0.0   0.547458      0.0   
+6616        0.0       0.0       0.0       1.0       0.0   0.547458      1.0   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+15208          0.000000              0.0 -0.886483  
+25325          0.000000              0.0  0.592213  
+5132           0.000000             -1.0  0.312949  
+17217          0.000000              0.0  0.592213  
+6382           0.000000              0.0  0.597293  
+...                 ...              ...       ...  
+6265           0.662459              0.0 -0.501621  
+42694          0.000000             -1.0  0.592213  
+13399          0.000000              0.0 -0.224534  
+39959          0.000000              0.0  0.592213  
+6616           0.000000              0.0  0.290247  
+
+[30586 rows x 31 columns]
+2025-12-02 17:34:22,537:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:22,537:INFO:Initializing get_config()
+2025-12-02 17:34:22,537:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_train)
+2025-12-02 17:34:22,537:INFO:Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+2025-12-02 17:34:22,537:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_train' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_train_transformed' instead.
+
+2025-12-02 17:34:22,546:INFO:Variable:  returned as 15208    0.0
+25325    0.0
+5132     0.0
+17217    0.0
+6382     0.0
+        ... 
+6265     0.0
+42694    0.0
+13399    0.0
+39959    0.0
+6616     0.0
+Name: HeartDisease, Length: 30586, dtype: float32
+2025-12-02 17:34:22,546:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:22,547:INFO:Initializing get_config()
+2025-12-02 17:34:22,547:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:34:22,634:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:34:22,634:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:22,634:INFO:Initializing get_config()
+2025-12-02 17:34:22,634:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:34:22,634:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:34:22,634:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:34:22,638:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:34:22,638:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:58,955:INFO:Initializing get_config()
+2025-12-02 17:34:58,955:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=y_test)
+2025-12-02 17:34:58,955:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2025-12-02 17:34:58,956:WARNING:c:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+
+2025-12-02 17:34:58,960:INFO:Variable:  returned as 28456    0.0
+8993     0.0
+34312    0.0
+4802     0.0
+25895    0.0
+        ... 
+18045    0.0
+5425     0.0
+12819    0.0
+33659    0.0
+19531    0.0
+Name: HeartDisease, Length: 13109, dtype: float32
+2025-12-02 17:34:58,960:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:58,963:INFO:Initializing get_config()
+2025-12-02 17:34:58,963:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_test_transformed)
+2025-12-02 17:34:59,050:INFO:Variable: X_test returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+28456 -0.477273    -0.304717   -0.519256 -0.987220           -0.923253   
+8993   0.818182     0.253271    2.156910  0.770675            0.920394   
+34312  0.704545     0.055403    0.519256  0.518044            0.662901   
+4802  -0.545455     0.253730   -0.331933 -0.229036           -0.436352   
+25895  0.704545     1.226781   -0.093200 -0.226100            0.012322   
+...         ...          ...         ...       ...                 ...   
+18045 -0.568182    -0.083104   -0.568713 -1.176693           -1.338674   
+5425   0.590909     0.362732    2.210168  0.139096            0.292112   
+12819  0.909091    -0.019787    0.899042  0.454886            0.971892   
+33659 -0.522727     1.060572   -0.525683 -0.587220           -0.906087   
+19531 -0.590909    -0.344290   -0.510287 -0.945114           -1.215078   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+28456 -1.080540         -0.078535      -0.470757 -0.026922  0.418008  ...   
+8993  -0.279669          0.765897       0.705031  0.006026  0.446825  ...   
+34312  0.559339         -0.123259       0.929511 -1.031826 -1.404309  ...   
+4802  -0.504861         -0.188325      -0.322647  0.000015 -0.138743  ...   
+25895  0.216731          0.892919       1.291109  0.008211 -0.255329  ...   
+...         ...               ...            ...       ...       ...  ...   
+18045 -2.080569         -0.340947      -0.470582 -0.848950  0.393794  ...   
+5425   0.156785          0.435639      -0.065356  1.113733  0.127664  ...   
+12819  1.194951         -0.732967      -0.470025 -0.211535 -1.085148  ...   
+33659 -1.254274         -1.063225      -0.470958 -2.849419  0.127664  ...   
+19531 -2.339052         -0.356898      -0.470595 -0.900608  0.393896  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education   Smoking  \
+28456       1.0       0.0       0.0       0.0       0.0  -0.012820  0.000000   
+8993        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+34312       0.0       0.0       0.0       1.0       0.0  -0.659696  0.000000   
+4802        1.0       0.0       0.0       0.0       0.0   0.262895  0.073612   
+25895       0.0       0.0       0.0       1.0       0.0   1.151035  0.000000   
+...         ...       ...       ...       ...       ...        ...       ...   
+18045       0.0       0.0       0.0       1.0       0.0  -0.793202  0.000000   
+5425        0.0       0.0       1.0       0.0       0.0   0.547458  1.000000   
+12819       0.0       0.0       0.0       1.0       0.0   1.151035  1.000000   
+33659       0.0       0.0       1.0       0.0       0.0   0.258362  0.000000   
+19531       1.0       0.0       0.0       0.0       0.0  -0.821118  0.000000   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+28456          0.660578              0.0 -0.518600  
+8993           0.000000              0.0  0.115329  
+34312          0.000000              0.0  0.592213  
+4802           1.012447              0.0 -0.103347  
+25895          0.000000              0.0 -0.886483  
+...                 ...              ...       ...  
+18045          0.904383              0.0 -0.482716  
+5425           1.598141              0.0  0.097790  
+12819          1.598141              0.0  0.612947  
+33659          1.162475              0.0 -0.154408  
+19531          0.791302              0.0 -0.683278  
+
+[13109 rows x 31 columns]
+2025-12-02 17:34:59,050:INFO:get_config() successfully completed......................................
+2025-12-02 17:34:59,143:INFO:Initializing get_config()
+2025-12-02 17:34:59,143:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017153B431F0>, variable=X_train_transformed)
+2025-12-02 17:34:59,184:INFO:Variable: X_train returned as             Age  IncomeRatio  SystolicBP       BMI  WaistCircumference  \
+15208  0.954545     0.854789    0.359485  0.518044            0.206281   
+25325 -0.272727     0.253271   -0.812170 -0.966167           -0.799656   
+5132   0.181818    -0.407608   -0.372799  0.054886            0.319578   
+17217  0.500000    -0.751898    0.013314 -0.260904            0.278379   
+6382   0.568182     0.054503    1.131712  2.675938            1.888566   
+...         ...          ...         ...       ...                 ...   
+6265  -0.545455    -0.431352   -0.591719  0.191728           -0.377368   
+42694 -0.022727    -0.221612   -0.892056 -0.260904           -0.047778   
+13399  0.454545     0.388518    0.377985  0.271482            0.183567   
+39959  0.954545    -0.193911    0.625770  0.991728            1.160720   
+6616   0.613636    -0.447182    0.652399 -0.871430           -0.514698   
+
+         Height  TotalCholesterol  Triglycerides       LDL       HDL  ...  \
+15208 -0.487303          0.625876       0.583394  0.005397  0.314564  ...   
+25325 -0.300856          0.033588      -0.261476  0.000256  0.303682  ...   
+5132   0.766972          0.181594       0.479279  0.948690 -1.340476  ...   
+17217  0.745785          0.227516       0.346113  0.002441 -0.274561  ...   
+6382   0.237295          0.867515       0.635574  0.002754  0.829819  ...   
+...         ...               ...            ...       ...       ...  ...   
+6265  -1.737339         -1.393483      -0.471046 -3.840886  0.063832  ...   
+42694  0.000000          0.029167      -0.131730  0.000893  0.063832  ...   
+13399 -0.147405          0.462357       0.380371  0.003925  0.256949  ...   
+39959  0.368655          1.528031       1.934134  0.011744  0.191497  ...   
+6616  -0.021187         -0.224877      -0.043571 -1.609476  0.510658  ...   
+
+       Race_5.0  Race_1.0  Race_4.0  Race_3.0  Race_2.0  Education  Smoking  \
+15208       1.0       0.0       0.0       0.0       0.0  -0.659696      0.0   
+25325       0.0       1.0       0.0       0.0       0.0   0.185278      0.0   
+5132        0.0       1.0       0.0       0.0       0.0  -0.659696      1.0   
+17217       0.0       0.0       1.0       0.0       0.0  -0.056119      1.0   
+6382        0.0       0.0       1.0       0.0       0.0   0.547458      1.0   
+...         ...       ...       ...       ...       ...        ...      ...   
+6265        0.0       1.0       0.0       0.0       0.0  -0.769055      0.0   
+42694       0.0       1.0       0.0       0.0       0.0   0.547458      0.0   
+13399       0.0       0.0       1.0       0.0       0.0   0.547458      0.0   
+39959       0.0       0.0       0.0       1.0       0.0   0.547458      0.0   
+6616        0.0       0.0       0.0       1.0       0.0   0.547458      1.0   
+
+       PhysicalActivity  HealthInsurance   Alcohol  
+15208          0.000000              0.0 -0.886483  
+25325          0.000000              0.0  0.592213  
+5132           0.000000             -1.0  0.312949  
+17217          0.000000              0.0  0.592213  
+6382           0.000000              0.0  0.597293  
+...                 ...              ...       ...  
+6265           0.662459              0.0 -0.501621  
+42694          0.000000             -1.0  0.592213  
+13399          0.000000              0.0 -0.224534  
+39959          0.000000              0.0  0.592213  
+6616           0.000000              0.0  0.290247  
+
+[30586 rows x 31 columns]
+2025-12-02 17:34:59,184:INFO:get_config() successfully completed......................................
+2025-12-02 17:37:27,942:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:37:27,942:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:37:27,942:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-02 17:37:27,942:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
