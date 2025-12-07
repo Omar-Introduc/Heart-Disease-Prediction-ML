@@ -91,7 +91,7 @@ def train_baseline(
         numeric_features=numeric_features,
         categorical_features=categorical_features,
         normalize=True,
-        normalize_method="minmax",
+        normalize_method="robust", # CORREGIDO (Antes era "minmax")
         session_id=42,
         verbose=False,
     )
