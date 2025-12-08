@@ -65154,3 +65154,1180 @@ Name: HeartDisease, Length: 13109, dtype: float32
 2025-12-07 18:34:10,812:INFO:Soft dependency imported: xgboost: 2.1.3
 2025-12-07 18:34:10,814:INFO:Soft dependency imported: catboost: 1.2.8
 2025-12-07 18:34:10,815:INFO:setup() successfully completed in 1.24s...............
+2025-12-07 18:34:14,334:INFO:Initializing get_config()
+2025-12-07 18:34:14,334:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61540>, variable=pipeline)
+2025-12-07 18:34:14,358:INFO:Variable:  returned as Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                                                                         learning_rate=0.1,
+                                                                                         max_depth=-1,
+                                                                                         min_child_samples=20,
+                                                                                         min_child_weight=0.001,
+                                                                                         min_split_gain=0.0,
+                                                                                         n_estimators=100,
+                                                                                         n_jobs=None,
+                                                                                         num_leaves=31,
+                                                                                         objective=None,
+                                                                                         random_state=None,
+                                                                                         reg_alpha=0.0,
+                                                                                         reg_lambda=0.0,
+                                                                                         subsample=1.0,
+                                                                                         subsample_for_bin=200000,
+                                                                                         subsample_freq=0),
+                                                                importance_getter='auto',
+                                                                max_features=5,
+                                                                norm_order=1,
+                                                                prefit=False,
+                                                                threshold=-inf)))],
+         verbose=False)
+2025-12-07 18:34:14,359:INFO:get_config() successfully completed......................................
+2025-12-07 18:34:28,928:INFO:Initializing create_model()
+2025-12-07 18:34:28,928:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61540>, estimator=xgboost, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-07 18:34:28,928:INFO:Checking exceptions
+2025-12-07 18:34:28,939:INFO:Importing libraries
+2025-12-07 18:34:28,940:INFO:Copying training dataset
+2025-12-07 18:34:28,967:INFO:Defining folds
+2025-12-07 18:34:28,968:INFO:Declaring metric variables
+2025-12-07 18:34:28,970:INFO:Importing untrained model
+2025-12-07 18:34:28,973:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-07 18:34:28,977:INFO:Starting cross validation
+2025-12-07 18:34:28,984:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-07 18:34:29,341:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:34:29,346:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003456 seconds.
+2025-12-07 18:34:29,346:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:29,346:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:29,347:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:34:29,348:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:30,158:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:34:30,162:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003001 seconds.
+2025-12-07 18:34:30,162:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:30,162:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:30,162:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:34:30,164:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:30,898:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:34:30,903:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003228 seconds.
+2025-12-07 18:34:30,903:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:30,903:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:30,904:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:34:30,904:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:31,659:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:34:31,663:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002495 seconds.
+2025-12-07 18:34:31,663:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:31,663:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:31,663:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:34:31,664:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:32,395:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:34:32,398:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002293 seconds.
+2025-12-07 18:34:32,398:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:32,399:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:32,400:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:34:32,400:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:33,115:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:34:33,119:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002290 seconds.
+2025-12-07 18:34:33,119:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:33,119:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:33,119:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:34:33,120:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:33,831:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:34:33,834:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002253 seconds.
+2025-12-07 18:34:33,834:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:33,834:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:33,834:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:34:33,836:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:34,573:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:34:34,578:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002607 seconds.
+2025-12-07 18:34:34,578:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:34,578:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:34,578:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:34:34,578:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:35,286:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:34:35,291:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003178 seconds.
+2025-12-07 18:34:35,291:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:35,292:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:35,292:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:34:35,292:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:36,006:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:34:36,010:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002992 seconds.
+2025-12-07 18:34:36,010:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:36,010:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:36,011:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:34:36,011:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:36,433:INFO:Calculating mean and std
+2025-12-07 18:34:36,433:INFO:Creating metrics dataframe
+2025-12-07 18:34:36,437:INFO:Finalizing model
+2025-12-07 18:34:36,513:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-07 18:34:36,776:INFO:[LightGBM] [Info] Number of positive: 29805, number of negative: 29805
+2025-12-07 18:34:36,781:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002563 seconds.
+2025-12-07 18:34:36,781:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:34:36,782:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:34:36,782:INFO:[LightGBM] [Info] Number of data points in the train set: 59610, number of used features: 31
+2025-12-07 18:34:36,782:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:34:37,201:INFO:Uploading results into container
+2025-12-07 18:34:37,202:INFO:Uploading model into container now
+2025-12-07 18:34:37,211:INFO:_master_model_container: 1
+2025-12-07 18:34:37,211:INFO:_display_container: 2
+2025-12-07 18:34:37,212:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-07 18:34:37,212:INFO:create_model() successfully completed......................................
+2025-12-07 18:34:37,454:INFO:Initializing tune_model()
+2025-12-07 18:34:37,454:INFO:tune_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=None, round=4, n_iter=20, custom_grid={'learning_rate': [0.01, 0.02, 0.05, 0.1], 'n_estimators': [150, 300, 500, 700], 'max_depth': [3, 4, 5, 6, 8], 'min_child_weight': [1, 3, 5, 7], 'gamma': [0, 0.1, 0.2, 0.5], 'scale_pos_weight': [38.153225806451616, 57.22983870967742, 76.30645161290323], 'max_delta_step': [0, 1, 2], 'subsample': [0.6, 0.7, 0.8, 0.9], 'colsample_bytree': [0.6, 0.7, 0.8, 0.9], 'reg_alpha': [0, 0.01, 0.1, 1], 'reg_lambda': [1, 1.5, 3]}, optimize=Recall, custom_scorer=None, search_library=scikit-learn, search_algorithm=random, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, return_train_score=False, kwargs={}, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61540>)
+2025-12-07 18:34:37,454:INFO:Checking exceptions
+2025-12-07 18:34:37,486:INFO:Copying training dataset
+2025-12-07 18:34:37,509:INFO:Checking base model
+2025-12-07 18:34:37,509:INFO:Base model : Extreme Gradient Boosting
+2025-12-07 18:34:37,512:INFO:Declaring metric variables
+2025-12-07 18:34:37,514:INFO:Defining Hyperparameters
+2025-12-07 18:34:37,725:INFO:custom_grid: {'actual_estimator__learning_rate': [0.01, 0.02, 0.05, 0.1], 'actual_estimator__n_estimators': [150, 300, 500, 700], 'actual_estimator__max_depth': [3, 4, 5, 6, 8], 'actual_estimator__min_child_weight': [1, 3, 5, 7], 'actual_estimator__gamma': [0, 0.1, 0.2, 0.5], 'actual_estimator__scale_pos_weight': [38.153225806451616, 57.22983870967742, 76.30645161290323], 'actual_estimator__max_delta_step': [0, 1, 2], 'actual_estimator__subsample': [0.6, 0.7, 0.8, 0.9], 'actual_estimator__colsample_bytree': [0.6, 0.7, 0.8, 0.9], 'actual_estimator__reg_alpha': [0, 0.01, 0.1, 1], 'actual_estimator__reg_lambda': [1, 1.5, 3]}
+2025-12-07 18:34:37,725:INFO:Tuning with n_jobs=1
+2025-12-07 18:34:37,725:INFO:Initializing RandomizedSearchCV
+2025-12-07 18:36:14,974:INFO:Initializing create_model()
+2025-12-07 18:36:14,975:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61540>, estimator=xgboost, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-07 18:36:14,975:INFO:Checking exceptions
+2025-12-07 18:36:14,985:INFO:Importing libraries
+2025-12-07 18:36:14,985:INFO:Copying training dataset
+2025-12-07 18:36:15,010:INFO:Defining folds
+2025-12-07 18:36:15,010:INFO:Declaring metric variables
+2025-12-07 18:36:15,014:INFO:Importing untrained model
+2025-12-07 18:36:15,018:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-07 18:36:15,023:INFO:Starting cross validation
+2025-12-07 18:36:15,030:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-07 18:36:15,381:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:36:15,386:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003095 seconds.
+2025-12-07 18:36:15,386:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:15,386:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:15,386:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:36:15,387:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:16,141:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:36:16,145:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002231 seconds.
+2025-12-07 18:36:16,145:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:16,145:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:16,146:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:36:16,146:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:16,880:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:36:16,884:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003117 seconds.
+2025-12-07 18:36:16,884:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:16,885:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:16,885:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:36:16,885:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:17,615:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:36:17,620:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003440 seconds.
+2025-12-07 18:36:17,620:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:17,620:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:17,620:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:36:17,621:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:18,373:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:36:18,377:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002255 seconds.
+2025-12-07 18:36:18,377:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:18,377:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:18,377:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:36:18,377:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:19,092:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:36:19,095:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002414 seconds.
+2025-12-07 18:36:19,095:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:19,095:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:19,095:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:36:19,095:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:19,809:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:36:19,812:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002642 seconds.
+2025-12-07 18:36:19,812:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:19,812:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:19,812:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:36:19,814:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:20,515:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:36:20,519:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003048 seconds.
+2025-12-07 18:36:20,520:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:20,520:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:20,520:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:36:20,520:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:21,221:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:36:21,224:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002223 seconds.
+2025-12-07 18:36:21,224:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:21,224:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:21,224:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:36:21,224:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:21,935:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:36:21,939:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002915 seconds.
+2025-12-07 18:36:21,939:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:21,939:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:21,939:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:36:21,939:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:22,384:INFO:Calculating mean and std
+2025-12-07 18:36:22,385:INFO:Creating metrics dataframe
+2025-12-07 18:36:22,389:INFO:Finalizing model
+2025-12-07 18:36:22,486:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-07 18:36:22,775:INFO:[LightGBM] [Info] Number of positive: 29805, number of negative: 29805
+2025-12-07 18:36:22,781:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003716 seconds.
+2025-12-07 18:36:22,781:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:22,781:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:22,781:INFO:[LightGBM] [Info] Number of data points in the train set: 59610, number of used features: 31
+2025-12-07 18:36:22,781:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:36:23,373:INFO:Uploading results into container
+2025-12-07 18:36:23,374:INFO:Uploading model into container now
+2025-12-07 18:36:23,383:INFO:_master_model_container: 2
+2025-12-07 18:36:23,383:INFO:_display_container: 3
+2025-12-07 18:36:23,385:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-07 18:36:23,385:INFO:create_model() successfully completed......................................
+2025-12-07 18:36:23,672:INFO:Initializing tune_model()
+2025-12-07 18:36:23,672:INFO:tune_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=None, round=4, n_iter=1, custom_grid={'learning_rate': [0.01, 0.02, 0.05, 0.1], 'n_estimators': [150, 300, 500, 700], 'max_depth': [3, 4, 5, 6, 8], 'min_child_weight': [1, 3, 5, 7], 'gamma': [0, 0.1, 0.2, 0.5], 'scale_pos_weight': [38.153225806451616, 57.22983870967742, 76.30645161290323], 'max_delta_step': [0, 1, 2], 'subsample': [0.6, 0.7, 0.8, 0.9], 'colsample_bytree': [0.6, 0.7, 0.8, 0.9], 'reg_alpha': [0, 0.01, 0.1, 1], 'reg_lambda': [1, 1.5, 3]}, optimize=Recall, custom_scorer=None, search_library=scikit-learn, search_algorithm=random, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, return_train_score=False, kwargs={}, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61540>)
+2025-12-07 18:36:23,672:INFO:Checking exceptions
+2025-12-07 18:36:23,705:INFO:Copying training dataset
+2025-12-07 18:36:23,731:INFO:Checking base model
+2025-12-07 18:36:23,731:INFO:Base model : Extreme Gradient Boosting
+2025-12-07 18:36:23,735:INFO:Declaring metric variables
+2025-12-07 18:36:23,742:INFO:Defining Hyperparameters
+2025-12-07 18:36:23,992:INFO:custom_grid: {'actual_estimator__learning_rate': [0.01, 0.02, 0.05, 0.1], 'actual_estimator__n_estimators': [150, 300, 500, 700], 'actual_estimator__max_depth': [3, 4, 5, 6, 8], 'actual_estimator__min_child_weight': [1, 3, 5, 7], 'actual_estimator__gamma': [0, 0.1, 0.2, 0.5], 'actual_estimator__scale_pos_weight': [38.153225806451616, 57.22983870967742, 76.30645161290323], 'actual_estimator__max_delta_step': [0, 1, 2], 'actual_estimator__subsample': [0.6, 0.7, 0.8, 0.9], 'actual_estimator__colsample_bytree': [0.6, 0.7, 0.8, 0.9], 'actual_estimator__reg_alpha': [0, 0.01, 0.1, 1], 'actual_estimator__reg_lambda': [1, 1.5, 3]}
+2025-12-07 18:36:23,992:INFO:Tuning with n_jobs=1
+2025-12-07 18:36:23,992:INFO:Initializing RandomizedSearchCV
+2025-12-07 18:36:59,441:INFO:best_params: {'actual_estimator__subsample': 0.9, 'actual_estimator__scale_pos_weight': 76.30645161290323, 'actual_estimator__reg_lambda': 1.5, 'actual_estimator__reg_alpha': 0, 'actual_estimator__n_estimators': 700, 'actual_estimator__min_child_weight': 5, 'actual_estimator__max_depth': 8, 'actual_estimator__max_delta_step': 2, 'actual_estimator__learning_rate': 0.01, 'actual_estimator__gamma': 0, 'actual_estimator__colsample_bytree': 0.9}
+2025-12-07 18:36:59,441:INFO:Hyperparameter search completed
+2025-12-07 18:36:59,441:INFO:SubProcess create_model() called ==================================
+2025-12-07 18:36:59,444:INFO:Initializing create_model()
+2025-12-07 18:36:59,444:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61540>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000023AACAD7E80>, model_only=True, return_train_score=False, error_score=0.0, kwargs={'subsample': 0.9, 'scale_pos_weight': 76.30645161290323, 'reg_lambda': 1.5, 'reg_alpha': 0, 'n_estimators': 700, 'min_child_weight': 5, 'max_depth': 8, 'max_delta_step': 2, 'learning_rate': 0.01, 'gamma': 0, 'colsample_bytree': 0.9})
+2025-12-07 18:36:59,444:INFO:Checking exceptions
+2025-12-07 18:36:59,444:INFO:Importing libraries
+2025-12-07 18:36:59,444:INFO:Copying training dataset
+2025-12-07 18:36:59,471:INFO:Defining folds
+2025-12-07 18:36:59,471:INFO:Declaring metric variables
+2025-12-07 18:36:59,475:INFO:Importing untrained model
+2025-12-07 18:36:59,475:INFO:Declaring custom model
+2025-12-07 18:36:59,481:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-07 18:36:59,489:INFO:Starting cross validation
+2025-12-07 18:36:59,496:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-07 18:36:59,815:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:36:59,817:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002211 seconds.
+2025-12-07 18:36:59,817:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:36:59,817:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:36:59,817:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:36:59,819:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:03,386:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:03,390:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002237 seconds.
+2025-12-07 18:37:03,390:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:03,390:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:03,390:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:03,390:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:06,935:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:06,939:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002208 seconds.
+2025-12-07 18:37:06,939:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:06,939:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:06,939:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:06,939:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:10,532:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:10,536:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002261 seconds.
+2025-12-07 18:37:10,536:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:10,536:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:10,536:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:10,536:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:14,036:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:14,044:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.005415 seconds.
+2025-12-07 18:37:14,044:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:14,045:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:14,045:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:14,045:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:17,660:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:17,664:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002537 seconds.
+2025-12-07 18:37:17,664:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:17,664:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:17,664:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:17,665:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:21,200:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:21,203:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002820 seconds.
+2025-12-07 18:37:21,203:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:21,203:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:21,203:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:21,203:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:24,803:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:24,806:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002245 seconds.
+2025-12-07 18:37:24,806:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:24,806:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:24,808:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:24,808:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:28,482:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:28,485:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002301 seconds.
+2025-12-07 18:37:28,485:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:28,485:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:28,485:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:28,485:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:31,991:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:31,995:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002912 seconds.
+2025-12-07 18:37:31,995:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:31,995:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:31,995:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:31,996:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:35,115:INFO:Calculating mean and std
+2025-12-07 18:37:35,115:INFO:Creating metrics dataframe
+2025-12-07 18:37:35,120:INFO:Finalizing model
+2025-12-07 18:37:35,201:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-07 18:37:35,444:INFO:[LightGBM] [Info] Number of positive: 29805, number of negative: 29805
+2025-12-07 18:37:35,449:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002757 seconds.
+2025-12-07 18:37:35,449:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:35,449:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:35,449:INFO:[LightGBM] [Info] Number of data points in the train set: 59610, number of used features: 31
+2025-12-07 18:37:35,449:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:38,798:INFO:Uploading results into container
+2025-12-07 18:37:38,799:INFO:Uploading model into container now
+2025-12-07 18:37:38,800:INFO:_master_model_container: 3
+2025-12-07 18:37:38,800:INFO:_display_container: 4
+2025-12-07 18:37:38,801:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=0, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.01, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None, max_delta_step=2,
+              max_depth=8, max_leaves=None, min_child_weight=5, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=700,
+              n_jobs=1, num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-07 18:37:38,801:INFO:create_model() successfully completed......................................
+2025-12-07 18:37:39,023:INFO:SubProcess create_model() end ==================================
+2025-12-07 18:37:39,023:INFO:choose_better activated
+2025-12-07 18:37:39,025:INFO:SubProcess create_model() called ==================================
+2025-12-07 18:37:39,026:INFO:Initializing create_model()
+2025-12-07 18:37:39,026:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61540>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-07 18:37:39,026:INFO:Checking exceptions
+2025-12-07 18:37:39,028:INFO:Importing libraries
+2025-12-07 18:37:39,028:INFO:Copying training dataset
+2025-12-07 18:37:39,049:INFO:Defining folds
+2025-12-07 18:37:39,049:INFO:Declaring metric variables
+2025-12-07 18:37:39,050:INFO:Importing untrained model
+2025-12-07 18:37:39,050:INFO:Declaring custom model
+2025-12-07 18:37:39,051:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-07 18:37:39,051:INFO:Starting cross validation
+2025-12-07 18:37:39,057:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-07 18:37:39,372:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:39,375:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002291 seconds.
+2025-12-07 18:37:39,375:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:39,375:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:39,375:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:39,375:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:40,175:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:40,180:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002300 seconds.
+2025-12-07 18:37:40,180:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:40,180:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:40,180:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:40,181:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:40,909:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:40,912:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002206 seconds.
+2025-12-07 18:37:40,912:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:40,912:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:40,912:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:40,912:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:41,651:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:41,655:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003057 seconds.
+2025-12-07 18:37:41,655:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:41,655:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:41,655:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:41,656:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:42,425:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:37:42,428:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002262 seconds.
+2025-12-07 18:37:42,428:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:42,428:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:42,428:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:37:42,428:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:43,242:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:43,246:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002226 seconds.
+2025-12-07 18:37:43,246:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:43,246:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:43,246:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:43,248:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:44,045:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:44,050:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002995 seconds.
+2025-12-07 18:37:44,050:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:44,050:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:44,050:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:44,050:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:44,826:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:44,831:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003510 seconds.
+2025-12-07 18:37:44,831:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:44,831:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:44,831:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:44,832:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:45,670:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:45,674:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002314 seconds.
+2025-12-07 18:37:45,674:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:45,674:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:45,674:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:45,674:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:46,450:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:37:46,453:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002229 seconds.
+2025-12-07 18:37:46,453:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:46,453:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:46,453:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:37:46,453:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:46,898:INFO:Calculating mean and std
+2025-12-07 18:37:46,898:INFO:Creating metrics dataframe
+2025-12-07 18:37:46,900:INFO:Finalizing model
+2025-12-07 18:37:46,975:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-07 18:37:47,258:INFO:[LightGBM] [Info] Number of positive: 29805, number of negative: 29805
+2025-12-07 18:37:47,262:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002874 seconds.
+2025-12-07 18:37:47,262:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:37:47,262:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:37:47,262:INFO:[LightGBM] [Info] Number of data points in the train set: 59610, number of used features: 31
+2025-12-07 18:37:47,262:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:37:47,702:INFO:Uploading results into container
+2025-12-07 18:37:47,702:INFO:Uploading model into container now
+2025-12-07 18:37:47,705:INFO:_master_model_container: 4
+2025-12-07 18:37:47,705:INFO:_display_container: 5
+2025-12-07 18:37:47,705:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-07 18:37:47,705:INFO:create_model() successfully completed......................................
+2025-12-07 18:37:47,929:INFO:SubProcess create_model() end ==================================
+2025-12-07 18:37:47,930:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...) result for Recall is 0.1114
+2025-12-07 18:37:47,930:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=0, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.01, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None, max_delta_step=2,
+              max_depth=8, max_leaves=None, min_child_weight=5, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=700,
+              n_jobs=1, num_parallel_tree=None, objective='binary:logistic', ...) result for Recall is 0.8605
+2025-12-07 18:37:47,931:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=0, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.01, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None, max_delta_step=2,
+              max_depth=8, max_leaves=None, min_child_weight=5, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=700,
+              n_jobs=1, num_parallel_tree=None, objective='binary:logistic', ...) is best model
+2025-12-07 18:37:47,931:INFO:choose_better completed
+2025-12-07 18:37:47,938:INFO:_master_model_container: 4
+2025-12-07 18:37:47,939:INFO:_display_container: 4
+2025-12-07 18:37:47,939:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=0, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.01, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None, max_delta_step=2,
+              max_depth=8, max_leaves=None, min_child_weight=5, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=700,
+              n_jobs=1, num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-07 18:37:47,939:INFO:tune_model() successfully completed......................................
+2025-12-07 18:39:53,443:INFO:Initializing load_model()
+2025-12-07 18:39:53,443:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-07 18:39:53,569:INFO:Initializing predict_model()
+2025-12-07 18:39:53,569:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240800BDFF0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                                                                grow_policy=None,
+                                                                importance_type=None,
+                                                                interaction_constraints=None,
+                                                                learning_rate=0.01,
+                                                                max_bin=None,
+                                                                max_cat_threshold=None,
+                                                                max_cat_to_onehot=None,
+                                                                max_delta_step=1,
+                                                                max_depth=3,
+                                                                max_leaves=None,
+                                                                min_child_weight=7,
+                                                                missing=nan,
+                                                                monotone_constraints=None,
+                                                                multi_strategy=None,
+                                                                n_estimators=500,
+                                                                n_jobs=1,
+                                                                num_parallel_tree=None,
+                                                                random_state=42, ...),
+                                        method='isotonic'))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002408031D870>)
+2025-12-07 18:39:53,569:INFO:Checking exceptions
+2025-12-07 18:39:53,569:INFO:Preloading libraries
+2025-12-07 18:39:53,570:INFO:Set up data.
+2025-12-07 18:39:53,579:INFO:Set up index.
+2025-12-07 18:40:21,301:INFO:Initializing load_model()
+2025-12-07 18:40:21,301:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-07 18:40:21,457:INFO:Initializing predict_model()
+2025-12-07 18:40:21,457:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240805D3E20>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                                                                grow_policy=None,
+                                                                importance_type=None,
+                                                                interaction_constraints=None,
+                                                                learning_rate=0.01,
+                                                                max_bin=None,
+                                                                max_cat_threshold=None,
+                                                                max_cat_to_onehot=None,
+                                                                max_delta_step=1,
+                                                                max_depth=3,
+                                                                max_leaves=None,
+                                                                min_child_weight=7,
+                                                                missing=nan,
+                                                                monotone_constraints=None,
+                                                                multi_strategy=None,
+                                                                n_estimators=500,
+                                                                n_jobs=1,
+                                                                num_parallel_tree=None,
+                                                                random_state=42, ...),
+                                        method='isotonic'))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000240FE13FC70>)
+2025-12-07 18:40:21,457:INFO:Checking exceptions
+2025-12-07 18:40:21,457:INFO:Preloading libraries
+2025-12-07 18:40:21,458:INFO:Set up data.
+2025-12-07 18:40:21,468:INFO:Set up index.
+2025-12-07 18:44:16,856:INFO:PyCaret ClassificationExperiment
+2025-12-07 18:44:16,856:INFO:Logging name: clf-default-name
+2025-12-07 18:44:16,856:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-12-07 18:44:16,856:INFO:version 3.3.2
+2025-12-07 18:44:16,856:INFO:Initializing setup()
+2025-12-07 18:44:16,856:INFO:self.USI: c046
+2025-12-07 18:44:16,856:INFO:self._variable_keys: {'y_train', 'exp_id', 'is_multiclass', 'USI', 'idx', 'fold_groups_param', 'html_param', 'X_test', 'data', 'gpu_n_jobs_param', 'X', 'y_test', 'logging_param', 'exp_name_log', '_available_plots', 'fold_generator', 'target_param', 'pipeline', 'n_jobs_param', 'memory', 'X_train', 'fix_imbalance', 'log_plots_param', 'fold_shuffle_param', 'y', '_ml_usecase', 'seed', 'gpu_param'}
+2025-12-07 18:44:16,856:INFO:Checking environment
+2025-12-07 18:44:16,856:INFO:python_version: 3.10.19
+2025-12-07 18:44:16,856:INFO:python_build: ('main', 'Oct 21 2025 16:41:31')
+2025-12-07 18:44:16,856:INFO:machine: AMD64
+2025-12-07 18:44:16,856:INFO:platform: Windows-10-10.0.26100-SP0
+2025-12-07 18:44:16,856:INFO:Memory: svmem(total=16282144768, available=4154408960, percent=74.5, used=12127735808, free=4154408960)
+2025-12-07 18:44:16,856:INFO:Physical Core: 6
+2025-12-07 18:44:16,856:INFO:Logical Core: 12
+2025-12-07 18:44:16,856:INFO:Checking libraries
+2025-12-07 18:44:16,856:INFO:System:
+2025-12-07 18:44:16,856:INFO:    python: 3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]
+2025-12-07 18:44:16,856:INFO:executable: c:\Users\OMAR\miniconda3\envs\xgb_env\python.exe
+2025-12-07 18:44:16,856:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-12-07 18:44:16,856:INFO:PyCaret required dependencies:
+2025-12-07 18:44:16,856:INFO:                 pip: 25.3
+2025-12-07 18:44:16,856:INFO:          setuptools: 80.9.0
+2025-12-07 18:44:16,856:INFO:             pycaret: 3.3.2
+2025-12-07 18:44:16,856:INFO:             IPython: 8.37.0
+2025-12-07 18:44:16,856:INFO:          ipywidgets: 8.1.8
+2025-12-07 18:44:16,856:INFO:                tqdm: 4.67.1
+2025-12-07 18:44:16,856:INFO:               numpy: 1.26.4
+2025-12-07 18:44:16,856:INFO:              pandas: 2.1.4
+2025-12-07 18:44:16,856:INFO:              jinja2: 3.1.6
+2025-12-07 18:44:16,856:INFO:               scipy: 1.11.4
+2025-12-07 18:44:16,856:INFO:              joblib: 1.3.2
+2025-12-07 18:44:16,856:INFO:             sklearn: 1.4.2
+2025-12-07 18:44:16,856:INFO:                pyod: 2.0.5
+2025-12-07 18:44:16,856:INFO:            imblearn: 0.14.0
+2025-12-07 18:44:16,856:INFO:   category_encoders: 2.7.0
+2025-12-07 18:44:16,856:INFO:            lightgbm: 4.6.0
+2025-12-07 18:44:16,856:INFO:               numba: 0.62.1
+2025-12-07 18:44:16,856:INFO:            requests: 2.32.5
+2025-12-07 18:44:16,856:INFO:          matplotlib: 3.7.5
+2025-12-07 18:44:16,856:INFO:          scikitplot: 0.3.7
+2025-12-07 18:44:16,856:INFO:         yellowbrick: 1.5
+2025-12-07 18:44:16,856:INFO:              plotly: 5.24.1
+2025-12-07 18:44:16,856:INFO:    plotly-resampler: Not installed
+2025-12-07 18:44:16,858:INFO:             kaleido: 1.2.0
+2025-12-07 18:44:16,858:INFO:           schemdraw: 0.15
+2025-12-07 18:44:16,858:INFO:         statsmodels: 0.14.5
+2025-12-07 18:44:16,858:INFO:              sktime: 0.26.0
+2025-12-07 18:44:16,858:INFO:               tbats: 1.1.3
+2025-12-07 18:44:16,858:INFO:            pmdarima: 2.0.4
+2025-12-07 18:44:16,858:INFO:              psutil: 7.1.3
+2025-12-07 18:44:16,858:INFO:          markupsafe: 3.0.3
+2025-12-07 18:44:16,858:INFO:             pickle5: Not installed
+2025-12-07 18:44:16,858:INFO:         cloudpickle: 3.1.2
+2025-12-07 18:44:16,858:INFO:         deprecation: 2.1.0
+2025-12-07 18:44:16,858:INFO:              xxhash: 3.6.0
+2025-12-07 18:44:16,858:INFO:           wurlitzer: Not installed
+2025-12-07 18:44:16,858:INFO:PyCaret optional dependencies:
+2025-12-07 18:44:16,858:INFO:                shap: 0.49.1
+2025-12-07 18:44:16,858:INFO:           interpret: 0.7.3
+2025-12-07 18:44:16,858:INFO:                umap: 0.5.7
+2025-12-07 18:44:16,858:INFO:     ydata_profiling: 4.18.0
+2025-12-07 18:44:16,858:INFO:  explainerdashboard: 0.5.1
+2025-12-07 18:44:16,858:INFO:             autoviz: Not installed
+2025-12-07 18:44:16,858:INFO:           fairlearn: 0.7.0
+2025-12-07 18:44:16,858:INFO:          deepchecks: Not installed
+2025-12-07 18:44:16,858:INFO:             xgboost: 2.1.3
+2025-12-07 18:44:16,858:INFO:            catboost: 1.2.8
+2025-12-07 18:44:16,858:INFO:              kmodes: 0.12.2
+2025-12-07 18:44:16,858:INFO:             mlxtend: 0.23.4
+2025-12-07 18:44:16,858:INFO:       statsforecast: 1.5.0
+2025-12-07 18:44:16,858:INFO:        tune_sklearn: Not installed
+2025-12-07 18:44:16,858:INFO:                 ray: Not installed
+2025-12-07 18:44:16,858:INFO:            hyperopt: 0.2.7
+2025-12-07 18:44:16,858:INFO:              optuna: 4.6.0
+2025-12-07 18:44:16,858:INFO:               skopt: 0.10.2
+2025-12-07 18:44:16,858:INFO:              mlflow: 3.6.0
+2025-12-07 18:44:16,858:INFO:              gradio: 6.0.1
+2025-12-07 18:44:16,858:INFO:             fastapi: 0.123.0
+2025-12-07 18:44:16,858:INFO:             uvicorn: 0.38.0
+2025-12-07 18:44:16,858:INFO:              m2cgen: 0.10.0
+2025-12-07 18:44:16,858:INFO:           evidently: 0.4.40
+2025-12-07 18:44:16,858:INFO:               fugue: 0.8.7
+2025-12-07 18:44:16,858:INFO:           streamlit: 1.51.0
+2025-12-07 18:44:16,858:INFO:             prophet: Not installed
+2025-12-07 18:44:16,858:INFO:None
+2025-12-07 18:44:16,858:INFO:Set up data.
+2025-12-07 18:44:16,880:INFO:Set up folding strategy.
+2025-12-07 18:44:16,880:INFO:Set up train/test split.
+2025-12-07 18:44:16,909:INFO:Set up index.
+2025-12-07 18:44:16,909:INFO:Assigning column types.
+2025-12-07 18:44:16,927:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-12-07 18:44:16,952:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-07 18:44:16,954:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:44:16,970:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:16,971:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:16,997:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-07 18:44:16,998:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:44:17,014:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:17,015:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:17,016:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-12-07 18:44:17,042:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:44:17,056:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:17,058:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:17,083:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:44:17,099:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:17,100:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:17,100:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-12-07 18:44:17,142:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:17,144:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:17,187:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:17,189:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:17,190:INFO:Preparing preprocessing pipeline...
+2025-12-07 18:44:17,194:INFO:Set up simple imputation.
+2025-12-07 18:44:17,206:INFO:Set up encoding of ordinal features.
+2025-12-07 18:44:17,212:INFO:Set up encoding of categorical features.
+2025-12-07 18:44:17,212:INFO:Set up removing multicollinearity.
+2025-12-07 18:44:17,212:INFO:Set up imbalanced handling.
+2025-12-07 18:44:17,212:INFO:Set up feature normalization.
+2025-12-07 18:44:17,212:INFO:Set up feature selection.
+2025-12-07 18:44:17,252:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:17,257:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:17,664:INFO:Finished creating preprocessing pipeline.
+2025-12-07 18:44:17,691:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                                                                         learning_rate=0.1,
+                                                                                         max_depth=-1,
+                                                                                         min_child_samples=20,
+                                                                                         min_child_weight=0.001,
+                                                                                         min_split_gain=0.0,
+                                                                                         n_estimators=100,
+                                                                                         n_jobs=None,
+                                                                                         num_leaves=31,
+                                                                                         objective=None,
+                                                                                         random_state=None,
+                                                                                         reg_alpha=0.0,
+                                                                                         reg_lambda=0.0,
+                                                                                         subsample=1.0,
+                                                                                         subsample_for_bin=200000,
+                                                                                         subsample_freq=0),
+                                                                importance_getter='auto',
+                                                                max_features=5,
+                                                                norm_order=1,
+                                                                prefit=False,
+                                                                threshold=-inf)))],
+         verbose=False)
+2025-12-07 18:44:17,691:INFO:Creating final display dataframe.
+2025-12-07 18:44:18,015:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target      HeartDisease
+2                   Target type            Binary
+3           Original data shape       (43695, 28)
+4        Transformed data shape        (72719, 6)
+5   Transformed train set shape        (59610, 6)
+6    Transformed test set shape        (13109, 6)
+7              Numeric features                20
+8          Categorical features                 7
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation               knn
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15     Remove multicollinearity              True
+16  Multicollinearity threshold              0.95
+17                Fix imbalance              True
+18         Fix imbalance method             SMOTE
+19                    Normalize              True
+20             Normalize method            robust
+21            Feature selection              True
+22     Feature selection method           classic
+23  Feature selection estimator          lightgbm
+24  Number of features selected               0.2
+25               Fold Generator   StratifiedKFold
+26                  Fold Number                10
+27                     CPU Jobs                 1
+28                      Use GPU             False
+29               Log Experiment             False
+30              Experiment Name  clf-default-name
+31                          USI              c046
+2025-12-07 18:44:18,090:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:18,093:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:18,141:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:44:18,142:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:44:18,143:INFO:setup() successfully completed in 1.3s...............
+2025-12-07 18:44:18,160:INFO:Initializing get_config()
+2025-12-07 18:44:18,161:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61300>, variable=pipeline)
+2025-12-07 18:44:18,183:INFO:Variable:  returned as Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                                                                         learning_rate=0.1,
+                                                                                         max_depth=-1,
+                                                                                         min_child_samples=20,
+                                                                                         min_child_weight=0.001,
+                                                                                         min_split_gain=0.0,
+                                                                                         n_estimators=100,
+                                                                                         n_jobs=None,
+                                                                                         num_leaves=31,
+                                                                                         objective=None,
+                                                                                         random_state=None,
+                                                                                         reg_alpha=0.0,
+                                                                                         reg_lambda=0.0,
+                                                                                         subsample=1.0,
+                                                                                         subsample_for_bin=200000,
+                                                                                         subsample_freq=0),
+                                                                importance_getter='auto',
+                                                                max_features=5,
+                                                                norm_order=1,
+                                                                prefit=False,
+                                                                threshold=-inf)))],
+         verbose=False)
+2025-12-07 18:44:18,183:INFO:get_config() successfully completed......................................
+2025-12-07 18:44:18,211:INFO:Initializing create_model()
+2025-12-07 18:44:18,212:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61300>, estimator=xgboost, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-07 18:44:18,212:INFO:Checking exceptions
+2025-12-07 18:44:18,223:INFO:Importing libraries
+2025-12-07 18:44:18,223:INFO:Copying training dataset
+2025-12-07 18:44:18,250:INFO:Defining folds
+2025-12-07 18:44:18,250:INFO:Declaring metric variables
+2025-12-07 18:44:18,252:INFO:Importing untrained model
+2025-12-07 18:44:18,255:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-07 18:44:18,260:INFO:Starting cross validation
+2025-12-07 18:44:18,266:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-12-07 18:44:18,615:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:44:18,618:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002950 seconds.
+2025-12-07 18:44:18,618:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:18,619:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:18,620:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:44:18,620:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:19,398:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:44:19,401:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002443 seconds.
+2025-12-07 18:44:19,401:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:19,402:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:19,402:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:44:19,402:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:20,170:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:44:20,173:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002517 seconds.
+2025-12-07 18:44:20,173:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:20,173:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:20,173:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:44:20,173:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:21,007:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:44:21,011:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002738 seconds.
+2025-12-07 18:44:21,011:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:21,011:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:21,011:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:44:21,011:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:21,794:INFO:[LightGBM] [Info] Number of positive: 26824, number of negative: 26824
+2025-12-07 18:44:21,798:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002279 seconds.
+2025-12-07 18:44:21,798:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:21,798:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:21,798:INFO:[LightGBM] [Info] Number of data points in the train set: 53648, number of used features: 31
+2025-12-07 18:44:21,798:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:22,598:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:44:22,601:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002503 seconds.
+2025-12-07 18:44:22,601:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:22,601:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:22,602:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:44:22,602:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:23,345:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:44:23,350:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002546 seconds.
+2025-12-07 18:44:23,350:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:23,350:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:23,350:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:44:23,350:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:24,066:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:44:24,072:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002401 seconds.
+2025-12-07 18:44:24,072:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:24,072:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:24,072:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:44:24,073:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:24,778:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:44:24,781:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002253 seconds.
+2025-12-07 18:44:24,781:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:24,781:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:24,781:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:44:24,781:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:25,486:INFO:[LightGBM] [Info] Number of positive: 26825, number of negative: 26825
+2025-12-07 18:44:25,489:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002176 seconds.
+2025-12-07 18:44:25,489:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:25,491:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:25,491:INFO:[LightGBM] [Info] Number of data points in the train set: 53650, number of used features: 31
+2025-12-07 18:44:25,491:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:25,885:INFO:Calculating mean and std
+2025-12-07 18:44:25,888:INFO:Creating metrics dataframe
+2025-12-07 18:44:25,894:INFO:Finalizing model
+2025-12-07 18:44:25,999:INFO:Warning: No categorical columns found. Calling 'transform' will only return input data.
+2025-12-07 18:44:26,272:INFO:[LightGBM] [Info] Number of positive: 29805, number of negative: 29805
+2025-12-07 18:44:26,276:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002412 seconds.
+2025-12-07 18:44:26,276:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-12-07 18:44:26,276:INFO:[LightGBM] [Info] Total Bins 7905
+2025-12-07 18:44:26,276:INFO:[LightGBM] [Info] Number of data points in the train set: 59610, number of used features: 31
+2025-12-07 18:44:26,276:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-12-07 18:44:26,651:INFO:Uploading results into container
+2025-12-07 18:44:26,651:INFO:Uploading model into container now
+2025-12-07 18:44:26,662:INFO:_master_model_container: 1
+2025-12-07 18:44:26,662:INFO:_display_container: 2
+2025-12-07 18:44:26,662:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2025-12-07 18:44:26,662:INFO:create_model() successfully completed......................................
+2025-12-07 18:44:26,875:INFO:Initializing tune_model()
+2025-12-07 18:44:26,875:INFO:tune_model(estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=1,
+              num_parallel_tree=None, objective='binary:logistic', ...), fold=None, round=4, n_iter=30, custom_grid={'learning_rate': [0.01, 0.02, 0.05, 0.1], 'n_estimators': [150, 300, 500, 700], 'max_depth': [3, 4, 5, 6, 8], 'min_child_weight': [1, 3, 5, 7], 'gamma': [0, 0.1, 0.2, 0.5], 'scale_pos_weight': [38.153225806451616, 57.22983870967742, 76.30645161290323], 'max_delta_step': [0, 1, 2], 'subsample': [0.6, 0.7, 0.8, 0.9], 'colsample_bytree': [0.6, 0.7, 0.8, 0.9], 'reg_alpha': [0, 0.01, 0.1, 1], 'reg_lambda': [1, 1.5, 3]}, optimize=Recall, custom_scorer=None, search_library=scikit-learn, search_algorithm=random, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, return_train_score=False, kwargs={}, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023ABFB61300>)
+2025-12-07 18:44:26,875:INFO:Checking exceptions
+2025-12-07 18:44:26,900:INFO:Copying training dataset
+2025-12-07 18:44:26,921:INFO:Checking base model
+2025-12-07 18:44:26,921:INFO:Base model : Extreme Gradient Boosting
+2025-12-07 18:44:26,925:INFO:Declaring metric variables
+2025-12-07 18:44:26,927:INFO:Defining Hyperparameters
+2025-12-07 18:44:27,181:INFO:custom_grid: {'actual_estimator__learning_rate': [0.01, 0.02, 0.05, 0.1], 'actual_estimator__n_estimators': [150, 300, 500, 700], 'actual_estimator__max_depth': [3, 4, 5, 6, 8], 'actual_estimator__min_child_weight': [1, 3, 5, 7], 'actual_estimator__gamma': [0, 0.1, 0.2, 0.5], 'actual_estimator__scale_pos_weight': [38.153225806451616, 57.22983870967742, 76.30645161290323], 'actual_estimator__max_delta_step': [0, 1, 2], 'actual_estimator__subsample': [0.6, 0.7, 0.8, 0.9], 'actual_estimator__colsample_bytree': [0.6, 0.7, 0.8, 0.9], 'actual_estimator__reg_alpha': [0, 0.01, 0.1, 1], 'actual_estimator__reg_lambda': [1, 1.5, 3]}
+2025-12-07 18:44:27,181:INFO:Tuning with n_jobs=1
+2025-12-07 18:44:27,181:INFO:Initializing RandomizedSearchCV
+2025-12-07 18:46:54,487:INFO:PyCaret ClassificationExperiment
+2025-12-07 18:46:54,487:INFO:Logging name: clf-default-name
+2025-12-07 18:46:54,487:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-12-07 18:46:54,487:INFO:version 3.3.2
+2025-12-07 18:46:54,487:INFO:Initializing setup()
+2025-12-07 18:46:54,487:INFO:self.USI: 797b
+2025-12-07 18:46:54,487:INFO:self._variable_keys: {'y_train', 'exp_id', 'is_multiclass', 'USI', 'idx', 'fold_groups_param', 'html_param', 'X_test', 'data', 'gpu_n_jobs_param', 'X', 'y_test', 'logging_param', 'exp_name_log', '_available_plots', 'fold_generator', 'target_param', 'pipeline', 'n_jobs_param', 'memory', 'X_train', 'fix_imbalance', 'log_plots_param', 'fold_shuffle_param', 'y', '_ml_usecase', 'seed', 'gpu_param'}
+2025-12-07 18:46:54,487:INFO:Checking environment
+2025-12-07 18:46:54,487:INFO:python_version: 3.10.19
+2025-12-07 18:46:54,487:INFO:python_build: ('main', 'Oct 21 2025 16:41:31')
+2025-12-07 18:46:54,487:INFO:machine: AMD64
+2025-12-07 18:46:54,487:INFO:platform: Windows-10-10.0.26100-SP0
+2025-12-07 18:46:54,488:INFO:Memory: svmem(total=16282144768, available=4248035328, percent=73.9, used=12034109440, free=4248035328)
+2025-12-07 18:46:54,488:INFO:Physical Core: 6
+2025-12-07 18:46:54,488:INFO:Logical Core: 12
+2025-12-07 18:46:54,488:INFO:Checking libraries
+2025-12-07 18:46:54,488:INFO:System:
+2025-12-07 18:46:54,488:INFO:    python: 3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]
+2025-12-07 18:46:54,488:INFO:executable: c:\Users\OMAR\miniconda3\envs\xgb_env\python.exe
+2025-12-07 18:46:54,488:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-12-07 18:46:54,488:INFO:PyCaret required dependencies:
+2025-12-07 18:46:54,489:INFO:                 pip: 25.3
+2025-12-07 18:46:54,489:INFO:          setuptools: 80.9.0
+2025-12-07 18:46:54,489:INFO:             pycaret: 3.3.2
+2025-12-07 18:46:54,489:INFO:             IPython: 8.37.0
+2025-12-07 18:46:54,489:INFO:          ipywidgets: 8.1.8
+2025-12-07 18:46:54,489:INFO:                tqdm: 4.67.1
+2025-12-07 18:46:54,489:INFO:               numpy: 1.26.4
+2025-12-07 18:46:54,489:INFO:              pandas: 2.1.4
+2025-12-07 18:46:54,489:INFO:              jinja2: 3.1.6
+2025-12-07 18:46:54,489:INFO:               scipy: 1.11.4
+2025-12-07 18:46:54,489:INFO:              joblib: 1.3.2
+2025-12-07 18:46:54,489:INFO:             sklearn: 1.4.2
+2025-12-07 18:46:54,489:INFO:                pyod: 2.0.5
+2025-12-07 18:46:54,489:INFO:            imblearn: 0.14.0
+2025-12-07 18:46:54,489:INFO:   category_encoders: 2.7.0
+2025-12-07 18:46:54,489:INFO:            lightgbm: 4.6.0
+2025-12-07 18:46:54,489:INFO:               numba: 0.62.1
+2025-12-07 18:46:54,489:INFO:            requests: 2.32.5
+2025-12-07 18:46:54,489:INFO:          matplotlib: 3.7.5
+2025-12-07 18:46:54,489:INFO:          scikitplot: 0.3.7
+2025-12-07 18:46:54,489:INFO:         yellowbrick: 1.5
+2025-12-07 18:46:54,489:INFO:              plotly: 5.24.1
+2025-12-07 18:46:54,489:INFO:    plotly-resampler: Not installed
+2025-12-07 18:46:54,489:INFO:             kaleido: 1.2.0
+2025-12-07 18:46:54,489:INFO:           schemdraw: 0.15
+2025-12-07 18:46:54,489:INFO:         statsmodels: 0.14.5
+2025-12-07 18:46:54,489:INFO:              sktime: 0.26.0
+2025-12-07 18:46:54,489:INFO:               tbats: 1.1.3
+2025-12-07 18:46:54,489:INFO:            pmdarima: 2.0.4
+2025-12-07 18:46:54,489:INFO:              psutil: 7.1.3
+2025-12-07 18:46:54,489:INFO:          markupsafe: 3.0.3
+2025-12-07 18:46:54,489:INFO:             pickle5: Not installed
+2025-12-07 18:46:54,489:INFO:         cloudpickle: 3.1.2
+2025-12-07 18:46:54,489:INFO:         deprecation: 2.1.0
+2025-12-07 18:46:54,489:INFO:              xxhash: 3.6.0
+2025-12-07 18:46:54,489:INFO:           wurlitzer: Not installed
+2025-12-07 18:46:54,489:INFO:PyCaret optional dependencies:
+2025-12-07 18:46:54,490:INFO:                shap: 0.49.1
+2025-12-07 18:46:54,490:INFO:           interpret: 0.7.3
+2025-12-07 18:46:54,490:INFO:                umap: 0.5.7
+2025-12-07 18:46:54,490:INFO:     ydata_profiling: 4.18.0
+2025-12-07 18:46:54,490:INFO:  explainerdashboard: 0.5.1
+2025-12-07 18:46:54,490:INFO:             autoviz: Not installed
+2025-12-07 18:46:54,490:INFO:           fairlearn: 0.7.0
+2025-12-07 18:46:54,490:INFO:          deepchecks: Not installed
+2025-12-07 18:46:54,490:INFO:             xgboost: 2.1.3
+2025-12-07 18:46:54,490:INFO:            catboost: 1.2.8
+2025-12-07 18:46:54,490:INFO:              kmodes: 0.12.2
+2025-12-07 18:46:54,490:INFO:             mlxtend: 0.23.4
+2025-12-07 18:46:54,490:INFO:       statsforecast: 1.5.0
+2025-12-07 18:46:54,490:INFO:        tune_sklearn: Not installed
+2025-12-07 18:46:54,490:INFO:                 ray: Not installed
+2025-12-07 18:46:54,490:INFO:            hyperopt: 0.2.7
+2025-12-07 18:46:54,490:INFO:              optuna: 4.6.0
+2025-12-07 18:46:54,490:INFO:               skopt: 0.10.2
+2025-12-07 18:46:54,490:INFO:              mlflow: 3.6.0
+2025-12-07 18:46:54,490:INFO:              gradio: 6.0.1
+2025-12-07 18:46:54,490:INFO:             fastapi: 0.123.0
+2025-12-07 18:46:54,490:INFO:             uvicorn: 0.38.0
+2025-12-07 18:46:54,490:INFO:              m2cgen: 0.10.0
+2025-12-07 18:46:54,490:INFO:           evidently: 0.4.40
+2025-12-07 18:46:54,490:INFO:               fugue: 0.8.7
+2025-12-07 18:46:54,490:INFO:           streamlit: 1.51.0
+2025-12-07 18:46:54,490:INFO:             prophet: Not installed
+2025-12-07 18:46:54,490:INFO:None
+2025-12-07 18:46:54,490:INFO:Set up data.
+2025-12-07 18:46:54,511:INFO:Set up folding strategy.
+2025-12-07 18:46:54,511:INFO:Set up train/test split.
+2025-12-07 18:46:54,546:INFO:Set up index.
+2025-12-07 18:46:54,547:INFO:Assigning column types.
+2025-12-07 18:46:54,567:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-12-07 18:46:54,593:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-07 18:46:54,594:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:46:54,609:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:54,611:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:54,635:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-12-07 18:46:54,635:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:46:54,652:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:54,652:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:54,652:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-12-07 18:46:54,681:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:46:54,696:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:54,698:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:54,725:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-12-07 18:46:54,739:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:54,741:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:54,742:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-12-07 18:46:54,781:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:54,784:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:54,825:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:54,828:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:54,828:INFO:Preparing preprocessing pipeline...
+2025-12-07 18:46:54,831:INFO:Set up simple imputation.
+2025-12-07 18:46:54,842:INFO:Set up encoding of ordinal features.
+2025-12-07 18:46:54,851:INFO:Set up encoding of categorical features.
+2025-12-07 18:46:54,851:INFO:Set up removing multicollinearity.
+2025-12-07 18:46:54,851:INFO:Set up feature normalization.
+2025-12-07 18:46:55,060:INFO:Finished creating preprocessing pipeline.
+2025-12-07 18:46:55,075:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('remove_multicollinearity',
+                 TransformerWrapper(exclude=[], include=None,
+                                    transformer=RemoveMulticollinearity(threshold=0.95))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False)
+2025-12-07 18:46:55,075:INFO:Creating final display dataframe.
+2025-12-07 18:46:55,455:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target      HeartDisease
+2                   Target type            Binary
+3           Original data shape       (43695, 28)
+4        Transformed data shape       (43695, 32)
+5   Transformed train set shape       (30586, 32)
+6    Transformed test set shape       (13109, 32)
+7              Numeric features                20
+8          Categorical features                 7
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation               knn
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15     Remove multicollinearity              True
+16  Multicollinearity threshold              0.95
+17                    Normalize              True
+18             Normalize method            robust
+19               Fold Generator   StratifiedKFold
+20                  Fold Number                10
+21                     CPU Jobs                 1
+22                      Use GPU             False
+23               Log Experiment             False
+24              Experiment Name  clf-default-name
+25                          USI              797b
+2025-12-07 18:46:55,505:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:55,507:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:55,550:INFO:Soft dependency imported: xgboost: 2.1.3
+2025-12-07 18:46:55,552:INFO:Soft dependency imported: catboost: 1.2.8
+2025-12-07 18:46:55,552:INFO:setup() successfully completed in 1.07s...............
+2025-12-07 18:46:55,568:INFO:Initializing get_config()
+2025-12-07 18:46:55,568:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023AB896BCA0>, variable=pipeline)
+2025-12-07 18:46:55,583:INFO:Variable:  returned as Pipeline(memory=FastMemory(location=C:\Users\OMAR\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'G...
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0))),
+                ('remove_multicollinearity',
+                 TransformerWrapper(exclude=[], include=None,
+                                    transformer=RemoveMulticollinearity(threshold=0.95))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RobustScaler(copy=True,
+                                                             quantile_range=(25.0,
+                                                                             75.0),
+                                                             unit_variance=False,
+                                                             with_centering=True,
+                                                             with_scaling=True)))],
+         verbose=False)
+2025-12-07 18:46:55,583:INFO:get_config() successfully completed......................................
+2025-12-07 18:46:55,610:INFO:Initializing create_model()
+2025-12-07 18:46:55,610:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023AB896BCA0>, estimator=xgboost, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-12-07 18:46:55,610:INFO:Checking exceptions
+2025-12-07 18:46:55,620:INFO:Importing libraries
+2025-12-07 18:46:55,620:INFO:Copying training dataset
+2025-12-07 18:46:55,645:INFO:Defining folds
+2025-12-07 18:46:55,645:INFO:Declaring metric variables
+2025-12-07 18:46:55,648:INFO:Importing untrained model
+2025-12-07 18:46:55,651:INFO:Extreme Gradient Boosting Imported successfully
+2025-12-07 18:46:55,655:INFO:Starting cross validation
+2025-12-07 18:46:55,656:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
