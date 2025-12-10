@@ -944,3 +944,111 @@ Name: HeartDisease, Length: 13109, dtype: float32
 2025-12-07 23:42:58,495:INFO:Preloading libraries
 2025-12-07 23:42:58,496:INFO:Set up data.
 2025-12-07 23:42:58,506:INFO:Set up index.
+2025-12-08 00:14:20,715:INFO:Initializing load_model()
+2025-12-08 00:14:20,716:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-08 00:14:20,789:INFO:Initializing predict_model()
+2025-12-08 00:14:20,789:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F9474FB190>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001F94637BD00>)
+2025-12-08 00:14:20,789:INFO:Checking exceptions
+2025-12-08 00:14:20,789:INFO:Preloading libraries
+2025-12-08 00:14:20,789:INFO:Set up data.
+2025-12-08 00:14:20,799:INFO:Set up index.
+2025-12-08 00:16:39,002:INFO:Initializing load_model()
+2025-12-08 00:16:39,002:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-08 00:16:39,079:INFO:Initializing predict_model()
+2025-12-08 00:16:39,079:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F9475844F0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001F947660F70>)
+2025-12-08 00:16:39,080:INFO:Checking exceptions
+2025-12-08 00:16:39,080:INFO:Preloading libraries
+2025-12-08 00:16:39,080:INFO:Set up data.
+2025-12-08 00:16:39,093:INFO:Set up index.
+2025-12-08 00:18:01,087:INFO:Initializing load_model()
+2025-12-08 00:18:01,087:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-08 00:18:01,169:INFO:Initializing predict_model()
+2025-12-08 00:18:01,169:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F943C225C0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001F94749D510>)
+2025-12-08 00:18:01,169:INFO:Checking exceptions
+2025-12-08 00:18:01,169:INFO:Preloading libraries
+2025-12-08 00:18:01,170:INFO:Set up data.
+2025-12-08 00:18:01,182:INFO:Set up index.
+2025-12-08 00:20:22,941:INFO:Initializing load_model()
+2025-12-08 00:20:22,941:INFO:load_model(model_name=../models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-08 00:20:23,028:INFO:Initializing predict_model()
+2025-12-08 00:20:23,028:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F9474E5B70>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001F9474C9000>)
+2025-12-08 00:20:23,028:INFO:Checking exceptions
+2025-12-08 00:20:23,028:INFO:Preloading libraries
+2025-12-08 00:20:23,028:INFO:Set up data.
+2025-12-08 00:20:23,043:INFO:Set up index.

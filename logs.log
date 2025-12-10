@@ -1,0 +1,296 @@
+2025-12-08 00:22:54,114:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:22:54,114:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:22:54,114:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:22:54,114:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:23:41,684:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:23:41,684:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:23:41,684:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:23:41,684:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-12-08 00:23:43,607:INFO:Initializing load_model()
+2025-12-08 00:23:43,607:INFO:load_model(model_name=models/best_pipeline, platform=None, authentication=None, verbose=True)
+2025-12-08 00:23:43,645:WARNING:C:\Users\OMAR\miniconda3\envs\xgb_env\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2025-12-08 00:23:50,396:INFO:Initializing predict_model()
+2025-12-08 00:23:50,396:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B056590>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06DBD0>)
+2025-12-08 00:23:50,397:INFO:Checking exceptions
+2025-12-08 00:23:50,397:INFO:Preloading libraries
+2025-12-08 00:23:50,397:INFO:Set up data.
+2025-12-08 00:23:50,402:INFO:Set up index.
+2025-12-08 00:24:19,875:INFO:Initializing predict_model()
+2025-12-08 00:24:19,875:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B10B610>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06E710>)
+2025-12-08 00:24:19,875:INFO:Checking exceptions
+2025-12-08 00:24:19,875:INFO:Preloading libraries
+2025-12-08 00:24:19,882:INFO:Set up data.
+2025-12-08 00:24:19,885:INFO:Set up index.
+2025-12-08 00:24:38,696:INFO:Initializing predict_model()
+2025-12-08 00:24:38,698:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B057340>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06D750>)
+2025-12-08 00:24:38,698:INFO:Checking exceptions
+2025-12-08 00:24:38,698:INFO:Preloading libraries
+2025-12-08 00:24:38,698:INFO:Set up data.
+2025-12-08 00:24:38,703:INFO:Set up index.
+2025-12-08 00:24:45,339:INFO:Initializing predict_model()
+2025-12-08 00:24:45,339:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B057BE0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06EF80>)
+2025-12-08 00:24:45,339:INFO:Checking exceptions
+2025-12-08 00:24:45,339:INFO:Preloading libraries
+2025-12-08 00:24:45,339:INFO:Set up data.
+2025-12-08 00:24:45,345:INFO:Set up index.
+2025-12-08 00:24:52,219:INFO:Initializing predict_model()
+2025-12-08 00:24:52,219:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B10AF80>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06ED40>)
+2025-12-08 00:24:52,219:INFO:Checking exceptions
+2025-12-08 00:24:52,219:INFO:Preloading libraries
+2025-12-08 00:24:52,219:INFO:Set up data.
+2025-12-08 00:24:52,224:INFO:Set up index.
+2025-12-08 00:25:00,196:INFO:Initializing predict_model()
+2025-12-08 00:25:00,197:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B0572B0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06E710>)
+2025-12-08 00:25:00,197:INFO:Checking exceptions
+2025-12-08 00:25:00,197:INFO:Preloading libraries
+2025-12-08 00:25:00,197:INFO:Set up data.
+2025-12-08 00:25:00,202:INFO:Set up index.
+2025-12-08 00:25:07,020:INFO:Initializing predict_model()
+2025-12-08 00:25:07,020:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B096CE0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06F370>)
+2025-12-08 00:25:07,020:INFO:Checking exceptions
+2025-12-08 00:25:07,020:INFO:Preloading libraries
+2025-12-08 00:25:07,020:INFO:Set up data.
+2025-12-08 00:25:07,024:INFO:Set up index.
+2025-12-08 00:25:15,591:INFO:Initializing predict_model()
+2025-12-08 00:25:15,591:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B095900>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06E9E0>)
+2025-12-08 00:25:15,593:INFO:Checking exceptions
+2025-12-08 00:25:15,593:INFO:Preloading libraries
+2025-12-08 00:25:15,593:INFO:Set up data.
+2025-12-08 00:25:15,596:INFO:Set up index.
+2025-12-08 00:25:20,687:INFO:Initializing predict_model()
+2025-12-08 00:25:20,687:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B095D80>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06D3F0>)
+2025-12-08 00:25:20,688:INFO:Checking exceptions
+2025-12-08 00:25:20,688:INFO:Preloading libraries
+2025-12-08 00:25:20,688:INFO:Set up data.
+2025-12-08 00:25:20,692:INFO:Set up index.
+2025-12-08 00:25:29,440:INFO:Initializing predict_model()
+2025-12-08 00:25:29,440:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B0573A0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06EDD0>)
+2025-12-08 00:25:29,440:INFO:Checking exceptions
+2025-12-08 00:25:29,441:INFO:Preloading libraries
+2025-12-08 00:25:29,442:INFO:Set up data.
+2025-12-08 00:25:29,447:INFO:Set up index.
+2025-12-08 00:25:51,280:INFO:Initializing predict_model()
+2025-12-08 00:25:51,280:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000018A4B0959F0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Age', 'IncomeRatio', 'SystolicBP',
+                                             'BMI', 'WaistCircumference',
+                                             'Height', 'TotalCholesterol',
+                                             'Triglycerides', 'LDL', 'HDL',
+                                             'HbA1c', 'Glucose', 'Creatinine',
+                                             'UricAcid', 'ALT_Enzyme',
+                                             'Albumin', 'Potassium', 'Sodium',
+                                             'GGT_Enzyme', 'AST_Enzyme'],
+                                    transformer=KNNImputer())),...
+                               feature_types=None, gamma=0.2, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.01,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=1,
+                               max_depth=3, max_leaves=None, min_child_weight=7,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=500, n_jobs=1,
+                               num_parallel_tree=None, random_state=42, ...))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000018A4B06E950>)
+2025-12-08 00:25:51,280:INFO:Checking exceptions
+2025-12-08 00:25:51,280:INFO:Preloading libraries
+2025-12-08 00:25:51,282:INFO:Set up data.
+2025-12-08 00:25:51,284:INFO:Set up index.
